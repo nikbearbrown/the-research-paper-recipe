@@ -1,98 +1,133 @@
 # Chapter 1 — Before You Write Anything
+*The claim has to be able to die before the paper deserves to live.*
 
-**Chapter one-line:** Before You Write — Topic -> Research Question -> Working Hypothesis
+There is a particular kind of productivity that feels like progress and isn't. You open a blank document, you type a title, you ask an AI to help you get started, and ten minutes later you have three polished paragraphs about the broad importance of your topic. The sentences flow. The transitions are clean. There are phrases like "a growing body of evidence suggests" and "scholars have increasingly recognized." It reads like a paper. It has the rhythm of a paper, the weight of a paper. And it is not yet a paper at all.
 
----
+What you have is momentum without a destination. The danger is that this momentum is real — it feels like you've begun, which makes it harder to stop and ask whether you actually know what you're trying to show.
 
-## 1. Learning objectives
+I want to slow you down before you write a single sentence of prose. Not forever. Just long enough to ask one question that most writers skip, or ask too late, or answer wrong.
 
-- Distinguish a topic, research question, and hypothesis (Understand).
-- Convert a broad curiosity into a falsifiable working claim (Apply).
-- Identify when AI is useful for interrogation but dangerous for hypothesis generation (Analyze).
-- Explain why prose should wait until the claim can fail (Evaluate).
+The question is: what would have to be true for your paper to be wrong?
 
 ---
 
-## 2. Opening case
+If you cannot answer that question — if you can only describe what your paper will show, not what it would take for it to fail — then you don't have a research paper yet. You have a direction. Directions are fine for beginning, but you cannot build an argument on one. An argument has a specific claim, and a specific claim has edges: conditions under which it holds and conditions under which it doesn't.
 
-Maya opens a blank document and types the title, "AI tutoring in education." In ten minutes, an AI tool gives her a polished introduction: broad stakes, smooth transitions, citations to check later. It feels like progress. But when her adviser asks what exactly the paper will show, Maya has three answers: AI tutoring improves learning, AI tutoring changes feedback quality, and students use AI tutoring differently depending on motivation. None is yet a paper. They are directions. The danger is that the draft now has momentum before the claim has shape.
+This is Karl Popper's insight, and it is one of the genuinely clarifying ideas in the philosophy of science. Popper noticed that many statements can survive any evidence you throw at them — not because they are true, but because they are too vague to be false. "AI tutoring improves learning" is an example. It is almost certainly true in some cases. It is almost certainly false in others. But as a research claim it tells you nothing, because it doesn't say *which* students, *which* kind of AI tutoring, *which* outcome measure, *compared to what*, over *what time period*. A claim that flexible can accommodate any finding. And a claim that can accommodate any finding cannot be tested.
 
----
+What Popper argued — and what every working researcher knows from experience, even if they didn't learn it from Popper — is that the intellectual content of a claim comes precisely from what it rules out. A claim that says "students who receive Socratic AI feedback will retain programming skills better two weeks later than students who receive direct-answer feedback, because retrieval effort consolidates memory" is specific enough to be wrong. The experimental group might not outperform the control. The retention effect might appear immediately but not at two weeks. The mechanism might be entirely different from what you predicted. Each of those outcomes would damage the claim. That damage is the point. It's the cost of saying something real.
 
-## 3. Core concept explanation
-
-A topic is a region. A research question is a question that could be answered. A hypothesis is a claim about what the answer will be and why. A research paper starts only when the writer can say the hypothesis in one declarative sentence with a subject, verb, scope, and possible failure condition. Popper's falsifiability standard is useful here because it asks what observation would count against the claim (Popper, 1959).
-
-This book's rule is simple: do not draft until the schema exists. The schema is the chain from claim to evidence to interpretation. A fluent paragraph written before that chain exists can hide the missing link. Open-science work on preregistration makes the same point procedurally: the timing of the hypothesis matters because post-hoc explanation is easy to mistake for prediction (Nosek et al., 2018; Kerr, 1998).
-
-AI belongs in this stage as a pressure tool, not an author. Ask it what would make the idea testable, what rival hypotheses could explain the observation, and what measurements would distinguish them. Do not ask it to decide the hypothesis for you. The research question is the author's intellectual contribution.
+<!-- → [INFOGRAPHIC: Popper falsifiability ladder — from vague topic ("AI tutoring") to falsifiable hypothesis ("Socratic feedback improves two-week retention because retrieval effort consolidates memory") — show what each level rules out] -->
 
 ---
 
-## 4. Worked example
+Let me draw a distinction that will run through everything in this book, because writers confuse these three things constantly: a **topic**, a **research question**, and a **hypothesis**.
 
-**Situation.** Maya begins with the topic "AI tutoring in education."
+A topic is a region of inquiry. "AI tutoring in education" is a topic. It tells you what you're interested in, which matters — interest is where research begins. But a topic cannot be true or false. You cannot be right or wrong about it. It has no edges.
 
-**Analytical process.**
+A research question is a question that could, in principle, be answered. "Does feedback specificity in AI tutoring affect undergraduate programming retention?" is a research question. It has a variable (feedback specificity), a population (undergraduates), and an outcome (retention). It could be answered by evidence. But it still doesn't tell you what you expect the answer to be, or why. It is a question, not a prediction.
 
-1. First pass: "Does AI tutoring help students?" This is answerable only in the loosest sense. Help which students, with what outcome, compared with what?
-2. Second pass: "How does feedback specificity in AI tutoring affect undergraduate programming practice?" Now the question has a variable and a setting, but it does not yet predict anything.
-3. Hypothesis: "Socratic AI feedback improves two-week unassisted programming retention more than direct-answer feedback because students must retrieve and repair their own reasoning." This can fail: the direct-answer group might retain as much, or the Socratic group might improve only on immediate performance.
+A hypothesis is a prediction with a mechanism. "Socratic AI feedback improves two-week unassisted programming retention more than direct-answer feedback because students must retrieve and repair their own reasoning." That's a hypothesis. It makes a specific claim, names the comparison, specifies the outcome and timeframe, and offers a causal explanation that could be confirmed or disconfirmed separately from the result itself.
 
-**Resolution.** The paper can now be designed. It needs at least two feedback conditions, an unassisted delayed test, and a comparison that distinguishes immediate performance from retention.
+The paper doesn't begin until you have the hypothesis. Not the topic. Not the question. The hypothesis.
 
-**The lesson.** The lesson: a hypothesis is not a prettier topic; it is a claim that names what would defeat it.
-
-**The limit.** The limit: exploratory work may begin without a fixed hypothesis, but it must be labeled exploratory rather than written as if it predicted its findings.
+<!-- → [TABLE: Three-column comparison — Topic / Research Question / Hypothesis — rows: definition, what it rules out, what evidence would look like, whether it can be false] -->
 
 ---
 
-## 5. Common misconceptions
+Here is where I want to be honest about something that textbooks often skip.
 
-- **A broad topic is enough to start writing.** A broad topic creates prose without a test. In Maya's case, a polished introduction would make three possible papers sound like one.
-- **AI can generate my hypothesis if I give it enough context.** AI can generate plausible hypotheses, but plausibility is not the same as fit to the actual data, literature gap, or domain problem.
-- **If the introduction sounds rigorous, the paper has a claim.** Style can imitate rigor. The test is whether the writer can state the claim and the evidence that could disconfirm it.
+Getting from topic to hypothesis is hard. It takes time, and the first attempts are almost always wrong — not wrong in the sense that they lead somewhere bad, but wrong in the sense that they are not yet specific enough to be false. You will write "AI tutoring improves learning" and have to push yourself to ask: *which students?* You will write "Socratic feedback is more effective" and have to ask: *more effective than what? for what outcome? on what timeline?* Each push is a compression: you are narrowing the claim until it has edges.
 
----
+The compression hurts. It means giving up the territory where you haven't taken a position. When your claim was "AI tutoring affects learning outcomes," you could write about all of it. When your claim becomes "Socratic AI feedback improves two-week retention for novice programmers," you have committed. You can no longer write around the edges. The paper now has a specific bet, and the experiment either pays out or it doesn't.
 
-## 6. Exercises
-
-1. Take a topic from your field and write three versions: topic, research question, hypothesis. Mark what changed at each step.
-2. Ask an AI tool for three rival hypotheses that could explain an observation you care about. Reject at least one and explain why your evidence could not test it.
-3. Find a published abstract and identify its central claim. If you cannot find one sentence that states it, rewrite the claim yourself.
+This is precisely why some writers resist making the claim specific. A vague hypothesis is comfortable. It can survive any result. Specificity is what makes the thing interesting.
 
 ---
 
-## 7. What would change my mind
+What goes into the compression? How do you actually get from a broad topic to a hypothesis with real edges?
 
-This chapter would need revision if strong evidence showed that novice researchers produce more valid, better-scoped hypotheses by first drafting prose and then extracting claims from it. The evidence would need to compare actual study quality, not writer confidence or perceived fluency.
+In my experience, the reliable path is through rival hypotheses — not just asking "what do I expect to find?" but "what else could explain the observation I care about?"
 
----
+Take Maya's situation from the start of this chapter. She wants to study AI tutoring in programming courses. She has a hunch that AI tutoring helps students. Fine. But: *why might it help?* And crucially: *what alternative explanations might produce the same surface result?*
 
-## 8. Still puzzling
+Maybe Socratic feedback helps because it forces retrieval. Or maybe it helps because it feels more personal, and engagement goes up. Or maybe direct-answer feedback is actually faster and lets students attempt more problems in the same time, which is what drives retention. Or maybe the type of feedback doesn't matter much at all — maybe what matters is whether students have any feedback at all, compared to nothing.
 
-- How much exploratory freedom should beginning researchers preserve before locking a hypothesis?
-- When does AI-assisted interrogation become AI-assisted authorship of the claim?
-- How should this process change for humanities or conceptual papers where hypotheses may not be statistical?
+If you run an experiment with only two conditions — Socratic feedback vs. direct-answer feedback — you can distinguish the first explanation from the second and third only indirectly, by measuring retention at a delayed unassisted test (which would rule out the "engagement" explanation if Socratic feedback shows no short-term advantage). The rival hypotheses tell you what the experiment has to measure, how long it has to run, and what the comparison group needs to look like.
 
----
+This is not a preliminary step before "real" research. This is the research. The intellectual work of a paper is not the writing. It is the thinking that happens here — before a word of prose is drafted — when you are forcing the claim to have edges.
 
-## Sources used
-
-- Popper 1959
-- Nosek et al. 2018
-- Kerr 1998
-- Simmons et al. 2011
-
+<!-- → [INFOGRAPHIC: Rival hypothesis tree — starting from "AI tutoring improves retention," branching into four competing mechanisms — labels showing which experiment design would distinguish them] -->
 
 ---
 
-## Chapter 1 Exercises: Before You Write Anything
+I want to say something specific about AI tools in this stage, because there is a version of this work that goes wrong in a particular way.
 
-**Project:** Research Paper Submission Dossier
-**This chapter adds:** a topic-to-question-to-hypothesis brief for the dossier.
+AI tools are genuinely useful for interrogating a hypothesis. You can describe your tentative claim to an AI and ask: what would defeat this? What rival hypotheses could explain the same observation? What measurements would distinguish them? The AI will generate options. Some of those options will be ones you hadn't considered, and that is valuable — not because the AI is right, but because it forces you to think about why you are dismissing something.
+
+What AI tools should not do — what you should not let them do — is decide the hypothesis for you.
+
+This is a subtle distinction, and it matters. The AI can generate a list of plausible research questions from your topic. The list might be good. One of the questions on the list might be the question you end up asking. But there is a difference between choosing from a list the AI generated and arriving at the question yourself. The difference is that you, the researcher, have domain knowledge, access to specific data, a sense of what gap exists in the literature, and — crucially — accountability for the claim. The AI has none of those things. It has pattern-matched on research it has seen before and produced something that looks like a research question. Looking like a research question and being the right research question for this dataset, this literature gap, this researcher, at this moment, are not the same.
+
+When you choose the hypothesis, you are making an intellectual claim. The paper is yours. When you let the AI choose the hypothesis and you execute on it, the paper is something else — a production, not an argument. The distinction will show up in the paper itself, in ways that are hard to locate but easy to feel: the claim will be slightly off-center, slightly disconnected from the evidence, as if written by someone who believed the words but didn't fully understand why those words rather than others.
+
+The test is simple: can you explain, in your own words, why this hypothesis and not a related alternative? If you need the AI to explain it, the AI did the work that should have been yours.
 
 ---
+
+There is one more thing I want to address before we move forward, and it is a misconception that is easy to carry through an entire graduate training without anyone pointing it out: the idea that a well-written introduction is evidence of a good research claim.
+
+It isn't.
+
+A polished paragraph can imitate rigor. AI tools are extraordinarily good at producing sentences that feel like they have content — that have the weight of a claim, the tone of precision, the rhythm of an argument. This is not a criticism of AI tools. It is a fact about language. The surface features of rigorous writing can be reproduced without the underlying structure. And when you are reading your own introduction, you want it to be good — which means you are primed to find it rigorous whether or not it is.
+
+The test is not "does this read like a real paper?" The test is: can I state the hypothesis in one declarative sentence with a subject, verb, scope, and failure condition? If I can't, the introduction is prose without a claim, regardless of how professional it sounds.
+
+Write that sentence first. Everything else is downstream of it.
+
+<!-- → [TABLE: Fluent but hollow vs. specific and falsifiable — five example claims side by side, showing how the vague version can accommodate any finding while the specific version cannot] -->
+
+---
+
+Before you write anything, you need three things in order.
+
+First, you need a topic — just the region of inquiry you care about. Write it in a phrase. Don't draft with it yet.
+
+Second, you need a research question — a question that could, in principle, be answered by evidence. Write it as a question. Note what it would take to answer it: what you would have to measure, what comparison you would have to make.
+
+Third, you need a hypothesis — a single declarative sentence naming your specific claim, the comparison, the outcome, the timeframe if relevant, and the mechanism. Test it against Popper's criterion: what observation would count against it? If you can't answer that, the hypothesis is not yet specific enough.
+
+The paper starts when you have the third thing. Not before.
+
+---
+
+## Exercises
+
+### Warm-up
+
+**1.** Take a topic from your field and write three versions — topic, research question, hypothesis — following the definitions in this chapter. For each version, write one sentence describing what would count as evidence against it. Note what changed at each step.
+
+**2.** Find a published abstract and identify its central claim. Write out: (a) the hypothesis as the authors state it, (b) what the authors say would defeat it, and (c) what you think would defeat it if the paper found nothing. If the abstract doesn't state a falsifiable claim, rewrite one that fits the study design.
+
+### Application
+
+**3.** Take a hypothesis you wrote in Exercise 1 and generate three rival hypotheses — alternative explanations that could produce the same main result. For each rival, describe one measurement or experimental condition that would distinguish it from your original claim. Explain why your current study design would or wouldn't detect the distinction.
+
+**4.** Ask an AI tool for five possible research questions from your topic. Select the one closest to your interest and convert it to a hypothesis following this chapter's definition. Write two sentences explaining why you chose that one over the others — and why the choice required your judgment rather than the AI's.
+
+### Synthesis
+
+**5.** Maya's hypothesis is: "Socratic AI feedback improves two-week unassisted programming retention more than direct-answer feedback because students must retrieve and repair their own reasoning." Identify (a) the claim, (b) the comparison, (c) the outcome and timeframe, (d) the mechanism, and (e) at least two findings that would seriously damage the hypothesis without fully refuting it. Explain the difference between damaging a hypothesis and disproving it.
+
+**6.** A classmate says: "My introduction sounds really rigorous, so I think my claim is solid." Using this chapter's argument, explain specifically why the quality of the prose does not validate the quality of the claim. Give one example of a sentence that could appear in a polished introduction and still fail Popper's criterion.
+
+### Challenge
+
+**7.** Find a published paper in your field that you think has a vague or untestable central claim. Write a revised hypothesis that would make the same research more falsifiable. Explain what you would have to change in the study design — not just the wording — to test the revised hypothesis. Consider: does the original paper's contribution survive the revision, or does the revision change what the paper is fundamentally about?
+
+---
+
+## LLM Exercises
 
 ### Exercise 1 — When to Use AI
 
