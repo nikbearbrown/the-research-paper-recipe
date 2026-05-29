@@ -1,99 +1,119 @@
 # Chapter 7 — Statistics
+*A p-value tells you how surprising your data is under an assumption — not how right your hypothesis is.*
 
-**Chapter one-line:** Statistics — Test selection, assumptions, power, reporting
+A Results section says: "The experimental group performed significantly better (p < .05)."
 
----
+That sentence is doing almost no work. Better by how much? On what measure? With what test? How many degrees of freedom? How many other comparisons were run before this one crossed the threshold? Was the difference large enough to matter in practice, or was the study simply big enough to detect something negligible?
 
-## 1. Learning objectives
+The number is there. But the number alone, without its context, without its accompanying uncertainty, without its relationship to the question the study was designed to answer — the number is not a result. It is the name of a result. The result itself requires more.
 
-- Interpret p-values without treating them as proof (Understand).
-- Choose common statistical tests from design and variable type (Apply).
-- Report effect sizes, uncertainty, and exact test results (Apply).
-- Recognize multiple-comparisons and power problems (Analyze).
+This chapter is about what a statistical result actually contains, what it doesn't contain, and how to report it in a way that gives a reader enough to make their own judgment.
 
 ---
 
-## 2. Opening case
+Let me start with the one thing that trips up more writers than anything else in this chapter, because getting it right changes how you read every results section you will ever encounter.
 
-A Results section says, "The experimental group performed significantly better (p < .05)." That sentence is not enough. Better by how much? On what measure? With what test? How many degrees of freedom? Was the effect practically meaningful? Could one significant result be the survivor of twenty tests? The number is doing less work than the prose claims.
+A p-value is not the probability that the null hypothesis is true. It is almost exactly the opposite.
 
----
+What a p-value tells you is this: *assuming* the null hypothesis were true — assuming there is no real effect, no real difference, nothing going on — how likely would it be to observe data at least as extreme as what you actually got? A p-value of 0.04 means that if the null were true, data this surprising would occur by chance about 4% of the time. That's evidence against the null — it's saying the data are inconsistent with a world where nothing is happening — but it is not a 96% probability that your hypothesis is correct. The probability that your hypothesis is correct is a different quantity, one that depends not just on the data but on how plausible your hypothesis was to begin with.
 
-## 3. Core concept explanation
+The American Statistical Association issued a formal statement in 2016 specifically because this confusion is so widespread and so consequential. The statement is worth reading in full, but the core message is this: a p-value below some threshold is not, by itself, proof of an effect, evidence of its importance, or a guarantee that the result will replicate. It is a measure of surprise under a model.
 
-Statistics expresses uncertainty under a model. A p-value is not the probability that the null hypothesis is true; the ASA statement warns against exactly that interpretation (Wasserstein and Lazar, 2016). A small p-value says the data would be unusual under a specified null model. It does not prove the effect, importance, or replicability.
-
-A complete result includes the test statistic, degrees of freedom where relevant, exact p-value, effect size, and uncertainty. Effect size answers a different question from statistical significance: how large is the difference or relationship? Cohen's benchmarks are useful as historical reference but not universal standards (Cohen, 1992).
-
-Multiplicity and power shape interpretation. If a study runs many tests, some will cross alpha by chance; Benjamini and Hochberg's false discovery rate method is one response (Benjamini and Hochberg, 1995). Underpowered studies produce unstable estimates and inflated significant effects, a core reason many published findings fail to replicate (Ioannidis, 2005).
+<!-- → [INFOGRAPHIC: What a p-value actually says — visual showing the null distribution, the observed test statistic, and the shaded tail representing the p-value — labeled clearly: "probability of data this extreme if null is true" vs. the common misconception "probability that null is true"] -->
 
 ---
 
-## 4. Worked example
+If the p-value doesn't tell you how large the effect is, or whether it matters, what does?
 
-**Situation.** A student compares two groups on a posttest and writes only p < .05.
+The effect size does. And effect size is a separate number that answers a different question: not "is this effect detectable?" but "how large is this effect?"
 
-**Analytical process.**
+The distinction is not academic. A study with a thousand participants can detect a difference so small it is invisible in practice and report it with p < 0.001 — highly statistically significant, essentially meaningless in the real world. A study with twenty participants may find a large, practically important effect and report it as p = 0.09 — not statistically significant at conventional thresholds, but pointing toward something real that a larger study might confirm.
 
-1. Identify design: two independent groups, continuous outcome. A t-test may fit if assumptions are reasonable.
-2. Report fully: means, standard deviations, t statistic, degrees of freedom, exact p-value, Cohen's d, and confidence interval.
-3. Ask multiplicity: was this the primary outcome or one of many?
-4. Ask meaning: is d = 0.18 meaningful in this field, cost, and context?
+Statistical significance is about signal-to-noise ratio and sample size. Effect size is about the actual magnitude of the relationship. Both matter. Neither is a substitute for the other.
 
-**Resolution.** The revised sentence reports the result and scopes the interpretation: "The intervention group scored higher than the control group on the delayed posttest, t(62) = 2.47, p = .016, d = 0.63, though this was the only planned primary comparison."
+The most common effect size measures depend on what you're comparing. For the difference between two group means, Cohen's d expresses the difference in units of standard deviation: a d of 0.5 means the groups differ by half a standard deviation. For correlations, r itself is the effect size. For proportions, odds ratios or risk ratios. For more complex models, partial eta-squared or omega-squared. Cohen proposed benchmarks — small, medium, and large — that are widely used as rough orientation, but he intended them as conventions for a researcher who has no better reference, not as universal standards. The more informative comparison is: what effect sizes have prior studies in this field, with this population, on this outcome, typically found?
 
-**The lesson.** The lesson: statistical reporting should let the reader evaluate both signal and uncertainty.
+A complete result includes the test statistic, the degrees of freedom where relevant, the exact p-value (not "p < .05" but the actual value like p = .023), the effect size, and a confidence interval. The confidence interval is particularly important because it shows the range of effect sizes consistent with the data — it is the uncertainty estimate that a single p-value hides.
 
-**The limit.** The limit: statistics cannot repair a bad design, weak measure, or post-hoc hypothesis.
+The revised result sentence from the chapter's opening case looks like this: "The intervention group scored higher than the control group on the delayed post-test, *t*(62) = 2.47, *p* = .016, *d* = 0.63, 95% CI [0.11, 1.14]." That sentence tells you the test used, the degrees of freedom (which tells you the effective sample size), the exact p-value, the effect size, and the uncertainty around the effect size. A reader can evaluate the result. A reader can compare it to other studies. A reader can judge whether the confidence interval is wide enough to be genuinely uncertain or narrow enough to be reasonably precise.
 
----
-
-## 5. Common misconceptions
-
-- **p = .04 means the null has a 4 percent chance of being true.** That interpretation reverses the conditional probability.
-- **Non-significant means no effect.** It may mean no effect, low power, noisy measurement, or a poorly matched test.
-- **Large samples make findings important.** Large samples can make trivial effects statistically significant.
+<!-- → [TABLE: Complete statistical reporting template — rows: t-test, ANOVA, correlation, regression, chi-square — columns: test statistic, degrees of freedom, p-value format, effect size measure, uncertainty measure, what the assumptions are] -->
 
 ---
 
-## 6. Exercises
+Choosing the right test is a matter of matching the test's assumptions to your data and design. Getting this wrong is common, and the consequences range from mildly conservative estimates to seriously misleading ones.
 
-1. Rewrite a p-value-only result into a complete statistical sentence.
-2. Given three designs, choose the likely test and name its assumptions.
-3. List all tests in a hypothetical Results section and decide whether a multiple-comparisons correction is needed.
+The basic logic: different tests are built for different data structures. A t-test compares two group means and assumes the outcome is approximately normally distributed within each group and that the observations are independent. An ANOVA extends that logic to more than two groups. A chi-square test examines whether two categorical variables are independent. A correlation measures the linear relationship between two continuous variables. A regression predicts one variable from one or more others.
 
----
+The word "assumes" matters. Every test has assumptions, and when those assumptions are substantially violated, the test's output — the p-value, the confidence interval — can be misleading. Independence is the assumption that is most often violated in educational research without anyone noticing: students in the same classroom are not independent observations, because they share a teacher, a curriculum, a room, a social dynamic. If you analyze students as if they were independent when they were nested in classrooms, your standard errors will be too small, your p-values will be too small, and you will find more "significant" results than you should.
 
-## 7. What would change my mind
+The appropriate remedy for nested data is multilevel modeling — but the prerequisite is noticing that the data are nested. The question to ask before selecting any test is: are my observations actually independent, or do some of them share context in ways that make them more similar to each other than to the rest of the sample?
 
-This chapter would change if journals broadly abandoned null-hypothesis significance testing in favor of estimation or Bayesian reporting. The current chapter teaches common practice while naming its limits.
+A related assumption is that the variance is approximately equal across groups — the homogeneity of variance assumption for t-tests and ANOVA. When groups have very different variances, Welch's correction (a modified t-test that doesn't assume equal variances) is more appropriate than the standard version, and most software offers it as an option that researchers frequently leave unchecked.
 
----
-
-## 8. Still puzzling
-
-- How much statistical detail should a general research-writing book teach before referring to a methods text?
-- When should confidence intervals replace significance language entirely?
-- How should AI-generated analysis code be audited for defaults and assumptions?
+None of this requires becoming a statistician before you can write a paper. It requires knowing enough to check the assumptions that are most likely to be violated in your design, and to report what you found when you checked.
 
 ---
 
-## Sources used
+Now the problem that is most responsible for the replication crisis in many fields: underpowered studies and multiple comparisons.
 
-- Wasserstein and Lazar 2016
-- Cohen 1992
-- Benjamini and Hochberg 1995
-- Ioannidis 2005
+Statistical power is the probability of detecting a real effect if one exists. It depends on three things: the size of the true effect, the sample size, and the alpha threshold you're using. A study with low power is like trying to hear a quiet conversation from the other end of a noisy room — you might catch it, but you might not, and the times you do catch something, you're not sure whether it was the conversation or the noise.
 
+The particular danger of low power is not just that you miss real effects. It's what happens when underpowered studies do find significant results. An effect that barely reaches significance in an underpowered study is likely to be an overestimate of the true effect — the observed effect had to be unusually large just to cross the threshold given the noise level. This is called the winner's curse: the studies that "win" the significance lottery in low-power conditions show effects that are inflated relative to what the true effect actually is. This is one of the main reasons published effects in psychology and education often fail to replicate: the original study was underpowered, got lucky with an inflated estimate, and the replication, often better powered, finds a smaller or null effect.
+
+Power analysis should happen before data collection, not after. The question is: given what I expect the true effect to be (based on prior literature), how many participants do I need to have an 80% (or 90%) chance of detecting it if it's real? The answer is usually larger than researchers expect, which is uncomfortable but important. A study that is underpowered by design is a study that will either miss real effects or report inflated ones.
+
+<!-- → [CHART: Power curves — x-axis: sample size per group, y-axis: statistical power — three curves for small (d=0.2), medium (d=0.5), and large (d=0.8) effect sizes — horizontal line at 0.80 showing the conventional threshold — point where each curve crosses it showing required N] -->
+
+---
+
+Multiple comparisons are the other side of the same problem.
+
+The alpha level — conventionally 0.05 — is the rate of false positives you're willing to accept when the null is true. If you run one test at alpha = 0.05, you have a 5% chance of a false positive. If you run twenty tests, each at alpha = 0.05, the probability that at least one will cross the threshold by chance alone is much higher — roughly 64% if the tests are independent. If you then report the one that crossed the threshold as your finding, you have done what researchers call p-hacking, even if you didn't intend to.
+
+The honest accounting: when you run multiple tests, you need to either correct for the multiple comparisons, or report all tests, or distinguish pre-specified primary outcomes from exploratory analyses. The Benjamini-Hochberg procedure controls the false discovery rate — the expected proportion of significant results that are actually false — and is less conservative than Bonferroni correction while still providing meaningful protection.
+
+The deeper fix, though, is not statistical. It is the pre-specification from Chapter 6: decide which test is the primary test, what the primary outcome is, and what the correction strategy will be, before looking at the data. Then report everything — including the tests that didn't reach significance. Selective reporting of the significant outcomes from a battery of tests is a form of data presentation that misleads readers about the actual false positive rate of the study.
 
 ---
 
-## Chapter 7 Exercises: Statistics
+There is one more thing that statistics cannot do, and it is worth naming explicitly because researchers sometimes speak as if a sophisticated enough analysis can overcome other problems in the study.
 
-**Project:** Research Paper Submission Dossier
-**This chapter adds:** a statistical analysis and reporting plan.
+Statistics cannot repair a bad design. If the study has confounders that weren't controlled for, the regression model will give you a precise estimate of an effect that includes the confounder's contribution, and the precision will look like accuracy. If the outcome measure doesn't capture the construct (Chapter 5), the analysis will precisely quantify the wrong thing. If the data are missing in a pattern that biases the sample (Chapter 6), the standard errors will be correct for the remaining data and misleading for the claim the paper is making.
+
+This is not a failure of statistics. Statistics is doing exactly what it should do: summarizing the data correctly and quantifying uncertainty appropriately. The problem is upstream — in the design, the measurement, the data quality. No amount of analytical sophistication closes a design gap. The better the analysis, the more clearly it illuminates the problem in the data. Precision in service of a biased estimate is not a virtue.
+
+The statistics section of a paper is the last step in a chain. If the earlier steps were sound — the hypothesis was specific, the design supported the claim, the measures captured the constructs, the data were clean — the statistics are there to express the result with appropriate uncertainty. If the earlier steps were not sound, the statistics will report that faithfully too, to anyone who knows how to read them.
 
 ---
+
+## Exercises
+
+### Warm-up
+
+**1.** Find a Results section in a published paper that reports only p < .05 for a primary finding. Identify what information is missing: the test statistic, degrees of freedom, exact p-value, effect size, confidence interval. Rewrite the sentence with all the components that should be there, using the paper's Methods section to infer what you can. Note what you cannot infer.
+
+**2.** Without looking at any software output, write your best answer to: what does a p-value of 0.03 actually mean? What does it not mean? Then check your answer against the ASA's 2016 statement. Note specifically any interpretation you held before reading this chapter that the statement would correct.
+
+### Application
+
+**3.** For each of the following designs, identify the most appropriate test and name its two most important assumptions: (a) comparing mean post-test scores between two randomly assigned conditions with a continuous outcome; (b) examining whether feedback type and prior programming experience jointly predict retention scores; (c) testing whether the proportion of students who passed a threshold differs between conditions; (d) comparing mean scores across three conditions where students are nested in classrooms.
+
+**4.** A study runs eight outcome measures across two conditions and reports three of them as significant at p < .05. Write the paragraph that should appear in the Results section explaining how the multiple comparisons should be interpreted, which outcomes were pre-specified as primary, and what correction was applied or why one was not.
+
+### Synthesis
+
+**5.** You plan to run the Socratic vs. direct-answer feedback study with a two-week delayed retention test as the primary outcome. Before collecting data, conduct a power analysis: (a) identify what effect size you would expect based on prior related work (use d = 0.5 as a placeholder if prior work isn't available), (b) calculate the sample size needed for 80% power at alpha = 0.05 for a two-group independent-samples t-test, (c) explain what would happen to your estimates if the true effect is d = 0.2 instead of d = 0.5 and your sample was sized for d = 0.5. State your assumptions explicitly.
+
+**6.** Explain why a statistically significant result in an underpowered study is likely to overestimate the true effect size. Use the concept of the "winner's curse" from this chapter. Describe what happens to the estimated effect size in a well-powered replication of the same study, and why this pattern produces the appearance that published effects fail to replicate even when real effects exist.
+
+### Challenge
+
+**7.** You collect data and find that your primary outcome (two-week retention) shows a non-significant difference between conditions (p = .12, d = 0.28, 95% CI [−0.09, 0.65]), but a secondary outcome (immediate post-test) shows a significant difference (p = .03, d = 0.52). Write the Results and Discussion for this pattern, reporting both outcomes fully, characterizing what the non-significant primary result means and does not mean, explaining what the significant secondary result contributes given that it was not the pre-specified primary test, and stating what the study would need for you to draw stronger conclusions. Avoid both overclaiming the secondary result and dismissing it as worthless.
+
+---
+
+## LLM Exercises
 
 ### Exercise 1 — When to Use AI
 
