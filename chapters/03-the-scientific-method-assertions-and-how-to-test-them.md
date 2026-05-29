@@ -1,99 +1,129 @@
 # Chapter 3 — The Scientific Method: Assertions and How to Test Them
+*The verb in your claim chooses the burden of proof.*
 
-**Chapter one-line:** The Scientific Method — Assertion types, falsifiability, null/alternative hypothesis
+Here is a sentence a student once handed me:
 
----
+"AI feedback improves learning because students engage more deeply."
 
-## 1. Learning objectives
+It reads like a scientific claim. It has the structure of an argument — a cause, an effect, a mechanism. It uses the vocabulary of educational research. And yet, in twelve words, it has made at least three distinct bets: that AI feedback causes better learning outcomes, that the operative mediator is engagement depth, and that engagement is an explanatory construct that genuinely means something. If the study behind this sentence only compared students who used an AI platform with students who didn't — no random assignment, no measure of engagement, no delayed unassisted test — then the sentence has already outrun the evidence by several lengths.
 
-- Classify assertions by type (Understand).
-- Match assertion type to evidence and design (Apply).
-- State null and alternative hypotheses for empirical claims (Apply).
-- Detect unfalsifiable or self-protecting claims (Analyze).
+This happens constantly. Not because researchers are dishonest, but because the verbs in natural language carry more weight than writers notice when they're writing. "Improves" is a causal verb. "Because" is a mechanistic connective. Both carry evidentiary burdens that a comparison study cannot discharge.
 
----
-
-## 2. Opening case
-
-A student writes, "AI feedback improves learning because students engage more deeply." The sentence sounds scientific. It actually contains at least three claims: a causal claim about AI feedback, a construct claim about learning, and a mechanistic claim about engagement. If the study only compares platform users with non-users, the sentence has already outrun the design.
+The scientific method, at its core, is a discipline for noticing when your language has made a promise your evidence can't keep.
 
 ---
 
-## 3. Core concept explanation
+Before we get to the machinery of null hypotheses and testing frameworks, I want to spend some time on a concept that precedes all of that: the assertion.
 
-An assertion is a claim that can be evaluated as true or false, even if the answer is not yet known. Different assertions require different evidence. Descriptive claims report what happened. Correlational claims say variables move together. Causal claims say one thing produces another. Predictive claims say one variable helps anticipate another. Mechanistic claims explain how or why. Normative claims say what should be done. Conceptual claims define or clarify terms.
+An assertion is a claim that can, in principle, be evaluated as true or false — even if you don't yet know the answer. This sounds trivially obvious, but it rules out more than you'd expect. "AI is interesting" is not an assertion in this sense — there's no observation that would settle it. "I prefer Socratic feedback" is a report of preference, not a claim about the world. "Students should receive more individualized feedback" is a normative claim — a claim about what ought to happen — and data alone cannot settle it, no matter how well designed the study.
 
-The scientific method disciplines assertions by asking what kind of claim is being made and what would count against it. Popper's falsifiability criterion is not the whole of science, but it is a powerful guardrail against claims that can explain every outcome (Popper, 1959). Neyman and Pearson's testing framework formalized the null/alternative structure as a decision procedure, not as proof of truth (Neyman and Pearson, 1933).
+The reason the distinction matters is that different types of assertions require different types of evidence, and using the wrong evidence for an assertion type is a logical error regardless of how strong the evidence is.
 
-The chapter's practical move is assertion typing. Before choosing methods or writing the Discussion, classify the central claim. If the assertion type and design do not match, fix the claim or fix the design.
+Let me walk through the taxonomy, because once you have it, you start to see it everywhere.
 
----
+A **descriptive** claim reports what happened or what is true in some population: "Sixty percent of students in the sample used AI hints at least once per problem set." This requires measurement. It does not require a control group, a comparison, or a causal argument. Its evidentiary burden is: did you measure the right thing in the right population?
 
-## 4. Worked example
+A **correlational** claim says that two variables move together: "Students who used AI hints more frequently scored higher on the post-test." This requires that both variables be measured and that their covariation be estimated. It does not license you to say one caused the other. The evidentiary burden is: did you measure both, and did you account for other variables that might explain the pattern?
 
-**Situation.** Claim: "Students who use AI hints learn more because hints force retrieval."
+A **causal** claim says one thing produced another: "AI hints improved post-test performance." This is the claim that requires the most from a design. To support it, you need something that creates a counterfactual — what would the same students have scored without AI hints? Random assignment to conditions is the standard tool for this, because it distributes all the other possible causes (motivation, prior knowledge, study habits) roughly equally between groups, leaving the intervention as the only systematic difference.
 
-**Analytical process.**
+A **predictive** claim says one variable helps anticipate another, without necessarily specifying why: "Students who spend more time on problem sets before using hints score better on retention tests." This is weaker than causation but stronger than correlation — it implies a practical use (you could use hint delay as a predictor) even without a causal story.
 
-1. Type the first clause: causal, because it says AI hints produce learning.
-2. Type the second clause: mechanistic, because it explains why through retrieval.
-3. State the null: students receiving AI hints do not differ in delayed unassisted learning from students in the comparison condition.
-4. Ask what would falsify it: no delayed difference, better retention in direct-answer condition, or no evidence that retrieval mediated the effect.
+A **mechanistic** claim explains how or why: "AI hints improve retention because they force students to identify their own errors before receiving feedback, which produces deeper processing." This is the hardest to test, because it requires not just a comparison of outcomes but evidence about the process. If you claim engagement mediates the effect, you need to measure engagement, show it varies with the intervention, and show that when you control for engagement, the effect shrinks.
 
-**Resolution.** A correlational log analysis cannot test the causal/mechanistic version. The writer must either design an experiment with a process measure or rewrite the claim as an association.
+A **normative** claim says what should be done: "Instructors should prefer Socratic AI feedback for courses where long-term retention matters." Data can inform this claim — evidence about what produces retention is relevant — but the claim itself involves a value judgment about what matters, which evidence alone cannot settle.
 
-**The lesson.** The lesson: the verb chooses the burden of proof.
+A **conceptual** claim defines or clarifies: "By 'durable retention,' I mean unassisted recall of core concepts after a two-week delay." This doesn't require empirical support; it requires precision and coherence.
 
-**The limit.** The limit: real papers often contain layered assertions, so the audit must happen sentence by sentence.
+<!-- → [TABLE: Assertion taxonomy — seven rows (descriptive, correlational, causal, predictive, mechanistic, normative, conceptual) — columns: definition, what evidence is required, what evidence cannot support it, example] -->
 
 ---
 
-## 5. Common misconceptions
+Now here is the move the chapter title is pointing at.
 
-- **A question is a hypothesis.** A question asks; a hypothesis predicts. "Does X affect Y?" does not state what you expect or why.
-- **A significant p-value confirms the alternative.** A p-value evaluates data under a null model; it does not prove the alternative true.
-- **Normative claims are unscientific and should disappear.** Normative claims can be legitimate, but data cannot settle them alone. They need to be separated from empirical claims.
+The scientific method is not, at its heart, a set of procedures for producing results. It is a discipline for keeping assertions honest. And the specific tool it uses for that is falsifiability — the demand that an empirical claim name the conditions under which it would be false.
 
----
+Karl Popper's argument, stated simply, is this: a claim that can accommodate any possible evidence is not an empirical claim at all. If "AI feedback improves learning" is true when test scores go up, and also true when they go down (because "learning" is redefined to mean something that didn't get measured), and also true when there's no difference (because "improve" meant "prevents decline"), then the sentence isn't making a claim. It's making a noise that sounds like a claim.
 
-## 6. Exercises
+What falsifiability demands is that you name, in advance, what you would need to see for your claim to be in trouble. For a causal claim like "Socratic AI feedback improves two-week retention more than direct-answer feedback," the falsification conditions are clear: the Socratic group's retention is not higher, or it is higher immediately but not at two weeks, or it is higher only for students who already have strong retrieval habits, making it a moderator rather than a main effect.
 
-1. Classify five claims from your draft as descriptive, causal, correlational, predictive, mechanistic, normative, or conceptual.
-2. Write the null hypothesis for your main empirical claim.
-3. List three observations that would make your hypothesis false. If none are possible, rewrite the hypothesis.
+Each of those falsification conditions is also a design choice. If you want to be able to detect whether the effect is moderated by prior retrieval habits, you need to measure prior retrieval habits. If you want to be able to detect the difference between short-term performance and two-week retention, you need two assessment points. The falsification conditions tell you what the design requires.
+
+<!-- → [INFOGRAPHIC: Falsifiability spectrum — from "can accommodate any evidence" on one end to "specific enough to be wrong in multiple ways" on the other — with three example claims placed along the spectrum] -->
 
 ---
 
-## 7. What would change my mind
+The second tool the chapter title is pointing at is the null and alternative hypothesis structure, and I want to be precise about what this is and what it isn't.
 
-This chapter would change if a better classroom taxonomy helped novices align claims to designs more accurately than the current assertion categories. The criterion would be fewer design/claim mismatches in actual drafts.
+Jerzy Neyman and Egon Pearson formalized statistical hypothesis testing in the 1930s as a decision procedure. The logic is not "find out whether the null is true." The logic is: assume the null is true, calculate how surprising your data would be under that assumption, and decide, at a pre-specified threshold, whether the data are surprising enough to act as though the null is false.
 
----
+The null hypothesis is usually stated as the absence of the effect you're looking for: "Students who receive Socratic feedback do not differ in two-week retention from students who receive direct-answer feedback." This is the baseline — the world as it would be if your intervention does nothing. The alternative is your actual prediction: "Students who receive Socratic feedback show higher two-week retention than students who receive direct-answer feedback."
 
-## 8. Still puzzling
+Three things are worth being clear about, because they trip up even experienced writers.
 
-- How should mixed empirical and normative arguments be taught without flattening either?
-- When is a mechanistic claim strong enough to include in a Discussion?
-- How can qualitative evidence be mapped to assertion types without forcing it into experimental categories?
+First, a significant p-value does not confirm the alternative hypothesis. It means the data would be unlikely — specifically, less likely than your threshold (usually 5%) — if the null were true. That's evidence against the null, but it's not proof that your alternative is right. There could be other explanations for the result that you haven't considered.
 
----
+Second, a null hypothesis is not the same as the claim "nothing is happening." It is a specific quantitative claim — usually that the difference is zero, or that the correlation is zero. You are not testing whether "AI feedback matters in general." You are testing whether this specific measured difference, in this specific sample, at this specific time point, is larger than what you'd expect by chance.
 
-## Sources used
+Third, the null hypothesis is chosen by the researcher, not by convention. Your null should be the specific claim that your design is positioned to challenge. If you've designed a study to detect a retention advantage at two weeks, your null is "no retention advantage at two weeks" — not "no effect of AI feedback on anything, ever."
 
-- Popper 1959
-- Neyman and Pearson 1933
-- Meehl 1967
-- Kerr 1998
-
+<!-- → [TABLE: Null vs. alternative hypothesis pairs for the three assertion types that have them (correlational, causal, predictive) — common mistakes in null formulation alongside correct versions] -->
 
 ---
 
-## Chapter 3 Exercises: The Scientific Method: Assertions and How to Test Them
+Let me return to the student's sentence from the beginning of the chapter, because now we can do something with it.
 
-**Project:** Research Paper Submission Dossier
-**This chapter adds:** an assertion-type and falsifiability audit.
+"AI feedback improves learning because students engage more deeply."
+
+Clause one — "AI feedback improves learning" — is a causal claim. Its null hypothesis is: students receiving AI feedback do not differ in learning outcomes from students in the comparison condition. The design needed to test it requires at least two conditions, a measure of learning (which needs to be defined precisely — immediate performance? delayed retention? transfer to novel problems?), and something that controls for the other differences between groups.
+
+Clause two — "because students engage more deeply" — is a mechanistic claim. Its null hypothesis is: any effect of AI feedback on learning is not mediated by engagement depth. Testing this requires that engagement be measured, that the relationship between feedback and engagement be established, and that a mediation analysis show that the indirect path (through engagement) accounts for the outcome difference. This is a substantially more demanding design than clause one already required.
+
+If the study behind the sentence only compared platform users with non-users — no random assignment, no engagement measure, no mediation analysis — then neither clause is supported by the design. The most the study can support is a correlational version: "Students who used AI feedback scored higher on [some measure]." The causal language and the mechanism have to come out.
+
+This is not a small edit. It changes what the paper claims to contribute. A correlational finding is a real finding — it says something about the world — but it says something weaker than a causal finding, and the difference matters for how educators and policymakers should respond to it.
+
+The practical move is assertion typing. Before you choose your methods, classify your central claim. Before you write the Discussion, audit every sentence for its assertion type. When you find a causal verb where you have correlational evidence, you have a choice: redesign the study or rewrite the sentence. The scientific method doesn't tell you which to choose. It tells you that you have to choose one.
 
 ---
+
+One more thing, because it comes up in almost every paper I review.
+
+Normative claims are legitimate. They are not unscientific. Education, medicine, public policy — all of these fields exist to make normative recommendations, and a research paper that never says anything about what should happen is often failing its audience. But normative claims cannot be settled by data alone. They require a value judgment about what matters, and that judgment is separate from the empirical evidence even when the evidence is relevant.
+
+The common mistake is to slide between normative and empirical claims without marking the transition. "Students who receive Socratic feedback retain more, therefore instructors should use Socratic feedback" treats a causal finding as if it settles a normative question. It doesn't — not because the finding is wrong, but because "should use" involves a judgment about tradeoffs (time, implementation cost, equity of access, what other goals matter) that the data can inform but not resolve.
+
+Separate the claims. Say: "These findings suggest that Socratic feedback produces better two-week retention under these conditions. Whether that retention advantage justifies the additional design complexity is a question that depends on the instructional context." The empirical claim stands on its own. The normative claim is made explicitly, as a claim, not dressed up as a finding.
+
+---
+
+## Exercises
+
+### Warm-up
+
+**1.** Take five sentences from your draft introduction or literature review. Classify each as descriptive, correlational, causal, predictive, mechanistic, normative, or conceptual. For any sentence that is causal or mechanistic, ask whether your study design can support that classification. If it cannot, rewrite the sentence in the strongest language your design actually licenses.
+
+**2.** Write a null and alternative hypothesis for your main empirical claim. Make the null specific — not "no effect" in the abstract, but the specific quantitative claim your design is positioned to challenge. Read both aloud and ask: is the null actually falsifiable by the study you're running?
+
+### Application
+
+**3.** Take the following sentence and perform a full assertion audit: "Students who use AI tutoring systems outperform their peers because the immediate feedback loop reinforces correct reasoning before errors consolidate." Identify every assertion type present, write the null hypothesis for each falsifiable claim, and describe what study design would be required to test the mechanistic claim.
+
+**4.** Find a published Discussion section in your field. Identify two sentences where causal language appears and check whether the study design — as described in the Methods — supports that language. If it doesn't, rewrite both sentences in the strongest language the design licenses. Note whether the paper's contribution changes when you make this substitution.
+
+### Synthesis
+
+**5.** Your hypothesis is: "Socratic AI feedback improves two-week unassisted programming retention more than direct-answer feedback because students must retrieve and repair their own reasoning." (a) Classify every assertion type in this sentence. (b) Write the null for the causal claim and the null for the mechanistic claim. (c) Describe what the study would need to measure, and when, to give the mechanistic null a fair chance of being falsified. (d) Explain what the study can still conclude if the outcome effect is found but the mediation is not.
+
+**6.** A classmate argues: "Normative claims don't belong in empirical papers — data should speak for itself." Write a response using this chapter's framework. Explain what normative claims are, why they are legitimate in research papers, and what discipline is required when making them alongside empirical claims.
+
+### Challenge
+
+**7.** Design a study that could test the mechanistic claim in the hypothesis above — specifically, that retrieval-and-repair mediates the retention advantage of Socratic feedback. Describe the design, the measures required, and the analysis you would run. Then identify the strongest rival mechanism that your design could not rule out, and explain what additional measurement or condition would be required to distinguish them. Consider: does your revised design still fit within a realistic semester-length study, and if not, what do you give up?
+
+---
+
+## LLM Exercises
 
 ### Exercise 1 — When to Use AI
 
