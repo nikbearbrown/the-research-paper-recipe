@@ -1,99 +1,119 @@
 # Chapter 2 — Foundation
+*What a source can carry is not the same as what it says.*
 
-**Chapter one-line:** Foundation — Lock hypothesis, evaluate sources, plan design
+Noah has five papers. Every one of them reports positive effects for the intervention he wants to study. He lines them up like witnesses for the defense and starts writing his literature review — "prior work consistently demonstrates," "research has shown," "studies confirm." It feels like the field has spoken. It feels like building on solid ground.
 
----
+Then he looks at the details.
 
-## 1. Learning objectives
+One study measured satisfaction, not learning. Another ran a post-test immediately after the intervention with no control group. A third used a self-selected sample of students who signed up voluntarily — which is fine, but it means the result may say as much about motivation as it does about the intervention. Two papers report only p-values, with no effect sizes, which means Noah has no way to judge whether a statistically significant result was large enough to matter. The fifth paper is the strongest: a randomized trial with a delayed unassisted test. But its sample is a single institution, which limits how far the finding can travel.
 
-- Lock a hypothesis before building an outline (Apply).
-- Evaluate whether a source's design supports its claim (Analyze).
-- Compare candidate study designs for fit to a research question (Evaluate).
-- Build a source matrix that separates findings from limitations (Create).
+None of these papers are useless. But none of them say what Noah was about to claim they said.
 
----
-
-## 2. Opening case
-
-Noah finds five papers supporting his intervention. Each reports positive effects. He starts writing the literature review as if the field has spoken. Then he notices the details: one paper used a self-selected sample, another measured satisfaction instead of learning, one had no control group, and two reported only p-values. The problem is not that the sources are useless. The problem is that he has not yet asked what each source can actually carry.
+The problem isn't that the sources are weak. The problem is that Noah hasn't yet asked the question that should precede every literature review: *What does this source license me to say?*
 
 ---
 
-## 3. Core concept explanation
+That question sounds simple. It is not. Answering it requires understanding the relationship between a study's design and the claims its design can support — and that relationship is more specific, and more limiting, than most writers realize before they've been caught getting it wrong.
 
-The foundation of a paper has two locks: the hypothesis and the evidence plan. The hypothesis names the claim. The evidence plan asks what design, sample, measure, and analysis would make that claim defensible. Reporting standards such as JARS, CONSORT, and STROBE exist because readers cannot evaluate findings without design details (Appelbaum et al., 2018; Schulz et al., 2010; von Elm et al., 2007).
+Here is the core idea: a study design is not just a method. It is a commitment. When a researcher chooses to run a randomized controlled trial, they are committing to a specific set of things they can and cannot claim. A randomized design, when executed properly, licenses causal language: you can say the intervention *caused* the outcome, not merely that the two were associated. But it comes with constraints on generalization — you can speak to the population you randomized, and extrapolation beyond that population requires argument, not just citation.
 
-Source quality is not identical to journal prestige. A strong source for one claim can be weak for another. An observational study may be excellent evidence of association and poor evidence of causation. A trial with a narrow sample may be strong for internal validity and weak for generalization. The foundation chapter teaches students to ask: what does this source license me to say?
+An observational study makes a different commitment. You can describe what happened in the world without intervening in it, which gives you ecological validity — your sample is from the real population, not from whoever agreed to be randomized. But you cannot say "caused." You can say "associated with," "predicted," "was related to." Causal language, in an observational study, is overreach.
 
-AI can help by generating design tradeoffs and methodological red flags. It cannot decide whether the source matters in the student's field or whether the comparison is fair. That judgment belongs to the author.
+This is not a technicality. It is not the kind of precision that only methodologists care about. It is the difference between a paper that makes a defensible argument and a paper that will be correctly challenged in peer review for overstating what the evidence supports.
 
----
-
-## 4. Worked example
-
-**Situation.** Noah wants to claim that a feedback tool improves durable learning.
-
-**Analytical process.**
-
-1. He lists each source with design, sample, measure, comparison, effect size, and limitation.
-2. He marks one study as satisfaction-only: useful for user experience, not learning.
-3. He marks another as immediate aligned post-test: useful for short-term performance, not durable retention.
-4. He identifies the best source as a randomized study with delayed assessment but notes its sample is one institution.
-
-**Resolution.** His literature review changes. Instead of "prior work shows the tool improves learning," he writes, "prior work suggests short-term performance gains, but evidence for durable retention remains limited."
-
-**The lesson.** The lesson: a source supports only the claim its design can bear.
-
-**The limit.** The limit: no checklist replaces domain expertise about which comparison or measure actually matters.
+<!-- → [TABLE: Design commitment matrix — rows: RCT, quasi-experiment, observational study, case study, meta-analysis — columns: what it licenses (association / causation / generalization), what it cannot support, when to use each] -->
 
 ---
 
-## 5. Common misconceptions
+Let me put the same idea differently, because there is a version of it that takes longer to internalize.
 
-- **A peer-reviewed source is safe to build on without inspection.** Peer review does not guarantee that the design supports the claim you want to borrow.
-- **A source that supports my topic supports my hypothesis.** A source can be relevant to the topic while failing to test the exact mechanism, population, or outcome in your hypothesis.
-- **Evaluating sources means finding flaws.** The goal is not to dismiss sources but to scope their contribution accurately.
+When you read a source, you are not just extracting findings. You are evaluating the chain from design to claim. A source makes a claim. Behind that claim is an analysis. Behind the analysis is a measurement. Behind the measurement is a sample. Behind the sample is a design. At every link in that chain, something can go wrong — not fraudulently, not carelessly, just by making choices that trade one thing for another.
 
----
+Every design choice is a trade-off. Random assignment gives you causal leverage but removes you from naturalistic conditions. A narrow sample gives you tight internal validity but weak generalizability. Immediate post-tests tell you about short-term performance but say nothing about retention. Self-report measures are scalable but susceptible to social desirability. None of these choices are mistakes. They are decisions about what the study is optimized to detect.
 
-## 6. Exercises
+Your job, when you read a source, is to reconstruct the trade-offs and ask whether the finding you want to borrow came from the part of the design that was strong, or from a part that was constrained.
 
-1. Build a six-column source matrix for three papers in your area: claim, design, sample, measure, finding, limitation.
-2. Take one causal sentence from a source and decide whether the design supports causal language. Rewrite if necessary.
-3. Ask AI for three possible designs for your hypothesis. For each, write what it can and cannot rule out.
+Noah's satisfaction paper is a good example. Satisfaction is a real outcome. It matters that students have positive experiences. But if Noah wants to claim that the intervention *improves durable learning*, then a satisfaction measure is evidence for a different claim. The paper didn't fail to measure learning because the authors were careless. They may have measured exactly what they intended to measure. Noah is the one proposing to use it for something it wasn't designed to support.
+
+<!-- → [INFOGRAPHIC: Source chain diagram — design → sample → measure → analysis → finding → claim — with annotations showing where the chain can be strained (e.g., self-selected sample strains generalization, immediate test strains retention claims)] -->
 
 ---
 
-## 7. What would change my mind
+There is a practical tool for doing this systematically, and I want to introduce it now because you will use it every time you conduct a literature review: the source matrix.
 
-This chapter would change if evidence showed that novice writers who begin with unstructured literature summaries produce more accurate claims than writers who begin with source-design matrices. The comparison would need to assess claim accuracy, not speed.
+A source matrix is not a summary table. A summary table tells you what each source found. A source matrix tells you what each source *can support* — which is a different question that requires more work to answer.
 
----
+The columns I use are: citation, hypothesis or claim the source makes, study design, sample characteristics, outcome measure, effect size or magnitude, primary limitation, and what this source licenses me to say in my own paper. That last column is the one that matters. It forces a translation from "what the paper reported" to "what I am justified in borrowing."
 
-## 8. Still puzzling
+Building the matrix before writing the literature review changes the literature review. Noah's review, once he builds the matrix, stops saying "research has shown" and starts saying something more precise: "randomized evidence supports short-term performance gains; evidence for durable retention is currently limited to one institution and one delivery format." That sentence is narrower. It is also more honest. And it sets up a genuine contribution — because if the evidence for durable retention is thin, that is a gap worth filling.
 
-- How much methodology should a first-time writer learn before drafting?
-- When is a source limitation serious enough to exclude the source rather than qualify it?
-- How should this matrix work for theoretical or interpretive scholarship?
+<!-- → [TABLE: Sample source matrix — four rows representing the four study types in Noah's example — columns: claim, design, sample, measure, finding, limitation, what it licenses] -->
 
 ---
 
-## Sources used
+The second lock — alongside the source matrix — is the evidence plan for your own study.
 
-- Appelbaum et al. 2018
-- Schulz et al. 2010
-- von Elm et al. 2007
-- Nosek et al. 2018
+An evidence plan asks: given my hypothesis, what design, sample, measure, and analysis would make the claim defensible? This is not the same as choosing a design because it is convenient or because it is what your field typically uses. It is asking, from first principles, what the claim actually requires.
 
+If your hypothesis is causal — "X causes Y" — your evidence plan needs an experimental or quasi-experimental design, or a very explicit argument for why an observational design is sufficient given the alternatives. If your hypothesis is about a mechanism — "X causes Y *because* Z" — your evidence plan needs a measure of Z, not just a measure of Y. If your hypothesis specifies a population — "among novice programmers" — your evidence plan needs a sample that actually contains novice programmers, not a convenience sample that happens to include some.
+
+This sounds obvious. It is less obvious in practice, because many research projects begin from available resources: a dataset that already exists, a classroom you have access to, a survey instrument someone else validated. Working from available resources is fine — most research does this — but the evidence plan forces an honest accounting of what those resources can and cannot support. A dataset of self-selected participants can support some claims and not others. An instrument validated in one population may or may not transfer to yours.
+
+Reporting standards exist precisely because the relationship between design and claim is easy to obscure in a polished paper. JARS, the Journal Article Reporting Standards, specifies what methodological details readers need in order to evaluate a psychology study. CONSORT does the same for clinical trials. STROBE for observational epidemiology. The details vary by field, but the underlying logic is the same: a reader cannot evaluate a finding without knowing how it was produced.
+
+<!-- → [TABLE: Reporting standards reference — JARS / CONSORT / STROBE — columns: field, what it requires, what absence of those details prevents readers from evaluating] -->
+
+---
+
+There is a version of this chapter that would take a very different approach. It would say: read a lot of sources, take notes, trust your instincts about what's relevant, and let the argument emerge from immersion in the literature. I have seen writers work this way. Some of them produce excellent papers.
+
+But the papers they produce are excellent despite the method, not because of it. When the immersion approach works, it works because the writer has accumulated, over years of reading, a tacit sense of design quality that they apply without naming it. They have internalized the source-matrix logic without building a matrix. They have learned to distinguish "associated with" from "caused by" without consciously applying that rule at every turn.
+
+That tacit knowledge is not available to a first-time writer. And even experienced writers, when working in an adjacent field or under deadline pressure, make the same mistakes as beginners — borrowing causal language from observational studies, overgeneralizing from narrow samples — because the tacit sense is domain-specific and not always active when you're tired at midnight trying to finish a literature review.
+
+The source matrix makes the tacit explicit. It is not a constraint on sophisticated thinking. It is a scaffold that forces the thinking to happen even when you would rather skip it.
 
 ---
 
-## Chapter 2 Exercises: Foundation
+What changes when you do this work before drafting?
 
-**Project:** Research Paper Submission Dossier
-**This chapter adds:** a source and study-design evaluation matrix.
+The literature review changes. Instead of reporting findings as if they were facts, you report them as claims licensed by specific designs with specific limits. That's more honest, but it is also more useful — because the places where the evidence is thin are where your contribution fits.
+
+The hypothesis changes too, sometimes. When you build the matrix and realize that existing studies have tested X but not Y, you may find that your hypothesis is already answered, or that it is unanswerable with the resources you have, or that a slight reframe makes it both more tractable and more original. This is not failure. This is the foundation doing its job.
+
+And the paper changes. A paper built on a honest source matrix is harder to overclaim. The writer has already named the limits. The claims are scoped to the evidence. The contribution is legible because the gap it fills is real.
+
+The writing, when you finally begin it, goes faster. Not because you have more material, but because you know what the material can bear.
 
 ---
+
+## Exercises
+
+### Warm-up
+
+**1.** Choose three papers relevant to your research area. For each, identify: (a) the study design, (b) the primary outcome measure, (c) one thing the design licenses the authors to claim, and (d) one thing the design does not support, even if the authors imply it. Note where your reading and the authors' own language diverge.
+
+**2.** Take one sentence from a paper's abstract that uses causal language ("improves," "causes," "leads to," "produces"). Look at the methods section and decide whether the design supports that language. If it does not, rewrite the sentence in language the design actually supports.
+
+### Application
+
+**3.** Build a source matrix for four papers relevant to your hypothesis. Use these columns: citation, study design, sample characteristics, outcome measure, effect size or magnitude, primary limitation, what this source licenses you to say. In the final column, be precise: "licenses me to say X" is not the same as "is relevant to my topic."
+
+**4.** Write an evidence plan for your own study using three design options. For each option, state: what the design can rule out, what it cannot, what sample and measure it requires, and what you would have to give up to use it. Identify which option best fits your hypothesis and explain the trade-off you accepted.
+
+### Synthesis
+
+**5.** Noah's literature review originally said "prior work consistently demonstrates that feedback tools improve learning." Rewrite that claim using the source matrix logic from this chapter, scoping it to what Noah's five sources can actually support. Then write a second sentence explaining what gap remains — and why that gap is where a new study could contribute.
+
+**6.** A classmate says: "All my sources are peer-reviewed, so my literature review is solid." Using this chapter's argument, explain why peer review does not resolve the source-evaluation problem. Give one example of a methodological limitation that peer review would not catch and that a source matrix would surface.
+
+### Challenge
+
+**7.** Find a published literature review in your field that you suspect over-relies on weak evidence — causal language from observational studies, generalized claims from narrow samples, or confidence without effect sizes. Build a source matrix for three of the papers it cites. Write a one-paragraph revision of the review's central claim that accurately represents what the cited evidence can bear. Consider: does the revised claim still support the paper's contribution, or does the contribution depend on the overclaim?
+
+---
+
+## LLM Exercises
 
 ### Exercise 1 — When to Use AI
 
