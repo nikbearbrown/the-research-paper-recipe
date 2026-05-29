@@ -1,99 +1,129 @@
 # Chapter 4 — What Does Causal Mean, Exactly?
+*Causation is not a stronger synonym for correlation — it is a different question about a world you cannot observe.*
 
-**Chapter one-line:** What Does Causal Mean, Exactly? — Counterfactuals, DAGs, Pearl's hierarchy [PLACEHOLDER]
+A paper reports that students who used an AI tutor more often scored higher on the final exam. The Discussion says the AI tutor caused the improvement.
 
----
+That sentence may be true. The study has not shown it.
 
-## 1. Learning objectives
+Here is the problem, stated precisely: high-motivation students may have used the tutor more, studied harder, attended more office hours, and scored higher on the final exam for reasons that had nothing to do with what the tutor specifically contributed. The causal verb — "caused" — has smuggled in a comparison that the study never made. It has claimed to answer the question: *what would have happened to these same students if the tutor had not existed?* That question has a name. It is called a counterfactual. And the reason causal inference is hard is that you can never observe both sides of a counterfactual at the same time.
 
-- Explain causation as a counterfactual claim (Understand).
-- Draw a simple DAG with exposure, outcome, confounder, mediator, and collider (Apply).
-- Distinguish association, intervention, and counterfactual questions (Analyze).
-- Audit causal language in a draft for design support (Evaluate).
+You either gave a student the AI tutor or you didn't. You cannot do both and compare. This is what statisticians call the fundamental problem of causal inference, and it is the reason that "correlation is not causation" is not just a methodological slogan — it is pointing at something real about what observational data can and cannot show.
 
 ---
 
-## 2. Opening case
+Let me make the counterfactual structure explicit, because once you see it, you cannot unsee it in papers you read.
 
-A paper reports that students who used an AI tutor more often scored higher on the final exam. The Discussion says the AI tutor caused the improvement. That sentence may be true. The study has not shown it. High-motivation students may have used the tutor more, studied more, and scored higher for reasons the tutor did not create. The causal verb has smuggled in an untested comparison: what would have happened to the same students if they had not used the tutor?
+When a researcher says "the intervention caused the outcome," what they are really claiming is this: if the same individuals had been exposed to the intervention, they would have had outcome Y₁; if those same individuals had instead not been exposed, they would have had outcome Y₀; and Y₁ is larger than Y₀. The causal effect, for a single person, is the difference between Y₁ and Y₀.
 
----
+The problem is that you only ever see one of those. A student either got the Socratic feedback or the direct-answer feedback. You can't give both and compare the same student against themselves. The counterfactual — what would have happened otherwise — is unobservable by definition.
 
-## 3. Core concept explanation
+This is Rubin's potential outcomes framework, and it clarifies why experimental design is so valuable. When you randomly assign students to conditions, you make the two groups — on average, across many students — interchangeable in all the ways that matter. The students who got Socratic feedback and the students who got direct-answer feedback are, by random assignment, similar in prior knowledge, motivation, study habits, and all the other things you didn't measure and couldn't control for. Which means the group that got direct-answer feedback is a credible stand-in for what the Socratic-feedback group would have scored if they'd gotten direct-answer feedback instead.
 
-A causal claim is a counterfactual claim. It asks whether the outcome would have been different if the cause had been absent or changed. Rubin's potential-outcomes framework expresses this as a comparison between observed and unobserved potential outcomes (Rubin, 1974). Because we cannot observe both states for the same unit at the same time, causal inference depends on design and assumptions.
+Random assignment doesn't let you observe the counterfactual for any individual. It creates a comparison group that approximates the counterfactual for the group on average. That's why it works. And that's why observational data — where students chose which condition they ended up in, or where assignment was based on something correlated with the outcome — struggles to support causal claims.
 
-Pearl's causal hierarchy separates association, intervention, and counterfactual questions (Pearl, 2009). Association asks what is seen. Intervention asks what happens if we do something. Counterfactuals ask what would have happened otherwise. Many papers live on the association rung and write as if they reached the counterfactual rung.
-
-Directed acyclic graphs, or DAGs, make causal assumptions visible. A confounder influences both cause and outcome. A mediator lies on the pathway from cause to outcome. A collider is caused by two variables; adjusting for it can create bias. The drawing is not evidence. It is a map of the assumptions the evidence must defend (Hernán and Robins, 2020).
+<!-- → [INFOGRAPHIC: Potential outcomes diagram — single student node branching into two worlds: treated (Y₁ observed) and untreated (Y₀ unobserved) — labeled "The fundamental problem: you only see one branch"] -->
 
 ---
 
-## 4. Worked example
+Judea Pearl organized the kinds of questions a researcher can ask into a three-level hierarchy, and it is one of the most clarifying frameworks I know for thinking about what a study can and cannot answer.
 
-**Situation.** Observed: AI tutor use is associated with higher exam scores.
+The first level is **association**: what do we see in the data? "Students who used the AI tutor more often scored higher." This is a statement about covariation. It requires only that you measure both variables. It makes no claim about why the pattern exists or what would happen if you intervened.
 
-**Analytical process.**
+The second level is **intervention**: what happens if we do something? "If we give students access to the AI tutor, their scores will improve." This is a claim about the effect of an action. It requires a design that creates a real comparison — an experiment, or something that functions like one. It is the question that randomized controlled trials are built to answer.
 
-1. Draw AI use -> exam score as the proposed causal path.
-2. Add motivation -> AI use and motivation -> exam score as a confounder.
-3. Ask whether the design randomized AI access. If not, motivation remains a plausible alternative explanation.
-4. Consider rewriting: "AI tutor use was associated with higher exam scores" or strengthening design through random assignment, natural experiment, or adjustment justified by a DAG.
+The third level is **counterfactual**: what would have happened if things had been different? "Students who did not use the tutor would have scored higher if they had." This is the deepest level — it requires reasoning about worlds that didn't happen. It is the logic behind retrospective questions like "did this treatment cause this patient's recovery?" where you cannot go back and withhold the treatment.
 
-**Resolution.** The paper can keep the association or build a causal design. It cannot keep observational evidence and write experimental verbs.
+Most observational studies in education and social science produce association-level evidence. Most researchers write at the intervention or counterfactual level. The gap between those two things is where overclaiming lives.
 
-**The lesson.** The lesson: causation is not a stronger synonym for correlation; it is a different claim.
-
-**The limit.** The limit: even strong causal designs depend on assumptions that must be stated and defended.
+<!-- → [TABLE: Pearl's causal hierarchy — three rows (association, intervention, counterfactual) — columns: the question it answers, what it requires, example claim, what it cannot support, typical study design that reaches this level] -->
 
 ---
 
-## 5. Common misconceptions
+There is a tool for making the gap visible, and it is called a directed acyclic graph — a DAG. The name is intimidating. The concept is not.
 
-- **Correlation is not causation, so causal claims are impossible outside experiments.** Some nonrandomized designs can support causal inference, but only with explicit assumptions and identification strategies.
-- **A DAG proves the causal story.** A DAG displays assumptions; it does not verify them.
-- **Controlling for more variables always improves causal inference.** Adjusting for mediators or colliders can create bias.
+A DAG is a drawing of your causal assumptions. Nodes are variables. Arrows represent causal relationships — an arrow from A to B means "A causes B." The word "acyclic" means there are no loops: you can't have A causing B causing A. The word "directed" means the arrows have a direction — they point from cause to effect.
 
----
+Here is why DAGs are useful: they force you to be explicit about what you believe is causing what, before you analyze any data. And once you've drawn the DAG, it tells you something non-obvious about how to analyze your data correctly.
 
-## 6. Exercises
+Consider our AI tutor example. You draw an arrow from AI tutor use to exam score — that's your hypothesis. But you also believe that student motivation affects how much they use the tutor and also affects their exam score independently. So you draw arrows from motivation to AI tutor use, and from motivation to exam score. Motivation is now a **confounder** — a variable that influences both the cause and the outcome, which is why the raw association between tutor use and exam scores doesn't tell you what the tutor itself contributed.
 
-1. Draw a DAG for your main hypothesis with at least one possible confounder.
-2. Find every causal verb in a draft paragraph and decide whether the design licenses it.
-3. Rewrite one causal claim into associational language and one associational design into a stronger causal design proposal.
+If you've measured motivation, you can control for it in your analysis, and the DAG tells you that you should. But if you haven't measured it — and motivation is notoriously hard to measure well — then it remains a threat to causal inference that your design has to handle some other way.
 
----
+<!-- → [IMAGE: Hand-drawn style DAG — nodes: AI tutor use, exam score, student motivation — arrows: motivation→AI tutor use, motivation→exam score, AI tutor use→exam score — confounder labeled in red] -->
 
-## 7. What would change my mind
+Now introduce a second complication. Suppose you believe that the reason Socratic feedback improves retention is that it forces students to engage more deeply — to retrieve and repair their own reasoning rather than just receiving the answer. Engagement is a **mediator**: it sits on the causal pathway from the intervention to the outcome. Engagement doesn't confound the relationship; it explains it.
 
-This chapter would change if a simpler causal framework consistently helped novice writers avoid overclaiming without introducing new misunderstandings. The current approach uses counterfactuals and DAGs because they expose assumptions directly.
+This distinction matters enormously for analysis. If you want to estimate the total effect of Socratic feedback on retention, you should not control for engagement — because engagement is part of how the effect works, and controlling for it would block the very pathway you're trying to measure. If you want to test the mechanism — to ask whether retrieval effort is what's doing the work — then you need to measure engagement and analyze it as a mediator, which is a different analysis from the main effect test.
 
----
+Many papers control for everything they measured because they believe more controls are always better. This is wrong. Controlling for a mediator when you want the total effect is a mistake. Controlling for a confounder when you want the direct effect is correct. The DAG tells you which is which.
 
-## 8. Still puzzling
-
-- How much causal notation is useful before it becomes a barrier?
-- When should beginning writers consult a statistician or methodologist rather than simplify?
-- How should causal language work in historical or interpretive research?
+<!-- → [IMAGE: DAG with mediator — nodes: Socratic feedback, retrieval effort (mediator), two-week retention — arrows: Socratic feedback→retrieval effort, retrieval effort→retention, Socratic feedback→retention (direct path dashed) — total vs. direct effect labeled] -->
 
 ---
 
-## Sources used
+There is a third structural element in DAGs that is less intuitive and more dangerous: the **collider**.
 
-- Rubin 1974
-- Pearl 2009
-- Hernán and Robins 2020
-- Angrist and Pischke 2009
+A collider is a variable that is caused by two other variables. If both AI tutor use and student anxiety independently cause a student to seek extra help, then "seeks extra help" is a collider — it has arrows pointing into it from both directions. The counterintuitive result: if you condition on a collider — if you analyze only the subgroup of students who sought extra help — you can create a spurious association between AI tutor use and anxiety that wasn't there in the full population.
 
+This is known as collider bias, and it is one of the less-obvious ways that controlling for more variables can make your causal inference worse rather than better. It shows up in selection problems (analyzing only people who completed the study, when completion is caused by two of your key variables), in stratification errors, and in certain kinds of case-control designs.
+
+The practical implication: you cannot decide what to control for by looking at what's associated with your variables. You need a causal story — a DAG — that specifies the structural relationships, and then the DAG tells you what to condition on and what to leave alone.
+
+<!-- → [IMAGE: Collider DAG — nodes: AI tutor use, student anxiety, seeks extra help (collider) — arrows pointing into collider from both — annotation: "conditioning on this node opens a spurious path"] -->
+
+---
+
+I want to be honest about something that is sometimes glossed over in methods courses.
+
+Drawing a DAG does not prove anything. A DAG is a map of your assumptions, not evidence for them. The arrows you draw represent causal relationships you believe to exist based on theory, prior research, domain knowledge, and argument. Someone else, with different beliefs about the domain, might draw different arrows and reach different conclusions about what to control for.
+
+This is not a flaw in the DAG approach. It is a feature. Making your assumptions explicit is better than leaving them implicit, because explicit assumptions can be challenged and defended. When you write "we controlled for motivation because we believe motivation independently affects both tutor use and outcomes," you have made a claim that readers can evaluate. When you write "we controlled for all available covariates," you have hidden your causal assumptions behind a procedure.
+
+The deep point, which Pearl has argued extensively, is that causal inference is never purely statistical. Statistics can tell you about patterns in data. Causal inference requires assumptions about the data-generating process — assumptions that come from the researcher's understanding of the domain, not from the data itself. The DAG is the place where those assumptions live.
 
 ---
 
-## Chapter 4 Exercises: What Does Causal Mean, Exactly?
+Now let's return to the original paper, and look at it with everything we've built.
 
-**Project:** Research Paper Submission Dossier
-**This chapter adds:** a causal-language audit and tentative DAG.
+"Students who used an AI tutor more often scored higher on the final exam. The AI tutor caused the improvement."
+
+The first sentence is association-level. It is supported by the observational data. The second sentence is intervention-level — it claims that if you gave students the tutor, scores would improve. To support that claim, the design needs something that creates a credible counterfactual: random assignment, a natural experiment where tutor access was assigned by something unrelated to motivation, an instrumental variable that predicts tutor use but doesn't independently affect scores.
+
+If none of those design features are present, the paper has two honest options. It can rewrite the second sentence in association language: "AI tutor use was associated with higher exam scores; whether this reflects a causal effect remains to be tested." Or it can propose a follow-up design that would support the causal claim: "Future work should randomly assign tutor access to isolate the effect of the tool from the selection effects that likely confound this analysis."
+
+What it cannot do, without making an error, is keep observational evidence and write experimental verbs. Causation is not a stronger synonym for correlation. It is a different claim, about a different question, requiring different evidence.
+
+The verb "caused" is not a prize for a strong correlation. It is a commitment to a counterfactual comparison that your design either supports or doesn't. When you write it, you are telling your reader something specific about what your study showed. If the study didn't show that thing, the word is wrong — not strong.
 
 ---
+
+## Exercises
+
+### Warm-up
+
+**1.** Find a Discussion section in a published paper that uses a causal verb ("caused," "produced," "led to," "resulted in," "improved"). Look at the study design in the Methods section. Does the design support a causal claim — specifically, does it create a credible counterfactual? If not, rewrite the sentence in the strongest language the design licenses.
+
+**2.** Write the counterfactual question behind your own main hypothesis. State it in the form: "What would have happened to [population] if [condition] had been [different]?" Then describe what your study design does — or doesn't do — to approximate the answer.
+
+### Application
+
+**3.** Draw a DAG for your main hypothesis. Include: the proposed cause, the proposed outcome, at least one confounder you are worried about, and (if your hypothesis includes a mechanism) the proposed mediator. Label each arrow with your justification for why you believe that causal direction exists. Identify which variables you have measured and which you haven't.
+
+**4.** Using your DAG from Exercise 3, identify which variables you should and should not control for in your main analysis, and explain why. If any variable in your design could function as a collider, describe how you would detect and handle that.
+
+### Synthesis
+
+**5.** Place the following three claims on Pearl's causal hierarchy and explain what design each would require: (a) "Students who completed more practice problems before using the tutor scored higher." (b) "Giving students access to Socratic feedback raised their exam scores by half a standard deviation." (c) "Students who failed to complete the course would have passed if they had received Socratic feedback in week three." For each, describe whether existing study designs in your field can reach that level, and if not, what would be required.
+
+**6.** A classmate argues: "I controlled for twelve covariates, so my causal inference is solid." Using the confounder, mediator, and collider framework from this chapter, explain why more controls are not always better. Give one example of a variable type that, if controlled for incorrectly, would make causal inference worse rather than better.
+
+### Challenge
+
+**7.** Identify a published observational study in your field that makes causal claims. Draw the DAG you believe the authors implicitly assumed. Then draw an alternative DAG — with different arrow directions or additional nodes — that would be consistent with the same data but would imply different analysis choices and different conclusions. Write two paragraphs explaining why the data alone cannot distinguish between your two DAGs, and what additional evidence or design feature would be required to do so.
+
+---
+
+## LLM Exercises
 
 ### Exercise 1 — When to Use AI
 
