@@ -1,0 +1,15 @@
+date,book,chapter_slug,word_count,sources_count,verify_flag_count,pantry_notes_found,pantry_lib_files_used,thin_pantry,mechanism_explained,contested_claims_flagged
+2026-05-29,the-research-paper-recipe,01-before-you-write-anything,811,4,0,yes,0,no,Topic is narrowed into a falsifiable hypothesis before prose creates false momentum.,0
+2026-05-29,the-research-paper-recipe,02-foundation,669,4,0,yes,0,no,Hypothesis; source evaluation; and design plan are locked before the literature review inherits overclaims.,0
+2026-05-29,the-research-paper-recipe,03-the-scientific-method-assertions-and-how-to-test-them,643,4,0,yes,0,no,Assertion typing determines what evidence and design the paper must provide.,0
+2026-05-29,the-research-paper-recipe,04-what-does-causal-mean-exactly,649,4,0,yes,0,no,Causal language is licensed only when the design and assumptions support the counterfactual comparison.,0
+2026-05-29,the-research-paper-recipe,05-measurement,565,4,0,yes,0,no,Constructs are inferred from instruments; so claims must be scoped to what the instrument can actually support.,0
+2026-05-29,the-research-paper-recipe,06-gigo-garbage-in-garbage-out,587,4,0,yes,0,no,Data-quality failures propagate through analysis unless diagnosed before statistical testing.,0
+2026-05-29,the-research-paper-recipe,07-statistics,592,4,0,yes,0,no,Statistical claims become defensible only when test choice; assumptions; effect size; uncertainty; and multiplicity are visible.,0
+2026-05-29,the-research-paper-recipe,08-how-to-design-a-graph,641,4,0,yes,0,no,A figure maps data to visual channels; and each channel carries specific perceptual assumptions.,0
+2026-05-29,the-research-paper-recipe,09-literature-review,582,4,0,yes,0,no,Synthesis converts individual sources into a field map that justifies the paper's niche.,0
+2026-05-29,the-research-paper-recipe,10-drafting-section-by-section,590,4,0,yes,0,no,Section order controls alignment between what the paper did; what it found; and what it claims.,0
+2026-05-29,the-research-paper-recipe,11-quality-control,538,4,0,yes,0,no,A claim audit aligns every sentence with the evidence; preventing fluent prose from laundering weak reasoning.,0
+2026-05-29,the-research-paper-recipe,12-peer-review-simulation,548,4,0,yes,0,no,Peer-review simulation exposes cross-section and evidence weaknesses before external reviewers do.,0
+2026-05-29,the-research-paper-recipe,13-ethics-and-bias-screen,606,4,0,yes,0,no,Ethical screening aligns disclosure; scope; citation balance; and accountability before submission.,0
+2026-05-29,the-research-paper-recipe,14-writing-well-prose-for-scientific-papers,625,4,0,yes,0,no,Sentence-level revision makes the claim; evidence; actor; and epistemic force visible.,0

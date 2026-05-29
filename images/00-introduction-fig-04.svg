@@ -1,0 +1,64 @@
+<!--
+  How This Book Is Organized
+  Book: The Research Paper Recipe
+  Chapter: 00-introduction
+  Figure: 04
+  Type: Structural schematic
+  Generated: 2026-05-29
+  Source: pantry/00-introduction-cajal.md
+-->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-04">
+  <title id="fig-title-04">How This Book Is Organized</title>
+  <desc>The chapters are layered as repeated confrontations with one problem: what changes when AI does part of the work but cannot own the consequences. Input is domain work, the mechanism is each practical chapter, the output is transferable judgment, bounded by accountability.</desc>
+  <metadata>
+    <cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="The Research Paper Recipe" book-slug="the-research-paper-recipe" chapter="00-introduction" figure-number="04" figure-title="How This Book Is Organized" figure-slug="how-this-book-is-organized" figure-type="Structural schematic" priority="Important" author="Humanitarians AI" date-generated="2026-05-29" source-file="pantry/00-introduction-cajal.md"/>
+  </metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/></marker>
+  </defs>
+
+  <text x="32" y="40" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">How This Book Is Organized</text>
+  <text x="32" y="58" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">A sequence of practical confrontations with one problem</text>
+
+  <!-- Layered schematic stack -->
+  <!-- Layer 1: input -->
+  <rect x="180" y="84" width="340" height="48" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="350" y="113" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Input: domain work as it used to be taught</text>
+
+  <!-- Layer 2: core mechanism (chapters) -->
+  <rect x="180" y="156" width="340" height="92" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="350" y="178" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#C8102E" font-weight="600">Core mechanism: the chapter sequence</text>
+  <rect x="200" y="192" width="140" height="40" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="270" y="216" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Introduction</text>
+  <rect x="360" y="192" width="140" height="40" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="430" y="216" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Chapter 1</text>
+  <line x1="340" y1="212" x2="358" y2="212" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Layer 3: intermediate state -->
+  <rect x="180" y="272" width="340" height="48" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="350" y="301" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Intermediate state: AI does part of the work</text>
+
+  <!-- Layer 4: regulated output -->
+  <rect x="180" y="344" width="340" height="48" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="350" y="373" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Output: transferable professional judgment</text>
+
+  <!-- Flow arrows between layers -->
+  <line x1="350" y1="132" x2="350" y2="154" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="350" y1="248" x2="350" y2="270" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="350" y1="320" x2="350" y2="342" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Boundary condition: numbered leader line -->
+  <line x1="180" y1="368" x2="96" y2="368" stroke="#C8860E" stroke-width="1"/>
+  <circle cx="92" cy="368" r="9" fill="#FFFFFF" stroke="#C8860E" stroke-width="1"/>
+  <text x="92" y="372" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="11" fill="#C8860E">1</text>
+  <text x="40" y="396" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">1 · Boundary: AI cannot own the consequences</text>
+
+  <!-- Numbered leader for mechanism -->
+  <line x1="520" y1="202" x2="604" y2="202" stroke="#C8860E" stroke-width="1"/>
+  <circle cx="608" cy="202" r="9" fill="#FFFFFF" stroke="#C8860E" stroke-width="1"/>
+  <text x="608" y="206" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="11" fill="#C8860E">2</text>
+  <text x="560" y="232" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">2 · Same</text>
+  <text x="560" y="248" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">problem,</text>
+  <text x="560" y="264" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">each chapter</text>
+</svg>
