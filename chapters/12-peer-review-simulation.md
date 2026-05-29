@@ -1,100 +1,119 @@
 # Chapter 12 — Peer-Review Simulation
+*A review that only tells you what's working is not a review — it's reassurance.*
 
-**Chapter one-line:** Peer-Review Simulation — Section-by-section review before submission
+Lina asks an AI tool to review her paper before submission. The tool tells her the paper is clear, timely, and well organized. She is relieved. The paper goes out.
 
----
+Then a human colleague reads it and asks one question: "Why does your Discussion answer a different research question than your Introduction asks?"
 
-## 1. Learning objectives
+The polite review missed the fatal mismatch. And the mismatch was fatal — not because the writing was poor, not because the statistics were wrong, but because the paper's framing and its findings had drifted apart somewhere in the drafting process, and no one had looked specifically for that.
 
-- Explain what peer reviewers evaluate (Understand).
-- Use structured review categories to triage revision (Apply).
-- Run cross-section consistency checks (Analyze).
-- Decide which simulated reviewer comments are valid (Evaluate).
+The problem with Lina's AI review is not that it was an AI review. The problem is that it was a generic review. Generic review rewards what is easy to detect: fluency, organization, apparent completeness. It misses what requires targeted attention: whether the study's central claim, the evidence that supports it, and the framing around it are actually aligned.
 
----
-
-## 2. Opening case
-
-Before submission, Lina asks an AI tool to review her paper. It says the paper is clear, timely, and well organized. She is relieved. Then a human colleague asks one question: "Why does the Discussion answer a different research question than the Introduction asks?" The polite review missed the fatal mismatch.
+A useful peer-review simulation is adversarial and specific. It is not a reassurance mechanism. It is an attempt to find the strongest reasons the paper should not be published, before a real reviewer finds them for you.
 
 ---
 
-## 3. Core concept explanation
+Before designing the simulation, it helps to understand what peer reviewers are actually doing — what the process is asking them to evaluate, and where it typically fails.
 
-Peer review is not a proof of truth. It is a structured judgment by readers who evaluate contribution, method, evidence, clarity, fit, and ethics. The process is valuable and flawed; editors and scholars have documented inconsistency, bias, and conservatism in peer review (Smith, 2006; Tennant et al., 2017).
+A peer reviewer is being asked to make a judgment about several things simultaneously: whether the paper's contribution is real and significant enough to warrant publication, whether the methods are appropriate and executed well enough to support the claims, whether the evidence actually supports the conclusions, whether the paper communicates clearly enough for its intended audience, whether it fits the venue's scope and standards, and whether it meets ethical requirements for research conduct and reporting.
 
-A useful simulation is adversarial and specific. Ask for Critical, Major, and Minor issues. Ask for the strongest reason to reject. Ask whether the Results answer the Introduction's question, whether the Abstract matches the Results, and whether the Discussion overclaims the design. Narrow prompts beat generic "review this" prompts.
+That is a large and heterogeneous set of judgments, and the peer review literature documents extensively that reviewers vary widely in which of these they prioritize, how consistently they apply standards, and how much their assessments reflect the paper's actual quality versus factors like the authors' institutional affiliation, the favorability of the results, or the reviewer's own theoretical commitments. A landmark analysis documented that reviewer agreement is often not much better than chance. This is not a scandal — it is a description of what expert judgment under uncertainty looks like — but it does mean that peer review is not a proof of anything. Acceptance does not mean the paper is right. Rejection does not mean the paper is wrong.
 
-AI review has boundaries. Some journals restrict uploading unpublished manuscripts to AI systems because of confidentiality. Current editorial guidance treats authors as accountable for AI-assisted work and may require disclosure (ICMJE, 2026). Use tools only within venue and institutional rules.
-
----
-
-## 4. Worked example
-
-**Situation.** Lina runs a peer-review simulation.
-
-**Analytical process.**
-
-1. Prompt 1: "Give Critical/Major/Minor issues with section references."
-2. Prompt 2: "What is the strongest reason to reject?"
-3. Prompt 3: "Compare the Introduction hypothesis to the Results tests."
-4. Prompt 4: "Does the Discussion claim causation beyond the design?"
-5. She rejects one irrelevant comment about a method her field does not use, but keeps the cross-section mismatch.
-
-**Resolution.** The revision plan separates fatal alignment repairs from minor polish. The paper gets harder to reject because its claim, evidence, and sections now agree.
-
-**The lesson.** The lesson: simulated review is useful only when it is specific enough to hurt.
-
-**The limit.** The limit: AI cannot replace a real reviewer with domain expertise, venue knowledge, and accountability.
+What peer review provides, at its best, is informed external perspective from someone who has read the paper carefully and is accountable for their assessment. What simulation can approximate is the careful reading and the structured critique — not the domain expertise, the venue knowledge, or the accountability.
 
 ---
 
-## 5. Common misconceptions
+The key design principle for a useful simulation is that the questions must be specific enough to require a specific answer.
 
-- **A positive AI review means the paper is ready.** Generic AI reviews often reward fluency and miss field-specific weaknesses.
-- **Every reviewer comment should be followed.** Comments must be triaged by validity, severity, and fit to the paper's claim.
-- **Peer review only checks writing.** Reviewers check contribution, evidence, design, ethics, and fit.
+"Please review this paper" is not a useful prompt. It will produce a response that covers everything generally and nothing specifically — the equivalent of Lina's polite review. The simulation becomes useful when you ask targeted questions that force engagement with the paper's actual structure and evidence.
 
----
+Here is a set of questions that consistently surfaces the problems worth knowing about before submission.
 
-## 6. Exercises
+**What are the Critical, Major, and Minor issues?**
 
-1. Run a Critical/Major/Minor review prompt on one section and convert the output into a revision table.
-2. Ask for the strongest rejection reason and write whether you agree.
-3. Compare your Abstract to your Results and list every mismatch.
+The three-tier distinction is standard in peer review and useful in simulation because it forces prioritization. A Critical issue is one that, if unresolved, prevents the paper from being publishable — fatal methodological flaws, claims that directly contradict the evidence, missing essential information. A Major issue is one that requires significant revision but doesn't necessarily preclude publication if addressed — evidence that's weaker than claimed, missing comparisons, scope claims that need qualification. A Minor issue is one that improves quality but isn't essential — phrasing, citation formatting, minor presentation choices.
 
----
+The value of asking for all three tiers, labeled by tier, is that it prevents the common pattern where everything is treated as roughly equivalent. If a simulation produces ten comments and all of them are labeled equally, the author has no way to know which of those comments represents a paper-killing problem and which represents a preference the reviewer happens to have. The tier labels force a triage.
 
-## 7. What would change my mind
+**What is the strongest reason to reject?**
 
-This chapter would change if journals converged on stable, permissive AI-review policies and robust private tools for confidential peer-review simulation. Current policy variation requires caution.
+This question asks the simulation to take a position rather than a list. The strongest reason to reject is a single argument — the most compelling case that the paper should not be published as is. It might be a design flaw, a missing control, a scope overclaim, or a fundamental mismatch between claim and evidence. Asking for it explicitly ensures that the simulation does not bury a fatal problem inside a list of mostly minor concerns.
 
----
+The answer to this question is the one you most need to evaluate carefully. If the simulation names a problem you recognize — if you know it's real and were hoping it would go unnoticed — you have two choices: address it or withdraw. If the simulation names a problem you believe is invalid — if the method it criticizes is standard in your field, or if the concern reflects a misunderstanding of your approach — you have learned something about how the paper communicates, and you need to explain the choice more clearly.
 
-## 8. Still puzzling
+**Does the Discussion answer the research question the Introduction asks?**
 
-- How can authors use AI review without violating confidentiality?
-- When should a simulated critique be ignored as outside the field's norms?
-- How can students learn to receive critique without treating it as identity threat?
+This is the question Lina's colleague asked. It is the cross-section consistency check that generic review most reliably misses. The Introduction establishes a specific question or hypothesis. The Results tests something. The Discussion interprets the Results. In a well-constructed paper, these three things refer to the same question. In a paper where drafting order was not carefully managed, or where the scope shifted during writing, they may have drifted apart.
 
----
+The simulation is asked to compare the Introduction's stated question or hypothesis against the tests reported in Results, and to flag any gap. A gap here is a Critical issue. It means the paper is answering a question it didn't ask, or not answering the question it did ask, or both.
 
-## Sources used
+**Does the Discussion claim causation or generalization that the design does not support?**
 
-- Smith 2006
-- Tennant et al. 2017
-- Munafò et al. 2017
-- ICMJE 2026
+This is the assertion-type audit from Chapter 3 applied to the finished paper. The simulation is specifically asked to look for causal verbs in observational designs, scope claims broader than the sample, certainty language for uncertain findings. These are the claims that are most likely to have drifted in during the discussion-writing process and least likely to be caught by prose editing.
 
+<!-- → [TABLE: Simulation prompt structure — four rows: Critical/Major/Minor categories, strongest rejection reason, Introduction-to-Results alignment check, Discussion overclaim audit — columns: what the prompt asks, what a good response looks like, what a bad response looks like, how to triage the output] -->
 
 ---
 
-## Chapter 12 Exercises: Peer-Review Simulation
+The output of a simulated review needs to be triaged — evaluated, not just followed.
 
-**Project:** Research Paper Submission Dossier
-**This chapter adds:** a reviewer-style critique and revision plan.
+Not every comment from a simulated review is valid. Some will reflect the simulation's tendency to hedge everything as uncertain, or to apply standards from a different methodological tradition, or to note omissions that are standard practice in your field. Your job is to evaluate each comment using the same criteria you'd apply to a real reviewer's comment: is this a legitimate concern about my specific paper, does it reflect a genuine weakness I should address, or is it a generic preference that doesn't apply here?
+
+A useful triage framework: for each simulated comment, decide whether it is valid and serious (fix before submission), valid but minor (fix if time allows), invalid but pointing to a communication gap (improve the explanation), or invalid and irrelevant (discard, but note why you disagree). Writing the reason you're discarding a comment is not optional. If you cannot articulate why a comment is wrong, you haven't established that it is wrong — you've established that you don't want it to be right.
+
+The cross-section mismatches and the overclaim flags are the comments to take most seriously, because they are the ones generic review is least likely to catch and real reviewers are most likely to find. The word choice and paragraph structure comments are the ones to take least seriously in the first pass — they are real but not fatal, and addressing them before the structural issues are resolved wastes time.
+
+<!-- → [TABLE: Comment triage categories — four rows: valid and serious, valid but minor, invalid but revealing, invalid and irrelevant — columns: definition, what to do, example, why you must articulate the reason for discarding] -->
 
 ---
+
+There is a constraint that must be stated clearly, because it varies by venue and has legal and professional implications.
+
+Some journals explicitly prohibit uploading unpublished manuscripts to third-party AI systems for peer-review simulation, on the grounds that this exposes confidential pre-publication work to systems whose data handling practices are not covered by the journal's confidentiality expectations. Before running any simulation that involves uploading your full manuscript to an external tool, check your target journal's author guidelines and your institution's policies. "I ran the paper through an AI tool" may need to be disclosed in the submission, depending on the venue.
+
+The practical alternative for venues with restrictive policies: run the simulation on individual sections rather than the full manuscript, or on synthetic versions of your arguments rather than the actual text. You can describe your study design and claim to a simulation tool without submitting the manuscript, and ask the targeted questions about logical consistency and overclaiming on that description. This is less thorough but still useful, and it stays within appropriate boundaries.
+
+The ICMJE (International Committee of Medical Journal Editors) has addressed AI use in research writing, and editorial guidance across fields has been evolving toward treating authors as accountable for AI-assisted work and requiring disclosure when AI played a role in manuscript preparation. Check the current guidance for your specific venue rather than assuming a uniform policy.
+
+---
+
+Peer review is adversarial in the right way. A good peer reviewer is not trying to be kind. They are trying to make the paper publishable — which means finding every reason it might not be, so the author has the chance to fix those things. The simulation is useful when it adopts that stance.
+
+The failure mode Lina experienced — polite, reassuring, superficial — is the failure mode that characterizes generic review in any form, human or AI. A human reviewer who is friends with the author, or who doesn't want to deliver bad news, or who is reviewing quickly and running out of time will produce a review that looks like a review and functions like a pass. A simulation that is prompted generically will do the same.
+
+The difference between a useful review and a reassuring one is whether the review can find the strongest case against the paper. Not whether it is harsh. Whether it is specific. A harsh review that criticizes stylistic choices while missing a design flaw is not a useful review. A precise review that identifies the one thing most likely to cause rejection — even if it is uncomfortable to hear — is the one worth having before submission.
+
+"The strongest reason to reject" is the question that makes a simulation useful. If the answer to that question is something you can genuinely address, you have saved yourself a rejection. If the answer is something the simulation got wrong, explaining why it's wrong is part of understanding your own paper well enough to defend it.
+
+---
+
+## Exercises
+
+### Warm-up
+
+**1.** Take one section of a draft you are working on and run the following targeted simulation with an AI tool: "Give me Critical, Major, and Minor issues with this section, labeled by tier, with specific references to the text. For each Critical issue, explain what would need to change for the issue to be resolved." Triage the output: which comments are valid and serious, which are valid but minor, which reveal a communication gap, and which are invalid? Write one sentence of justification for each comment you are discarding.
+
+**2.** Without looking at your Results section, write out your research question as it appears in the Introduction. Then write out the test you actually ran — the comparison, the outcome measure, the timing. Compare the two. Is the question and the test referring to the same thing? If there is any gap, describe it.
+
+### Application
+
+**3.** Ask an AI tool: "What is the single strongest reason to reject a study that [describes your study in 100 words or less]?" Evaluate the response. If the identified weakness is real, write a plan for addressing it before submission. If the identified weakness is invalid, write the explanation you would give a real reviewer who raised it — not a dismissal, but a specific argument for why the concern doesn't apply to this design or this field.
+
+**4.** Run the cross-section consistency check on your paper. Ask an AI tool to compare your Introduction's stated hypothesis or research question with the statistical tests in your Results section and the conclusions in your Discussion. Report any mismatches the simulation identifies, triage them (valid/invalid, serious/minor), and write the revision required to close each valid mismatch.
+
+### Synthesis
+
+**5.** Design a complete pre-submission simulation protocol for the AI tutoring study: specify the four targeted questions you would ask, in what order, and what you would do with the output at each step. Then explain what the simulation cannot tell you — what kinds of weaknesses require a human domain expert to detect, and what you would ask that human expert to look for specifically.
+
+**6.** Lina's AI tool reviewed her paper and called it clear, timely, and well organized. Using this chapter's framework, explain what the tool was optimizing for when it produced that response, why that optimization missed the Introduction-Discussion mismatch, and what prompt Lina should have used to surface the problem. Write the specific prompt.
+
+### Challenge
+
+**7.** Find a published paper that you believe has a mismatch between its Introduction's stated research question and its Discussion's conclusions — a paper where the Discussion answers a somewhat different question than the Introduction asked. Write the peer-review comment you would have submitted as a reviewer: name the mismatch specifically, explain why it is a Critical rather than a Minor issue, and describe what revision would be required to resolve it. Then write the author's response to your comment — the explanation or revision the authors could plausibly offer. Evaluate whether the author's response resolves the issue or deflects it.
+
+---
+
+## LLM Exercises
 
 ### Exercise 1 — When to Use AI
 
