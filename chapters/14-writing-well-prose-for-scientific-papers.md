@@ -1,100 +1,117 @@
 # Chapter 14 — Writing Well: Prose for Scientific Papers
+*Clear prose is claim discipline at the scale of the sentence.*
 
-**Chapter one-line:** Writing Well — Prose quality, clarity, precision, economy, flow
+Here is a sentence from a draft Discussion section:
 
----
+"An improvement in performance was observed following implementation of the intervention."
 
-## 1. Learning objectives
+The sentence is grammatical. It follows the conventions of scientific register. A first reading produces no alarm. And it contains almost no information.
 
-- Identify prose features that obscure scientific claims (Understand).
-- Revise nominalizations, vague quantifiers, and evasive passives (Apply).
-- Calibrate epistemic verbs to evidence strength (Evaluate).
-- Rewrite a paragraph so the claim, actor, and evidence are visible (Create).
+Who improved? On what measure? Compared to what? How much? By whose observation? These are not pedantic questions. They are the questions that determine whether the sentence is actually saying anything. Stripped of the nominalization and the passive voice, the sentence might become: "Students in the Socratic feedback group scored four points higher on the delayed post-test than students in the direct-answer group." That version says something. It names the actor, the comparison, the measure, and the direction. A reader can evaluate it. A reader can use it.
 
----
+The original sentence wears a lab coat. It sounds like science. It performs the register of scientific writing without doing its job, which is to move a specific claim from the writer to the reader with as little distortion as possible.
 
-## 2. Opening case
-
-The draft says, "An improvement in performance was observed following implementation of the intervention." The sentence is grammatical. It hides the actor, the measure, the comparison, and the size of the change. Scientific prose can fail while sounding scientific. The job of the sentence is not to wear a lab coat. It is to move a claim from writer to reader with as little distortion as possible.
+This is the problem that prose quality addresses — not whether the writing is elegant, but whether it is precise enough for the claims it is carrying. And precision in scientific prose is not a stylistic virtue. It is an epistemic one.
 
 ---
 
-## 3. Core concept explanation
+Nominalization is the most common source of fog in scientific writing, and it is worth understanding specifically because it is so easy to produce and so hard to notice in your own prose.
 
-Scientific prose is a precision instrument. Gopen and Swan argue that readers interpret sentences through expectations about topic position, stress position, and logical flow (Gopen and Swan, 1990). Williams and Bizup teach the same practical lesson through characters and actions: make the central actor the subject and the central action the verb when clarity requires it (Williams and Bizup).
+A nominalization is a verb or adjective that has been converted into a noun. "Improve" becomes "improvement." "Analyze" becomes "analysis." "Measure" becomes "measurement." "Intervene" becomes "intervention." Each of these conversions moves the action from the verb position — where it carries the sentence's energy and makes actors visible — to the noun position, where it sits passively and hides who did what to whom.
 
-Fog appears as nominalization, noun strings, vague quantifiers, unnecessary passive voice, and hedging that no longer matches the evidence. Passive voice is not forbidden. It is useful when the actor is irrelevant: "Samples were analyzed." It becomes a problem when it hides decisions: "Outliers were removed" without saying who removed them and by what rule.
+The test for a nominalization: find any noun ending in -tion, -ment, -ance, -ence, -ity, or -al, and ask whether it was once a verb or adjective. If it was, ask whether restoring it to its original form would make the sentence clearer. Often it would. "The observation of improvement in performance" restores to "Students in the Socratic group improved their performance" — and that version has a subject (students), a verb (improved), and an object (performance), which gives the sentence a structure the reader can follow.
 
-Good hedging is calibrated. "Demonstrates" is strong and often causal. "Suggests" is moderate. "Is consistent with" is minimal. A sentence can be overconfident, but it can also be underconfident when excessive hedging makes a clear result sound like a rumor.
+Not all nominalizations are problems. "The randomization was stratified by prior programming experience" uses a nominalization appropriately — "randomization" is the right term for this concept, and the sentence is clear. The problem is when nominalizations stack: "The implementation of the intervention resulted in the observation of significant improvement in student learning outcomes." Every meaningful action in that sentence is hidden inside a noun. The sentence is impenetrable not because the ideas are hard but because the prose has removed all the structure that would make them accessible.
 
----
-
-## 4. Worked example
-
-**Situation.** Original sentence: "A significant improvement in student outcomes was observed after implementation."
-
-**Analytical process.**
-
-1. Find the nominalization: improvement. Ask who improved and on what.
-2. Find vague terms: significant, outcomes, implementation. Ask statistical or practical significance? Which outcome?
-3. Restore actor and measure: "Students in the intervention group scored higher on the delayed posttest."
-4. Add evidence: "...than students in the control group, t(62) = 2.47, p = .016, d = 0.63."
-5. Calibrate verb: if randomized, "scored higher after receiving" may be acceptable; if observational, use "was associated with."
-
-**Resolution.** Revised: "Students in the intervention group scored higher on the delayed posttest than students in the control group, t(62) = 2.47, p = .016, d = 0.63."
-
-**The lesson.** The lesson: clear prose is claim discipline at sentence scale.
-
-**The limit.** The limit: some disciplines require conventional phrasing, but convention should not hide decisions or inflate claims.
+<!-- → [TABLE: Nominalization audit — six example sentences with stacked nominalizations — columns: original sentence, nominalizations identified, restored actor-action version, what changed in clarity] -->
 
 ---
 
-## 5. Common misconceptions
+Vague quantifiers are the second major source of fog, and they are particularly problematic in scientific writing because scientific claims require precision.
 
-- **Scientific writing should sound impersonal.** Scientific writing should be accountable. Sometimes that is impersonal; sometimes it requires naming the decision-maker.
-- **Hedging always makes a claim safer.** Unnecessary hedging can make evidence harder to interpret and can understate a real result.
-- **Style is separate from truth.** Verb choice, scope, and precision can change the claim itself.
+"Some students improved." How many? "A significant improvement." Statistical or practical significance? "Most participants reported..." What percentage? "Performance increased substantially." By how much? Each of these vague quantifiers creates the appearance of a specific claim while withholding the information that would make it specific.
 
----
+The remedy is almost always to replace the vague quantifier with an actual number, percentage, or scoped phrase. "Some students improved" becomes "14 of 35 students in the Socratic group improved by more than one standard deviation." "A significant improvement" becomes "a statistically significant improvement, *p* = .016, *d* = 0.63, 95% CI [0.11, 1.14]." "Most participants reported" becomes "73% of participants (n = 51 of 70) reported."
 
-## 6. Exercises
-
-1. Find every -tion, -ment, -ance, and -ence noun in a paragraph. Convert three back into verbs.
-2. Replace every vague quantifier in a paragraph with a number, percentage, or scoped phrase.
-3. Choose the right epistemic verb for three findings: demonstrate, show, indicate, suggest, appear, or is consistent with.
+The vague quantifier often appears because the writer doesn't have the number — they haven't looked it up, or they've summarized loosely. This is a different problem from the nominalization, which is usually a stylistic habit. The vague quantifier is often a knowledge gap masquerading as a stylistic choice. When you find one, check whether you have the number. If you do, use it. If you don't, go find it. If you genuinely can't find it because the data wasn't collected, the sentence may be overclaiming.
 
 ---
 
-## 7. What would change my mind
+Passive voice is the element of scientific prose that generates the most categorical advice and the least nuanced guidance. "Never use passive" is wrong. "Passive voice hides important information" is right as a caution but wrong as a rule. The distinction is between informative passive and evasive passive.
 
-This chapter would change if evidence showed that conventional opaque prose improves expert comprehension more than clear actor-action prose. Until then, clarity and precision remain the default standard.
+**Informative passive** makes the actor irrelevant or suppresses the actor appropriately. "Samples were analyzed using a high-performance liquid chromatography method." The actor — whoever ran the machine — is genuinely irrelevant to what the reader needs to know. Passive is correct here. "Participants were randomly assigned to conditions using a computer-generated sequence." The procedure is what matters, not who ran the randomization software. Passive is correct.
 
----
+**Evasive passive** hides a decision-maker in order to avoid accountability. "Outliers were removed." Who removed them? By what rule? When? If the rule was pre-specified and applies equally to all conditions, that belongs in the Methods section with the rule named. If the rule was not pre-specified, the passive voice is concealing a researcher degree of freedom. "Three participants were excluded due to incomplete data." Were they excluded before or after the outcomes were examined? Did excluding them change the result? The passive hides these questions. The active voice — "We excluded three participants whose post-test data were missing before conducting any outcome analyses" — makes the accountability explicit.
 
-## 8. Still puzzling
+The test: when you find a passive, ask whether the actor is genuinely irrelevant or whether naming the actor would require saying something the sentence is currently hiding. If naming the actor would reveal a decision that should be disclosed, the passive is evasive and the decision should be reported.
 
-- How direct can prose be before it violates a field's register?
-- When does simplification remove necessary nuance?
-- How should writers preserve their own voice after AI-assisted editing?
+<!-- → [TABLE: Passive voice audit — four example sentences — columns: passive version, actor identified, whether actor is relevant, revised version (active or informative passive), what became visible in the revision] -->
 
 ---
 
-## Sources used
+The most consequential prose choice in a scientific paper is the epistemic verb — the word that characterizes the relationship between your evidence and your claim.
 
-- Gopen and Swan 1990
-- Williams and Bizup
-- Helen Sword 2012
-- Orwell 1946
+"Demonstrates" is a strong verb. It implies that the evidence is sufficient to establish the claim with high confidence. It is appropriate when the design is strong, the effect is large and robust, and the alternative explanations have been ruled out. It is often used when the evidence is much weaker than it implies.
 
+"Shows" is slightly softer but still implies substantial evidence. "Indicates" is moderate — the evidence points in this direction. "Suggests" is weaker — the evidence is consistent with this interpretation but does not establish it. "Is consistent with" is weaker still — the evidence doesn't contradict this interpretation, but it doesn't particularly support it either.
+
+The calibration between verb and evidence is not a matter of tone. It is a matter of accuracy. A study with observational data and a modest effect size that "demonstrates" a causal relationship has overstated its evidence. A study with a well-powered randomized trial and a replicated effect that "is consistent with" an association has understated its evidence. Both are errors. Both mislead readers about how much the finding should update their beliefs.
+
+Here is the practical rule: for each epistemic verb in your Discussion, ask what kind of evidence would justify that verb. Then ask whether your study provides that kind of evidence. If the answer is no, change the verb.
+
+A related issue: excessive hedging. A paper that uses "appears to suggest" and "may perhaps indicate" throughout its Discussion has been hedged into incoherence. Some of this hedging is genuine epistemic humility — the evidence is uncertain and the writer is being honest. But some of it is defensive writing — the writer is protecting against every possible objection by refusing to commit to any claim. Defensive hedging does not produce a safer claim. It produces an unreadable one. Calibrated hedging names the actual uncertainty. Defensive hedging names no uncertainty at all, because it is hiding, not disclosing.
+
+<!-- → [TABLE: Epistemic verb calibration — rows: demonstrates, shows, indicates, suggests, is consistent with — columns: what strength of evidence it implies, what design would justify it, example in context] -->
 
 ---
 
-## Chapter 14 Exercises: Writing Well: Prose for Scientific Papers
+The sentence structure principle that runs through all of this comes from a paper by George Gopen and Judith Swan that argued for a model of reading as expectation-based. Readers, they argued, expect certain kinds of information in certain positions. The subject position sets up what the sentence is about. The stress position — usually the end of the sentence — is where new, important information lands.
 
-**Project:** Research Paper Submission Dossier
-**This chapter adds:** a prose revision and claim-drift check for the final dossier.
+The implication for scientific prose: the sentence should open on what the reader already knows (topic position) and close on the new information that the sentence is adding (stress position). A sentence that buries its finding in a subordinate clause at the beginning and ends on a reference number has put its information in the wrong positions. The reader's cognitive machinery reads the reference number as the sentence's most important element.
+
+This is a subtle principle and it does not need to be followed mechanically. But it is useful for diagnosing why a paragraph that seems clear on re-reading was confusing on first reading. Often the culprit is information in the wrong position — the new claim buried where the familiar context should be, the qualification at the end where the finding should be.
+
+The Williams and Bizup principle complements this: when a sentence is hard to follow, look for the central actor and the central action. Make the actor the grammatical subject. Make the action the main verb. Everything else is secondary. "The intervention, which was implemented over six weeks in an introductory programming course, resulted in outcomes that were significantly better in the treatment group" has an actor (the intervention) in subject position, but the action is buried in "resulted in outcomes that were significantly better." Restored: "Students who received the intervention for six weeks scored significantly higher on the post-test than control students." Actor clear. Action clear. Information in the right positions.
 
 ---
+
+One last thing, because prose quality occupies a specific position in the book's sequence that is worth naming.
+
+This chapter comes after the claim audit, the peer-review simulation, and the ethics screen. That sequence is intentional. Prose quality is the last thing to address, not the first, because improving the prose before the claims are correct can make the wrong thing more convincing. An elegant sentence that overstates the evidence is more dangerous than an awkward sentence that overstates the evidence, because elegance suppresses critical reading. Clean it last.
+
+But clean it. A correct claim expressed in fog is harder to evaluate than a correct claim expressed clearly. The reader who cannot find the actor, the comparison, the measure, and the scope in your sentence cannot tell whether the claim is supported. Opacity protects nothing. It just makes the reader's job harder and creates the impression — usually wrong — that you are hiding something.
+
+Scientific prose is a precision instrument. Its job is not to sound scientific. Its job is to deliver a specific claim, scoped accurately, hedged appropriately, with the actor and evidence visible, in a form that allows evaluation. That is a high standard. It is the right standard.
+
+---
+
+## Exercises
+
+### Warm-up
+
+**1.** Take one paragraph from a Methods or Results section. Find every noun ending in -tion, -ment, -ance, -ence, -ity, or -al. For each, ask whether it was once a verb or adjective, and whether restoring it would make the sentence clearer. Convert at least three nominalizations back into the actor-action structure. Read the original and revised paragraphs aloud. Note which version requires less re-reading.
+
+**2.** Find five vague quantifiers in a draft — "some," "most," "many," "significantly," "substantial," or similar. For each, find the specific number, percentage, or statistical value that would replace it. If you cannot find the number, note why and decide whether the sentence should be revised or the data retrieved.
+
+### Application
+
+**3.** Take the following sentence and run it through all four analyses in this chapter: (a) identify nominalizations and restore them; (b) replace vague quantifiers with specific values; (c) identify whether the passive is informative or evasive, and revise if evasive; (d) calibrate the epistemic verb to appropriate evidence strength. Original sentence: "A significant improvement in learning outcomes was observed following implementation of the feedback intervention, suggesting that the provision of hints promotes the development of understanding."
+
+**4.** Read through the Discussion section of a paper you are working on. Highlight every epistemic verb. For each, ask: what strength of evidence would justify this verb, and does my study provide that evidence? List any verbs that need to be strengthened (understated evidence) or weakened (overstated evidence), and write the revised sentence for each.
+
+### Synthesis
+
+**5.** Take a paragraph from your Discussion that you believe summarizes your main finding. Apply the Gopen-Swan principle: for each sentence, identify where the topic information is (what the reader already knows) and where the stress information is (the new claim). Is the new information at the end? Is the topic information at the beginning? Revise any sentence where important information is in the wrong position. Compare the original and revised paragraph for first-reading clarity.
+
+**6.** A colleague asks an AI tool to "clean up" their Discussion section before running a claim audit. The AI produces a more fluent version that changes "was associated with" to "demonstrates" in two sentences and removes several hedges. Explain the specific problem this creates, using the epistemic verb calibration principle from this chapter. Write the rule your colleague should follow for sequencing AI prose editing and claim audit.
+
+### Challenge
+
+**7.** Find a paragraph in a published paper that you believe has at least three of the following problems: stacked nominalizations, vague quantifiers, evasive passive, miscalibrated epistemic verb, and information in the wrong sentence position. Rewrite the paragraph applying all four analyses from this chapter. For each change, write one sentence explaining what the problem was and what the revision corrects. Then check that the rewritten version has not changed the paper's actual scientific claim — that clarity improvement has not silently altered the scope, causal force, or hedge level of the original finding.
+
+---
+
+## LLM Exercises
 
 ### Exercise 1 — When to Use AI
 
