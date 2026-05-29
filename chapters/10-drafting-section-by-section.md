@@ -7,6 +7,20 @@ Weeks later, the data are collected and analyzed. The findings are real but narr
 
 Rewriting the Introduction to match the actual results takes more than editing. It takes dismantling an argument that was constructed to support a different paper, and rebuilding it to support this one. The labor is real. More importantly, the mistake was avoidable. The Introduction was written first not because it needs to be written first — it doesn't — but because that is where it appears in the final document. Confusing reading order with drafting order is a surprisingly easy mistake to make, and a costly one.
 
+Before the drafting order makes sense, the sections themselves need to be clear — not just their names, but their specific jobs:
+
+- **Methods** — what was done and how. The full procedural record: design, participants, materials, procedure, and analysis plan. Written so that another researcher could run the same study without asking you anything.
+
+- **Results** — what was found, without interpretation. Every finding reported in hypothesis order, with effect sizes and uncertainty, but no explanation of why the pattern occurred or what it implies. The reader receives the evidence before encountering your interpretation of it.
+
+- **Discussion** — what the findings mean and don't mean. The inferential layer: how the results fit with prior work, what the limits of the evidence are, what the findings imply for theory or practice, and where the argument stops. This is where "what happened" becomes "what it means."
+
+- **Introduction** — why this question, why now, what gap. Establishes the territory, identifies the specific gap the study addresses, and announces the study's purpose. Written last so the frame matches the actual contribution rather than the intended one.
+
+- **Abstract** — the complete paper compressed to stand alone. A reader with access only to the abstract should understand the design, the findings, the limits, and the implications — accurately, without needing to open the paper.
+
+- **Title** — a search tool and a promise about the claim. Names the intervention, the outcome, the population, and ideally the key finding or frame. A good title tells a searching researcher whether this paper is relevant to their question before they open it.
+
 ---
 
 The empirical paper has a conventional reading order: Introduction, Methods, Results, Discussion, Abstract. That order was designed for readers, not writers. It presents the context before the findings, which is what a reader needs to understand what they're about to encounter. But a writer who drafts in reading order is constantly working with information they don't yet have: writing an Introduction before knowing what the results are, writing a Discussion before knowing what the Results section will say.
