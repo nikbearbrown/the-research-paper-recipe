@@ -1,99 +1,111 @@
 # Chapter 13 — Ethics and Bias Screen
+*Ethics is the final form of claim calibration — what you disclose, what you scope, and what you owe the reader.*
 
-**Chapter one-line:** Ethics and Bias Screen — Disclosure, generalization, replication fitness
+Here is a paper that looks fine on inspection.
 
----
+The study is small — 43 volunteers from one undergraduate programming course at one university. The Conclusion says the findings "demonstrate how students learn with AI tutoring." The literature review cites eight sources, all reporting positive effects of AI feedback on learning outcomes. An AI tool rewrote the Discussion for clarity; the author decided this was only a style improvement and added no disclosure. The limitations section describes one limitation — sample size — and frames it as minor given the consistency of findings.
 
-## 1. Learning objectives
+None of these choices is dramatic. No data was fabricated. No result was misreported. The statistics are correctly calculated and honestly presented. And yet the paper is less honest than it needs to be. The claim "how students learn with AI tutoring" is not what 43 volunteers from one course demonstrates. The eight supportive citations do not represent what the field found — they represent one corner of what the field found. The AI assistance that reshaped the Discussion did affect the argument, even if the facts themselves didn't change. The limitations section names one thing and implies the evidence is otherwise solid.
 
-- Identify disclosure obligations for conflicts, funding, ethics approval, and AI assistance (Understand).
-- Audit claims for overgeneralization from narrow samples (Analyze).
-- Check a literature review for confirmatory citation bias (Evaluate).
-- Write an AI-use disclosure that names tool and task (Create).
+Each gap is small. Together they add up to a paper that overstates its generalizability, conceals its intellectual debt, and gives readers insufficient information to calibrate how much to trust the findings.
 
----
-
-## 2. Opening case
-
-The study is small, local, and useful. The Conclusion says the findings show how students learn with AI. The literature review cites only supportive studies. AI helped rewrite the Discussion, but no disclosure appears because the author thinks the tool only improved style. None of these choices looks dramatic alone. Together, they make the paper less honest than it needs to be.
+This chapter is about finding those gaps before submission.
 
 ---
 
-## 3. Core concept explanation
+Disclosure is the most procedurally clear layer of the ethics screen, so it is a good place to start.
 
-Ethics in research writing is not only about institutional approval. It is about accountability for claims. Authors must disclose conflicts, funding, human-subjects approval where relevant, limitations, and assistance that affects the work. Publication-ethics bodies state that AI tools cannot be authors because they cannot take responsibility; human authors remain accountable for all content (COPE, 2023; ICMJE, 2026).
+Publication ethics bodies have established that authors are accountable for all content in a paper — regardless of who or what produced any of it. The COPE (Committee on Publication Ethics) guidelines and ICMJE statements both address this: AI tools cannot be listed as authors, because authorship carries accountability for the work, and AI systems cannot take that accountability. The human authors who used AI tools remain fully responsible for the content those tools helped produce.
 
-Bias enters through sampling, citation, interpretation, and disclosure. A narrow sample does not forbid a paper, but it constrains the claim. A literature review that cites only friendly sources may produce a false sense of consensus. A Discussion that universalizes from a local case makes readers carry a conclusion the study did not earn.
+The practical implication is disclosure: when AI tools contributed to the work in any substantive way, that contribution should be named. What "substantive" means is not universally defined, and different journals have different thresholds. Some require disclosure of any AI assistance in the manuscript preparation process. Some require disclosure only for AI involvement in data analysis or interpretation. Some are still developing their policies. The only reliable approach is to check the target journal's current author guidelines before submission.
 
-The ethics screen asks whether the paper could survive replication, scrutiny, and disclosure. If the answer depends on hiding a limitation, omitting a null result, smoothing over AI assistance, or ignoring contrary evidence, the paper is not ready.
+The disclosure should be specific. Not "AI tools were used" — which tells the reader nothing — but "An AI language model (Claude, Anthropic) was used to assist with restructuring the Discussion section for clarity. All substantive content, including all claims, citations, and interpretations, was produced by the authors and verified independently." This sentence tells the reader what was done, who or what did it, and what the human authors retained responsibility for.
 
----
+The common rationalization for omitting disclosure is that the AI "only helped with style" and therefore doesn't count as substantive assistance. This rationalization is problematic for two reasons. First, style and substance are not fully separable in research writing — how a Discussion is structured determines what claims are foregrounded and how uncertainty is communicated. Second, journal policies don't always make this distinction, and an author who omits disclosure based on their own judgment about what counts may be violating the policy of the venue they're submitting to. When in doubt, disclose. A disclosure that wasn't required costs nothing. An omitted disclosure that was required can cost the paper.
 
-## 4. Worked example
-
-**Situation.** A student study uses 43 volunteers from one university course and AI assistance for copyediting and code comments.
-
-**Analytical process.**
-
-1. Sample claim audit: replace "students learn" with "students in this course sample performed."
-2. Disclosure audit: state whether AI was used for copyediting, code generation, figure drafting, or analysis suggestions according to target-journal policy.
-3. Citation audit: add credible contrary or null findings if the review currently cites only supportive evidence.
-4. Replication audit: check whether materials, measures, and analysis decisions are available enough for another researcher.
-
-**Resolution.** The paper becomes more modest and more trustworthy. Its limitations are not confessions of failure; they are instructions for reading the evidence correctly.
-
-**The lesson.** The lesson: ethics is the final form of claim calibration.
-
-**The limit.** The limit: AI and journal policies change quickly, so every submission needs a current policy check.
+<!-- → [TABLE: AI disclosure template — rows: different types of AI use (analysis, writing/restructuring, code generation, figure preparation, literature search assistance) — columns: example disclosure language, what the disclosure must name, what human accountability statement is needed] -->
 
 ---
 
-## 5. Common misconceptions
+The second layer of the ethics screen is overgeneralization — and this is where the ethical question and the epistemic question become the same question.
 
-- **Ethics is only IRB paperwork.** IRB is one layer; disclosure, sampling, bias, and accountable interpretation are also ethical.
-- **Small studies should hide their limits.** Small studies can be valuable when claims are scoped honestly.
-- **If AI only edited prose, disclosure never matters.** Policies vary. Some require disclosure for substantive assistance, and authors must check the venue.
+A narrow sample does not forbid a paper. Studies with small, local samples can be valuable, precisely because they produce detailed knowledge about a specific context. The ethical problem is not the sample size. The ethical problem is claiming more generalizability than the sample supports.
 
----
+"Students learn more effectively with Socratic AI feedback" is a claim about students in general. "Students in this sample — 43 undergraduates in an introductory programming course at a research university — showed higher delayed retention scores in the Socratic feedback condition" is a claim about this sample. The first claim is what a reader takes away when they encounter the finding in an abstract or conclusion. The second claim is what the evidence actually supports.
 
-## 6. Exercises
+The gap between these two claims is not just a stylistic difference. It is the difference between a paper that instructs instructors about what to do for their students, and a paper that reports a finding in a specific context that may or may not generalize to theirs. Readers who encounter the broader claim and act on it are operating on information the study didn't earn. The author who wrote the broader claim is responsible for that.
 
-1. Write a limitations paragraph that names sample, design, measure, and timescale without apologizing.
-2. Audit a reference list for one-sided citation patterns.
-3. Draft an AI-use disclosure naming tool and task, then compare it to a target journal policy.
+The practical audit: for every generalization in the Abstract, Introduction, and Conclusion, identify the sample it is based on. If the sample is specific — particular institution, particular course level, particular population characteristics — the claim needs to reflect that specificity. Not through disclaimers appended to the end of the sentence, but through the structure of the claim itself. "In our sample of introductory programming students" is part of the subject, not an afterthought.
 
----
+Limitations sections are the natural home for this, and most papers have them. The problem with many limitations sections is that they treat the limitations as apologies rather than as instructions for reading. A limitations section that says "the small sample size limits generalizability" and then returns to claiming broad implications is not doing the work it claims to do. A limitations section that specifies which aspects of the findings are specific to this context and which might plausibly extend further — and why — is doing genuine epistemic service.
 
-## 7. What would change my mind
-
-This chapter would change if scholarly publishing adopted a universal AI-use disclosure standard. Until then, the safest rule is to check the target venue and disclose substantive assistance clearly.
+<!-- → [TABLE: Overgeneralization audit — rows: Abstract, Introduction niche statement, Discussion conclusion, Limitations — columns: what broad claim appears, what the sample actually is, revised language scoped to sample] -->
 
 ---
 
-## 8. Still puzzling
+Citation bias is the third layer, and it is the one that is easiest to rationalize away.
 
-- How much AI assistance is enough to require disclosure?
-- How can authors assess citation diversity without making demographic assumptions from names?
-- What level of materials sharing is reasonable for sensitive or proprietary data?
+The natural impulse when building a literature review is to find sources that support the argument you want to make. This is partly appropriate — you are building a case, and the sources are your evidence. The problem arises when the selection becomes systematically one-sided: citing only the studies that found positive effects, omitting the null findings, citing the larger effects and not the smaller ones, ignoring the methodological critiques.
 
----
+Research on publication bias and citation bias documents that this is not a hypothetical problem. Fanelli demonstrated that the proportion of positive results in published papers has increased over time, which suggests either that research has become more efficient or that negative findings are systematically underrepresented. A literature review built on published sources inherits that bias unless the author actively looks for contrary evidence.
 
-## Sources used
+The citation audit asks: is this literature review representative of what the field actually found, or only of what got published and what I chose to cite? The check is not just about whether disconfirming evidence exists — it's about whether the review's characterization of the field is accurate.
 
-- COPE 2023
-- ICMJE 2026
-- Fanelli 2009
-- Munafò et al. 2017
+The practical steps: search specifically for null findings, for methodological critiques, for replications that found smaller effects. Note what proportion of your citations found positive, mixed, or null effects. If the answer is all positive, either the field has unusually consistent findings (which should be noted) or you have inadvertently built a one-sided review (which needs correcting). A literature review that acknowledges "most studies found positive effects, though several observational studies found null effects when controlling for prior ability" is more trustworthy than one that presents convergent positive evidence without noting that some of the convergence may be selection effects.
 
+This is not the same as both-sidesing every literature review with artificial balance. It is the difference between accurately characterizing what is known and presenting a curated selection that overstates consensus.
 
 ---
 
-## Chapter 13 Exercises: Ethics and Bias Screen
+There is a fourth layer of the ethics screen that is less about disclosure and more about future-use accountability: replication fitness.
 
-**Project:** Research Paper Submission Dossier
-**This chapter adds:** an ethics, bias, and disclosure checklist.
+A paper that cannot be replicated is a paper that makes a claim the field cannot verify. Replication fitness is not identical to full open science — some data is legitimately sensitive or proprietary, some materials are protected, some analyses require specific software licenses. But it is a question every author should ask: if another researcher wanted to test whether this finding holds in a different sample, what would they need, and is that information available?
+
+At minimum, replication fitness requires that the methods be described in enough detail that another researcher could implement the same design. The intervention should be specified precisely enough to reproduce. The measures should be named and referenced. The analysis decisions — the ones that matter, including the pre-specified primary outcome, the exclusion criteria, the covariates — should be reported.
+
+The researcher who omits these details may be protecting intellectual property or simplifying a complex protocol. The cost is that the finding cannot be tested. A finding that cannot be tested is one that the community of researchers cannot build on — they can cite it, but they cannot know whether it holds beyond this sample and this context.
+
+The ethics screen asks whether the paper is written in a way that allows scrutiny. Not whether it invites challenge, but whether the information needed for challenge is present.
 
 ---
+
+The chapter's central claim deserves to be stated plainly: ethics in research writing is not only about institutional approval, consent forms, and conflict-of-interest statements. Those things matter. They are also the layer that gets the most attention and often the only layer that gets systematic attention. But they are the beginning of the ethics question, not the end of it.
+
+The deeper ethics question is: does this paper give its readers an accurate picture of what was found, in a form that allows them to evaluate it and act on it appropriately? That question runs through the scope of the claims, the representativeness of the citations, the completeness of the disclosures, the specificity of the limitations, and the adequacy of the methods description.
+
+None of these are decorative requirements. They are what it means for a research paper to be honest. The study was small and local and useful. Saying it was small and local and useful is not a failure. It is what allows the finding to contribute accurately to the field. A small, local finding reported honestly is more valuable than a small, local finding reported as if it were universal — because the honest version can be integrated correctly, while the overstated version will eventually be found out and discounted, along with anything the author writes thereafter.
+
+Ethics is the final form of claim calibration. The earlier chapters calibrated the claim against design, measurement, data quality, and statistics. This chapter calibrates the claim against accountability: who knows what, what was disclosed, what was concealed, and whether a reader who trusted this paper would be well served or misled.
+
+---
+
+## Exercises
+
+### Warm-up
+
+**1.** Read the Abstract and Conclusion of a paper you are working on or have found. For every generalization — every claim about "students," "learners," "practitioners," or other general groups — identify the specific sample the finding is based on. Rewrite each generalization so that its subject accurately reflects the sample. Note which revisions change the paper's apparent contribution and which do not.
+
+**2.** Draft an AI-use disclosure for a study in which: an AI language model was used to suggest alternative phrasings for the Discussion section, AI-generated code was used to produce the data visualizations (with all values supplied by the researcher), and an AI tool was used to generate initial search terms for the literature review. Write the disclosure in a form that would satisfy a journal that requires disclosure of any substantive AI assistance. Then check it against one published journal's author guidelines for AI use.
+
+### Application
+
+**3.** Audit the reference list of a literature review — either your own or a published paper's. Sort the citations by finding direction: positive, null, mixed, or unclear. Calculate the proportion in each category. If the positive proportion is substantially higher than what you'd expect from a representative sample of the field, write the sentence that should appear in the literature review acknowledging this pattern.
+
+**4.** Write a limitations paragraph for the AI tutoring study. The sample is 43 undergraduates at one research university in one programming course. The design is randomized but the attrition was differential. The measure is a two-week delayed retention test on programming concepts covered in the course. Write the paragraph in a form that names the limitations as instructions for reading — what the findings apply to, what they do not, and what would be needed to extend them — rather than as apologies.
+
+### Synthesis
+
+**5.** A paper's current Conclusion reads: "These findings demonstrate that Socratic AI feedback improves learning outcomes for students, with implications for instructional design across higher education." Run the overgeneralization audit on this sentence. Identify every claim that outpaces the sample (43 undergraduates, one institution, one course, two-week delayed retention on programming concepts). Then rewrite the Conclusion in the most specific language that the evidence can support — language that names the actual contribution without shrinking from it.
+
+**6.** The student in the chapter's opening case decided that AI assistance with "only style" did not require disclosure. Write a response that explains why this reasoning is problematic, using three distinct arguments: one about the style/substance distinction, one about the author's accountability, and one about journal policy. Conclude with the disclosure the author should have written.
+
+### Challenge
+
+**7.** You are preparing to submit the AI tutoring study to a journal. Find the current author guidelines for one relevant journal in your field. Check them for: AI disclosure requirements, limitations-section requirements, data/materials sharing requirements, and conflict-of-interest requirements. Write the full disclosure section — all four components — that you would include in your submission, using the actual journal's requirements as your standard. Note any requirement that the study as described would not currently satisfy, and describe what would need to change.
+
+---
+
+## LLM Exercises
 
 ### Exercise 1 — When to Use AI
 
