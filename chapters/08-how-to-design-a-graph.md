@@ -69,7 +69,7 @@ A bar chart with error bars could be showing any of three different things: the 
 
 The **standard deviation** shows how spread out the individual observations are. Error bars representing one standard deviation above and below the mean capture approximately 68% of observations if the distribution is normal.
 
-The **standard error of the mean** shows how uncertain the estimate of the mean is. It equals the standard deviation divided by the square root of the sample size. For large samples, the standard error is small even when individual scores are widely dispersed. An error bar showing one standard error looks tight and precise even when the distribution of individual scores is wide.
+The **standard error of the mean** shows how uncertain the estimate of the mean is. It equals the standard deviation divided by the square root of the sample size (SE = SD / √n). For large samples, the standard error is small even when individual scores are widely dispersed. An error bar showing one standard error looks tight and precise even when the distribution of individual scores is wide. This is the same √n in the denominator that lets a large sample manufacture a tiny p-value out of a trivial effect — the mechanism Chapter 7 works through. A standard-error bar is the visual form of that trap: it narrows with sample size, so it can make a negligible difference look decisive.
 
 A **confidence interval** shows the range of values consistent with the data at a specified confidence level — typically 95%. It is wider than one standard error (approximately 1.96 standard errors for 95%) and is the most interpretable form for research communication, because it directly answers: what effect sizes are consistent with what we observed?
 
