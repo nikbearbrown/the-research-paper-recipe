@@ -21,7 +21,7 @@ This is Rubin's potential outcomes framework, and it clarifies why experimental 
 
 Random assignment doesn't let you observe the counterfactual for any individual. It creates a comparison group that approximates the counterfactual for the group on average. That's why it works. And that's why observational data — where students chose which condition they ended up in, or where assignment was based on something correlated with the outcome — struggles to support causal claims.
 
-<!-- → [INFOGRAPHIC: Potential outcomes diagram — single student node branching into two worlds: treated (Y₁ observed) and untreated (Y₀ unobserved) — labeled "The fundamental problem: you only see one branch"] -->
+![Figure 4.1 — A causal effect is the difference between two potential outcomes for the same individual, but only one is ever observed, making the counterfactual unobservable by definition.](../images/04-what-does-causal-mean-exactly-fig-01.png)
 
 ---
 
@@ -35,7 +35,7 @@ The third level is **counterfactual**: what would have happened if things had be
 
 Most observational studies in education and social science produce association-level evidence. Most researchers write at the intervention or counterfactual level. The gap between those two things is where overclaiming lives.
 
-<!-- → [TABLE: Pearl's causal hierarchy — three rows (association, intervention, counterfactual) — columns: the question it answers, what it requires, example claim, what it cannot support, typical study design that reaches this level] -->
+![Figure 4.2 — Pearl's three rungs — association, intervention, counterfactual — form an ascending ladder where each higher level answers a deeper question and demands a stronger study design.](../images/04-what-does-causal-mean-exactly-fig-02.png)
 
 ---
 
@@ -49,7 +49,7 @@ Consider our AI tutor example. You draw an arrow from AI tutor use to exam score
 
 If you've measured motivation, you can control for it in your analysis, and the DAG tells you that you should. But if you haven't measured it — and motivation is notoriously hard to measure well — then it remains a threat to causal inference that your design has to handle some other way.
 
-<!-- → [IMAGE: Hand-drawn style DAG — nodes: AI tutor use, exam score, student motivation — arrows: motivation→AI tutor use, motivation→exam score, AI tutor use→exam score — confounder labeled in red] -->
+![Figure 4.3 — A confounder is a variable with arrows into both the proposed cause and the outcome, which is why the raw cause-outcome association does not isolate the cause's contribution.](../images/04-what-does-causal-mean-exactly-fig-03.png)
 
 Now introduce a second complication. Suppose you believe that the reason Socratic feedback improves retention is that it forces students to engage more deeply — to retrieve and repair their own reasoning rather than just receiving the answer. Engagement is a **mediator**: it sits on the causal pathway from the intervention to the outcome. Engagement doesn't confound the relationship; it explains it.
 
@@ -57,7 +57,7 @@ This distinction matters enormously for analysis. If you want to estimate the to
 
 Many papers control for everything they measured because they believe more controls are always better. This is wrong. Controlling for a mediator when you want the total effect is a mistake. Controlling for a confounder when you want the direct effect is correct. The DAG tells you which is which.
 
-<!-- → [IMAGE: DAG with mediator — nodes: Socratic feedback, retrieval effort (mediator), two-week retention — arrows: Socratic feedback→retrieval effort, retrieval effort→retention, Socratic feedback→retention (direct path dashed) — total vs. direct effect labeled] -->
+![Figure 4.4 — A mediator lies on the causal pathway between cause and outcome, so the cause's total effect splits into an indirect route through the mediator and a residual direct route.](../images/04-what-does-causal-mean-exactly-fig-04.png)
 
 ---
 
@@ -69,7 +69,7 @@ This is known as collider bias, and it is one of the less-obvious ways that cont
 
 The practical implication: you cannot decide what to control for by looking at what's associated with your variables. You need a causal story — a DAG — that specifies the structural relationships, and then the DAG tells you what to condition on and what to leave alone.
 
-<!-- → [IMAGE: Collider DAG — nodes: AI tutor use, student anxiety, seeks extra help (collider) — arrows pointing into collider from both — annotation: "conditioning on this node opens a spurious path"] -->
+![Figure 4.5 — A collider is a variable with arrows pointing into it from two otherwise-unrelated causes, so conditioning on it opens a spurious association between those causes.](../images/04-what-does-causal-mean-exactly-fig-05.png)
 
 ---
 

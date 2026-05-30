@@ -1,0 +1,43 @@
+<!-- The Key-Message Constraint | Book: The Research Paper Recipe | Chapter: 10-drafting-section-by-section | Figure: 03 | Generated: 2026-05-29 | Source: pantry/10-drafting-section-by-section-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-03">
+  <title id="fig-title-03">The Key-Message Constraint</title>
+  <desc>A key-message sentence sits outside and above a drafted section as an external constraint. The section can fail two ways: under-delivery, saying less than it promised, or over-delivery, claiming more than the evidence licenses. The constraint catches both.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="10-drafting-section-by-section" figure-number="03" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/></marker>
+  </defs>
+
+  <text x="32" y="40" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">The Key-Message Constraint</text>
+  <text x="32" y="58" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">One sentence, outside the section, that the section must deliver exactly &#8212; no less, no more</text>
+
+  <!-- constraint capsule, outside and above -->
+  <rect x="220" y="96" width="260" height="56" rx="0" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="350" y="120" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#C8102E" font-weight="600">KEY-MESSAGE SENTENCE</text>
+  <text x="350" y="138" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">external constraint &#8212; not part of the section</text>
+
+  <!-- governing arrow -->
+  <line x1="350" y1="152" x2="350" y2="218" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="358" y="190" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">governs</text>
+
+  <!-- the section box, calibrated -->
+  <rect x="240" y="222" width="220" height="80" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="350" y="256" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">DRAFTED SECTION</text>
+  <text x="350" y="276" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">aligned: delivers exactly</text>
+  <text x="350" y="291" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">what the message promises</text>
+
+  <!-- under-delivery chevron (left, pointing down/short) -->
+  <polygon points="120,232 180,232 150,272" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="150" y="300" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#C8102E" font-weight="600">UNDER-DELIVERY</text>
+  <text x="150" y="318" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">says less than promised</text>
+  <line x1="240" y1="262" x2="184" y2="262" stroke="#545454" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- over-delivery chevron (right, pointing up) -->
+  <polygon points="520,272 580,272 550,232" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="550" y="300" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#C8102E" font-weight="600">OVER-DELIVERY</text>
+  <text x="550" y="318" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">claims more than licensed</text>
+  <line x1="460" y1="262" x2="516" y2="262" stroke="#545454" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <text x="32" y="372" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Because the sentence lives outside the section, it can judge drift in either direction: too little, or too much.</text>
+  <text x="32" y="392" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Write the key message first; then the section's only job is to honour it precisely.</text>
+</svg>

@@ -1,0 +1,52 @@
+<!-- Epistemic Verb Calibration Scale | Book: The Research Paper Recipe | Chapter: 14-writing-well-prose-for-scientific-papers | Figure: 03 | Generated: 2026-05-29 | Source: pantry/14-writing-well-prose-for-scientific-papers-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-03 fig-desc-03">
+<title id="fig-title-03">The Epistemic Verb Calibration Scale</title>
+<desc id="fig-desc-03">Five epistemic verbs ordered left to right from strongest to weakest evidential commitment — demonstrates, shows, indicates, suggests, is consistent with — sitting on a single axis above a tapering wedge that narrows rightward to encode decreasing evidence strength.</desc>
+<metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="14-writing-well-prose-for-scientific-papers" figure-number="03" date-generated="2026-05-29"/></metadata>
+<rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+
+<text x="60" y="48" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">Match the verb to the strength of your evidence</text>
+
+<!-- end labels -->
+<text x="70" y="92" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" font-weight="600" fill="#C8102E">STRONGEST commitment</text>
+<text x="630" y="92" text-anchor="end" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" font-weight="600" fill="#545454">WEAKEST commitment</text>
+
+<!-- axis line -->
+<line x1="70" y1="172" x2="630" y2="172" stroke="#2a1a0e" stroke-width="1.5"/>
+
+<!-- five boxes sitting on the axis. centers at 120, 240, 350, 460, 575 -->
+<!-- box 1 demonstrates (strongest, red emphasis) -->
+<rect x="70" y="112" width="100" height="60" fill="#C8102E" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="120" y="148" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="15" fill="#FFFFFF">demonstrates</text>
+<line x1="120" y1="172" x2="120" y2="180" stroke="#2a1a0e" stroke-width="1.5"/>
+
+<!-- box 2 shows -->
+<rect x="185" y="112" width="100" height="60" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="235" y="148" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="15" fill="#2a1a0e">shows</text>
+<line x1="235" y1="172" x2="235" y2="180" stroke="#2a1a0e" stroke-width="1.5"/>
+
+<!-- box 3 indicates -->
+<rect x="300" y="112" width="100" height="60" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="350" y="148" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="15" fill="#2a1a0e">indicates</text>
+<line x1="350" y1="172" x2="350" y2="180" stroke="#2a1a0e" stroke-width="1.5"/>
+
+<!-- box 4 suggests -->
+<rect x="415" y="112" width="100" height="60" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="465" y="148" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="15" fill="#2a1a0e">suggests</text>
+<line x1="465" y1="172" x2="465" y2="180" stroke="#2a1a0e" stroke-width="1.5"/>
+
+<!-- box 5 is consistent with (weakest, white outline) -->
+<rect x="530" y="112" width="100" height="60" fill="#FFFFFF" stroke="#545454" stroke-width="1.5"/>
+<text x="580" y="142" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="13" fill="#2a1a0e">is consistent</text>
+<text x="580" y="160" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="13" fill="#2a1a0e">with</text>
+<line x1="580" y1="172" x2="580" y2="180" stroke="#2a1a0e" stroke-width="1.5"/>
+
+<!-- tapering wedge below: tall at left, point at right -->
+<polygon points="70,200 630,232 70,264" fill="#F5F5F5" stroke="#545454" stroke-width="1"/>
+<text x="90" y="236" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">strong proof</text>
+<text x="540" y="228" text-anchor="end" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">weak proof</text>
+
+<!-- caption -->
+<text x="60" y="320" font-family="'EB Garamond',Georgia,serif" font-size="15" fill="#2a1a0e">Overclaiming swaps a weak result for a strong verb. Underclaiming buries a real one.</text>
+<text x="60" y="346" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#545454">When the evidence changes, change the verb — not the other way around.</text>
+</svg>

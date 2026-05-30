@@ -1,0 +1,33 @@
+<!-- Bars of means hide the distribution | Book: The Research Paper Recipe | Chapter: 08-how-to-design-a-graph | Figure: 05 | Generated: 2026-05-29 | Source: pantry/08-how-to-design-a-graph-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-05 fig-desc-05"><title id="fig-title-05">Bars of means hide the distribution</title><desc id="fig-desc-05">Two conditions with the same mean look identical as bars. The raw points below reveal that the left condition is a tight unimodal cluster while the right is bimodal, split high and low, despite sharing a mean.</desc><metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="08-how-to-design-a-graph" figure-number="05" date-generated="2026-05-29"/></metadata>
+<rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+<text x="350" y="30" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">Equal means, opposite distributions</text>
+<!-- TOP ROW: two bars same height -->
+<text x="60" y="56" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="bold">What the bars show</text>
+<rect x="80" y="64" width="540" height="130" fill="#F5F5F5"/>
+<line x1="80" y1="194" x2="620" y2="194" stroke="#2a1a0e" stroke-width="1.2"/>
+<line x1="80" y1="64" x2="80" y2="194" stroke="#2a1a0e" stroke-width="1.2"/>
+<!-- both bars same height ~110 -->
+<rect x="200" y="84" width="90" height="110" fill="#545454"/>
+<rect x="410" y="84" width="90" height="110" fill="#545454"/>
+<text x="245" y="212" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Condition A</text>
+<text x="455" y="212" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Condition B</text>
+<!-- BOTTOM ROW: raw points -->
+<text x="60" y="248" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#C8102E" font-weight="bold">What the bars hide</text>
+<rect x="80" y="256" width="540" height="130" fill="#F5F5F5"/>
+<line x1="80" y1="386" x2="620" y2="386" stroke="#2a1a0e" stroke-width="1.2"/>
+<line x1="80" y1="256" x2="80" y2="386" stroke="#2a1a0e" stroke-width="1.2"/>
+<!-- mean line at y=321 (center) -->
+<line x1="80" y1="321" x2="620" y2="321" stroke="#D4D4D4" stroke-width="1" stroke-dasharray="4 3"/>
+<!-- A: tight unimodal cluster around 321 -->
+<circle cx="232" cy="318" r="2.6" fill="#545454"/><circle cx="248" cy="324" r="2.6" fill="#545454"/><circle cx="240" cy="312" r="2.6" fill="#545454"/><circle cx="256" cy="328" r="2.6" fill="#545454"/><circle cx="244" cy="330" r="2.6" fill="#545454"/><circle cx="236" cy="326" r="2.6" fill="#545454"/><circle cx="252" cy="316" r="2.6" fill="#545454"/><circle cx="245" cy="321" r="2.6" fill="#545454"/><circle cx="258" cy="322" r="2.6" fill="#545454"/><circle cx="234" cy="314" r="2.6" fill="#545454"/>
+<line x1="245" y1="311" x2="245" y2="331" stroke="#C8102E" stroke-width="1.4"/>
+<circle cx="245" cy="321" r="4.5" fill="#C8102E"/>
+<!-- B: bimodal high and low -->
+<circle cx="438" cy="272" r="2.6" fill="#545454"/><circle cx="452" cy="278" r="2.6" fill="#545454"/><circle cx="446" cy="284" r="2.6" fill="#545454"/><circle cx="460" cy="274" r="2.6" fill="#545454"/><circle cx="442" cy="280" r="2.6" fill="#545454"/>
+<circle cx="438" cy="368" r="2.6" fill="#545454"/><circle cx="452" cy="362" r="2.6" fill="#545454"/><circle cx="446" cy="372" r="2.6" fill="#545454"/><circle cx="460" cy="366" r="2.6" fill="#545454"/><circle cx="442" cy="358" r="2.6" fill="#545454"/>
+<line x1="455" y1="311" x2="455" y2="331" stroke="#C8102E" stroke-width="1.4"/>
+<circle cx="455" cy="321" r="4.5" fill="#C8102E"/>
+<text x="245" y="404" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">tight, unimodal</text>
+<text x="455" y="404" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">bimodal, split high &amp; low</text>
+</svg>

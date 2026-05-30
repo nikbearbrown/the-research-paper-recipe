@@ -1,0 +1,54 @@
+<!-- Generic Review vs Adversarial Simulation | Book: The Research Paper Recipe | Chapter: 12-peer-review-simulation | Figure: 01 | Generated: 2026-05-29 | Source: pantry/12-peer-review-simulation-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-01">
+  <title id="fig-title-01">Generic Review vs. Adversarial Simulation</title>
+  <desc>The same four review targets, scanned two ways. Generic review reaches fluency, organization, and completeness but misses claim-evidence-frame alignment, the one fatal target, marked with a red flag. Adversarial simulation drives straight at alignment and de-prioritizes the surface targets.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="12-peer-review-simulation" figure-number="01" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/></marker>
+  </defs>
+
+  <text x="32" y="40" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">Generic Review vs. Adversarial Simulation</text>
+  <text x="32" y="58" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Generic review rewards the surface and skips the fatal target; adversarial review aims at it</text>
+
+  <!-- column targets header positions -->
+  <text x="120" y="92" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Fluency</text>
+  <text x="270" y="92" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Organization</text>
+  <text x="420" y="92" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Completeness</text>
+  <text x="590" y="84" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E" font-weight="600">Claim-evidence-</text>
+  <text x="590" y="98" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E" font-weight="600">frame alignment</text>
+
+  <!-- GENERIC band -->
+  <text x="32" y="138" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#545454" font-weight="600">GENERIC</text>
+  <text x="32" y="154" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#545454" font-weight="600">REVIEW</text>
+  <rect x="60" y="120" width="120" height="56" fill="#FFFFFF" stroke="#C8860E" stroke-width="1.5"/>
+  <text x="120" y="153" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">reached</text>
+  <rect x="210" y="120" width="120" height="56" fill="#FFFFFF" stroke="#C8860E" stroke-width="1.5"/>
+  <text x="270" y="153" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">reached</text>
+  <rect x="360" y="120" width="120" height="56" fill="#FFFFFF" stroke="#C8860E" stroke-width="1.5"/>
+  <text x="420" y="153" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">reached</text>
+  <rect x="530" y="120" width="120" height="56" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="590" y="153" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">missed</text>
+  <!-- miss flag -->
+  <line x1="650" y1="120" x2="650" y2="100" stroke="#C8102E" stroke-width="1.5"/>
+  <polygon points="650,100 672,107 650,114" fill="#C8102E"/>
+
+  <!-- ADVERSARIAL band -->
+  <text x="32" y="258" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">ADVERSARIAL</text>
+  <text x="32" y="274" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">SIMULATION</text>
+  <rect x="60" y="240" width="120" height="56" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="120" y="273" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">de-prioritized</text>
+  <rect x="210" y="240" width="120" height="56" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="270" y="273" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">de-prioritized</text>
+  <rect x="360" y="240" width="120" height="56" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="420" y="273" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">de-prioritized</text>
+  <rect x="530" y="240" width="120" height="56" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="2"/>
+  <text x="590" y="266" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e" font-weight="600">reached</text>
+  <text x="590" y="282" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">central target</text>
+  <!-- arrow into alignment -->
+  <line x1="590" y1="320" x2="590" y2="298" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="590" y="338" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">aims here</text>
+
+  <text x="32" y="380" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">The red flag marks the one target generic review never reaches &#8212; the alignment that decides whether the paper holds.</text>
+  <text x="32" y="400" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">An adversarial prompt spends its attention where the fatal failures actually live.</text>
+</svg>

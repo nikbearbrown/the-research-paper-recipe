@@ -17,7 +17,7 @@ This is Karl Popper's insight, and it is one of the genuinely clarifying ideas i
 
 What Popper argued — and what every working researcher knows from experience, even if they didn't learn it from Popper — is that the intellectual content of a claim comes precisely from what it rules out. A claim that says "students who receive Socratic AI feedback will retain programming skills better two weeks later than students who receive direct-answer feedback, because retrieval effort consolidates memory" is specific enough to be wrong. The experimental group might not outperform the control. The retention effect might appear immediately but not at two weeks. The mechanism might be entirely different from what you predicted. Each of those outcomes would damage the claim. That damage is the point. It's the cost of saying something real.
 
-<!-- → [INFOGRAPHIC: Popper falsifiability ladder — from vague topic ("AI tutoring") to falsifiable hypothesis ("Socratic feedback improves two-week retention because retrieval effort consolidates memory") — show what each level rules out] -->
+![Figure 1.1 — A claim gains intellectual content as it is compressed from a vague topic into a falsifiable hypothesis that specifies what would count against it.](../images/01-before-you-write-anything-fig-01.png)
 
 ---
 
@@ -31,7 +31,7 @@ A hypothesis is a prediction with a mechanism. "Socratic AI feedback improves tw
 
 The paper doesn't begin until you have the hypothesis. Not the topic. Not the question. The hypothesis.
 
-<!-- → [TABLE: Three-column comparison — Topic / Research Question / Hypothesis — rows: definition, what it rules out, what evidence would look like, whether it can be false] -->
+![Figure 1.2 — A topic has no edges, a research question can be answered in principle, and a hypothesis is a falsifiable prediction with a mechanism.](../images/01-before-you-write-anything-fig-02.png)
 
 ---
 
@@ -57,7 +57,7 @@ If you run an experiment with only two conditions — Socratic feedback vs. dire
 
 This is not a preliminary step before "real" research. This is the research. The intellectual work of a paper is not the writing. It is the thinking that happens here — before a word of prose is drafted — when you are forcing the claim to have edges.
 
-<!-- → [INFOGRAPHIC: Rival hypothesis tree — starting from "AI tutoring improves retention," branching into four competing mechanisms — labels showing which experiment design would distinguish them] -->
+![Figure 1.3 — One observed result can be produced by several distinct mechanisms, and the research design must be chosen to distinguish them.](../images/01-before-you-write-anything-fig-03.png)
 
 ---
 
@@ -85,7 +85,7 @@ The test is not "does this read like a real paper?" The test is: can I state the
 
 Write that sentence first. Everything else is downstream of it.
 
-<!-- → [TABLE: Fluent but hollow vs. specific and falsifiable — five example claims side by side, showing how the vague version can accommodate any finding while the specific version cannot] -->
+![Figure 1.4 — A fluent claim can accommodate any finding while a specific claim can be contradicted, so prose polish is not evidence of a testable claim.](../images/01-before-you-write-anything-fig-04.png)
 
 ---
 

@@ -1,0 +1,64 @@
+<!-- Rival Hypotheses for One Result | Book: The Research Paper Recipe | Chapter: 01-before-you-write-anything | Figure: 03 | Generated: 2026-05-29 | Source: pantry/01-before-you-write-anything-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-03">
+  <title id="fig-title-03">Rival Hypotheses for One Result</title>
+  <desc>One observation — AI tutoring improves retention — fans into four competing mechanisms, each demanding a different distinguishing measurement that the research design must supply.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="01-before-you-write-anything" figure-number="03" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#2a1a0e"/></marker>
+  </defs>
+
+  <text x="32" y="38" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">Rival Hypotheses for One Result</text>
+  <text x="32" y="56" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">"AI tutoring improves retention" — but which mechanism produced it?</text>
+
+  <!-- Root node: shared observation -->
+  <rect x="250" y="78" width="200" height="48" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="350" y="100" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">Observed: retention</text>
+  <text x="350" y="116" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">improves</text>
+
+  <!-- Branch lines to four children -->
+  <line x1="350" y1="126" x2="90" y2="178" stroke="#2a1a0e" stroke-width="1"/>
+  <line x1="350" y1="126" x2="263" y2="178" stroke="#2a1a0e" stroke-width="1"/>
+  <line x1="350" y1="126" x2="437" y2="178" stroke="#2a1a0e" stroke-width="1"/>
+  <line x1="350" y1="126" x2="610" y2="178" stroke="#2a1a0e" stroke-width="1"/>
+
+  <!-- Child A -->
+  <rect x="16" y="180" width="148" height="58" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="90" y="202" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">More practice</text>
+  <text x="90" y="218" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">time on task</text>
+  <!-- Child B -->
+  <rect x="189" y="180" width="148" height="58" fill="#FFFFFF" stroke="#545454" stroke-width="1"/>
+  <text x="263" y="202" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Personalized</text>
+  <text x="263" y="218" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">pacing</text>
+  <!-- Child C -->
+  <rect x="363" y="180" width="148" height="58" fill="#FFFFFF" stroke="#545454" stroke-width="1"/>
+  <text x="437" y="202" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Immediate</text>
+  <text x="437" y="218" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">feedback</text>
+  <!-- Child D (neutral rival) -->
+  <rect x="536" y="180" width="148" height="58" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="610" y="202" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Novelty — any</text>
+  <text x="610" y="218" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">new tool helps</text>
+
+  <!-- Distinguishing measurement arrows + slots -->
+  <line x1="90" y1="238" x2="90" y2="288" stroke="#2a1a0e" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="263" y1="238" x2="263" y2="288" stroke="#2a1a0e" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="437" y1="238" x2="437" y2="288" stroke="#2a1a0e" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="610" y1="238" x2="610" y2="288" stroke="#2a1a0e" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <rect x="16" y="294" width="148" height="58" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="90" y="316" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Hold time</text>
+  <text x="90" y="332" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">constant</text>
+  <rect x="189" y="294" width="148" height="58" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="263" y="316" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Vary pace,</text>
+  <text x="263" y="332" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">log it</text>
+  <rect x="363" y="294" width="148" height="58" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="437" y="316" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Delay vs.</text>
+  <text x="437" y="332" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">instant feedback</text>
+  <rect x="536" y="294" width="148" height="58" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="610" y="316" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Compare to a</text>
+  <text x="610" y="332" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">sham tool</text>
+
+  <text x="32" y="380" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">competing mechanisms</text>
+  <text x="32" y="396" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">distinguishing measurement the design must add</text>
+  <text x="32" y="414" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">A result is not an explanation: your design earns its keep by ruling rival mechanisms out.</text>
+</svg>

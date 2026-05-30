@@ -1,0 +1,57 @@
+<!-- The Frame-Before-Findings Failure | Book: The Research Paper Recipe | Chapter: 10-drafting-section-by-section | Figure: 04 | Generated: 2026-05-29 | Source: pantry/10-drafting-section-by-section-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-04">
+  <title id="fig-title-04">The Frame-Before-Findings Failure</title>
+  <desc>Two timelines from a shared start. The failure path commits to a frame before the findings arrive, hits a mismatch, and forces a costly rebuild. The protected path lets the findings arrive first, then fits the frame to them, ending aligned. A dashed guide marks where the findings event sits in each.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="10-drafting-section-by-section" figure-number="04" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/></marker>
+  </defs>
+
+  <text x="32" y="40" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">The Frame-Before-Findings Failure</text>
+  <text x="32" y="58" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Commit to a frame before the evidence exists and you pay to rebuild; write it last and it fits</text>
+
+  <!-- FAILURE PATH (top) -->
+  <text x="32" y="100" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#C8102E" font-weight="600">FAILURE: frame first</text>
+  <rect x="40" y="112" width="120" height="48" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="100" y="132" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Commit to a</text>
+  <text x="100" y="147" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">frame</text>
+
+  <rect x="210" y="112" width="120" height="48" fill="#F5F5F5" stroke="#545454" stroke-width="1"/>
+  <text x="270" y="132" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Findings</text>
+  <text x="270" y="147" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">arrive</text>
+
+  <rect x="380" y="112" width="120" height="48" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="440" y="140" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Mismatch</text>
+
+  <rect x="550" y="112" width="120" height="48" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="610" y="132" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Costly</text>
+  <text x="610" y="147" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">rebuild</text>
+
+  <line x1="160" y1="136" x2="208" y2="136" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="330" y1="136" x2="378" y2="136" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="500" y1="136" x2="548" y2="136" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- PROTECTED PATH (bottom) -->
+  <text x="32" y="240" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">PROTECTED: frame last</text>
+  <rect x="210" y="252" width="120" height="48" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="270" y="272" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Findings</text>
+  <text x="270" y="287" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">arrive</text>
+
+  <rect x="380" y="252" width="120" height="48" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="440" y="272" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Fit frame to</text>
+  <text x="440" y="287" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">findings</text>
+
+  <rect x="550" y="252" width="120" height="48" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="610" y="280" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Aligned</text>
+
+  <line x1="330" y1="276" x2="378" y2="276" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="500" y1="276" x2="548" y2="276" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- dashed guide aligning the findings event across both rows -->
+  <line x1="270" y1="160" x2="270" y2="252" stroke="#545454" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="278" y="210" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">same event &#8212; early vs. on time</text>
+
+  <text x="32" y="360" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">The findings arrive at the same moment in both paths. Only the order of frame and findings decides the cost.</text>
+  <text x="32" y="380" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Drafting Methods-Results-Discussion first protects you from committing to a frame the evidence won't support.</text>
+</svg>

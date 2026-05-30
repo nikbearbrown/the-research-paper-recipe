@@ -1,0 +1,56 @@
+<!-- The Source Chain: Design to Claim | Book: The Research Paper Recipe | Chapter: 02-foundation | Figure: 01 | Generated: 2026-05-29 | Source: pantry/02-foundation-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-01">
+  <title id="fig-title-01">The Source Chain: Design to Claim</title>
+  <desc>Every claim rests on a six-link chain back through finding, analysis, measurement, sample, and design. Two strain markers flag where the chain commonly breaks: self-selected sample and an immediate test.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="02-foundation" figure-number="01" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#2a1a0e"/></marker>
+  </defs>
+
+  <text x="32" y="38" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">The Source Chain: Design to Claim</text>
+  <text x="32" y="56" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">A borrowed finding is only as strong as the link it actually came from</text>
+
+  <!-- Production side (3 boxes) -->
+  <rect x="24" y="170" width="96" height="60" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="72" y="205" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Design</text>
+  <rect x="142" y="170" width="96" height="60" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="190" y="205" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Sample</text>
+  <rect x="260" y="170" width="96" height="60" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="308" y="205" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Measure</text>
+
+  <!-- Inference side (3 boxes) -->
+  <rect x="378" y="170" width="96" height="60" fill="#F5F5F5" stroke="#545454" stroke-width="1"/>
+  <text x="426" y="205" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Analysis</text>
+  <rect x="496" y="170" width="96" height="60" fill="#F5F5F5" stroke="#545454" stroke-width="1"/>
+  <text x="544" y="205" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Finding</text>
+  <rect x="600" y="170" width="80" height="60" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="640" y="205" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">Claim</text>
+
+  <!-- Connecting arrows -->
+  <line x1="120" y1="200" x2="140" y2="200" stroke="#2a1a0e" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="238" y1="200" x2="258" y2="200" stroke="#2a1a0e" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="356" y1="200" x2="376" y2="200" stroke="#2a1a0e" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="474" y1="200" x2="494" y2="200" stroke="#2a1a0e" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="592" y1="200" x2="598" y2="200" stroke="#2a1a0e" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Side labels -->
+  <text x="190" y="150" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">production side</text>
+  <text x="485" y="150" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">inference side</text>
+
+  <!-- Strain marker 1: sample -> measure -->
+  <path d="M 242 250 l 6 12 l 6 -12" fill="none" stroke="#C8102E" stroke-width="1.5"/>
+  <line x1="248" y1="232" x2="248" y2="250" stroke="#D4D4D4" stroke-width="1"/>
+  <rect x="172" y="272" width="152" height="52" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="248" y="294" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E">Strain: self-selected</text>
+  <text x="248" y="310" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">volunteers, not the population</text>
+
+  <!-- Strain marker 2: measure -> analysis -->
+  <path d="M 360 250 l 6 12 l 6 -12" fill="none" stroke="#C8102E" stroke-width="1.5"/>
+  <line x1="366" y1="232" x2="366" y2="250" stroke="#D4D4D4" stroke-width="1"/>
+  <rect x="378" y="272" width="160" height="52" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="458" y="294" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E">Strain: immediate test</text>
+  <text x="458" y="310" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">measures cramming, not learning</text>
+
+  <text x="32" y="392" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">When you cite a result, you inherit its whole chain — including the weakest link you never saw.</text>
+</svg>

@@ -35,7 +35,7 @@ A **normative** claim says what should be done: "Instructors should prefer Socra
 
 A **conceptual** claim defines or clarifies: "By 'durable retention,' I mean unassisted recall of core concepts after a two-week delay." This doesn't require empirical support; it requires precision and coherence.
 
-<!-- → [TABLE: Assertion taxonomy — seven rows (descriptive, correlational, causal, predictive, mechanistic, normative, conceptual) — columns: definition, what evidence is required, what evidence cannot support it, example] -->
+![Figure 3.1 — Seven assertion types each carry a different evidentiary burden, rising from descriptive measurement to mechanistic mediation, with normative and conceptual claims off the empirical axis.](../images/03-the-scientific-method-assertions-and-how-to-test-them-fig-01.png)
 
 ---
 
@@ -49,7 +49,7 @@ What falsifiability demands is that you name, in advance, what you would need to
 
 Each of those falsification conditions is also a design choice. If you want to be able to detect whether the effect is moderated by prior retrieval habits, you need to measure prior retrieval habits. If you want to be able to detect the difference between short-term performance and two-week retention, you need two assessment points. The falsification conditions tell you what the design requires.
 
-<!-- → [INFOGRAPHIC: Falsifiability spectrum — from "can accommodate any evidence" on one end to "specific enough to be wrong in multiple ways" on the other — with three example claims placed along the spectrum] -->
+![Figure 3.2 — Claims fall along a spectrum from those that accommodate any possible evidence to those specific enough to be wrong in several distinct ways, and only the latter are empirical.](../images/03-the-scientific-method-assertions-and-how-to-test-them-fig-02.png)
 
 ---
 
@@ -67,7 +67,7 @@ Second, a null hypothesis is not the same as the claim "nothing is happening." I
 
 Third, the null hypothesis is chosen by the researcher, not by convention. Your null should be the specific claim that your design is positioned to challenge. If you've designed a study to detect a retention advantage at two weeks, your null is "no retention advantage at two weeks" — not "no effect of AI feedback on anything, ever."
 
-<!-- → [TABLE: Null vs. alternative hypothesis pairs for the three assertion types that have them (correlational, causal, predictive) — common mistakes in null formulation alongside correct versions] -->
+![Figure 3.3 — Hypothesis testing is a decision procedure: assume the null, measure how surprising the data are under it, and at a pre-set threshold decide whether to act as if the null is false.](../images/03-the-scientific-method-assertions-and-how-to-test-them-fig-03.png)
 
 ---
 
@@ -78,6 +78,8 @@ Let me return to the student's sentence from the beginning of the chapter, becau
 Clause one — "AI feedback improves learning" — is a causal claim. Its null hypothesis is: students receiving AI feedback do not differ in learning outcomes from students in the comparison condition. The design needed to test it requires at least two conditions, a measure of learning (which needs to be defined precisely — immediate performance? delayed retention? transfer to novel problems?), and something that controls for the other differences between groups.
 
 Clause two — "because students engage more deeply" — is a mechanistic claim. Its null hypothesis is: any effect of AI feedback on learning is not mediated by engagement depth. Testing this requires that engagement be measured, that the relationship between feedback and engagement be established, and that a mediation analysis show that the indirect path (through engagement) accounts for the outcome difference. This is a substantially more demanding design than clause one already required.
+
+![Figure 3.4 — A single sentence can bundle a causal clause and a mechanistic clause, each carrying its own null hypothesis and its own escalating design burden.](../images/03-the-scientific-method-assertions-and-how-to-test-them-fig-04.png)
 
 If the study behind the sentence only compared platform users with non-users — no random assignment, no engagement measure, no mediation analysis — then neither clause is supported by the design. The most the study can support is a correlational version: "Students who used AI feedback scored higher on [some measure]." The causal language and the mechanism have to come out.
 
@@ -94,6 +96,8 @@ Normative claims are legitimate. They are not unscientific. Education, medicine,
 The common mistake is to slide between normative and empirical claims without marking the transition. "Students who receive Socratic feedback retain more, therefore instructors should use Socratic feedback" treats a causal finding as if it settles a normative question. It doesn't — not because the finding is wrong, but because "should use" involves a judgment about tradeoffs (time, implementation cost, equity of access, what other goals matter) that the data can inform but not resolve.
 
 Separate the claims. Say: "These findings suggest that Socratic feedback produces better two-week retention under these conditions. Whether that retention advantage justifies the additional design complexity is a question that depends on the instructional context." The empirical claim stands on its own. The normative claim is made explicitly, as a claim, not dressed up as a finding.
+
+![Figure 3.5 — A causal finding does not settle a normative recommendation; the move from "is" to "should" requires an explicit value judgment, not a silent slide.](../images/03-the-scientific-method-assertions-and-how-to-test-them-fig-05.png)
 
 ---
 

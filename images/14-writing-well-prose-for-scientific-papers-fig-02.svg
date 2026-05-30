@@ -1,0 +1,59 @@
+<!-- Passive Voice: Informative vs. Evasive | Book: The Research Paper Recipe | Chapter: 14-writing-well-prose-for-scientific-papers | Figure: 02 | Generated: 2026-05-29 | Source: pantry/14-writing-well-prose-for-scientific-papers-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-02 fig-desc-02">
+<title id="fig-title-02">Passive Voice: Informative vs. Evasive</title>
+<desc id="fig-desc-02">Two side-by-side panels. The informative passive leaves an empty actor slot feeding the process, because the actor is genuinely irrelevant. The evasive passive hides a real decision-maker behind a block. The test: would naming the actor reveal something the sentence conceals?</desc>
+<metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="14-writing-well-prose-for-scientific-papers" figure-number="02" date-generated="2026-05-29"/></metadata>
+<defs>
+<marker id="arrow14b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#2a1a0e"/>
+</marker>
+</defs>
+<rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+
+<!-- vertical divider -->
+<line x1="350" y1="40" x2="350" y2="380" stroke="#D4D4D4" stroke-width="1"/>
+
+<!-- LEFT — informative passive -->
+<text x="60" y="56" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" font-weight="600" fill="#2a1a0e">INFORMATIVE — actor truly irrelevant</text>
+
+<!-- empty dashed actor placeholder -->
+<rect x="60" y="80" width="90" height="64" fill="none" stroke="#2a1a0e" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="105" y="116" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">(no actor)</text>
+<line x1="150" y1="112" x2="200" y2="112" stroke="#545454" stroke-width="1" marker-end="url(#arrow14b)"/>
+<!-- process box -->
+<rect x="205" y="80" width="110" height="64" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="260" y="108" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" font-weight="600" fill="#2a1a0e">Process</text>
+<text x="260" y="126" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">samples were</text>
+<text x="260" y="140" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">frozen at -80C</text>
+
+<rect x="60" y="172" width="255" height="64" fill="#F5F5F5" stroke="#545454" stroke-width="1"/>
+<text x="74" y="198" font-family="'EB Garamond',Georgia,serif" font-size="15" fill="#2a1a0e">"The samples were frozen</text>
+<text x="74" y="220" font-family="'EB Garamond',Georgia,serif" font-size="15" fill="#2a1a0e">at -80 C."</text>
+<text x="60" y="262" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" font-style="italic">Who froze them is irrelevant —</text>
+<text x="60" y="278" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" font-style="italic">suppressing the actor is appropriate.</text>
+
+<!-- RIGHT — evasive passive -->
+<text x="380" y="56" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" font-weight="600" fill="#C8102E">EVASIVE — decision-maker concealed</text>
+
+<!-- solid actor box, partly occluded -->
+<rect x="380" y="80" width="90" height="64" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="425" y="116" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">we</text>
+<!-- occluding block -->
+<rect x="440" y="74" width="42" height="76" fill="#545454" stroke="#2a1a0e" stroke-width="1"/>
+<line x1="478" y1="112" x2="525" y2="112" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow14b)"/>
+<!-- process box -->
+<rect x="530" y="80" width="110" height="64" fill="#FFFFFF" stroke="#C8102E" stroke-width="2"/>
+<text x="585" y="108" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" font-weight="600" fill="#C8102E">Process</text>
+<text x="585" y="126" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">subjects were</text>
+<text x="585" y="140" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">excluded</text>
+
+<rect x="380" y="172" width="260" height="64" fill="#FFFFFF" stroke="#C8102E" stroke-width="2"/>
+<text x="394" y="198" font-family="'EB Garamond',Georgia,serif" font-size="15" fill="#2a1a0e">"Three subjects were</text>
+<text x="394" y="220" font-family="'EB Garamond',Georgia,serif" font-size="15" fill="#2a1a0e">excluded."</text>
+<text x="380" y="262" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" font-style="italic">We decided to exclude them —</text>
+<text x="380" y="278" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E" font-style="italic">the decision should be reported.</text>
+
+<!-- the test -->
+<line x1="60" y1="316" x2="640" y2="316" stroke="#D4D4D4" stroke-width="1"/>
+<text x="350" y="348" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">The test: would naming the actor reveal something the sentence is hiding?</text>
+</svg>

@@ -1,0 +1,64 @@
+<!-- Topic vs. Question vs. Hypothesis | Book: The Research Paper Recipe | Chapter: 01-before-you-write-anything | Figure: 02 | Generated: 2026-05-29 | Source: pantry/01-before-you-write-anything-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-02">
+  <title id="fig-title-02">Topic vs. Question vs. Hypothesis</title>
+  <desc>Three columns compare a topic, a research question, and a hypothesis on definition, what evidence would look like, and whether it can be false. Falsifiability rises left to right, shown by a hollow, half, and solid circle.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="01-before-you-write-anything" figure-number="02" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#2a1a0e"/></marker>
+  </defs>
+
+  <text x="32" y="38" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">Topic vs. Question vs. Hypothesis</text>
+  <text x="32" y="56" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Three different objects writers routinely conflate — falsifiability rises across them</text>
+
+  <!-- Progression arrow across the top -->
+  <line x1="70" y1="80" x2="650" y2="80" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="300" y="74" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">increasing falsifiability</text>
+
+  <!-- Row labels (left stub) -->
+  <text x="22" y="158" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">Definition</text>
+  <text x="22" y="238" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">Evidence</text>
+  <text x="22" y="318" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">Can it be false?</text>
+
+  <!-- Panel 1: Topic -->
+  <rect x="96" y="92" width="176" height="28" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="184" y="111" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">Topic</text>
+  <rect x="96" y="124" width="176" height="56" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="184" y="148" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">An area with</text>
+  <text x="184" y="164" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">no edges</text>
+  <rect x="96" y="184" width="176" height="56" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="184" y="208" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">No evidence could</text>
+  <text x="184" y="224" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">settle it</text>
+  <rect x="96" y="244" width="176" height="64" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <circle cx="184" cy="276" r="13" fill="#FFFFFF" stroke="#545454" stroke-width="1.5"/>
+  <text x="184" y="332" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">No — cannot be false</text>
+
+  <!-- Panel 2: Research question -->
+  <rect x="288" y="92" width="176" height="28" fill="#FFFFFF" stroke="#545454" stroke-width="1"/>
+  <text x="376" y="111" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">Research question</text>
+  <rect x="288" y="124" width="176" height="56" fill="#FFFFFF" stroke="#545454" stroke-width="1"/>
+  <text x="376" y="148" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Answerable</text>
+  <text x="376" y="164" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">in principle</text>
+  <rect x="288" y="184" width="176" height="56" fill="#FFFFFF" stroke="#545454" stroke-width="1"/>
+  <text x="376" y="208" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Points to data that</text>
+  <text x="376" y="224" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">could answer it</text>
+  <rect x="288" y="244" width="176" height="64" fill="#FFFFFF" stroke="#545454" stroke-width="1"/>
+  <path d="M 376 263 a 13 13 0 0 1 0 26 z" fill="#545454"/>
+  <circle cx="376" cy="276" r="13" fill="none" stroke="#545454" stroke-width="1.5"/>
+  <text x="376" y="332" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Not yet — it asks</text>
+
+  <!-- Panel 3: Hypothesis (emphasis) -->
+  <rect x="480" y="92" width="176" height="28" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="568" y="111" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">Hypothesis</text>
+  <rect x="480" y="124" width="176" height="56" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="568" y="148" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">A falsifiable</text>
+  <text x="568" y="164" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">prediction</text>
+  <rect x="480" y="184" width="176" height="56" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="568" y="208" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Names the result</text>
+  <text x="568" y="224" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">that would defeat it</text>
+  <rect x="480" y="244" width="176" height="64" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <circle cx="568" cy="276" r="13" fill="#C8102E" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="568" y="332" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E">Yes — can be false</text>
+
+  <text x="32" y="404" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Only the hypothesis stakes a claim that reality could refute — that is what makes it research, not commentary.</text>
+</svg>

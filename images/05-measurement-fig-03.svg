@@ -1,0 +1,37 @@
+<!-- Retrieval vs storage strength over time | Book: The Research Paper Recipe | Chapter: 05-measurement | Figure: 03 | Generated: 2026-05-29 | Source: pantry/05-measurement-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-03 fig-desc-03">
+  <title id="fig-title-03">An immediate test can reverse the durable ranking</title>
+  <desc id="fig-desc-03">Performance plotted against time for two conditions. Condition A starts high but drops steeply; condition B starts lower but declines shallowly. The two curves cross, so the ranking at the immediate test is the opposite of the ranking at the delayed test.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="05-measurement" figure-number="03" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+
+  <text x="40" y="40" font-family="'EB Garamond',Georgia,serif" font-size="18" fill="#2a1a0e">When the test happens decides which condition "wins"</text>
+
+  <!-- plot area -->
+  <rect x="90" y="70" width="520" height="270" fill="#F5F5F5" stroke="none"/>
+  <!-- axes -->
+  <line x1="90" y1="340" x2="610" y2="340" stroke="#2a1a0e" stroke-width="1.5"/>
+  <line x1="90" y1="70" x2="90" y2="340" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="350" y="372" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" text-anchor="middle">Time since learning</text>
+  <text x="58" y="205" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" text-anchor="middle" transform="rotate(-90 58 205)">Performance</text>
+
+  <!-- reference lines -->
+  <line x1="160" y1="70" x2="160" y2="340" stroke="#D4D4D4" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="540" y1="70" x2="540" y2="340" stroke="#D4D4D4" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="160" y="86" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" text-anchor="middle">immediate</text>
+  <text x="540" y="86" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" text-anchor="middle">delayed</text>
+
+  <!-- Curve A: high start, steep drop (emphasis red) -->
+  <path d="M 90 100 Q 250 150 400 270 T 610 320" fill="none" stroke="#C8102E" stroke-width="2.5"/>
+  <text x="100" y="116" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E">Condition A — high immediate, poor retention</text>
+
+  <!-- Curve B: lower start, shallow drop (ink) -->
+  <path d="M 90 210 Q 300 230 450 245 T 610 258" fill="none" stroke="#2a1a0e" stroke-width="2.5"/>
+  <text x="350" y="288" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Condition B — lower immediate, better retention</text>
+
+  <!-- crossing marker -->
+  <circle cx="372" cy="240" r="4" fill="#2a1a0e"/>
+  <text x="382" y="232" font-family="'JetBrains Mono','Fira Code',monospace" font-size="11" fill="#545454">ranking flips here</text>
+
+  <text x="40" y="404" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Test too soon and you measure retrieval strength; the durable storage ranking only shows after a delay.</text>
+</svg>

@@ -1,0 +1,42 @@
+<!-- The Four-Layer Ethics Screen | Book: The Research Paper Recipe | Chapter: 13-ethics-and-bias-screen | Figure: 01 | Generated: 2026-05-29 | Source: pantry/13-ethics-and-bias-screen-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-01 fig-desc-01">
+<title id="fig-title-01">The Four-Layer Ethics Screen</title>
+<desc id="fig-desc-01">A taxonomy: one parent box, the ethics screen, branches to four parallel child layers stacked vertically — disclosure, overgeneralization, citation bias, and replication fitness — each auditing a different way a paper can mislead readers.</desc>
+<metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="13-ethics-and-bias-screen" figure-number="01" date-generated="2026-05-29"/></metadata>
+<rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+
+<!-- parent container -->
+<rect x="230" y="34" width="240" height="48" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="350" y="63" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">The Ethics Screen</text>
+
+<!-- branch connectors from parent to each child -->
+<line x1="350" y1="82" x2="350" y2="104" stroke="#2a1a0e" stroke-width="1"/>
+<line x1="200" y1="104" x2="200" y2="120" stroke="#2a1a0e" stroke-width="1"/>
+<line x1="200" y1="104" x2="500" y2="104" stroke="#2a1a0e" stroke-width="1"/>
+<line x1="200" y1="104" x2="200" y2="142" stroke="#2a1a0e" stroke-width="1"/>
+
+<!-- left-edge accent bar spanning the four children -->
+<rect x="180" y="120" width="6" height="270" fill="#C8860E"/>
+
+<!-- child 1 — disclosure -->
+<rect x="200" y="120" width="300" height="52" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="232" y="143" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" font-weight="600" fill="#2a1a0e">Layer 1 — Disclosure</text>
+<text x="232" y="161" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Did you tell readers what you actually did?</text>
+
+<!-- child 2 — overgeneralization -->
+<rect x="200" y="186" width="300" height="52" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="232" y="209" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" font-weight="600" fill="#2a1a0e">Layer 2 — Overgeneralization</text>
+<text x="232" y="227" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Does the claim outrun the sample?</text>
+
+<!-- child 3 — citation bias -->
+<rect x="200" y="252" width="300" height="52" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="232" y="275" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" font-weight="600" fill="#2a1a0e">Layer 3 — Citation Bias</text>
+<text x="232" y="293" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Is the literature cited one-sided?</text>
+
+<!-- child 4 — replication fitness -->
+<rect x="200" y="318" width="300" height="52" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="232" y="341" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" font-weight="600" fill="#2a1a0e">Layer 4 — Replication Fitness</text>
+<text x="232" y="359" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Could another lab rebuild this?</text>
+
+<text x="180" y="404" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" font-style="italic">Four ordered layers — each audits a different way a paper can mislead.</text>
+</svg>

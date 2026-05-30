@@ -1,0 +1,53 @@
+<!-- Gopen-Swan Sentence Positions | Book: The Research Paper Recipe | Chapter: 14-writing-well-prose-for-scientific-papers | Figure: 04 | Generated: 2026-05-29 | Source: pantry/14-writing-well-prose-for-scientific-papers-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-04 fig-desc-04">
+<title id="fig-title-04">Gopen-Swan Sentence Positions: Topic and Stress</title>
+<desc id="fig-desc-04">Two sentence bars, each split into topic, body, and stress segments. The correct sentence opens with familiar context and ends on the new finding in the stress position. The inverted sentence buries the finding at the front and ends on a trivial reference number.</desc>
+<metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="14-writing-well-prose-for-scientific-papers" figure-number="04" date-generated="2026-05-29"/></metadata>
+<rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+
+<text x="60" y="44" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">Readers expect old information first, the new finding last</text>
+
+<!-- position labels -->
+<text x="135" y="86" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" font-weight="600" fill="#545454">TOPIC position</text>
+<text x="350" y="86" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" font-weight="600" fill="#545454">body</text>
+<text x="560" y="86" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" font-weight="600" fill="#C8102E">STRESS position</text>
+
+<!-- TOP BAR — correct -->
+<text x="60" y="124" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" font-weight="600" fill="#2a1a0e">Correct</text>
+<!-- topic -->
+<rect x="60" y="134" width="150" height="48" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="135" y="163" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="13" fill="#2a1a0e">familiar context</text>
+<!-- body -->
+<rect x="210" y="134" width="280" height="48" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="350" y="163" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="13" fill="#545454">. . . the connecting detail . . .</text>
+<!-- stress (emphasis) -->
+<rect x="490" y="134" width="150" height="48" fill="#C8102E" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="565" y="163" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="13" fill="#FFFFFF">the new finding</text>
+<!-- stress caret -->
+<path d="M555,118 L565,128 L575,118" fill="none" stroke="#2a1a0e" stroke-width="1.5"/>
+
+<!-- TOP example -->
+<text x="60" y="206" font-family="'EB Garamond',Georgia,serif" font-size="14" fill="#2a1a0e" font-style="italic">"In rats fed the diet, body weight fell by 12 percent."</text>
+
+<!-- divider -->
+<line x1="60" y1="232" x2="640" y2="232" stroke="#D4D4D4" stroke-width="1"/>
+
+<!-- BOTTOM BAR — inverted -->
+<text x="60" y="270" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" font-weight="600" fill="#2a1a0e">Inverted</text>
+<!-- topic slot now holds new info (misplaced) -->
+<rect x="60" y="280" width="150" height="48" fill="#545454" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="135" y="309" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="13" fill="#FFFFFF">new finding</text>
+<!-- body -->
+<rect x="210" y="280" width="280" height="48" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="350" y="309" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="13" fill="#545454">. . . the connecting detail . . .</text>
+<!-- stress now holds trivial ref number -->
+<rect x="490" y="280" width="150" height="48" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="565" y="309" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="13" fill="#545454">reference number</text>
+<!-- stress caret -->
+<path d="M555,264 L565,274 L575,264" fill="none" stroke="#2a1a0e" stroke-width="1.5"/>
+
+<!-- BOTTOM example -->
+<text x="60" y="352" font-family="'EB Garamond',Georgia,serif" font-size="14" fill="#2a1a0e" font-style="italic">"A 12 percent drop in body weight occurred in rats fed the diet [14]."</text>
+
+<text x="60" y="388" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E" font-style="italic">Inverting the positions ends the sentence on a citation, not the result — and misdirects attention.</text>
+</svg>

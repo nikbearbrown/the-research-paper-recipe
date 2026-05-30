@@ -1,0 +1,55 @@
+<!-- Auditing One Sentence into Two Clauses | Book: The Research Paper Recipe | Chapter: 03-the-scientific-method-assertions-and-how-to-test-them | Figure: 04 | Generated: 2026-05-29 | Source: pantry/03-the-scientific-method-assertions-and-how-to-test-them-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-04">
+  <title id="fig-title-04">Auditing One Sentence into Two Clauses</title>
+  <desc>The sentence "AI feedback improves learning because students engage more deeply" splits into a causal clause and a mechanistic clause. Each carries its own null and design requirement; the mechanistic burden is heavier.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="03-the-scientific-method-assertions-and-how-to-test-them" figure-number="04" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#2a1a0e"/></marker>
+  </defs>
+
+  <text x="32" y="38" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">Auditing One Sentence into Two Clauses</text>
+  <text x="32" y="56" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">One sentence can bundle two claims, each with its own null and its own burden</text>
+
+  <!-- Parent bar split in two -->
+  <rect x="80" y="78" width="540" height="44" fill="#F5F5F5" stroke="#545454" stroke-width="1"/>
+  <line x1="350" y1="78" x2="350" y2="122" stroke="#545454" stroke-width="1"/>
+  <text x="215" y="105" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">"AI feedback improves learning</text>
+  <text x="485" y="105" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">because students engage more deeply"</text>
+
+  <!-- Arrows down to clause nodes -->
+  <line x1="215" y1="122" x2="215" y2="146" stroke="#2a1a0e" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="485" y1="122" x2="485" y2="146" stroke="#2a1a0e" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Clause nodes -->
+  <rect x="115" y="150" width="200" height="44" fill="#FFFFFF" stroke="#545454" stroke-width="1"/>
+  <text x="215" y="172" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">Causal clause</text>
+  <text x="215" y="187" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">feedback &#8594; learning</text>
+
+  <rect x="385" y="150" width="200" height="44" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="485" y="172" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">Mechanistic clause</text>
+  <text x="485" y="187" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">via deeper engagement</text>
+
+  <!-- Null slots (upper) -->
+  <rect x="115" y="208" width="200" height="46" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="215" y="227" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">Null:</text>
+  <text x="215" y="243" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">feedback has no effect</text>
+
+  <rect x="385" y="208" width="200" height="46" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="485" y="227" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">Null:</text>
+  <text x="485" y="243" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">engagement is not the path</text>
+
+  <!-- Design requirement slots (lower) - mechanistic larger -->
+  <rect x="115" y="268" width="200" height="60" fill="#F5F5F5" stroke="#545454" stroke-width="1"/>
+  <text x="215" y="289" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">Design needed:</text>
+  <text x="215" y="305" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">randomize feedback,</text>
+  <text x="215" y="319" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">compare outcomes</text>
+
+  <rect x="385" y="268" width="200" height="92" fill="#F5F5F5" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="485" y="289" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#C8102E">Design needed (heavier):</text>
+  <text x="485" y="305" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">also measure engagement</text>
+  <text x="485" y="321" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">as a mediator, show it</text>
+  <text x="485" y="337" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">carries the effect</text>
+
+  <text x="32" y="392" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">The word "because" doubles your obligation: you now owe evidence for the path, not just the effect.</text>
+</svg>

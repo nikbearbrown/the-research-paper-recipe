@@ -27,6 +27,8 @@ The empirical paper has a conventional reading order: Introduction, Methods, Res
 
 The drafting order that protects honesty runs almost in reverse. It starts with what you actually did and found, and works outward from there.
 
+![Figure 10.1 — Papers are read Introduction-first but should be drafted Methods-first, because each drafting step only becomes possible once the prior step's content exists.](../images/10-drafting-section-by-section-fig-01.png)
+
 **Methods first.** Methods report what was done — the design, participants, materials, procedure, and analysis plan. This section can be drafted from the protocol and the actual record of what happened, without waiting for results. It is the most purely procedural section of the paper. Its job is replicability: a reader who follows the Methods description should be able to run the same study. If you cannot describe the procedure clearly enough for that, the description is incomplete, not the study.
 
 Reporting standards exist precisely because readers cannot evaluate findings without design details. JARS specifies what a psychology study's methods must report. CONSORT does the same for clinical trials. STROBE for observational epidemiology. The details vary, but the underlying logic is consistent: the reader's ability to judge your results depends entirely on knowing how those results were produced. A Methods section that omits how outliers were handled, how randomization was implemented, or what the pre-specified primary outcome was is a Methods section that prevents evaluation.
@@ -42,6 +44,8 @@ This separation is not bureaucratic formalism. It is epistemically important. Re
 The Discussion is also where honest limits live. A finding from an underpowered study, or a finding with wide confidence intervals, or a finding that was the third of seven comparisons — the Discussion is where those qualifications belong. Not as apologies, but as honest accounting of what the evidence can and cannot support.
 
 A Discussion that only elaborates the positive findings and buries the limitations in a final paragraph is not doing its job. The limits shape the claim. A claim without its limits is a different claim — a stronger one than the evidence supports.
+
+![Figure 10.2 — Each paper section has one specific job and one boundary it must not cross, and the violations are the places adjacent sections leak into each other.](../images/10-drafting-section-by-section-fig-02.png)
 
 <!-- → [TABLE: Each section's job — rows: Methods, Results, Discussion, Introduction, Abstract, Title — columns: what it reports, what it does NOT do, common violation, test question] -->
 
@@ -73,6 +77,8 @@ Before drafting any section, write one sentence that captures what that section 
 
 The key-message sentence is not part of the section. It is a constraint on the section. When you have drafted the section, check it against the key-message sentence: does the section establish what it needed to establish? If the section says less than the key-message sentence, something is missing. If the section says more — if it makes claims the key-message sentence doesn't license — the section has drifted.
 
+![Figure 10.3 — The key-message sentence sits outside a section as a constraint; the section can drift by saying less than it promises or more than it licenses, and the constraint catches both failures.](../images/10-drafting-section-by-section-fig-03.png)
+
 The key-message sentences for all six sections should form a coherent argument when read in sequence. If the Methods key message describes a two-condition experiment with a delayed test, the Results key message should report what the delayed test found, the Discussion key message should interpret that finding with its limits, the Introduction key message should establish the gap that makes the delayed test important, the Abstract key message should compress all five into a standalone summary, and the Title should name the finding precisely enough to be retrieved by the right reader.
 
 If those six sentences contradict each other, or if one section promises what another can't deliver, the paper has a structural problem that prose quality cannot fix.
@@ -86,6 +92,8 @@ The chapter's principle has a corollary that is worth making explicit: this draf
 Humanities papers, legal scholarship, theoretical modeling work — these have different section structures and different relationships between argument and evidence. The Methods-first advice doesn't apply in the same way. But the discipline of asking, for each section, "what is this section's specific job, and am I doing that job and not another section's job" — that discipline applies everywhere.
 
 The common thread is protection against a specific kind of failure: writing a frame before you know what it needs to frame, and then being unable to update the frame honestly because you are attached to it. The introduction a student writes on day one of a project is almost always wrong by the time the project is done — not wrong about the topic, but wrong about the specific contribution, because that contribution isn't fully visible until the work is finished. The drafting order is a structural guarantee that the frame gets written last, when the contribution is known.
+
+![Figure 10.4 — Writing the Introduction first commits to a frame before the evidence exists, forcing a costly rebuild; writing it last lets the frame fit the findings.](../images/10-drafting-section-by-section-fig-04.png)
 
 ---
 

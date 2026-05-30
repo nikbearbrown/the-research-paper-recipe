@@ -1,0 +1,43 @@
+<!-- From "Is" to "Should" Requires a Value Gate | Book: The Research Paper Recipe | Chapter: 03-the-scientific-method-assertions-and-how-to-test-them | Figure: 05 | Generated: 2026-05-29 | Source: pantry/03-the-scientific-method-assertions-and-how-to-test-them-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-05">
+  <title id="fig-title-05">From "Is" to "Should" Requires a Value Gate</title>
+  <desc>An empirical finding does not settle a normative recommendation. Crossing from the finding zone to the recommendation zone requires passing an explicit value-judgment gate, which depends on trade-off inputs.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="03-the-scientific-method-assertions-and-how-to-test-them" figure-number="05" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#2a1a0e"/></marker>
+  </defs>
+
+  <text x="32" y="38" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">From "Is" to "Should" Requires a Value Gate</text>
+  <text x="32" y="56" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">A finding never settles a recommendation by itself — the gate must be supplied</text>
+
+  <!-- Left zone: empirical finding -->
+  <rect x="40" y="150" width="220" height="110" fill="#F5F5F5" stroke="#545454" stroke-width="1"/>
+  <text x="150" y="178" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">Empirical finding (is)</text>
+  <text x="150" y="206" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">"AI tutoring raises</text>
+  <text x="150" y="222" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">test scores 8%"</text>
+
+  <!-- Right zone: normative recommendation -->
+  <rect x="440" y="150" width="220" height="110" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="550" y="178" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">Recommendation (should)</text>
+  <text x="550" y="206" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">"Schools should adopt</text>
+  <text x="550" y="222" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">AI tutoring"</text>
+
+  <!-- Bridging arrow -->
+  <line x1="260" y1="205" x2="330" y2="205" stroke="#2a1a0e" stroke-width="1.5"/>
+  <line x1="370" y1="205" x2="438" y2="205" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Value gate (vertical bar + diamond) -->
+  <line x1="350" y1="178" x2="350" y2="232" stroke="#C8102E" stroke-width="2"/>
+  <polygon points="350,190 362,205 350,220 338,205" fill="#C8102E" stroke="#C8102E" stroke-width="1"/>
+  <text x="350" y="160" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e" font-weight="600">Value gate</text>
+
+  <!-- Trade-off input stub + slot below the gate -->
+  <line x1="350" y1="232" x2="350" y2="282" stroke="#545454" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="248" y="288" width="204" height="60" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="350" y="310" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">Trade-off inputs the judgment needs:</text>
+  <text x="350" y="326" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">cost, equity, what we value</text>
+  <text x="350" y="340" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">in education</text>
+
+  <text x="32" y="384" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">The slide from "is" to "should" is silent and seductive — name the value judgment, or you have smuggled it.</text>
+</svg>

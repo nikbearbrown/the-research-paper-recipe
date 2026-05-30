@@ -1,0 +1,29 @@
+<!-- CARS three-move funnel | Book: The Research Paper Recipe | Chapter: 09-literature-review | Figure: 03 | Generated: 2026-05-29 | Source: pantry/09-literature-review-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-03 fig-desc-03"><title id="fig-title-03">CARS three-move funnel</title><desc id="fig-desc-03">A research introduction narrows like a funnel through three dependent moves: establish the territory (broad), establish the niche (the gap pivot), occupy the niche (the study), arriving at the hypothesis. A dashed slot beside the niche marks the move writers most often skip.</desc><metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="09-literature-review" figure-number="03" date-generated="2026-05-29"/></metadata>
+<rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+<defs><marker id="arr03b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2a1a0e"/></marker></defs>
+<text x="350" y="32" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">The CARS introduction funnel</text>
+<!-- Move 1: widest band -->
+<path d="M160 60 L540 60 L500 120 L200 120 Z" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.4"/>
+<text x="350" y="86" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Move 1 — Establish the territory</text>
+<text x="350" y="104" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">(broad: why the field matters)</text>
+<line x1="350" y1="120" x2="350" y2="150" stroke="#2a1a0e" stroke-width="1.2" marker-end="url(#arr03b)"/>
+<!-- Move 2: narrower, red emphasis (the pivot) -->
+<path d="M210 152 L490 152 L450 212 L250 212 Z" fill="#F5F5F5" stroke="#C8102E" stroke-width="1.8"/>
+<text x="350" y="178" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#C8102E">Move 2 — Establish the niche</text>
+<text x="350" y="196" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">(the pivot: name the gap)</text>
+<line x1="350" y1="212" x2="350" y2="242" stroke="#2a1a0e" stroke-width="1.2" marker-end="url(#arr03b)"/>
+<!-- missing-niche reserved slot beside move 2 -->
+<rect x="540" y="160" width="120" height="46" fill="#FFFFFF" stroke="#545454" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="600" y="180" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">skip this and the</text>
+<text x="600" y="194" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">intro is a parade</text>
+<line x1="490" y1="182" x2="540" y2="183" stroke="#545454" stroke-width="1" stroke-dasharray="3 3"/>
+<!-- Move 3: narrowest -->
+<path d="M260 244 L440 244 L405 304 L295 304 Z" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.4"/>
+<text x="350" y="270" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Move 3 — Occupy the niche</text>
+<text x="350" y="288" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">(your study fills it)</text>
+<line x1="350" y1="304" x2="350" y2="338" stroke="#2a1a0e" stroke-width="1.2" marker-end="url(#arr03b)"/>
+<!-- hypothesis dot -->
+<circle cx="350" cy="356" r="9" fill="#C8102E"/>
+<text x="350" y="392" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">the hypothesis arrives</text>
+</svg>

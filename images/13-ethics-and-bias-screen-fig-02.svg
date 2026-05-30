@@ -1,0 +1,55 @@
+<!-- Disclosure Decision Flow | Book: The Research Paper Recipe | Chapter: 13-ethics-and-bias-screen | Figure: 02 | Generated: 2026-05-29 | Source: pantry/13-ethics-and-bias-screen-cajal.md -->
+<svg viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-02 fig-desc-02">
+<title id="fig-title-02">Disclosure Decision Flow</title>
+<desc id="fig-desc-02">A top-to-bottom decision flowchart for disclosing AI assistance: from the entry that AI was used, a substantive-contribution question branches to either disclosure or a when-in-doubt holding step that itself defaults to disclosure, both converging on writing a specific named disclosure.</desc>
+<metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="13-ethics-and-bias-screen" figure-number="02" date-generated="2026-05-29"/></metadata>
+<defs>
+<marker id="arrow02" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#2a1a0e"/>
+</marker>
+</defs>
+<rect x="0" y="0" width="700" height="480" fill="#FFFFFF"/>
+
+<!-- entry -->
+<rect x="250" y="24" width="200" height="44" rx="0" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="350" y="51" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" fill="#2a1a0e">An AI tool was used</text>
+<line x1="350" y1="68" x2="350" y2="100" stroke="#2a1a0e" stroke-width="1" marker-end="url(#arrow02)"/>
+
+<!-- decision diamond -->
+<polygon points="350,104 470,164 350,224 230,164" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="350" y="158" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" font-weight="600" fill="#2a1a0e">Substantive</text>
+<text x="350" y="176" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" font-weight="600" fill="#2a1a0e">contribution?</text>
+
+<!-- branch right: yes -->
+<line x1="470" y1="164" x2="520" y2="164" stroke="#2a1a0e" stroke-width="1"/>
+<line x1="520" y1="164" x2="520" y2="296" stroke="#2a1a0e" stroke-width="1" marker-end="url(#arrow02)"/>
+<text x="478" y="158" font-family="'JetBrains Mono','Fira Code',monospace" font-size="11" fill="#545454">yes</text>
+
+<!-- branch left: unsure -> gray holding -->
+<line x1="230" y1="164" x2="160" y2="164" stroke="#2a1a0e" stroke-width="1"/>
+<line x1="160" y1="164" x2="160" y2="194" stroke="#2a1a0e" stroke-width="1" marker-end="url(#arrow02)"/>
+<text x="138" y="158" text-anchor="end" font-family="'JetBrains Mono','Fira Code',monospace" font-size="11" fill="#545454">unsure</text>
+
+<rect x="60" y="198" width="200" height="56" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="160" y="222" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" font-weight="600" fill="#C8102E">When in doubt,</text>
+<text x="160" y="240" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" font-weight="600" fill="#C8102E">disclose</text>
+
+<!-- holding rejoins toward green process -->
+<line x1="160" y1="254" x2="160" y2="318" stroke="#2a1a0e" stroke-width="1"/>
+<line x1="160" y1="318" x2="248" y2="318" stroke="#2a1a0e" stroke-width="1" marker-end="url(#arrow02)"/>
+
+<!-- green process: write specific disclosure -->
+<rect x="250" y="296" width="200" height="56" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="350" y="320" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" font-weight="600" fill="#2a1a0e">Write a specific,</text>
+<text x="350" y="338" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" font-weight="600" fill="#2a1a0e">named disclosure</text>
+
+<line x1="350" y1="352" x2="350" y2="392" stroke="#2a1a0e" stroke-width="1" marker-end="url(#arrow02)"/>
+
+<!-- terminal -->
+<rect x="250" y="396" width="200" height="44" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="2"/>
+<text x="350" y="423" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="15" fill="#2a1a0e">Disclosure included</text>
+
+<text x="495" y="296" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" font-style="italic">Uncertainty</text>
+<text x="495" y="312" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" font-style="italic">defaults to</text>
+<text x="495" y="328" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" font-style="italic">disclosure.</text>
+</svg>

@@ -1,0 +1,31 @@
+<!-- Reader task to chart type decision map | Book: The Research Paper Recipe | Chapter: 08-how-to-design-a-graph | Figure: 03 | Generated: 2026-05-29 | Source: pantry/08-how-to-design-a-graph-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-03 fig-desc-03"><title id="fig-title-03">Reader task to chart type decision map</title><desc id="fig-desc-03">A central reader-task node branches to five chart forms. The task chosen determines the chart: compare values to grouped bars, distribution to a box plot, change over time to a line, relationship to a scatter, composition to a pie.</desc><metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="08-how-to-design-a-graph" figure-number="03" date-generated="2026-05-29"/></metadata>
+<rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+<defs><marker id="arr03" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2a1a0e"/></marker></defs>
+<text x="350" y="32" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">The reader's task picks the chart</text>
+<!-- central node -->
+<rect x="40" y="170" width="150" height="80" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.4"/>
+<text x="115" y="205" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">What is the</text>
+<text x="115" y="222" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">reader's task?</text>
+<!-- arrows to 5 terminals at x~430 -->
+<line x1="190" y1="210" x2="430" y2="70" stroke="#2a1a0e" stroke-width="1" marker-end="url(#arr03)"/>
+<line x1="190" y1="210" x2="430" y2="140" stroke="#2a1a0e" stroke-width="1" marker-end="url(#arr03)"/>
+<line x1="190" y1="210" x2="430" y2="210" stroke="#2a1a0e" stroke-width="1" marker-end="url(#arr03)"/>
+<line x1="190" y1="210" x2="430" y2="280" stroke="#2a1a0e" stroke-width="1" marker-end="url(#arr03)"/>
+<line x1="190" y1="210" x2="430" y2="350" stroke="#2a1a0e" stroke-width="1" marker-end="url(#arr03)"/>
+<!-- Terminal 1: compare values -> grouped bars (y=70) -->
+<g transform="translate(440,46)"><rect x="0" y="0" width="50" height="48" fill="#FFFFFF" stroke="#545454" stroke-width="1"/><rect x="8" y="20" width="8" height="22" fill="#545454"/><rect x="20" y="12" width="8" height="30" fill="#545454"/><rect x="32" y="26" width="8" height="16" fill="#545454"/></g>
+<text x="500" y="76" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Compare values → grouped bars</text>
+<!-- Terminal 2: distribution -> box plot (y=140) -->
+<g transform="translate(440,116)"><rect x="0" y="0" width="50" height="48" fill="#FFFFFF" stroke="#545454" stroke-width="1"/><line x1="25" y1="6" x2="25" y2="16" stroke="#545454" stroke-width="1"/><rect x="14" y="16" width="22" height="16" fill="none" stroke="#545454" stroke-width="1"/><line x1="14" y1="24" x2="36" y2="24" stroke="#545454" stroke-width="1.2"/><line x1="25" y1="32" x2="25" y2="42" stroke="#545454" stroke-width="1"/></g>
+<text x="500" y="146" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Show distribution → box plot</text>
+<!-- Terminal 3: change over time -> line (y=210) -->
+<g transform="translate(440,186)"><rect x="0" y="0" width="50" height="48" fill="#FFFFFF" stroke="#545454" stroke-width="1"/><polyline points="8,38 18,26 28,30 42,10" fill="none" stroke="#545454" stroke-width="1.4"/></g>
+<text x="500" y="216" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Track change → line chart</text>
+<!-- Terminal 4: relationship -> scatter (y=280) -->
+<g transform="translate(440,256)"><rect x="0" y="0" width="50" height="48" fill="#FFFFFF" stroke="#545454" stroke-width="1"/><circle cx="12" cy="34" r="2.2" fill="#545454"/><circle cx="22" cy="22" r="2.2" fill="#545454"/><circle cx="32" cy="26" r="2.2" fill="#545454"/><circle cx="40" cy="12" r="2.2" fill="#545454"/></g>
+<text x="500" y="286" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Examine relationship → scatter</text>
+<!-- Terminal 5: composition -> pie (y=350) -->
+<g transform="translate(440,326)"><rect x="0" y="0" width="50" height="48" fill="#FFFFFF" stroke="#545454" stroke-width="1"/><circle cx="25" cy="24" r="15" fill="none" stroke="#545454" stroke-width="1"/><path d="M25 24 L25 9 A15 15 0 0 1 38 30 Z" fill="#545454"/></g>
+<text x="500" y="356" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Show composition → pie</text>
+</svg>

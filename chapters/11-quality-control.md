@@ -19,6 +19,8 @@ For each highlighted sentence, ask: what specific evidence supports this, and is
 
 This is the audit. It is not a readability check. It is a truth check.
 
+![Figure 11.1 — A claim audit tests each world-claim's evidence against its scope, assigns one of six labels, and routes overstated or unsupported claims to scope-narrowing while supported claims pass.](../images/11-quality-control-fig-01.png)
+
 The claim "demonstrates that AI improves learning" will almost certainly come back labeled overstated. "Demonstrates" is too strong — demonstration requires a design that rules out alternative explanations. "AI" is too broad — you studied a specific AI tutoring system with a specific feedback type. "Improves learning" is too broad — you measured one outcome, at one time point, in one population. The label isn't a criticism. It's a diagnosis. The sentence needs to be narrowed to the scope the evidence actually supports.
 
 <!-- → [TABLE: Claim audit labels — six rows: supported, partially supported, overstated, unsupported, needs citation, needs qualification — columns: definition, what triggers this label, example claim, what revision looks like] -->
@@ -47,6 +49,8 @@ The GRIM test (Granularity-Related Inconsistency of Means) and related methods h
 
 The statistical integrity check: for every quantitative claim, trace it to its source. The p-value in the Discussion discussion should match the p-value in the Results table, which should match the output file. The effect size described in the Abstract should match the effect size reported in Results. The comparison described in words in the Discussion ("Socratic feedback produced significantly better retention") should correspond to a specific test with a specific result reported somewhere in Results, not to a general impression of the findings.
 
+![Figure 11.2 — Every quantitative claim must trace identically from software output through the Results table to the in-text statement and the Abstract; any mismatch between linked points is a reporting error.](../images/11-quality-control-fig-02.png)
+
 This is tedious. Do it anyway. The reviewer who catches a mismatch between a p-value in the text and a p-value in the table has found evidence of either carelessness or error, and will reasonably wonder what else might be wrong.
 
 <!-- → [TABLE: Statistical integrity checklist — rows: p-values, effect sizes, confidence intervals, comparison language, descriptive statistics — columns: where it should appear in the paper, what to check against, common mismatch patterns] -->
@@ -60,6 +64,8 @@ AI tools are very good at improving prose style. They can turn an awkward senten
 The specific danger: AI polish can make an unsupported claim harder to detect. An unsupported claim in rough prose draws attention to itself because the sentence is awkward; something feels off, and the reader looks more closely and finds the problem. The same claim, polished to fluency by an AI tool, reads smoothly and confidently, and the reader's attention flows past it. The error is still there. It is now harder to see.
 
 The implication is sequencing: run the logic audit and the statistical integrity check before any AI editing. Fix the logical errors in rough form, where they're visible. Then improve the prose. If you improve the prose first, you are at risk of polishing over problems that should have been corrected.
+
+![Figure 11.3 — Run the logic and statistical audits while errors are still visible in rough prose, then apply AI polish; reversing the order hides unsupported claims under fluency.](../images/11-quality-control-fig-03.png)
 
 This is not a criticism of AI editing tools. It is a description of how human cognition works: fluent text is easier to accept, harder to question. The tool is working as designed. The writer's job is to use it at the right point in the revision process.
 
@@ -88,6 +94,8 @@ A logic problem makes the claim unsupported by the evidence. The subject of the 
 Mixing these two types of problems up creates a particular failure: revising for logic when you should be revising for style, and vice versa. The writer who changes "demonstrates" to "suggests" because it sounds less aggressive has made a style choice, not a logic correction — "suggests" is still too broad if the evidence is from a single subgroup. The writer who rewrites a clear, well-supported sentence because it feels flat has spent time on style when the sentence was already doing its job.
 
 The claim audit sorts these. A sentence labeled overstated needs a logic revision — change what it claims. A sentence labeled unclear or wordy needs a style revision — change how it says it. Don't mix them.
+
+![Figure 11.4 — A style problem makes a sound claim hard to read and needs a how-it-reads fix; a logic problem makes a claim unsupported and needs a what-it-claims fix — and swapping the fixes fails.](../images/11-quality-control-fig-04.png)
 
 <!-- → [TABLE: Logic problem vs. style problem — rows: six example sentences — columns: what kind of problem it is, what the fix looks like for each type, what the wrong fix looks like] -->
 

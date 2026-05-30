@@ -1,0 +1,40 @@
+<!-- Potential outcomes: the unobserved branch | Book: The Research Paper Recipe | Chapter: 04-what-does-causal-mean-exactly | Figure: 01 | Generated: 2026-05-29 | Source: pantry/04-what-does-causal-mean-exactly-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-01 fig-desc-01">
+  <title id="fig-title-01">Potential outcomes: only one branch is ever observed</title>
+  <desc id="fig-desc-01">One individual leads to two potential outcomes. The treated world is observed; the untreated world is unobservable. The causal effect is the difference between the two, but only one is ever seen.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="04-what-does-causal-mean-exactly" figure-number="01" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#2a1a0e"/></marker>
+  </defs>
+
+  <text x="40" y="44" font-family="'EB Garamond',Georgia,serif" font-size="18" fill="#2a1a0e">One person, two possible worlds — one stays invisible</text>
+
+  <!-- individual node -->
+  <rect x="40" y="180" width="150" height="60" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="115" y="206" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" fill="#2a1a0e" text-anchor="middle">One student</text>
+  <text x="115" y="224" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" text-anchor="middle">(the individual)</text>
+
+  <!-- arrows -->
+  <line x1="190" y1="200" x2="360" y2="120" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="190" y1="220" x2="360" y2="300" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- observed treated outcome -->
+  <rect x="365" y="92" width="210" height="64" fill="#F5F5F5" stroke="#C8102E" stroke-width="2"/>
+  <text x="470" y="118" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" fill="#2a1a0e" text-anchor="middle">Outcome if treated</text>
+  <text x="470" y="138" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E" text-anchor="middle">OBSERVED</text>
+
+  <!-- unobserved untreated outcome -->
+  <rect x="365" y="266" width="210" height="64" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="470" y="292" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" fill="#545454" text-anchor="middle">Outcome if untreated</text>
+  <text x="470" y="312" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" text-anchor="middle">never observed</text>
+
+  <!-- difference bracket -->
+  <path d="M 600 100 H 614 V 320 H 600" fill="none" stroke="#2a1a0e" stroke-width="1.5"/>
+  <line x1="614" y1="210" x2="630" y2="210" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="636" y="200" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Causal</text>
+  <text x="636" y="216" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">effect</text>
+  <text x="636" y="232" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">(the gap)</text>
+
+  <text x="40" y="390" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">The counterfactual is missing by definition — the effect can never be measured on a single person.</text>
+</svg>

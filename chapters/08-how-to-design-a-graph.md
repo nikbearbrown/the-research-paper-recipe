@@ -11,6 +11,8 @@ No number has been changed. No data has been altered. The visual claim has chang
 
 This is the thing worth understanding about graphs before anything else: a graph is not a neutral container for data. It is a representation — a set of design choices about how to encode values into visual properties. Those choices carry arguments. They can make a real difference look negligible or a trivial difference look decisive. Getting them right is not an aesthetic concern. It is an epistemic one.
 
+![Figure 8.1 — Identical two-condition values look modestly different when bars start at zero and dramatically different when the baseline is truncated, while an honest dot plot shows the gap without inflating it.](../images/08-how-to-design-a-graph-fig-01.png)
+
 ---
 
 William Cleveland and Robert McGill ran a series of experiments in the 1980s to answer a question that sounds simple but had never been properly tested: when people read a graph, how accurately do they judge the quantities it represents? The answer depends, and it depends specifically on which visual property the data is encoded in.
@@ -18,6 +20,8 @@ William Cleveland and Robert McGill ran a series of experiments in the 1980s to 
 Their finding, replicated and extended by later researchers, is that visual encoding channels are not equal. People judge **position along a common scale** most accurately — which is what a well-designed bar chart or dot plot provides. They judge **length** (bars anchored at a common baseline) slightly less accurately. **Angle** is worse — which is why pie charts are poor at communicating precise differences. **Area** is worse still, which is why bubble charts require careful handling. **Color hue** and **shading** are the weakest channels for quantitative judgment — they are useful for distinguishing categories but unreliable for communicating magnitude.
 
 This ordering has a practical consequence for chart design: use the most accurate encoding channel available for the comparison the reader needs to make. If you're asking the reader to compare quantities, position or length is almost always better than area or color. If you're encoding one variable as area (bubble size, for instance), the reader's judgment of relative values will be imprecise, and you need to decide whether that imprecision matters for your claim.
+
+![Figure 8.2 — Perceptual channels differ in judgment accuracy: position on a common scale is read most accurately, then length, then angle, then area, with color/saturation least accurate.](../images/08-how-to-design-a-graph-fig-02.png)
 
 <!-- → [CHART: Cleveland-McGill accuracy ranking — horizontal bar chart of encoding channels ordered by judgment accuracy: position on common scale, position on non-aligned scales, length, direction/angle, area, color/saturation — each bar showing approximate error rate from their experiments] -->
 
@@ -27,9 +31,13 @@ Before choosing a chart type, there is a prior question: what is the reader supp
 
 This sounds obvious, but it is the step that gets skipped when researchers reach for the default chart type — which in many fields is a bar chart of means, regardless of the question. The reader task determines the appropriate form.
 
+![Figure 8.3 — The reader's task — compare values, show distribution, track change, examine relationship, show composition — determines which chart form is appropriate before any default is reached for.](../images/08-how-to-design-a-graph-fig-03.png)
+
 If the task is **compare discrete values** — how does the mean score in condition A differ from condition B? — then bars or dot plots work well. Bars use length to encode the quantity; dot plots use position. Both are accurate. Dot plots are often cleaner for comparisons across several groups.
 
 If the task is **understand a distribution** — what is the spread of individual scores? Are there outliers? Is the distribution skewed? — then bars of means are actively misleading. A bar showing a mean of 72 tells you nothing about whether everyone scored near 72, or whether half the students scored 50 and half scored 94. For distribution questions, you need histograms, box plots, violin plots, or — for modest sample sizes — raw data points with jittering. Weissgerber and colleagues demonstrated that bar graphs in biomedical research routinely hide distributional structure in ways that change the scientific interpretation; the same is true in educational research.
+
+![Figure 8.5 — Two conditions with the same mean can have entirely different distributions — a bar of means conceals this, while a dot plot of individual scores reveals whether the spread or skew differs.](../images/08-how-to-design-a-graph-fig-05.png)
 
 If the task is **track change over time** — how did scores evolve across weeks? — then lines are almost always right. Lines imply continuity and progression between measured points, which is exactly what a longitudinal trend shows.
 
@@ -68,6 +76,8 @@ A **confidence interval** shows the range of values consistent with the data at 
 When error bars aren't labeled, readers cannot distinguish between these three quantities. A figure showing narrow standard-error bars around two group means, presented without labeling, can look like strong evidence of difference when the individual score distributions substantially overlap. The caption needs to say, at minimum: "Error bars represent 95% confidence intervals" (or standard deviations, or standard errors).
 
 The more informative solution: for modest sample sizes, show the individual data points. This makes the distribution visible and allows the reader to see both the central tendency and the spread simultaneously. The mean and its confidence interval can be overlaid as a point and line. Nothing is hidden.
+
+![Figure 8.4 — The same group mean drawn with standard-deviation, standard-error, and 95% confidence-interval bars yields visibly different bar widths, so unlabeled error bars are uninterpretable; showing individual points removes the ambiguity.](../images/08-how-to-design-a-graph-fig-04.png)
 
 <!-- → [IMAGE: Same data shown four ways — bar with SD error bars, bar with SE error bars, bar with 95% CI error bars, dot plot with individual points and mean — captions noting what each shows and hides] -->
 

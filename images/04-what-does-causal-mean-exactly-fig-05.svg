@@ -1,0 +1,39 @@
+<!-- Collider DAG | Book: The Research Paper Recipe | Chapter: 04-what-does-causal-mean-exactly | Figure: 05 | Generated: 2026-05-29 | Source: pantry/04-what-does-causal-mean-exactly-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-05 fig-desc-05">
+  <title id="fig-title-05">A collider receives arrows from two unrelated causes</title>
+  <desc id="fig-desc-05">A directed graph: two causes A and B across the top, collider C at bottom centre. Both A and B point down into C. A dashed line between A and B marks the spurious association that conditioning on the collider would open.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="04-what-does-causal-mean-exactly" figure-number="05" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#2a1a0e"/></marker>
+  </defs>
+
+  <text x="40" y="44" font-family="'EB Garamond',Georgia,serif" font-size="18" fill="#2a1a0e">Collider: arrows point in — conditioning opens a fake link</text>
+
+  <!-- cause A upper-left -->
+  <circle cx="180" cy="140" r="42" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="180" y="138" font-family="'JetBrains Mono','Fira Code',monospace" font-size="16" fill="#2a1a0e" text-anchor="middle">A</text>
+  <text x="180" y="158" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454" text-anchor="middle">cause</text>
+
+  <!-- cause B upper-right -->
+  <circle cx="520" cy="140" r="42" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="520" y="138" font-family="'JetBrains Mono','Fira Code',monospace" font-size="16" fill="#2a1a0e" text-anchor="middle">B</text>
+  <text x="520" y="158" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454" text-anchor="middle">cause</text>
+
+  <!-- collider C bottom-center -->
+  <circle cx="350" cy="310" r="42" fill="#F5F5F5" stroke="#C8102E" stroke-width="2"/>
+  <text x="350" y="308" font-family="'JetBrains Mono','Fira Code',monospace" font-size="16" fill="#2a1a0e" text-anchor="middle">C</text>
+  <text x="350" y="328" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454" text-anchor="middle">collider</text>
+
+  <!-- A -> C -->
+  <line x1="212" y1="168" x2="320" y2="282" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- B -> C -->
+  <line x1="488" y1="168" x2="380" y2="282" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- spurious dashed connector A to B -->
+  <line x1="222" y1="140" x2="478" y2="140" stroke="#545454" stroke-width="1" stroke-dasharray="6 4"/>
+  <text x="350" y="128" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" text-anchor="middle">spurious association</text>
+  <text x="350" y="116" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454" text-anchor="middle">(opens if you condition on C)</text>
+
+  <text x="40" y="396" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Controlling for a collider creates correlation where none existed — the opposite of fixing a confounder.</text>
+</svg>

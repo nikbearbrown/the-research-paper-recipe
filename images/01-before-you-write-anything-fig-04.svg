@@ -1,0 +1,57 @@
+<!-- Fluent but Hollow vs. Specific and Falsifiable | Book: The Research Paper Recipe | Chapter: 01-before-you-write-anything | Figure: 04 | Generated: 2026-05-29 | Source: pantry/01-before-you-write-anything-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-04">
+  <title id="fig-title-04">Fluent but Hollow vs. Specific and Falsifiable</title>
+  <desc>A hollow claim sweeps an arc that accommodates every possible finding; a specific claim points to one failure condition and can be defeated by a single contrary result. Prose polish is not evidence of a testable claim.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="01-before-you-write-anything" figure-number="04" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#2a1a0e"/></marker>
+  </defs>
+
+  <text x="32" y="38" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">Fluent but Hollow vs. Specific and Falsifiable</text>
+  <text x="32" y="56" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">A polished sentence is not a testable claim — read by what each one rules out</text>
+
+  <!-- Divider -->
+  <line x1="350" y1="80" x2="350" y2="372" stroke="#D4D4D4" stroke-width="1"/>
+
+  <!-- LEFT: fluent but hollow -->
+  <rect x="40" y="84" width="280" height="30" fill="#F5F5F5" stroke="#545454" stroke-width="1"/>
+  <text x="180" y="104" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">Fluent but hollow</text>
+
+  <rect x="100" y="138" width="160" height="44" fill="#FFFFFF" stroke="#545454" stroke-width="1"/>
+  <text x="180" y="160" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">"AI is reshaping how</text>
+  <text x="180" y="175" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">students learn"</text>
+
+  <!-- Accommodating arc enclosing scattered outcome dots -->
+  <path d="M 60 230 A 130 90 0 0 0 300 230" fill="none" stroke="#545454" stroke-width="1"/>
+  <line x1="180" y1="182" x2="180" y2="210" stroke="#545454" stroke-width="1"/>
+  <circle cx="92" cy="244" r="3.5" fill="#545454"/>
+  <circle cx="130" cy="262" r="3.5" fill="#545454"/>
+  <circle cx="168" cy="270" r="3.5" fill="#545454"/>
+  <circle cx="206" cy="266" r="3.5" fill="#545454"/>
+  <circle cx="244" cy="252" r="3.5" fill="#545454"/>
+  <circle cx="278" cy="236" r="3.5" fill="#545454"/>
+  <text x="180" y="316" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Accommodates every</text>
+  <text x="180" y="332" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">possible finding</text>
+
+  <!-- RIGHT: specific and falsifiable -->
+  <rect x="380" y="84" width="280" height="30" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="520" y="104" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">Specific and falsifiable</text>
+
+  <rect x="450" y="138" width="140" height="44" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="520" y="160" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">"AI tutoring beats</text>
+  <text x="520" y="175" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">drills on recall"</text>
+
+  <!-- Single failure-condition arrow to a slot -->
+  <line x1="520" y1="182" x2="520" y2="236" stroke="#2a1a0e" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="450" y="242" width="140" height="44" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="520" y="264" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">If recall is equal,</text>
+  <text x="520" y="279" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">the claim fails</text>
+
+  <!-- Defeat marker (one red X) -->
+  <line x1="612" y1="252" x2="628" y2="268" stroke="#C8102E" stroke-width="2"/>
+  <line x1="628" y1="252" x2="612" y2="268" stroke="#C8102E" stroke-width="2"/>
+  <text x="520" y="316" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E">One result can defeat it</text>
+
+  <text x="32" y="404" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">If no finding could embarrass your claim, you have written an essay, not a hypothesis.</text>
+</svg>

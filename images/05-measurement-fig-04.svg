@@ -1,0 +1,34 @@
+<!-- Instruction-assessment distance | Book: The Research Paper Recipe | Chapter: 05-measurement | Figure: 04 | Generated: 2026-05-29 | Source: pantry/05-measurement-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-04 fig-desc-04">
+  <title id="fig-title-04">A learning claim needs distance between teaching and testing</title>
+  <desc id="fig-desc-04">Two stacked panels. The upper panel shows an instruction box and an assessment box adjacent with almost no gap and matched shape — aligned testing. The lower panel shows the two boxes separated by a wide gap with differing shape and colour — independent assessment. A caliper marks each gap.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="05-measurement" figure-number="04" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+
+  <text x="40" y="40" font-family="'EB Garamond',Georgia,serif" font-size="18" fill="#2a1a0e">Aligned testing collapses the distance learning needs</text>
+
+  <!-- UPPER PANEL: aligned (minimal gap) -->
+  <text x="40" y="92" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Aligned — measures test-specific prep, not learning</text>
+  <rect x="160" y="106" width="180" height="60" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="250" y="141" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" text-anchor="middle">Instruction</text>
+  <rect x="348" y="106" width="180" height="60" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="438" y="141" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" text-anchor="middle">Assessment</text>
+  <!-- tiny gap caliper -->
+  <path d="M 340 178 V 188 H 348 V 178" fill="none" stroke="#545454" stroke-width="1"/>
+  <text x="344" y="206" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454" text-anchor="middle">no gap</text>
+
+  <!-- separator -->
+  <line x1="40" y1="230" x2="660" y2="230" stroke="#D4D4D4" stroke-width="1"/>
+
+  <!-- LOWER PANEL: independent (wide gap, different shape/color) -->
+  <text x="40" y="270" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Independent — different format, surface, and elapsed time</text>
+  <rect x="80" y="286" width="160" height="60" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="160" y="321" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" text-anchor="middle">Instruction</text>
+  <!-- different shape (rotated-feel via rounded? no rounded allowed -> use angled/wider box) -->
+  <rect x="470" y="278" width="170" height="76" fill="#F5F5F5" stroke="#C8102E" stroke-width="2"/>
+  <text x="555" y="313" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" text-anchor="middle">Assessment</text>
+  <text x="555" y="331" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#C8102E" text-anchor="middle">different by design</text>
+  <!-- wide gap caliper -->
+  <path d="M 240 366 V 376 H 470 V 366" fill="none" stroke="#545454" stroke-width="1"/>
+  <text x="355" y="394" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" text-anchor="middle">distance = the real learning signal</text>
+</svg>

@@ -1,0 +1,30 @@
+<!-- Cleveland-McGill encoding-channel accuracy ranking | Book: The Research Paper Recipe | Chapter: 08-how-to-design-a-graph | Figure: 02 | Generated: 2026-05-29 | Source: pantry/08-how-to-design-a-graph-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-02 fig-desc-02"><title id="fig-title-02">Cleveland-McGill encoding-channel accuracy ranking</title><desc id="fig-desc-02">A horizontal bar chart of six perceptual encoding channels ranked by judgment error. Position on a common scale is read most accurately with the shortest error bar; length, position on non-aligned scales, angle, and area follow; color and saturation are least accurate.</desc><metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="08-how-to-design-a-graph" figure-number="02" date-generated="2026-05-29"/></metadata>
+<rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+<text x="350" y="32" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">How accurately we read each encoding</text>
+<text x="350" y="52" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">shorter bar = judged more accurately</text>
+<rect x="240" y="72" width="400" height="288" fill="#F5F5F5"/>
+<!-- value axis bottom, category axis left -->
+<line x1="240" y1="360" x2="640" y2="360" stroke="#2a1a0e" stroke-width="1.2"/>
+<line x1="240" y1="72" x2="240" y2="360" stroke="#2a1a0e" stroke-width="1.2"/>
+<text x="440" y="392" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Relative judgment error →</text>
+<!-- 6 rows, bars increasing length; row spacing ~46px, bar thickness 24 -->
+<!-- Row 1 position common scale: short -->
+<rect x="240" y="82" width="70" height="24" fill="#545454"/>
+<text x="234" y="99" text-anchor="end" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Position, common scale</text>
+<!-- Row 2 position non-aligned -->
+<rect x="240" y="128" width="130" height="24" fill="#545454"/>
+<text x="234" y="145" text-anchor="end" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Position, non-aligned</text>
+<!-- Row 3 length -->
+<rect x="240" y="174" width="195" height="24" fill="#545454"/>
+<text x="234" y="191" text-anchor="end" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Length</text>
+<!-- Row 4 angle -->
+<rect x="240" y="220" width="255" height="24" fill="#545454"/>
+<text x="234" y="237" text-anchor="end" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Angle / slope</text>
+<!-- Row 5 area -->
+<rect x="240" y="266" width="320" height="24" fill="#545454"/>
+<text x="234" y="283" text-anchor="end" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Area</text>
+<!-- Row 6 color/saturation: worst, red emphasis -->
+<rect x="240" y="312" width="385" height="24" fill="#C8102E"/>
+<text x="234" y="329" text-anchor="end" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E">Color / saturation</text>
+</svg>

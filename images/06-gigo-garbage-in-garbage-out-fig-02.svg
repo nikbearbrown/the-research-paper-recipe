@@ -1,0 +1,54 @@
+<!-- Missingness mechanisms: MCAR / MAR / MNAR | Book: The Research Paper Recipe | Chapter: 06-gigo-garbage-in-garbage-out | Figure: 02 | Generated: 2026-05-29 | Source: pantry/06-gigo-garbage-in-garbage-out-cajal.md -->
+<svg viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-02 fig-desc-02">
+  <title id="fig-title-02">Three missingness mechanisms differ by what drives the gap</title>
+  <desc id="fig-desc-02">Three stacked panels each with an observed-variable node, a missing-value node, and a missingness indicator. MCAR has no arrow into the indicator. MAR has an arrow from the observed variable. MNAR has an arrow from the unobserved missing value itself, marked as the dangerous dependence.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="06-gigo-garbage-in-garbage-out" figure-number="02" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="480" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#2a1a0e"/></marker>
+    <marker id="arrowR" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#C8102E"/></marker>
+  </defs>
+
+  <text x="40" y="40" font-family="'EB Garamond',Georgia,serif" font-size="18" fill="#2a1a0e">What does "missing" depend on? That sets the threat.</text>
+
+  <!-- PANEL 1: MCAR -->
+  <text x="40" y="90" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" fill="#2a1a0e">MCAR — depends on nothing</text>
+  <rect x="160" y="74" width="110" height="40" fill="#F5F5F5" stroke="#545454" stroke-width="1.5"/>
+  <text x="215" y="98" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e" text-anchor="middle">Observed</text>
+  <rect x="300" y="74" width="110" height="40" fill="#F5F5F5" stroke="#545454" stroke-width="1.5"/>
+  <text x="355" y="98" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e" text-anchor="middle">Missing value</text>
+  <rect x="520" y="74" width="120" height="40" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="580" y="98" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e" text-anchor="middle">Missing? (R)</text>
+  <text x="480" y="138" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454" text-anchor="middle">no arrow in — random, safest</text>
+
+  <line x1="40" y1="166" x2="660" y2="166" stroke="#D4D4D4" stroke-width="1"/>
+
+  <!-- PANEL 2: MAR -->
+  <text x="40" y="216" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" fill="#2a1a0e">MAR — depends on observed</text>
+  <rect x="160" y="200" width="110" height="40" fill="#F5F5F5" stroke="#545454" stroke-width="1.5"/>
+  <text x="215" y="224" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e" text-anchor="middle">Observed</text>
+  <rect x="300" y="200" width="110" height="40" fill="#F5F5F5" stroke="#545454" stroke-width="1.5"/>
+  <text x="355" y="224" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e" text-anchor="middle">Missing value</text>
+  <rect x="520" y="200" width="120" height="40" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="580" y="224" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e" text-anchor="middle">Missing? (R)</text>
+  <!-- observed -> R (secondary) -->
+  <path d="M 215 200 Q 215 170 400 170 T 580 200" fill="none" stroke="#545454" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="480" y="262" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454" text-anchor="middle">fixable — adjust for the observed variable</text>
+
+  <line x1="40" y1="290" x2="660" y2="290" stroke="#D4D4D4" stroke-width="1"/>
+
+  <!-- PANEL 3: MNAR -->
+  <text x="40" y="340" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" fill="#2a1a0e">MNAR — depends on the missing value</text>
+  <rect x="160" y="324" width="110" height="40" fill="#F5F5F5" stroke="#545454" stroke-width="1.5"/>
+  <text x="215" y="348" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e" text-anchor="middle">Observed</text>
+  <rect x="300" y="324" width="110" height="40" fill="#F5F5F5" stroke="#C8102E" stroke-width="2"/>
+  <text x="355" y="348" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e" text-anchor="middle">Missing value</text>
+  <rect x="520" y="324" width="120" height="40" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="580" y="348" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e" text-anchor="middle">Missing? (R)</text>
+  <!-- missing value -> R (red, dangerous) -->
+  <line x1="410" y1="344" x2="516" y2="344" stroke="#C8102E" stroke-width="2" marker-end="url(#arrowR)"/>
+  <text x="465" y="334" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#C8102E" text-anchor="middle">dangerous</text>
+  <text x="400" y="392" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454" text-anchor="middle">not fixable from the data alone — biases the result</text>
+
+  <text x="40" y="436" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">R is the indicator "this cell is blank." What feeds the arrow into R determines how bad the missingness is.</text>
+</svg>

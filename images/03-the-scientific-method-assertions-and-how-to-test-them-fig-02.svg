@@ -1,0 +1,48 @@
+<!-- The Falsifiability Spectrum | Book: The Research Paper Recipe | Chapter: 03-the-scientific-method-assertions-and-how-to-test-them | Figure: 02 | Generated: 2026-05-29 | Source: pantry/03-the-scientific-method-assertions-and-how-to-test-them-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-02">
+  <title id="fig-title-02">The Falsifiability Spectrum</title>
+  <desc>Claims fall along a one-dimensional spectrum from accommodating any evidence to specific enough to be wrong in several distinct ways. Three claims are plotted left to right; only the rightmost has multiple ways to fail.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="03-the-scientific-method-assertions-and-how-to-test-them" figure-number="02" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+
+  <text x="32" y="38" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">The Falsifiability Spectrum</text>
+  <text x="32" y="56" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Falsifiability is a continuum — a claim earns its place by how much it rules out</text>
+
+  <!-- Plot background -->
+  <rect x="60" y="150" width="580" height="120" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+
+  <!-- Axis line -->
+  <line x1="80" y1="240" x2="620" y2="240" stroke="#2a1a0e" stroke-width="1.5"/>
+  <!-- End and mid ticks -->
+  <line x1="80" y1="234" x2="80" y2="246" stroke="#2a1a0e" stroke-width="1.5"/>
+  <line x1="350" y1="234" x2="350" y2="246" stroke="#2a1a0e" stroke-width="1"/>
+  <line x1="620" y1="234" x2="620" y2="246" stroke="#2a1a0e" stroke-width="1.5"/>
+
+  <!-- End labels -->
+  <text x="80" y="290" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">accommodates</text>
+  <text x="80" y="304" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">any evidence</text>
+  <text x="620" y="290" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">wrong in several</text>
+  <text x="620" y="304" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">distinct ways</text>
+
+  <!-- Dot 1: far left -->
+  <circle cx="130" cy="240" r="8" fill="#FFFFFF" stroke="#545454" stroke-width="1.5"/>
+  <text x="130" y="200" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">"AI matters"</text>
+  <text x="130" y="184" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">rules out nothing</text>
+
+  <!-- Dot 2: middle -->
+  <circle cx="350" cy="240" r="8" fill="#545454" stroke="#545454" stroke-width="1.5"/>
+  <text x="350" y="200" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">"AI tutoring helps"</text>
+  <text x="350" y="184" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">one way to fail</text>
+
+  <!-- Dot 3: right, with falsification rays -->
+  <circle cx="580" cy="240" r="8" fill="#C8102E" stroke="#C8102E" stroke-width="1.5"/>
+  <line x1="580" y1="232" x2="556" y2="204" stroke="#C8102E" stroke-width="1.2"/>
+  <line x1="580" y1="232" x2="580" y2="200" stroke="#C8102E" stroke-width="1.2"/>
+  <line x1="580" y1="232" x2="604" y2="204" stroke="#C8102E" stroke-width="1.2"/>
+  <text x="580" y="190" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">"AI tutoring beats</text>
+  <text x="580" y="174" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">drills on recall by 10%"</text>
+
+  <text x="580" y="334" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#C8102E">multiple ways to be wrong</text>
+
+  <text x="32" y="376" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">A claim that survives every conceivable result is not strong — it has simply said nothing testable.</text>
+</svg>

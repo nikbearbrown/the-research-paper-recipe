@@ -21,6 +21,8 @@ Let me make the distinction between summary and synthesis concrete, because the 
 
 The synthesis is what the literature review is for. Not the display of individual sources, but the argument that emerges when you hold them against each other and ask what they collectively say, where they agree, where they conflict, and where they stop.
 
+![Figure 9.1 — Summary lists what each source said as separate parallel statements; synthesis draws lines between sources to extract a shared pattern and locate the gap none of them fills.](../images/09-literature-review-fig-01.png)
+
 The practical problem is that synthesis requires a structure. You need a way of organizing the sources that is not "source 1, then source 2, then source 3." The structure that works is thematic: organize around problems, methods, populations, mechanisms, or debates — not around the authors who studied them.
 
 ---
@@ -32,6 +34,8 @@ Rows are themes or dimensions: feedback type, population, outcome measure, desig
 The matrix forces you to read actively — you have to decide, for each source, which cell its content belongs in. More importantly, the matrix makes patterns visible that source-by-source reading hides. You can see that six of your eight sources measured only immediate performance and two measured delayed. You can see that all of the randomized designs are in a single subfield and the rest are observational. You can see that nobody has isolated the specific comparison you're planning to make.
 
 Those patterns are your gap. The gap is not something you find by reading all the sources and then waiting for inspiration. It is something that emerges from the structure of what exists — the combination of what has been done and what hasn't.
+
+![Figure 9.2 — A theme-by-source matrix forces active reading and makes patterns and gaps visible — an empty region in the grid is precisely the unfilled space your study can occupy.](../images/09-literature-review-fig-02.png)
 
 <!-- → [TABLE: Sample synthesis matrix — rows: feedback type, study design, outcome measure, retention timescale, sample population, key limitation — columns: five hypothetical sources — cells showing variation across studies — gap visible where certain row-column combinations are empty] -->
 
@@ -46,6 +50,8 @@ John Swales developed a model for how research introductions establish their ter
 **Move 3: Occupy the niche.** Announce your purposes, state your hypothesis or research question, describe your method, announce your findings. This is the "here is what this paper does" section. It closes the argument that the first two moves built.
 
 The power of the CARS model is that it shows the logical relationship between the literature review and the hypothesis. The literature review is not a credential display — it is a setup. It establishes the territory, identifies the gap, and then the study occupies the gap. The hypothesis at the end of the introduction should feel like the only natural response to the gap the literature revealed.
+
+![Figure 9.3 — A research introduction moves through three dependent stages — establish the territory, establish the niche, occupy the niche — narrowing like a funnel toward the hypothesis.](../images/09-literature-review-fig-03.png)
 
 <!-- → [INFOGRAPHIC: CARS three-move structure — three stacked segments of an introduction: Move 1 (establish territory, "the field has done..."), Move 2 (establish niche, "but no one has..."), Move 3 (occupy niche, "this study...") — with annotations showing what each move does and what happens when Move 2 is missing or weak] -->
 
@@ -76,6 +82,8 @@ AI language models generate plausible-sounding citations. They produce author na
 A citation hallucination is not a formatting error. It is a false claim about the state of knowledge. It tells readers that something was demonstrated, argued, or shown in a specific paper — a paper that cannot be read, because it doesn't exist. The reader who trusts the citation and builds on it is building on air.
 
 The verification requirement is non-negotiable: locate the source (in a database, in a library, in an author's repository), open the source, confirm that it says what you are attributing to it, and record the correct bibliographic details from the actual document. This takes time. There is no shortcut. AI can help you find directions to look — adjacent terms to search, authors whose work is adjacent to yours, themes you may have missed — but every citation that appears in your paper must be traceable to a source you have personally verified.
+
+![Figure 9.4 — AI can cluster verified notes, suggest search terms, and diagnose source-by-source structure, but generating citations, deciding the gap, and judging evidence quality must remain human — a sharp boundary, not a gradient.](../images/09-literature-review-fig-04.png)
 
 <!-- → [TABLE: What AI can and cannot do in literature review preparation — two-column table: AI-appropriate tasks (clustering verified notes, suggesting search terms, identifying thematic gaps in your existing sources, diagnosing source-by-source organization) vs. human-required tasks (generating citations, summarizing unread papers, deciding what the gap is, evaluating evidence quality)] -->
 

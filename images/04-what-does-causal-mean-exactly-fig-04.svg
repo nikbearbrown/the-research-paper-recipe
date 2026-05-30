@@ -1,0 +1,40 @@
+<!-- Mediator DAG: total vs direct path | Book: The Research Paper Recipe | Chapter: 04-what-does-causal-mean-exactly | Figure: 04 | Generated: 2026-05-29 | Source: pantry/04-what-does-causal-mean-exactly-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-04 fig-desc-04">
+  <title id="fig-title-04">A mediator sits on the causal pathway between X and Y</title>
+  <desc id="fig-desc-04">A directed graph: cause X at left, mediator M raised at top centre, outcome Y at right. X to M to Y is the indirect route through the mediator; a separate X to Y arrow along the bottom is the direct route. The total effect splits into these two paths.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="04-what-does-causal-mean-exactly" figure-number="04" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#2a1a0e"/></marker>
+    <marker id="arrowR" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#C8102E"/></marker>
+  </defs>
+
+  <text x="40" y="44" font-family="'EB Garamond',Georgia,serif" font-size="18" fill="#2a1a0e">Mediator: M carries part of X's effect onward to Y</text>
+
+  <!-- mediator M top center -->
+  <circle cx="350" cy="130" r="42" fill="#F5F5F5" stroke="#C8102E" stroke-width="2"/>
+  <text x="350" y="128" font-family="'JetBrains Mono','Fira Code',monospace" font-size="16" fill="#2a1a0e" text-anchor="middle">M</text>
+  <text x="350" y="148" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454" text-anchor="middle">mediator</text>
+
+  <!-- cause X left -->
+  <circle cx="150" cy="300" r="42" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="150" y="298" font-family="'JetBrains Mono','Fira Code',monospace" font-size="16" fill="#2a1a0e" text-anchor="middle">X</text>
+  <text x="150" y="318" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454" text-anchor="middle">cause</text>
+
+  <!-- outcome Y right -->
+  <circle cx="550" cy="300" r="42" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="550" y="298" font-family="'JetBrains Mono','Fira Code',monospace" font-size="16" fill="#2a1a0e" text-anchor="middle">Y</text>
+  <text x="550" y="318" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454" text-anchor="middle">outcome</text>
+
+  <!-- X -> M (indirect) -->
+  <line x1="182" y1="272" x2="312" y2="156" stroke="#C8102E" stroke-width="1.5" marker-end="url(#arrowR)"/>
+  <!-- M -> Y (indirect) -->
+  <line x1="388" y1="156" x2="518" y2="272" stroke="#C8102E" stroke-width="1.5" marker-end="url(#arrowR)"/>
+  <!-- X -> Y (direct) -->
+  <line x1="192" y1="300" x2="506" y2="300" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <text x="350" y="218" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E" text-anchor="middle">indirect route</text>
+  <text x="350" y="288" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" text-anchor="middle">direct route</text>
+
+  <text x="40" y="396" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Controlling for M removes the indirect route — shrinking, not cleaning, the total effect of X.</text>
+</svg>

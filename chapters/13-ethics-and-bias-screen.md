@@ -15,6 +15,8 @@ This chapter is about finding those gaps before submission.
 
 Disclosure is the most procedurally clear layer of the ethics screen, so it is a good place to start.
 
+![Figure 13.1 — The ethics screen is a stack of four distinct accountability layers — disclosure, overgeneralization, citation bias, and replication fitness — each auditing a different way a paper can mislead readers.](../images/13-ethics-and-bias-screen-fig-01.png)
+
 Publication ethics bodies have established that authors are accountable for all content in a paper — regardless of who or what produced any of it. The COPE (Committee on Publication Ethics) guidelines and ICMJE statements both address this: AI tools cannot be listed as authors, because authorship carries accountability for the work, and AI systems cannot take that accountability. The human authors who used AI tools remain fully responsible for the content those tools helped produce.
 
 The practical implication is disclosure: when AI tools contributed to the work in any substantive way, that contribution should be named. What "substantive" means is not universally defined, and different journals have different thresholds. Some require disclosure of any AI assistance in the manuscript preparation process. Some require disclosure only for AI involvement in data analysis or interpretation. Some are still developing their policies. The only reliable approach is to check the target journal's current author guidelines before submission.
@@ -22,6 +24,8 @@ The practical implication is disclosure: when AI tools contributed to the work i
 The disclosure should be specific. Not "AI tools were used" — which tells the reader nothing — but "An AI language model (Claude, Anthropic) was used to assist with restructuring the Discussion section for clarity. All substantive content, including all claims, citations, and interpretations, was produced by the authors and verified independently." This sentence tells the reader what was done, who or what did it, and what the human authors retained responsibility for.
 
 The common rationalization for omitting disclosure is that the AI "only helped with style" and therefore doesn't count as substantive assistance. This rationalization is problematic for two reasons. First, style and substance are not fully separable in research writing — how a Discussion is structured determines what claims are foregrounded and how uncertainty is communicated. Second, journal policies don't always make this distinction, and an author who omits disclosure based on their own judgment about what counts may be violating the policy of the venue they're submitting to. When in doubt, disclose. A disclosure that wasn't required costs nothing. An omitted disclosure that was required can cost the paper.
+
+![Figure 13.2 — Deciding whether and how to disclose AI assistance is a conditional path: assess whether the contribution was substantive, default to disclosure under uncertainty, then write a specific named disclosure rather than a vague one.](../images/13-ethics-and-bias-screen-fig-02.png)
 
 <!-- → [TABLE: AI disclosure template — rows: different types of AI use (analysis, writing/restructuring, code generation, figure preparation, literature search assistance) — columns: example disclosure language, what the disclosure must name, what human accountability statement is needed] -->
 
@@ -34,6 +38,8 @@ A narrow sample does not forbid a paper. Studies with small, local samples can b
 "Students learn more effectively with Socratic AI feedback" is a claim about students in general. "Students in this sample — 43 undergraduates in an introductory programming course at a research university — showed higher delayed retention scores in the Socratic feedback condition" is a claim about this sample. The first claim is what a reader takes away when they encounter the finding in an abstract or conclusion. The second claim is what the evidence actually supports.
 
 The gap between these two claims is not just a stylistic difference. It is the difference between a paper that instructs instructors about what to do for their students, and a paper that reports a finding in a specific context that may or may not generalize to theirs. Readers who encounter the broader claim and act on it are operating on information the study didn't earn. The author who wrote the broader claim is responsible for that.
+
+![Figure 13.3 — Overgeneralization is the visible gap between the wide scope a claim asserts and the narrow scope the sample actually supports; honest scoping shrinks the claim to match the sample.](../images/13-ethics-and-bias-screen-fig-03.png)
 
 The practical audit: for every generalization in the Abstract, Introduction, and Conclusion, identify the sample it is based on. If the sample is specific — particular institution, particular course level, particular population characteristics — the claim needs to reflect that specificity. Not through disclaimers appended to the end of the sentence, but through the structure of the claim itself. "In our sample of introductory programming students" is part of the subject, not an afterthought.
 
@@ -52,6 +58,8 @@ Research on publication bias and citation bias documents that this is not a hypo
 The citation audit asks: is this literature review representative of what the field actually found, or only of what got published and what I chose to cite? The check is not just about whether disconfirming evidence exists — it's about whether the review's characterization of the field is accurate.
 
 The practical steps: search specifically for null findings, for methodological critiques, for replications that found smaller effects. Note what proportion of your citations found positive, mixed, or null effects. If the answer is all positive, either the field has unusually consistent findings (which should be noted) or you have inadvertently built a one-sided review (which needs correcting). A literature review that acknowledges "most studies found positive effects, though several observational studies found null effects when controlling for prior ability" is more trustworthy than one that presents convergent positive evidence without noting that some of the convergence may be selection effects.
+
+![Figure 13.4 — A one-sided literature review over-represents positive findings relative to the true mix of positive, mixed, and null results in the field, and the citation audit measures that distortion.](../images/13-ethics-and-bias-screen-fig-04.png)
 
 This is not the same as both-sidesing every literature review with artificial balance. It is the difference between accurately characterizing what is known and presenting a curated selection that overstates consensus.
 

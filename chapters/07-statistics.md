@@ -19,6 +19,8 @@ What a p-value tells you is this: *assuming* the null hypothesis were true — a
 
 The American Statistical Association issued a formal statement in 2016 specifically because this confusion is so widespread and so consequential. The statement is worth reading in full, but the core message is this: a p-value below some threshold is not, by itself, proof of an effect, evidence of its importance, or a guarantee that the result will replicate. It is a measure of surprise under a model.
 
+![Figure 7.1 — A p-value is the probability of observing data at least as extreme as the actual data assuming the null hypothesis is true — the shaded tail under the null distribution, not the probability the null is true.](../images/07-statistics-fig-01.png)
+
 <!-- → [INFOGRAPHIC: What a p-value actually says — visual showing the null distribution, the observed test statistic, and the shaded tail representing the p-value — labeled clearly: "probability of data this extreme if null is true" vs. the common misconception "probability that null is true"] -->
 
 ---
@@ -30,6 +32,8 @@ The effect size does. And effect size is a separate number that answers a differ
 The distinction is not academic. A study with a thousand participants can detect a difference so small it is invisible in practice and report it with p < 0.001 — highly statistically significant, essentially meaningless in the real world. A study with twenty participants may find a large, practically important effect and report it as p = 0.09 — not statistically significant at conventional thresholds, but pointing toward something real that a larger study might confirm.
 
 Statistical significance is about signal-to-noise ratio and sample size. Effect size is about the actual magnitude of the relationship. Both matter. Neither is a substitute for the other.
+
+![Figure 7.2 — Statistical significance and effect size are independent axes: a tiny effect can be highly significant in a large sample, and a large effect can be non-significant in a small one.](../images/07-statistics-fig-02.png)
 
 The most common effect size measures depend on what you're comparing. For the difference between two group means, Cohen's d expresses the difference in units of standard deviation: a d of 0.5 means the groups differ by half a standard deviation. For correlations, r itself is the effect size. For proportions, odds ratios or risk ratios. For more complex models, partial eta-squared or omega-squared. Cohen proposed benchmarks — small, medium, and large — that are widely used as rough orientation, but he intended them as conventions for a researcher who has no better reference, not as universal standards. The more informative comparison is: what effect sizes have prior studies in this field, with this population, on this outcome, typically found?
 
@@ -63,6 +67,8 @@ The particular danger of low power is not just that you miss real effects. It's 
 
 Power analysis should happen before data collection, not after. The question is: given what I expect the true effect to be (based on prior literature), how many participants do I need to have an 80% (or 90%) chance of detecting it if it's real? The answer is usually larger than researchers expect, which is uncomfortable but important. A study that is underpowered by design is a study that will either miss real effects or report inflated ones.
 
+![Figure 7.3 — Statistical power rises with sample size, and the sample size needed to reach the 0.80 threshold is far larger for small effects than for large ones.](../images/07-statistics-fig-03.png)
+
 <!-- → [CHART: Power curves — x-axis: sample size per group, y-axis: statistical power — three curves for small (d=0.2), medium (d=0.5), and large (d=0.8) effect sizes — horizontal line at 0.80 showing the conventional threshold — point where each curve crosses it showing required N] -->
 
 ---
@@ -70,6 +76,8 @@ Power analysis should happen before data collection, not after. The question is:
 Multiple comparisons are the other side of the same problem.
 
 The alpha level — conventionally 0.05 — is the rate of false positives you're willing to accept when the null is true. If you run one test at alpha = 0.05, you have a 5% chance of a false positive. If you run twenty tests, each at alpha = 0.05, the probability that at least one will cross the threshold by chance alone is much higher — roughly 64% if the tests are independent. If you then report the one that crossed the threshold as your finding, you have done what researchers call p-hacking, even if you didn't intend to.
+
+![Figure 7.4 — Running many independent tests each at alpha = 0.05 drives the family-wise probability of at least one false positive far above 5% — roughly 64% by twenty tests.](../images/07-statistics-fig-04.png)
 
 The honest accounting: when you run multiple tests, you need to either correct for the multiple comparisons, or report all tests, or distinguish pre-specified primary outcomes from exploratory analyses. The Benjamini-Hochberg procedure controls the false discovery rate — the expected proportion of significant results that are actually false — and is less conservative than Bonferroni correction while still providing meaningful protection.
 

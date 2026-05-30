@@ -1,0 +1,25 @@
+<!-- What AI can and cannot do in literature review | Book: The Research Paper Recipe | Chapter: 09-literature-review | Figure: 04 | Generated: 2026-05-29 | Source: pantry/09-literature-review-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-04 fig-desc-04"><title id="fig-title-04">What AI can and cannot do in literature review</title><desc id="fig-desc-04">A sharp vertical divider separates AI-appropriate support tasks on the left (cluster verified notes, suggest search terms, diagnose structure) from human-required judgment on the right (generate citations, summarize unread papers, decide the gap, judge evidence quality). The boundary is a line, not a gradient.</desc><metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="09-literature-review" figure-number="04" date-generated="2026-05-29"/></metadata>
+<rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+<text x="350" y="32" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">A sharp boundary, not a gradient</text>
+<!-- divider -->
+<line x1="350" y1="56" x2="350" y2="396" stroke="#2a1a0e" stroke-width="4"/>
+<!-- LEFT region: AI-appropriate -->
+<rect x="40" y="56" width="290" height="340" fill="#F5F5F5"/>
+<text x="185" y="84" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" fill="#2a1a0e" font-weight="bold">AI can support</text>
+<g font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">
+<rect x="60" y="108" width="250" height="54" fill="#FFFFFF" stroke="#545454" stroke-width="1.2"/><text x="185" y="140" text-anchor="middle">Cluster notes you have verified</text>
+<rect x="60" y="176" width="250" height="54" fill="#FFFFFF" stroke="#545454" stroke-width="1.2"/><text x="185" y="208" text-anchor="middle">Suggest search terms</text>
+<rect x="60" y="244" width="250" height="54" fill="#FFFFFF" stroke="#545454" stroke-width="1.2"/><text x="185" y="276" text-anchor="middle">Diagnose source-by-source structure</text>
+<rect x="60" y="312" width="250" height="54" fill="#FFFFFF" stroke="#545454" stroke-width="1.2"/><text x="185" y="344" text-anchor="middle">Reformat and organize</text>
+</g>
+<!-- RIGHT region: human-required (red emphasis) -->
+<rect x="370" y="56" width="290" height="340" fill="#F5F5F5"/>
+<text x="515" y="84" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" fill="#C8102E" font-weight="bold">Humans must judge</text>
+<g font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">
+<rect x="390" y="108" width="250" height="54" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.4"/><text x="515" y="140" text-anchor="middle">Generate citations</text>
+<rect x="390" y="176" width="250" height="54" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.4"/><text x="515" y="208" text-anchor="middle">Summarize unread papers</text>
+<rect x="390" y="244" width="250" height="54" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.4"/><text x="515" y="276" text-anchor="middle">Decide what the gap is</text>
+<rect x="390" y="312" width="250" height="54" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.4"/><text x="515" y="344" text-anchor="middle">Judge evidence quality</text>
+</g>
+</svg>

@@ -1,0 +1,32 @@
+<!-- Summary versus synthesis | Book: The Research Paper Recipe | Chapter: 09-literature-review | Figure: 01 | Generated: 2026-05-29 | Source: pantry/09-literature-review-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-01 fig-desc-01"><title id="fig-title-01">Summary versus synthesis</title><desc id="fig-desc-01">Left panel: three isolated source nodes listed in parallel, summary. Right panel: the same three sources joined by converging lines to one emergent cross-source claim, with a dashed box marking the gap none of them fills, synthesis.</desc><metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="09-literature-review" figure-number="01" date-generated="2026-05-29"/></metadata>
+<rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+<defs><marker id="arr01b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2a1a0e"/></marker></defs>
+<text x="350" y="32" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">Summary lists; synthesis connects</text>
+<!-- LEFT panel: summary -->
+<rect x="40" y="60" width="290" height="320" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+<text x="185" y="84" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#545454" font-weight="bold">Summary</text>
+<rect x="90" y="110" width="190" height="50" fill="#F5F5F5" stroke="#545454" stroke-width="1"/><text x="185" y="140" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Source 1 said…</text>
+<rect x="90" y="185" width="190" height="50" fill="#F5F5F5" stroke="#545454" stroke-width="1"/><text x="185" y="215" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Source 2 said…</text>
+<rect x="90" y="260" width="190" height="50" fill="#F5F5F5" stroke="#545454" stroke-width="1"/><text x="185" y="290" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Source 3 said…</text>
+<text x="185" y="350" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">isolated, no pattern</text>
+<!-- RIGHT panel: synthesis -->
+<rect x="370" y="60" width="290" height="320" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+<text x="515" y="84" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="bold">Synthesis</text>
+<rect x="390" y="110" width="120" height="44" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.2"/><text x="450" y="137" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Source 1</text>
+<rect x="390" y="178" width="120" height="44" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.2"/><text x="450" y="205" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Source 2</text>
+<rect x="390" y="246" width="120" height="44" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.2"/><text x="450" y="273" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Source 3</text>
+<!-- converge to claim node -->
+<line x1="510" y1="132" x2="588" y2="180" stroke="#2a1a0e" stroke-width="1" marker-end="url(#arr01b)"/>
+<line x1="510" y1="200" x2="588" y2="190" stroke="#2a1a0e" stroke-width="1" marker-end="url(#arr01b)"/>
+<line x1="510" y1="268" x2="588" y2="200" stroke="#2a1a0e" stroke-width="1" marker-end="url(#arr01b)"/>
+<rect x="592" y="160" width="56" height="56" fill="#C8102E"/>
+<text x="620" y="186" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#FFFFFF">cross-</text>
+<text x="620" y="199" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#FFFFFF">source</text>
+<text x="620" y="212" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#FFFFFF">claim</text>
+<!-- gap box -->
+<rect x="585" y="244" width="70" height="46" fill="#FFFFFF" stroke="#545454" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="620" y="266" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">the gap</text>
+<text x="620" y="280" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">(your study)</text>
+<line x1="620" y1="216" x2="620" y2="244" stroke="#545454" stroke-width="1" stroke-dasharray="3 3"/>
+</svg>

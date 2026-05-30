@@ -1,0 +1,68 @@
+<!-- Drafting Order vs. Reading Order | Book: The Research Paper Recipe | Chapter: 10-drafting-section-by-section | Figure: 01 | Generated: 2026-05-29 | Source: pantry/10-drafting-section-by-section-cajal.md -->
+<svg viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-01">
+  <title id="fig-title-01">Drafting Order vs. Reading Order</title>
+  <desc>Two parallel vertical sequences of paper sections. Papers are read Introduction-first but should be drafted Methods-first, because each drafting step depends on the prior step's content already existing. Connectors link the four shared sections that change position.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="10-drafting-section-by-section" figure-number="01" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="480" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/></marker>
+    <marker id="arrowgray" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#545454"/></marker>
+  </defs>
+
+  <text x="32" y="40" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">Drafting Order vs. Reading Order</text>
+  <text x="32" y="58" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Read Introduction-first; draft Methods-first &#8212; each step needs the prior step's content to exist</text>
+
+  <!-- Column headers -->
+  <text x="150" y="92" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#545454" font-weight="600">READING ORDER</text>
+  <text x="550" y="92" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#C8102E" font-weight="600">DRAFTING ORDER</text>
+
+  <!-- LEFT column: reading order (reference, hairline) -->
+  <!-- Introduction -->
+  <rect x="80" y="108" width="140" height="44" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="150" y="135" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Introduction</text>
+  <rect x="80" y="172" width="140" height="44" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="150" y="199" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Methods</text>
+  <rect x="80" y="236" width="140" height="44" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="150" y="263" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Results</text>
+  <rect x="80" y="300" width="140" height="44" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="150" y="327" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Discussion</text>
+  <rect x="80" y="364" width="140" height="44" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="150" y="391" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Abstract</text>
+  <!-- left arrows -->
+  <line x1="150" y1="152" x2="150" y2="170" stroke="#545454" stroke-width="1" marker-end="url(#arrowgray)"/>
+  <line x1="150" y1="216" x2="150" y2="234" stroke="#545454" stroke-width="1" marker-end="url(#arrowgray)"/>
+  <line x1="150" y1="280" x2="150" y2="298" stroke="#545454" stroke-width="1" marker-end="url(#arrowgray)"/>
+  <line x1="150" y1="344" x2="150" y2="362" stroke="#545454" stroke-width="1" marker-end="url(#arrowgray)"/>
+
+  <!-- RIGHT column: drafting order -->
+  <!-- Methods (ready) -->
+  <rect x="480" y="108" width="140" height="44" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="550" y="135" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Methods</text>
+  <rect x="480" y="172" width="140" height="44" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="550" y="199" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Results</text>
+  <rect x="480" y="236" width="140" height="44" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="550" y="263" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Discussion</text>
+  <!-- frame sections depend on the above -->
+  <rect x="480" y="300" width="140" height="44" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="550" y="327" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Introduction</text>
+  <rect x="480" y="364" width="140" height="44" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="550" y="391" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Abstract</text>
+  <rect x="480" y="428" width="140" height="40" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="550" y="452" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#545454">Title</text>
+  <!-- right arrows -->
+  <line x1="550" y1="152" x2="550" y2="170" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="550" y1="216" x2="550" y2="234" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="550" y1="280" x2="550" y2="298" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="550" y1="344" x2="550" y2="362" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="550" y1="408" x2="550" y2="426" stroke="#545454" stroke-width="1" marker-end="url(#arrowgray)"/>
+
+  <!-- cross connectors: shared sections that reorder -->
+  <!-- Methods: left row2 -> right row1 -->
+  <line x1="222" y1="194" x2="478" y2="130" stroke="#D4D4D4" stroke-width="1" marker-end="url(#arrowgray)"/>
+  <!-- Discussion: left row4 -> right row3 -->
+  <line x1="222" y1="322" x2="478" y2="258" stroke="#D4D4D4" stroke-width="1" marker-end="url(#arrowgray)"/>
+  <!-- Introduction: left row1 -> right row4 -->
+  <line x1="222" y1="130" x2="478" y2="322" stroke="#D4D4D4" stroke-width="1" marker-end="url(#arrowgray)"/>
+
+  <text x="32" y="468" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Red boxes (Introduction, Abstract) frame the paper &#8212; they can only be written once the findings exist.</text>
+</svg>

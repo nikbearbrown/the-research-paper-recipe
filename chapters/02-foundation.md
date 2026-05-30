@@ -21,7 +21,7 @@ An observational study makes a different commitment. You can describe what happe
 
 This is not a technicality. It is not the kind of precision that only methodologists care about. It is the difference between a paper that makes a defensible argument and a paper that will be correctly challenged in peer review for overstating what the evidence supports.
 
-<!-- → [TABLE: Design commitment matrix — rows: RCT, quasi-experiment, observational study, case study, meta-analysis — columns: what it licenses (association / causation / generalization), what it cannot support, when to use each] -->
+![Figure 2.2 — Each study design is a commitment that licenses some claims and forbids others, independent of the finding's content.](../images/02-foundation-fig-02.png)
 
 ---
 
@@ -35,7 +35,7 @@ Your job, when you read a source, is to reconstruct the trade-offs and ask wheth
 
 Noah's satisfaction paper is a good example. Satisfaction is a real outcome. It matters that students have positive experiences. But if Noah wants to claim that the intervention *improves durable learning*, then a satisfaction measure is evidence for a different claim. The paper didn't fail to measure learning because the authors were careless. They may have measured exactly what they intended to measure. Noah is the one proposing to use it for something it wasn't designed to support.
 
-<!-- → [INFOGRAPHIC: Source chain diagram — design → sample → measure → analysis → finding → claim — with annotations showing where the chain can be strained (e.g., self-selected sample strains generalization, immediate test strains retention claims)] -->
+![Figure 2.1 — Every claim rests on a chain back through analysis, measurement, sample, and design, and a borrowed finding is only as strong as the link it came from.](../images/02-foundation-fig-01.png)
 
 ---
 
@@ -47,7 +47,7 @@ The columns I use are: citation, hypothesis or claim the source makes, study des
 
 Building the matrix before writing the literature review changes the literature review. Noah's review, once he builds the matrix, stops saying "research has shown" and starts saying something more precise: "randomized evidence supports short-term performance gains; evidence for durable retention is currently limited to one institution and one delivery format." That sentence is narrower. It is also more honest. And it sets up a genuine contribution — because if the evidence for durable retention is thin, that is a gap worth filling.
 
-<!-- → [TABLE: Sample source matrix — four rows representing the four study types in Noah's example — columns: claim, design, sample, measure, finding, limitation, what it licenses] -->
+![Figure 2.3 — A summary table records what each source found; a source matrix adds the column that translates findings into what you are justified in borrowing.](../images/02-foundation-fig-03.png)
 
 ---
 
@@ -56,6 +56,8 @@ The second lock — alongside the source matrix — is the evidence plan for you
 An evidence plan asks: given my hypothesis, what design, sample, measure, and analysis would make the claim defensible? This is not the same as choosing a design because it is convenient or because it is what your field typically uses. It is asking, from first principles, what the claim actually requires.
 
 If your hypothesis is causal — "X causes Y" — your evidence plan needs an experimental or quasi-experimental design, or a very explicit argument for why an observational design is sufficient given the alternatives. If your hypothesis is about a mechanism — "X causes Y *because* Z" — your evidence plan needs a measure of Z, not just a measure of Y. If your hypothesis specifies a population — "among novice programmers" — your evidence plan needs a sample that actually contains novice programmers, not a convenience sample that happens to include some.
+
+![Figure 2.4 — The form of the hypothesis (causal, mechanistic, population-specific) dictates what design, measure, and sample the evidence plan must contain.](../images/02-foundation-fig-04.png)
 
 This sounds obvious. It is less obvious in practice, because many research projects begin from available resources: a dataset that already exists, a classroom you have access to, a survey instrument someone else validated. Working from available resources is fine — most research does this — but the evidence plan forces an honest accounting of what those resources can and cannot support. A dataset of self-selected participants can support some claims and not others. An instrument validated in one population may or may not transfer to yours.
 

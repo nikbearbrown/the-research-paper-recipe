@@ -1,0 +1,51 @@
+<!-- Nominalization: Action Hidden vs. Action Restored | Book: The Research Paper Recipe | Chapter: 14-writing-well-prose-for-scientific-papers | Figure: 01 | Generated: 2026-05-29 | Source: pantry/14-writing-well-prose-for-scientific-papers-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-01 fig-desc-01">
+<title id="fig-title-01">Nominalization: Action Hidden vs. Action Restored</title>
+<desc id="fig-desc-01">A before-and-after prose comparison. The "before" sentence buries its action inside a noun, collapsing actor and verb into one dense block. The revised "after" sentence restores a clear subject, verb, and object the reader can follow.</desc>
+<metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="14-writing-well-prose-for-scientific-papers" figure-number="01" date-generated="2026-05-29"/></metadata>
+<defs>
+<marker id="arrow14a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#2a1a0e"/>
+</marker>
+</defs>
+<rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+
+<!-- BEFORE panel -->
+<text x="60" y="48" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" font-weight="600" fill="#545454">BEFORE — action buried in a noun</text>
+<rect x="60" y="62" width="270" height="120" fill="#F5F5F5" stroke="#545454" stroke-width="1.5"/>
+<text x="80" y="98" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">"The implementation</text>
+<text x="80" y="122" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">of the protocol was</text>
+<text x="80" y="146" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">performed by the team."</text>
+<text x="80" y="172" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" font-style="italic">one dense noun-block; actor and verb collapsed</text>
+
+<!-- arrow between panels -->
+<line x1="345" y1="122" x2="385" y2="122" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow14a)"/>
+
+<!-- AFTER panel (emphasized) -->
+<text x="400" y="48" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" font-weight="600" fill="#C8102E">AFTER — verb restored</text>
+<rect x="400" y="62" width="240" height="120" fill="#FFFFFF" stroke="#C8102E" stroke-width="2"/>
+<text x="420" y="110" font-family="'EB Garamond',Georgia,serif" font-size="17" fill="#2a1a0e">"The team ran</text>
+<text x="420" y="136" font-family="'EB Garamond',Georgia,serif" font-size="17" fill="#2a1a0e">the protocol."</text>
+<text x="420" y="172" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" font-style="italic">clear actor, action, object</text>
+
+<!-- restored structure schematic: subject -> verb -> object -->
+<text x="60" y="244" font-family="'EB Garamond',Georgia,serif" font-size="15" fill="#2a1a0e">The restored structure the reader can follow:</text>
+
+<rect x="100" y="272" width="130" height="56" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="165" y="298" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" font-weight="600" fill="#2a1a0e">Subject</text>
+<text x="165" y="316" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">The team</text>
+
+<line x1="230" y1="300" x2="280" y2="300" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow14a)"/>
+
+<rect x="285" y="272" width="130" height="56" fill="#FFFFFF" stroke="#C8102E" stroke-width="2"/>
+<text x="350" y="298" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" font-weight="600" fill="#C8102E">Verb</text>
+<text x="350" y="316" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">ran</text>
+
+<line x1="415" y1="300" x2="465" y2="300" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow14a)"/>
+
+<rect x="470" y="272" width="130" height="56" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+<text x="535" y="298" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" font-weight="600" fill="#2a1a0e">Object</text>
+<text x="535" y="316" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">the protocol</text>
+
+<text x="60" y="372" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" font-style="italic">Unpack the noun, put the verb back, and the sentence regains a spine.</text>
+</svg>

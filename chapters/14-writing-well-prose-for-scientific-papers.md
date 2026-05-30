@@ -21,6 +21,8 @@ A nominalization is a verb or adjective that has been converted into a noun. "Im
 
 The test for a nominalization: find any noun ending in -tion, -ment, -ance, -ence, -ity, or -al, and ask whether it was once a verb or adjective. If it was, ask whether restoring it to its original form would make the sentence clearer. Often it would. "The observation of improvement in performance" restores to "Students in the Socratic group improved their performance" — and that version has a subject (students), a verb (improved), and an object (performance), which gives the sentence a structure the reader can follow.
 
+![Figure 14.1 — A nominalization buries the sentence's action inside a noun, collapsing the actor and verb; restoring the verb re-exposes a clear subject, verb, and object the reader can follow.](../images/14-writing-well-prose-for-scientific-papers-fig-01.png)
+
 Not all nominalizations are problems. "The randomization was stratified by prior programming experience" uses a nominalization appropriately — "randomization" is the right term for this concept, and the sentence is clear. The problem is when nominalizations stack: "The implementation of the intervention resulted in the observation of significant improvement in student learning outcomes." Every meaningful action in that sentence is hidden inside a noun. The sentence is impenetrable not because the ideas are hard but because the prose has removed all the structure that would make them accessible.
 
 <!-- → [TABLE: Nominalization audit — six example sentences with stacked nominalizations — columns: original sentence, nominalizations identified, restored actor-action version, what changed in clarity] -->
@@ -45,6 +47,8 @@ Passive voice is the element of scientific prose that generates the most categor
 
 The test: when you find a passive, ask whether the actor is genuinely irrelevant or whether naming the actor would require saying something the sentence is currently hiding. If naming the actor would reveal a decision that should be disclosed, the passive is evasive and the decision should be reported.
 
+![Figure 14.2 — Informative passive suppresses an actor who is genuinely irrelevant, while evasive passive conceals a present decision-maker; the test is whether naming the actor would reveal something the sentence is hiding.](../images/14-writing-well-prose-for-scientific-papers-fig-02.png)
+
 <!-- → [TABLE: Passive voice audit — four example sentences — columns: passive version, actor identified, whether actor is relevant, revised version (active or informative passive), what became visible in the revision] -->
 
 ---
@@ -59,6 +63,8 @@ The calibration between verb and evidence is not a matter of tone. It is a matte
 
 Here is the practical rule: for each epistemic verb in your Discussion, ask what kind of evidence would justify that verb. Then ask whether your study provides that kind of evidence. If the answer is no, change the verb.
 
+![Figure 14.3 — Epistemic verbs form an ordered scale from strongest to weakest evidential commitment — demonstrates, shows, indicates, suggests, is consistent with — and the verb must be matched to the actual strength of the study's evidence.](../images/14-writing-well-prose-for-scientific-papers-fig-03.png)
+
 A related issue: excessive hedging. A paper that uses "appears to suggest" and "may perhaps indicate" throughout its Discussion has been hedged into incoherence. Some of this hedging is genuine epistemic humility — the evidence is uncertain and the writer is being honest. But some of it is defensive writing — the writer is protecting against every possible objection by refusing to commit to any claim. Defensive hedging does not produce a safer claim. It produces an unreadable one. Calibrated hedging names the actual uncertainty. Defensive hedging names no uncertainty at all, because it is hiding, not disclosing.
 
 <!-- → [TABLE: Epistemic verb calibration — rows: demonstrates, shows, indicates, suggests, is consistent with — columns: what strength of evidence it implies, what design would justify it, example in context] -->
@@ -68,6 +74,8 @@ A related issue: excessive hedging. A paper that uses "appears to suggest" and "
 The sentence structure principle that runs through all of this comes from a paper by George Gopen and Judith Swan that argued for a model of reading as expectation-based. Readers, they argued, expect certain kinds of information in certain positions. The subject position sets up what the sentence is about. The stress position — usually the end of the sentence — is where new, important information lands.
 
 The implication for scientific prose: the sentence should open on what the reader already knows (topic position) and close on the new information that the sentence is adding (stress position). A sentence that buries its finding in a subordinate clause at the beginning and ends on a reference number has put its information in the wrong positions. The reader's cognitive machinery reads the reference number as the sentence's most important element.
+
+![Figure 14.4 — Readers expect familiar context in the opening topic position and new important information in the closing stress position; a sentence that inverts these misdirects attention.](../images/14-writing-well-prose-for-scientific-papers-fig-04.png)
 
 This is a subtle principle and it does not need to be followed mechanically. But it is useful for diagnosing why a paragraph that seems clear on re-reading was confusing on first reading. Often the culprit is information in the wrong position — the new claim buried where the familiar context should be, the qualification at the end where the finding should be.
 

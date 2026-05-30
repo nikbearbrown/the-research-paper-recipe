@@ -1,0 +1,52 @@
+<!-- The truncated-baseline manipulation | Book: The Research Paper Recipe | Chapter: 08-how-to-design-a-graph | Figure: 01 | Generated: 2026-05-29 | Source: pantry/08-how-to-design-a-graph-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-01 fig-desc-01"><title id="fig-title-01">The truncated-baseline manipulation</title><desc id="fig-desc-01">Three panels of identical values, 80 versus 83. Zero-based bars show a modest gap; truncated bars exaggerate it into a dramatic difference; an honest dot plot with error bars shows the small true gap on a clearly bracketed scale.</desc><metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="08-how-to-design-a-graph" figure-number="01" date-generated="2026-05-29"/></metadata>
+<rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+<text x="350" y="30" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">Same numbers, three visual arguments</text>
+<!-- ============ Panel 1: zero-based (GOOD) ============ -->
+<text x="120" y="60" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="bold">Honest: zero baseline</text>
+<rect x="50" y="80" width="140" height="250" fill="#F5F5F5"/>
+<line x1="50" y1="330" x2="190" y2="330" stroke="#2a1a0e" stroke-width="1.2"/>
+<line x1="50" y1="80" x2="50" y2="330" stroke="#2a1a0e" stroke-width="1.2"/>
+<!-- scale 0..100 over 250px; bar height = val/100*250 -->
+<rect x="78" y="130" width="34" height="200" fill="#545454"/>
+<rect x="128" y="122.5" width="34" height="207.5" fill="#545454"/>
+<text x="95" y="346" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">A</text>
+<text x="145" y="346" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">B</text>
+<text x="46" y="334" text-anchor="end" font-family="'JetBrains Mono','Fira Code',monospace" font-size="10" fill="#545454">0</text>
+<text x="46" y="135" text-anchor="end" font-family="'JetBrains Mono','Fira Code',monospace" font-size="10" fill="#545454">80</text>
+<text x="46" y="84" text-anchor="end" font-family="'JetBrains Mono','Fira Code',monospace" font-size="10" fill="#545454">100</text>
+<!-- ============ Panel 2: truncated (BAD) ============ -->
+<text x="350" y="60" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="12" fill="#C8102E" font-weight="bold">Misleading: truncated baseline</text>
+<rect x="280" y="80" width="140" height="250" fill="#F5F5F5"/>
+<line x1="280" y1="330" x2="420" y2="330" stroke="#2a1a0e" stroke-width="1.2"/>
+<line x1="280" y1="80" x2="280" y2="330" stroke="#2a1a0e" stroke-width="1.2"/>
+<!-- scale 79..84 over 250px; A=80 -> (80-79)/5*250=50 tall; B=83 -> 200 tall -->
+<rect x="308" y="280" width="34" height="50" fill="#C8102E"/>
+<rect x="358" y="130" width="34" height="200" fill="#C8102E"/>
+<text x="325" y="346" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">A</text>
+<text x="375" y="346" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">B</text>
+<text x="276" y="334" text-anchor="end" font-family="'JetBrains Mono','Fira Code',monospace" font-size="10" fill="#C8102E">79</text>
+<text x="276" y="84" text-anchor="end" font-family="'JetBrains Mono','Fira Code',monospace" font-size="10" fill="#545454">84</text>
+<!-- zigzag break mark on axis -->
+<path d="M276 318 l8 -4 l-8 -4" fill="none" stroke="#C8102E" stroke-width="1.2"/>
+<text x="350" y="378" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#C8102E">the bad example: cut baseline magnifies a 3-point gap</text>
+<!-- ============ Panel 3: honest dot plot ============ -->
+<text x="580" y="60" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="bold">Honest: dot plot</text>
+<rect x="510" y="80" width="140" height="250" fill="#F5F5F5"/>
+<line x1="510" y1="330" x2="650" y2="330" stroke="#2a1a0e" stroke-width="1.2"/>
+<line x1="510" y1="80" x2="510" y2="330" stroke="#2a1a0e" stroke-width="1.2"/>
+<!-- bracketed non-zero range, label clearly: 75..90 over 250px; A=80->y, B=83 -->
+<!-- y(v)=330-(v-75)/15*250 -->
+<!-- A=80 -> 330-83.3=246.7 ; B=83 -> 330-133.3=196.7 -->
+<line x1="545" y1="226.7" x2="545" y2="266.7" stroke="#2a1a0e" stroke-width="1.4"/>
+<circle cx="545" cy="246.7" r="5" fill="#545454"/>
+<line x1="615" y1="176.7" x2="615" y2="216.7" stroke="#2a1a0e" stroke-width="1.4"/>
+<circle cx="615" cy="196.7" r="5" fill="#545454"/>
+<text x="545" y="346" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">A</text>
+<text x="615" y="346" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">B</text>
+<text x="506" y="334" text-anchor="end" font-family="'JetBrains Mono','Fira Code',monospace" font-size="10" fill="#545454">75</text>
+<text x="506" y="84" text-anchor="end" font-family="'JetBrains Mono','Fira Code',monospace" font-size="10" fill="#545454">90</text>
+<text x="506" y="201" text-anchor="end" font-family="'JetBrains Mono','Fira Code',monospace" font-size="10" fill="#545454">83</text>
+<!-- bracket annotation -->
+<text x="580" y="406" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">scale bracketed; gap shown without inflation</text>
+</svg>

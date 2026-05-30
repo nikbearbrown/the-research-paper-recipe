@@ -1,0 +1,53 @@
+<!-- Logic Problem vs Style Problem | Book: The Research Paper Recipe | Chapter: 11-quality-control | Figure: 04 | Generated: 2026-05-29 | Source: pantry/11-quality-control-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-04">
+  <title id="fig-title-04">Logic Problem vs. Style Problem</title>
+  <desc>Two problem types with two correct fixes. A style problem makes a sound claim hard to read and needs a how-it-reads fix. A logic problem makes a claim unsupported and needs a what-it-claims fix. The crossed diagonal routes show that applying the other panel's fix fails.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="11-quality-control" figure-number="04" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/></marker>
+    <marker id="arrowred" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#C8102E"/></marker>
+  </defs>
+
+  <text x="32" y="40" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">Logic Problem vs. Style Problem</text>
+  <text x="32" y="58" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Two problems, two fixes &#8212; and swapping the fixes fails every time</text>
+
+  <!-- divider -->
+  <line x1="350" y1="80" x2="350" y2="340" stroke="#D4D4D4" stroke-width="1"/>
+
+  <!-- LEFT panel: style problem -->
+  <rect x="60" y="90" width="240" height="50" fill="#FFFFFF" stroke="#C8860E" stroke-width="1.5"/>
+  <text x="180" y="112" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">STYLE PROBLEM</text>
+  <text x="180" y="129" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">sound claim, hard to read</text>
+
+  <line x1="180" y1="140" x2="180" y2="218" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="188" y="184" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">correct fix</text>
+
+  <rect x="60" y="222" width="240" height="56" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="180" y="246" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">Change how it reads</text>
+  <text x="180" y="264" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">rephrase, restructure</text>
+
+  <!-- RIGHT panel: logic problem -->
+  <rect x="400" y="90" width="240" height="50" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="520" y="112" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#C8102E" font-weight="600">LOGIC PROBLEM</text>
+  <text x="520" y="129" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">claim unsupported</text>
+
+  <line x1="520" y1="140" x2="520" y2="218" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="528" y="184" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">correct fix</text>
+
+  <rect x="400" y="222" width="240" height="56" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="520" y="246" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">Change what it claims</text>
+  <text x="520" y="264" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">narrow, qualify, support</text>
+
+  <!-- crossed wrong-fix arrows -->
+  <line x1="200" y1="138" x2="400" y2="244" stroke="#C8102E" stroke-width="1" stroke-dasharray="5 4" marker-end="url(#arrowred)"/>
+  <line x1="500" y1="138" x2="300" y2="244" stroke="#C8102E" stroke-width="1" stroke-dasharray="5 4" marker-end="url(#arrowred)"/>
+  <!-- X failure markers near crossing -->
+  <g stroke="#C8102E" stroke-width="2">
+    <line x1="344" y1="186" x2="356" y2="198"/><line x1="356" y1="186" x2="344" y2="198"/>
+  </g>
+  <text x="350" y="172" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E" font-weight="600">wrong fix fails</text>
+
+  <text x="32" y="372" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Polishing a logic problem only makes a false claim read better; re-arguing a style problem leaves it unreadable.</text>
+  <text x="32" y="392" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Diagnose the kind of problem first, then apply the matching fix.</text>
+</svg>

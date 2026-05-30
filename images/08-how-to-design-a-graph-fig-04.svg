@@ -1,0 +1,38 @@
+<!-- Error bars mean three different things | Book: The Research Paper Recipe | Chapter: 08-how-to-design-a-graph | Figure: 04 | Generated: 2026-05-29 | Source: pantry/08-how-to-design-a-graph-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-04 fig-desc-04"><title id="fig-title-04">Error bars mean three different things</title><desc id="fig-desc-04">The same mean drawn with standard-deviation, standard-error, and 95% confidence-interval bars yields visibly different widths, so unlabeled error bars are uninterpretable. A fourth panel shows the raw individual points removing the ambiguity.</desc><metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="08-how-to-design-a-graph" figure-number="04" date-generated="2026-05-29"/></metadata>
+<rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+<text x="350" y="30" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">Same mean, four different error bars</text>
+<!-- mean at y=210 across panels. panels centered at x=110,270,430,590 -->
+<!-- Panel 1 SD widest -->
+<rect x="50" y="70" width="120" height="280" fill="#F5F5F5"/>
+<line x1="60" y1="70" x2="60" y2="350" stroke="#2a1a0e" stroke-width="1.2"/>
+<line x1="110" y1="120" x2="110" y2="300" stroke="#2a1a0e" stroke-width="1.4"/>
+<line x1="100" y1="120" x2="120" y2="120" stroke="#2a1a0e" stroke-width="1.4"/>
+<line x1="100" y1="300" x2="120" y2="300" stroke="#2a1a0e" stroke-width="1.4"/>
+<circle cx="110" cy="210" r="5" fill="#C8102E"/>
+<text x="110" y="368" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">SD (widest)</text>
+<!-- Panel 2 SE narrowest -->
+<rect x="210" y="70" width="120" height="280" fill="#F5F5F5"/>
+<line x1="220" y1="70" x2="220" y2="350" stroke="#2a1a0e" stroke-width="1.2"/>
+<line x1="270" y1="185" x2="270" y2="235" stroke="#2a1a0e" stroke-width="1.4"/>
+<line x1="260" y1="185" x2="280" y2="185" stroke="#2a1a0e" stroke-width="1.4"/>
+<line x1="260" y1="235" x2="280" y2="235" stroke="#2a1a0e" stroke-width="1.4"/>
+<circle cx="270" cy="210" r="5" fill="#C8102E"/>
+<text x="270" y="368" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">SE (narrowest)</text>
+<!-- Panel 3 CI intermediate -->
+<rect x="370" y="70" width="120" height="280" fill="#F5F5F5"/>
+<line x1="380" y1="70" x2="380" y2="350" stroke="#2a1a0e" stroke-width="1.2"/>
+<line x1="430" y1="160" x2="430" y2="260" stroke="#2a1a0e" stroke-width="1.4"/>
+<line x1="420" y1="160" x2="440" y2="160" stroke="#2a1a0e" stroke-width="1.4"/>
+<line x1="420" y1="260" x2="440" y2="260" stroke="#2a1a0e" stroke-width="1.4"/>
+<circle cx="430" cy="210" r="5" fill="#C8102E"/>
+<text x="430" y="368" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">95% CI</text>
+<!-- Panel 4 raw points + mean + CI -->
+<rect x="530" y="70" width="120" height="280" fill="#F5F5F5"/>
+<line x1="540" y1="70" x2="540" y2="350" stroke="#2a1a0e" stroke-width="1.2"/>
+<circle cx="582" cy="140" r="2.6" fill="#545454"/><circle cx="600" cy="170" r="2.6" fill="#545454"/><circle cx="612" cy="120" r="2.6" fill="#545454"/><circle cx="595" cy="200" r="2.6" fill="#545454"/><circle cx="615" cy="225" r="2.6" fill="#545454"/><circle cx="585" cy="250" r="2.6" fill="#545454"/><circle cx="605" cy="280" r="2.6" fill="#545454"/><circle cx="590" cy="300" r="2.6" fill="#545454"/><circle cx="618" cy="190" r="2.6" fill="#545454"/><circle cx="600" cy="245" r="2.6" fill="#545454"/>
+<line x1="600" y1="190" x2="600" y2="230" stroke="#C8102E" stroke-width="1.4"/>
+<circle cx="600" cy="210" r="5" fill="#C8102E"/>
+<text x="590" y="368" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Raw points + mean</text>
+<text x="350" y="402" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Unlabeled error bars are uninterpretable; showing the points removes the doubt.</text>
+</svg>

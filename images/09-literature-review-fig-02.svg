@@ -1,0 +1,41 @@
+<!-- The synthesis matrix | Book: The Research Paper Recipe | Chapter: 09-literature-review | Figure: 02 | Generated: 2026-05-29 | Source: pantry/09-literature-review-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-02 fig-desc-02"><title id="fig-title-02">The synthesis matrix</title><desc id="fig-desc-02">A theme-by-source grid: themes label the rows, sources label the columns. Filled marks show where each source addresses a theme; one empty highlighted block in the lower right is the visible gap your study can occupy.</desc><metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="09-literature-review" figure-number="02" date-generated="2026-05-29"/></metadata>
+<rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+<text x="350" y="32" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">The synthesis matrix makes gaps visible</text>
+<!-- grid: header row (sources) + header col (themes). data cells: 5 cols x 5 theme rows -->
+<!-- geometry: left header col x 60..170 (themes labels), data cols start x=170, each 80 wide x5 -> to 570 -->
+<!-- top header row y 60..96 ; data rows y 96.., each 48 x5 -> to 336 -->
+<!-- column headers (sources) -->
+<g font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e" text-anchor="middle">
+<text x="210" y="84">Src A</text><text x="290" y="84">Src B</text><text x="370" y="84">Src C</text><text x="450" y="84">Src D</text><text x="530" y="84">Src E</text>
+</g>
+<text x="115" y="78" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" font-weight="bold">Sources →</text>
+<!-- row headers (themes) -->
+<g font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e" text-anchor="end">
+<text x="165" y="125">Theme 1</text><text x="165" y="173">Theme 2</text><text x="165" y="221">Theme 3</text><text x="165" y="269">Theme 4</text><text x="165" y="317">Theme 5</text>
+</g>
+<text x="50" y="200" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" font-weight="bold" transform="rotate(-90 50 200)">Themes ↓</text>
+<!-- data plot bg -->
+<rect x="170" y="96" width="400" height="240" fill="#F5F5F5"/>
+<!-- grid lines -->
+<g stroke="#2a1a0e" stroke-width="1">
+<line x1="170" y1="96" x2="570" y2="96"/><line x1="170" y1="144" x2="570" y2="144"/><line x1="170" y1="192" x2="570" y2="192"/><line x1="170" y1="240" x2="570" y2="240"/><line x1="170" y1="288" x2="570" y2="288"/><line x1="170" y1="336" x2="570" y2="336"/>
+<line x1="170" y1="96" x2="170" y2="336"/><line x1="250" y1="96" x2="250" y2="336"/><line x1="330" y1="96" x2="330" y2="336"/><line x1="410" y1="96" x2="410" y2="336"/><line x1="490" y1="96" x2="490" y2="336"/><line x1="570" y1="96" x2="570" y2="336"/>
+</g>
+<!-- header bands heavier -->
+<line x1="170" y1="96" x2="570" y2="96" stroke="#2a1a0e" stroke-width="1.8"/>
+<line x1="170" y1="96" x2="170" y2="336" stroke="#2a1a0e" stroke-width="1.8"/>
+<!-- filled marks (content present) as small gray squares, centered in cells. Cell centers: cols 210,290,370,450,530; rows 120,168,216,264,312 -->
+<!-- fill most cells except lower-right 2x2 block (cols D,E rows 4,5) -->
+<g fill="#545454">
+<rect x="202" y="112" width="16" height="16"/><rect x="282" y="112" width="16" height="16"/><rect x="362" y="112" width="16" height="16"/><rect x="442" y="112" width="16" height="16"/><rect x="522" y="112" width="16" height="16"/>
+<rect x="202" y="160" width="16" height="16"/><rect x="282" y="160" width="16" height="16"/><rect x="362" y="160" width="16" height="16"/><rect x="442" y="160" width="16" height="16"/><rect x="522" y="160" width="16" height="16"/>
+<rect x="202" y="208" width="16" height="16"/><rect x="282" y="208" width="16" height="16"/><rect x="362" y="208" width="16" height="16"/><rect x="442" y="208" width="16" height="16"/><rect x="522" y="208" width="16" height="16"/>
+<rect x="202" y="256" width="16" height="16"/><rect x="282" y="256" width="16" height="16"/><rect x="362" y="256" width="16" height="16"/>
+<rect x="202" y="304" width="16" height="16"/><rect x="282" y="304" width="16" height="16"/><rect x="362" y="304" width="16" height="16"/>
+</g>
+<!-- gap highlight rectangle over cols D,E rows 4,5: x 410..570, y 240..336 -->
+<rect x="410" y="240" width="160" height="96" fill="none" stroke="#C8102E" stroke-width="2.2"/>
+<text x="490" y="294" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#C8102E">the gap</text>
+<text x="350" y="372" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">An empty region is precisely the unfilled space your study can occupy.</text>
+</svg>

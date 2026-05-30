@@ -9,6 +9,8 @@ The polite review missed the fatal mismatch. And the mismatch was fatal — not 
 
 The problem with Lina's AI review is not that it was an AI review. The problem is that it was a generic review. Generic review rewards what is easy to detect: fluency, organization, apparent completeness. It misses what requires targeted attention: whether the study's central claim, the evidence that supports it, and the framing around it are actually aligned.
 
+![Figure 12.1 — Generic review rewards easily detected surface qualities and misses claim-evidence-frame alignment; adversarial simulation targets exactly the structural mismatches that surface review skips.](../images/12-peer-review-simulation-fig-01.png)
+
 A useful peer-review simulation is adversarial and specific. It is not a reassurance mechanism. It is an attempt to find the strongest reasons the paper should not be published, before a real reviewer finds them for you.
 
 ---
@@ -47,9 +49,13 @@ This is the question Lina's colleague asked. It is the cross-section consistency
 
 The simulation is asked to compare the Introduction's stated question or hypothesis against the tests reported in Results, and to flag any gap. A gap here is a Critical issue. It means the paper is answering a question it didn't ask, or not answering the question it did ask, or both.
 
+![Figure 12.2 — In a sound paper the Introduction's question, the Results' test, and the Discussion's interpretation all refer to one question; drift between them is a Critical issue where the paper answers a question it did not ask.](../images/12-peer-review-simulation-fig-02.png)
+
 **Does the Discussion claim causation or generalization that the design does not support?**
 
 This is the assertion-type audit from Chapter 3 applied to the finished paper. The simulation is specifically asked to look for causal verbs in observational designs, scope claims broader than the sample, certainty language for uncertain findings. These are the claims that are most likely to have drifted in during the discussion-writing process and least likely to be caught by prose editing.
+
+![Figure 12.4 — A useful simulation asks four targeted questions in order — tiered issues, strongest reason to reject, Introduction-Results alignment, and the causation/generalization overclaim audit — each forcing a specific answer.](../images/12-peer-review-simulation-fig-04.png)
 
 <!-- → [TABLE: Simulation prompt structure — four rows: Critical/Major/Minor categories, strongest rejection reason, Introduction-to-Results alignment check, Discussion overclaim audit — columns: what the prompt asks, what a good response looks like, what a bad response looks like, how to triage the output] -->
 
@@ -60,6 +66,8 @@ The output of a simulated review needs to be triaged — evaluated, not just fol
 Not every comment from a simulated review is valid. Some will reflect the simulation's tendency to hedge everything as uncertain, or to apply standards from a different methodological tradition, or to note omissions that are standard practice in your field. Your job is to evaluate each comment using the same criteria you'd apply to a real reviewer's comment: is this a legitimate concern about my specific paper, does it reflect a genuine weakness I should address, or is it a generic preference that doesn't apply here?
 
 A useful triage framework: for each simulated comment, decide whether it is valid and serious (fix before submission), valid but minor (fix if time allows), invalid but pointing to a communication gap (improve the explanation), or invalid and irrelevant (discard, but note why you disagree). Writing the reason you're discarding a comment is not optional. If you cannot articulate why a comment is wrong, you haven't established that it is wrong — you've established that you don't want it to be right.
+
+![Figure 12.3 — Each simulated review comment is triaged by validity and seriousness into one of four actions — fix now, fix if time allows, improve the explanation, or discard with a stated reason.](../images/12-peer-review-simulation-fig-03.png)
 
 The cross-section mismatches and the overclaim flags are the comments to take most seriously, because they are the ones generic review is least likely to catch and real reviewers are most likely to find. The word choice and paragraph structure comments are the ones to take least seriously in the first pass — they are real but not fatal, and addressing them before the structural issues are resolved wastes time.
 

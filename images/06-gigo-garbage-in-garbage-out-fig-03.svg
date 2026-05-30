@@ -1,0 +1,39 @@
+<!-- Differential dropout by condition | Book: The Research Paper Recipe | Chapter: 06-gigo-garbage-in-garbage-out | Figure: 03 | Generated: 2026-05-29 | Source: pantry/06-gigo-garbage-in-garbage-out-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-03 fig-desc-03">
+  <title id="fig-title-03">Missing post-tests pile up in the treatment group</title>
+  <desc id="fig-desc-03">A two-bar chart with a count axis from zero. The treatment bar shows fifteen missing post-tests; the control bar shows three. The treatment bar is five times the height of the control bar, showing the lopsided dropout that signals biased loss rather than clerical noise.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="06-gigo-garbage-in-garbage-out" figure-number="03" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+
+  <text x="40" y="40" font-family="'EB Garamond',Georgia,serif" font-size="18" fill="#2a1a0e">Lopsided dropout is a finding, not a footnote</text>
+
+  <!-- plot background -->
+  <rect x="140" y="70" width="440" height="280" fill="#F5F5F5"/>
+  <!-- axes -->
+  <line x1="140" y1="350" x2="580" y2="350" stroke="#2a1a0e" stroke-width="1.5"/>
+  <line x1="140" y1="70" x2="140" y2="350" stroke="#2a1a0e" stroke-width="1.5"/>
+
+  <!-- y gridline ticks (count from zero) -->
+  <line x1="135" y1="350" x2="140" y2="350" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="128" y="354" font-family="'JetBrains Mono','Fira Code',monospace" font-size="11" fill="#545454" text-anchor="end">0</text>
+  <line x1="135" y1="280" x2="140" y2="280" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="128" y="284" font-family="'JetBrains Mono','Fira Code',monospace" font-size="11" fill="#545454" text-anchor="end">5</text>
+  <line x1="135" y1="210" x2="140" y2="210" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="128" y="214" font-family="'JetBrains Mono','Fira Code',monospace" font-size="11" fill="#545454" text-anchor="end">10</text>
+  <line x1="135" y1="140" x2="140" y2="140" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="128" y="144" font-family="'JetBrains Mono','Fira Code',monospace" font-size="11" fill="#545454" text-anchor="end">15</text>
+
+  <text x="58" y="210" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" text-anchor="middle" transform="rotate(-90 58 210)">Missing post-tests</text>
+
+  <!-- treatment bar: 15 -> 210px tall, top at 140 -->
+  <rect x="220" y="140" width="100" height="210" fill="#C8102E"/>
+  <text x="270" y="130" font-family="'JetBrains Mono','Fira Code',monospace" font-size="12" fill="#2a1a0e" text-anchor="middle">15</text>
+  <text x="270" y="372" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" text-anchor="middle">Treatment</text>
+
+  <!-- control bar: 3 -> 42px tall, top at 308 -->
+  <rect x="400" y="308" width="100" height="42" fill="#545454"/>
+  <text x="450" y="298" font-family="'JetBrains Mono','Fira Code',monospace" font-size="12" fill="#2a1a0e" text-anchor="middle">3</text>
+  <text x="450" y="372" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" text-anchor="middle">Control</text>
+
+  <text x="40" y="404" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Five times more dropout in treatment is evidence of MNAR loss that distorts the apparent effect.</text>
+</svg>

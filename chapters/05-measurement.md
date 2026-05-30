@@ -19,7 +19,7 @@ Samuel Messick argued — and this is one of the more important and underappreci
 
 This reframing matters because it changes what you have to argue. You don't just need to use a "validated instrument." You need to argue that the way you're interpreting these particular scores, for this particular purpose, in this particular population, is supported by evidence about how the scores behave.
 
-<!-- → [INFOGRAPHIC: Construct-instrument gap diagram — construct node (unobservable) connected by dashed "inference" arrow to instrument node (observable score) — labels showing: validity is about the quality of that arrow, not the instrument itself] -->
+![Figure 5.1 — Validity is the quality of the inferential arrow from an unobservable construct to an observable instrument score, not a property of the instrument itself.](../images/05-measurement-fig-01.png)
 
 ---
 
@@ -30,6 +30,8 @@ A reliable instrument produces consistent scores: the same student, tested under
 In research on learning, this distinction shows up constantly. A quiz that reliably differentiates students who did the practice from students who didn't might be a reliable instrument for measuring practice completion. Whether it's a valid measure of durable learning depends on different evidence — evidence about whether those scores predict later performance, transfer to novel problems, or retention after a delay.
 
 The shorthand I use: reliability is about consistency; validity is about interpretation. You need both, but they are not substitutes for each other, and having one does not give you the other.
+
+![Figure 5.2 — Reliability is consistency of scores and validity is hitting the right target; an instrument can be reliable without being valid, but not the reverse for a single interpretation.](../images/05-measurement-fig-02.png)
 
 ---
 
@@ -55,7 +57,7 @@ A student who scores 85% on a quiz immediately after practice may score 55% on t
 
 "Learned more" is a claim about storage strength. An immediate post-test measures retrieval strength. They are related but not equivalent, and the difference determines whether your conclusion is honest.
 
-<!-- → [CHART: Retrieval strength vs. storage strength over time — two curves: one condition with high immediate scores that drops steeply, one condition with lower immediate scores but shallower forgetting curve — labeled to show why immediate testing can reverse the apparent ranking of conditions] -->
+![Figure 5.3 — An immediate test measures retrieval strength and can rank conditions opposite to a delayed test, which measures durable storage strength, because the steeper-forgetting condition can start higher.](../images/05-measurement-fig-03.png)
 
 **Fifth: what would a null result have looked like?**
 
@@ -80,6 +82,8 @@ Many studies measure learning with the same instrument as the one used for instr
 A true learning claim requires some distance between instruction and assessment: different item format, different surface features, some time elapsed, ideally a context where the student cannot know that specifically this concept will be tested. The measure has to be at least somewhat independent of the specific experience the student had.
 
 This is not easy to achieve in practice. It requires deliberate design choices that often trade off against convenience and ecological validity. But the constraint is real, and papers that don't acknowledge it are making a stronger claim than their design supports.
+
+![Figure 5.4 — A true learning claim requires distance between instruction and assessment — different format, surface features, and elapsed time — whereas aligned testing confounds learning with test-specific preparation.](../images/05-measurement-fig-04.png)
 
 ---
 

@@ -1,0 +1,50 @@
+<!-- Assertion Types Ranked by Evidentiary Burden | Book: The Research Paper Recipe | Chapter: 03-the-scientific-method-assertions-and-how-to-test-them | Figure: 01 | Generated: 2026-05-29 | Source: pantry/03-the-scientific-method-assertions-and-how-to-test-them-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-01">
+  <title id="fig-title-01">Assertion Types Ranked by Evidentiary Burden</title>
+  <desc>Five empirical assertion types stack by rising evidentiary demand from descriptive to mechanistic. Two further types — normative and conceptual — sit off the empirical axis because no measurement settles them.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="03-the-scientific-method-assertions-and-how-to-test-them" figure-number="01" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#2a1a0e"/></marker>
+  </defs>
+
+  <text x="32" y="38" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">Assertion Types Ranked by Evidentiary Burden</text>
+  <text x="32" y="56" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Each claim type demands more evidence than the one below it</text>
+
+  <!-- Tier 5 (top, narrowest): mechanistic -->
+  <rect x="160" y="86" width="200" height="44" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="260" y="113" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">Mechanistic — "X works via M"</text>
+  <!-- Tier 4: causal -->
+  <rect x="140" y="138" width="240" height="44" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="260" y="165" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Causal — "X causes Y"</text>
+  <!-- Tier 3: predictive -->
+  <rect x="120" y="190" width="280" height="44" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="260" y="217" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Predictive — "X forecasts Y"</text>
+  <!-- Tier 2: correlational -->
+  <rect x="100" y="242" width="320" height="44" fill="#FFFFFF" stroke="#545454" stroke-width="1"/>
+  <text x="260" y="269" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Correlational — "X and Y move together"</text>
+  <!-- Tier 1 (bottom, widest): descriptive -->
+  <rect x="80" y="294" width="360" height="44" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="260" y="321" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Descriptive — "X measures this much"</text>
+
+  <!-- Rising-burden arrow on the right -->
+  <line x1="466" y1="338" x2="466" y2="86" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="490" y="212" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" transform="rotate(-90 490 212)">rising evidentiary burden</text>
+
+  <!-- Off-axis boxes -->
+  <rect x="520" y="120" width="156" height="50" fill="#FFFFFF" stroke="#545454" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="598" y="142" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Normative</text>
+  <text x="598" y="158" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">"X should be done"</text>
+
+  <rect x="520" y="254" width="156" height="50" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="598" y="276" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Conceptual</text>
+  <text x="598" y="292" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">"X means this"</text>
+
+  <!-- Off-axis connector lines with caret -->
+  <line x1="500" y1="145" x2="520" y2="145" stroke="#545454" stroke-width="1"/>
+  <line x1="500" y1="279" x2="520" y2="279" stroke="#545454" stroke-width="1"/>
+  <text x="540" y="200" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">off the empirical axis —</text>
+  <text x="540" y="214" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">no measurement settles them</text>
+
+  <text x="32" y="392" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Know which claim you are making: the verb you choose sets the evidence you owe.</text>
+</svg>

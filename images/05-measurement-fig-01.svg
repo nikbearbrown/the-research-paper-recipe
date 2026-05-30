@@ -1,0 +1,32 @@
+<!-- The construct-instrument gap | Book: The Research Paper Recipe | Chapter: 05-measurement | Figure: 01 | Generated: 2026-05-29 | Source: pantry/05-measurement-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-01 fig-desc-01">
+  <title id="fig-title-01">Validity lives on the inference, not the instrument</title>
+  <desc id="fig-desc-01">An unobservable construct on the left, drawn as an unfilled circle, connects by a dashed inferential arrow to an observable instrument on the right, drawn as a filled box. A caliper spans the gap. Validity is the quality of that inferential arrow.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="05-measurement" figure-number="01" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrowR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0, 10 4, 0 8" fill="#C8102E"/></marker>
+  </defs>
+
+  <text x="40" y="44" font-family="'EB Garamond',Georgia,serif" font-size="18" fill="#2a1a0e">The gap a measurement must bridge</text>
+
+  <!-- construct node (unobservable, unfilled circle) -->
+  <circle cx="150" cy="210" r="60" fill="#FFFFFF" stroke="#545454" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="150" y="206" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" fill="#2a1a0e" text-anchor="middle">Construct</text>
+  <text x="150" y="226" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" text-anchor="middle">unobservable</text>
+
+  <!-- instrument node (observable, filled box) -->
+  <rect x="490" y="160" width="160" height="100" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="570" y="206" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" fill="#2a1a0e" text-anchor="middle">Instrument</text>
+  <text x="570" y="226" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" text-anchor="middle">observable score</text>
+
+  <!-- dashed inference arrow (emphasized) -->
+  <line x1="214" y1="200" x2="484" y2="200" stroke="#C8102E" stroke-width="3" stroke-dasharray="9 5" marker-end="url(#arrowR)"/>
+  <text x="350" y="186" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="13" fill="#C8102E" text-anchor="middle">inference = VALIDITY</text>
+
+  <!-- gap caliper beneath -->
+  <path d="M 214 270 V 284 H 484 V 270" fill="none" stroke="#545454" stroke-width="1"/>
+  <text x="350" y="302" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454" text-anchor="middle">the distance is the object of interest</text>
+
+  <text x="40" y="384" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">An instrument is never "valid" in the abstract — validity is how well its scores let you infer the construct.</text>
+</svg>

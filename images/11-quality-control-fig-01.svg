@@ -1,0 +1,71 @@
+<!-- The Claim Audit as a Flow | Book: The Research Paper Recipe | Chapter: 11-quality-control | Figure: 01 | Generated: 2026-05-29 | Source: pantry/11-quality-control-cajal.md -->
+<svg viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-01">
+  <title id="fig-title-01">The Claim Audit as a Flow</title>
+  <desc>An incoming claim is tested against its evidence and scope, then assigned one of six labels. Supported passes; partially supported and needs-qualification are conditional; overstated, unsupported, and needs-citation are must-fix and all route to one shared revision: narrow the claim.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="11-quality-control" figure-number="01" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="480" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/></marker>
+  </defs>
+
+  <text x="32" y="40" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">The Claim Audit as a Flow</text>
+  <text x="32" y="58" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Test each claim against its evidence and scope, label it, route the failures to one fix: narrow it</text>
+
+  <!-- incoming claim -->
+  <rect x="290" y="80" width="120" height="44" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="350" y="107" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Incoming claim</text>
+  <line x1="350" y1="124" x2="350" y2="142" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- decision diamond -->
+  <polygon points="350,146 420,186 350,226 280,186" fill="#FFFFFF" stroke="#545454" stroke-width="1.5"/>
+  <text x="350" y="182" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Evidence vs.</text>
+  <text x="350" y="197" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">scope?</text>
+
+  <!-- six labels in a row -->
+  <!-- supported (pass) -->
+  <rect x="30" y="262" width="100" height="56" fill="#FFFFFF" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="80" y="286" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Supported</text>
+  <text x="80" y="303" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">pass</text>
+
+  <rect x="142" y="262" width="100" height="56" fill="#FFFFFF" stroke="#C8860E" stroke-width="1.5"/>
+  <text x="192" y="282" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Partially</text>
+  <text x="192" y="297" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">supported</text>
+  <text x="192" y="312" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">conditional</text>
+
+  <rect x="254" y="262" width="100" height="56" fill="#FFFFFF" stroke="#C8860E" stroke-width="1.5"/>
+  <text x="304" y="282" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Needs</text>
+  <text x="304" y="297" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">qualification</text>
+  <text x="304" y="312" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">conditional</text>
+
+  <rect x="366" y="262" width="100" height="56" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="416" y="290" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E">Overstated</text>
+  <text x="416" y="305" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">must fix</text>
+
+  <rect x="478" y="262" width="100" height="56" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="528" y="290" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E">Unsupported</text>
+  <text x="528" y="305" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">must fix</text>
+
+  <rect x="590" y="262" width="100" height="56" fill="#FFFFFF" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="640" y="290" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#C8102E">Needs citation</text>
+  <text x="640" y="305" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="10" fill="#545454">must fix</text>
+
+  <!-- fan-out arrows from diamond -->
+  <line x1="300" y1="206" x2="92" y2="260" stroke="#545454" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="320" y1="216" x2="200" y2="260" stroke="#545454" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="340" y1="222" x2="312" y2="260" stroke="#545454" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="360" y1="222" x2="408" y2="260" stroke="#545454" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="380" y1="216" x2="520" y2="260" stroke="#545454" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="400" y1="206" x2="628" y2="260" stroke="#545454" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- must-fix labels converge on terminal -->
+  <line x1="416" y1="318" x2="430" y2="392" stroke="#C8102E" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="528" y1="318" x2="470" y2="392" stroke="#C8102E" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="640" y1="318" x2="510" y2="392" stroke="#C8102E" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- terminal: narrowed claim -->
+  <rect x="350" y="396" width="200" height="52" fill="#F5F5F5" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="450" y="420" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" font-weight="600">Narrow the claim</text>
+  <text x="450" y="437" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">until the evidence supports it</text>
+
+  <text x="32" y="470" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Every must-fix label converges on the same revision: shrink the claim's scope to what the evidence licenses.</text>
+</svg>

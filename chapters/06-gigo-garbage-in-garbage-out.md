@@ -9,6 +9,8 @@ There are two response times recorded as negative numbers — physically impossi
 
 This is the problem the acronym names: garbage in, garbage out. It is not a slogan about computers. It is an epistemic rule. Statistical analysis inherits the quality of the data that enters it. Better methods, fancier models, more sophisticated software — none of these repair a dataset whose problems entered before the first line of code ran. The confidence intervals are precise. The standard errors are correct. They are precisely and correctly describing a dataset that does not describe what you think it describes.
 
+![Figure 6.1 — Corruption present in raw data propagates unchanged through cleaning and modeling into a clean-looking but untrustworthy output.](../images/06-gigo-garbage-in-garbage-out-fig-01.png)
+
 The chapter is about finding the garbage before you report the results.
 
 ---
@@ -18,6 +20,8 @@ Let me start with the thing that is most dangerous, because it is the easiest to
 A blank cell in a spreadsheet does not mean "this person had no value." It means "we do not know this person's value." Those are different epistemic states, and the difference matters enormously for what you can claim.
 
 Roderick Little and Donald Rubin introduced a taxonomy of missingness mechanisms that has become standard because it captures the three structurally distinct ways data can be absent. Understanding which mechanism is operating determines whether your missing data is a minor annoyance or a fundamental threat to your conclusions.
+
+![Figure 6.2 — The three missingness mechanisms differ by what the probability of being missing depends on: nothing (MCAR), observed variables (MAR), or the unobserved missing value itself (MNAR).](../images/06-gigo-garbage-in-garbage-out-fig-02.png)
 
 **Missing completely at random** (MCAR) means the probability that an observation is missing has nothing to do with the values of any variables in your study — observed or unobserved. A server glitch that randomly dropped one in twenty responses would produce MCAR data. Under MCAR, the complete cases — the people you have data on — are a random subset of your intended sample, and your results will still generalize, just with reduced sample size and power. MCAR is the most benign mechanism, and the least common in real research.
 
@@ -34,6 +38,8 @@ The practical implication: before any analysis, examine the pattern of missing d
 ---
 
 The missing post-tests concentrated in the treatment group are not a clerical inconvenience. They are information about the study. They are telling you something about what happened — most likely, that the students who dropped out of the treatment condition were not a random subset of treatment students, and that their outcomes, if you had them, would change your conclusions. A study that reports results for the students who remained is not a study of the intervention. It is a study of the students who persisted through the intervention, which is a different and systematically biased sample.
+
+![Figure 6.3 — Missing post-tests concentrated in the treatment condition (15 vs. 3) are evidence of MNAR dropout that biases the apparent treatment effect.](../images/06-gigo-garbage-in-garbage-out-fig-03.png)
 
 Reporting this honestly means saying so: "Post-test data were missing for 18 participants (15 in the treatment condition and 3 in the control condition). This differential dropout pattern is consistent with MNAR missingness, which limits our ability to estimate the treatment effect for the full enrolled sample. Analyses were conducted on complete cases, and results should be interpreted as applying to students who completed the study rather than to the intended population."
 
@@ -60,6 +66,8 @@ There is a category of data problem that is not about the data at all. It is abo
 Andrew Gelman and Eric Loken described what they called the garden of forking paths: the many analytic choices a researcher faces between collecting data and reporting results. How should outliers be handled? Which covariates should be included? Should the primary outcome be the immediate post-test, the delayed post-test, or the transfer measure? Should the analysis include all enrolled participants or only those who completed the protocol? Should scores be log-transformed to address skew? Should subgroups be analyzed separately?
 
 Each of these choices is defensible in isolation. Most of them have legitimate arguments on multiple sides. The problem is that when choices are made after looking at the data — when the researcher, consciously or not, gravitates toward the specification that produces the most interesting result — the p-values are no longer calibrated. A p-value of 0.04 means: if the null were true, data this extreme or more extreme would occur by chance 4% of the time, assuming the analysis was specified before the data were examined. If the analysis was adjusted to fit the data, that probability doesn't apply. The result looks like a 4% chance of a false positive. It is not.
+
+![Figure 6.4 — Between collected data and reported result lies a tree of defensible analytic choices, and choosing among them after seeing the data multiplies possible results and breaks the calibration of p-values.](../images/06-gigo-garbage-in-garbage-out-fig-04.png)
 
 This is not fraud. Most researchers doing this are not aware they're doing it. The human mind is extraordinarily good at generating post-hoc justifications for decisions that were actually driven by what the data showed. "We excluded those three participants because their response times indicated they weren't engaged" sounds principled. It may be true. It may also be that those three participants had anomalously low scores in the treatment condition, and the exclusion rule was constructed after noticing that.
 
