@@ -39,7 +39,7 @@ Noah's satisfaction paper is a good example. Satisfaction is a real outcome. It 
 
 ---
 
-There is a practical tool for doing this systematically, and I want to introduce it now because you will use it every time you conduct a literature review: the source matrix.
+If the previous chapter built the intent layer of your schema — the claim and its failure condition — this chapter builds the **evidence layer**: whether the sources behind you and the design ahead of you can actually carry that claim. There is a practical tool for doing this systematically, and I want to introduce it now because you will use it every time you conduct a literature review: the source matrix.
 
 A source matrix is not a summary table. A summary table tells you what each source found. A source matrix tells you what each source *can support* — which is a different question that requires more work to answer.
 
@@ -53,7 +53,7 @@ Building the matrix before writing the literature review changes the literature 
 
 The second lock — alongside the source matrix — is the evidence plan for your own study.
 
-An evidence plan asks: given my hypothesis, what design, sample, measure, and analysis would make the claim defensible? This is not the same as choosing a design because it is convenient or because it is what your field typically uses. It is asking, from first principles, what the claim actually requires.
+An evidence plan asks: given my hypothesis, what design, sample, measure, and analysis would make the claim defensible? This is not the same as choosing a design because it is convenient or because it is what your field typically uses. It is asking, from first principles, what the claim actually requires. This is exactly the move that preregistration formalizes (Nosek et al., 2018): you commit to the design, sample, measure, and analysis the claim requires *before* you see the data, so that the plan is dictated by the hypothesis rather than retrofitted to whatever the results turn out to be.
 
 If your hypothesis is causal — "X causes Y" — your evidence plan needs an experimental or quasi-experimental design, or a very explicit argument for why an observational design is sufficient given the alternatives. If your hypothesis is about a mechanism — "X causes Y *because* Z" — your evidence plan needs a measure of Z, not just a measure of Y. If your hypothesis specifies a population — "among novice programmers" — your evidence plan needs a sample that actually contains novice programmers, not a convenience sample that happens to include some.
 
@@ -61,7 +61,7 @@ If your hypothesis is causal — "X causes Y" — your evidence plan needs an ex
 
 This sounds obvious. It is less obvious in practice, because many research projects begin from available resources: a dataset that already exists, a classroom you have access to, a survey instrument someone else validated. Working from available resources is fine — most research does this — but the evidence plan forces an honest accounting of what those resources can and cannot support. A dataset of self-selected participants can support some claims and not others. An instrument validated in one population may or may not transfer to yours.
 
-Reporting standards exist precisely because the relationship between design and claim is easy to obscure in a polished paper. JARS, the Journal Article Reporting Standards, specifies what methodological details readers need in order to evaluate a psychology study. CONSORT does the same for clinical trials. STROBE for observational epidemiology. The details vary by field, but the underlying logic is the same: a reader cannot evaluate a finding without knowing how it was produced.
+Reporting standards exist precisely because the relationship between design and claim is easy to obscure in a polished paper. JARS, the Journal Article Reporting Standards (Appelbaum et al., 2018), specifies what methodological details readers need in order to evaluate a psychology study. CONSORT (Schulz, Altman, & Moher, 2010) does the same for randomized clinical trials. STROBE (von Elm et al., 2007) for observational epidemiology. The details vary by field, but the underlying logic is the same — and it is one logic, not three unrelated checklists: JARS-Quant explicitly cross-references CONSORT- and STROBE-style flow reporting, because all three are answering the same question. A reader cannot evaluate a finding without knowing how it was produced.
 
 <!-- → [TABLE: Reporting standards reference — JARS / CONSORT / STROBE — columns: field, what it requires, what absence of those details prevents readers from evaluating] -->
 
@@ -85,7 +85,17 @@ The hypothesis changes too, sometimes. When you build the matrix and realize tha
 
 And the paper changes. A paper built on a honest source matrix is harder to overclaim. The writer has already named the limits. The claims are scoped to the evidence. The contribution is legible because the gap it fills is real.
 
-The writing, when you finally begin it, goes faster. Not because you have more material, but because you know what the material can bear.
+The writing, when you finally begin it, goes faster. Not because you have more material, but because you know what the material can bear. You have built the schema — intent and evidence — before the prose, and the prose now has something true to be the surface of.
+
+---
+
+## Sources
+
+- Appelbaum, M., Cooper, H., Kline, R. B., Mayo-Wilson, E., Nezu, A. M., & Rao, S. M. (2018). Journal article reporting standards for quantitative research in psychology: The APA Publications and Communications Board task force report. *American Psychologist*, 73(1), 3–25.
+- Schulz, K. F., Altman, D. G., & Moher, D., for the CONSORT Group. (2010). CONSORT 2010 Statement: Updated guidelines for reporting parallel group randomised trials. *BMJ*, 340, c332.
+- von Elm, E., Altman, D. G., Egger, M., Pocock, S. J., Gøtzsche, P. C., & Vandenbroucke, J. P. (2007). The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) Statement. *PLoS Medicine*, 4(10), e296.
+- Nosek, B. A., Ebersole, C. R., DeHaven, A. C., & Mellor, D. T. (2018). The preregistration revolution. *Proceedings of the National Academy of Sciences*, 115(11), 2600–2606.
+- Bhattacharyya, M., Miller, V. M., Bhattacharyya, D., & Miller, L. E. (2023). High rates of fabricated and inaccurate references in ChatGPT-generated medical content. *Cureus*, 15(5), e39238.
 
 ---
 
@@ -116,6 +126,12 @@ The writing, when you finally begin it, goes faster. Not because you have more m
 ---
 
 ## LLM Exercises
+
+> **Running project — *Your Research Paper*.** This book is a fill-in template: you carry one real paper of your own from first question to submission-ready draft, building one piece per chapter. Replace the bracketed placeholders in the prompts below with your own topic, data, and field.
+>
+> **This chapter adds:** your claim's assertion type and an evidence plan (the source matrix) stating what your claim will require to hold.
+>
+> **Carries into the next chapter:** Chapter 3 restates your hypothesis so it can actually fail.
 
 ### Exercise 1 — When to Use AI
 
@@ -263,3 +279,25 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 > *Sentence 2:* One specific thing the AI could not determine that required your judgment.
 
 **Series connection:** This exercise trains Tier 4 Metacognitive: the capacity to catch when machine output is fluent, useful, and still not sufficient for the human conclusion.
+
+---
+
+##  AI Wayback Machine
+
+The ideas in this chapter didn't appear from nowhere. **Archie Cochrane** spent his career arguing that medicine should rest only on evidence that could survive a fair test — the conviction beneath every reporting standard you will cite. Here's a prompt to find out more — and then make it better.
+
+**Run this:**
+
+```text
+Who was Archie Cochrane, and how does his case for randomized evidence and systematic reviews connect to the idea that a research claim is only as strong as the evidence plan behind it? Keep it to three paragraphs. End with the single most surprising thing about his career or ideas.
+```
+
+→ Search **"Archie Cochrane"** on Wikipedia after you run this. See what the model got right, got wrong, or left out.
+
+**Now make the prompt better.** Try one of these:
+
+- Ask it to explain what a "systematic review" is in plain language, as if you've never read a methods section
+- Ask how Cochrane's wartime prisoner-of-war experiments compare to the reporting standards (CONSORT, STROBE) you'd use today
+- Add a constraint: "Answer as the opening text of a museum placard titled 'Why we count'"
+
+What changes? What gets better? What gets worse?

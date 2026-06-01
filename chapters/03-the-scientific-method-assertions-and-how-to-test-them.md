@@ -43,9 +43,13 @@ Now here is the move the chapter title is pointing at.
 
 The scientific method is not, at its heart, a set of procedures for producing results. It is a discipline for keeping assertions honest. And the specific tool it uses for that is falsifiability — the demand that an empirical claim name the conditions under which it would be false.
 
-Karl Popper's argument, stated simply, is this: a claim that can accommodate any possible evidence is not an empirical claim at all. If "AI feedback improves learning" is true when test scores go up, and also true when they go down (because "learning" is redefined to mean something that didn't get measured), and also true when there's no difference (because "improve" meant "prevents decline"), then the sentence isn't making a claim. It's making a noise that sounds like a claim.
+Karl Popper's argument, stated simply, is this: a claim that can accommodate any possible evidence is not an empirical claim at all. If "AI feedback improves learning" is true when test scores go up, and also true when they go down (because "learning" is redefined to mean something that didn't get measured), and also true when there's no difference (because "improve" meant "prevents decline"), then the sentence isn't making a claim. It's a sponge that absorbs every result — and a sponge that absorbs everything proves nothing. The logical engine underneath is an asymmetry: no number of confirming observations can ever prove a universal claim, but a single contradicting observation can falsify it. That asymmetry is why Popper made falsifiability his line of demarcation between science and non-science (*The Logic of Scientific Discovery*, 1934 in German, 1959 in English).
 
-What falsifiability demands is that you name, in advance, what you would need to see for your claim to be in trouble. For a causal claim like "Socratic AI feedback improves two-week retention more than direct-answer feedback," the falsification conditions are clear: the Socratic group's retention is not higher, or it is higher immediately but not at two weeks, or it is higher only for students who already have strong retrieval habits, making it a moderator rather than a main effect.
+What falsifiability demands is that you name, in advance, what you would need to see for your claim to be in trouble. The sharpest way to hold yourself to this is a single Cartesian question:
+
+> **What would I have to observe to conclude this is wrong?**
+
+If you cannot answer it for a sentence in your paper, that sentence is not yet an empirical claim. For a causal claim like "Socratic AI feedback improves two-week retention more than direct-answer feedback," the falsification conditions are clear: the Socratic group's retention is not higher, or it is higher immediately but not at two weeks, or it is higher only for students who already have strong retrieval habits, making it a moderator rather than a main effect.
 
 Each of those falsification conditions is also a design choice. If you want to be able to detect whether the effect is moderated by prior retrieval habits, you need to measure prior retrieval habits. If you want to be able to detect the difference between short-term performance and two-week retention, you need two assessment points. The falsification conditions tell you what the design requires.
 
@@ -55,7 +59,9 @@ Each of those falsification conditions is also a design choice. If you want to b
 
 The second tool the chapter title is pointing at is the null and alternative hypothesis structure, and I want to be precise about what this is and what it isn't.
 
-Jerzy Neyman and Egon Pearson formalized statistical hypothesis testing in the 1930s as a decision procedure. The logic is not "find out whether the null is true." The logic is: assume the null is true, calculate how surprising your data would be under that assumption, and decide, at a pre-specified threshold, whether the data are surprising enough to act as though the null is false.
+Jerzy Neyman and Egon Pearson formalized statistical hypothesis testing in the 1930s as a decision procedure (Neyman & Pearson, 1933). The logic is not "find out whether the null is true." The logic is: assume the null is true, calculate how surprising your data would be under that assumption, and decide, at a pre-specified threshold, whether the data are surprising enough to act as though the null is false.
+
+A footnote on lineage, because it sharpens what the p-value is and isn't. Two traditions are quietly fused in what most papers call "the test." Ronald Fisher's significance testing treated the p-value as a continuous measure of evidence against the null, with no explicit alternative; Neyman and Pearson added the explicit alternative hypothesis and the accept/reject decision rule with its Type I and Type II error rates. The apparatus you will actually run — null-hypothesis significance testing — is a hybrid neither man would fully endorse. Knowing which idea is whose keeps you from over-reading a single p-value as if it were both a measure of evidence and a verdict.
 
 The null hypothesis is usually stated as the absence of the effect you're looking for: "Students who receive Socratic feedback do not differ in two-week retention from students who receive direct-answer feedback." This is the baseline — the world as it would be if your intervention does nothing. The alternative is your actual prediction: "Students who receive Socratic feedback show higher two-week retention than students who receive direct-answer feedback."
 
@@ -66,6 +72,8 @@ First, a significant p-value does not confirm the alternative hypothesis. It mea
 Second, a null hypothesis is not the same as the claim "nothing is happening." It is a specific quantitative claim — usually that the difference is zero, or that the correlation is zero. You are not testing whether "AI feedback matters in general." You are testing whether this specific measured difference, in this specific sample, at this specific time point, is larger than what you'd expect by chance.
 
 Third, the null hypothesis is chosen by the researcher, not by convention. Your null should be the specific claim that your design is positioned to challenge. If you've designed a study to detect a retention advantage at two weeks, your null is "no retention advantage at two weeks" — not "no effect of AI feedback on anything, ever."
+
+Fourth, and most often violated: failing to reject the null is not the same as proving it. A non-significant result is, in the canonical phrasing, an *absence of evidence, not evidence of absence* (Altman & Bland, 1995) — and most of the time it is a power problem, not a finding of "no effect." If you genuinely want to claim an effect is negligible, you need a procedure built for that purpose. Equivalence testing — the two one-sided tests (TOST) procedure — lets you make a positive claim that any effect falls inside bounds you specify in advance, which is a different and stronger statement than "we didn't find one" (Lakens, 2017).
 
 ![Figure 3.3 — Hypothesis testing is a decision procedure: assume the null, measure how surprising the data are under it, and at a pre-set threshold decide whether to act as if the null is false.](../images/03-the-scientific-method-assertions-and-how-to-test-them-fig-03.png)
 
@@ -91,7 +99,7 @@ The practical move is assertion typing. Before you choose your methods, classify
 
 One more thing, because it comes up in almost every paper I review.
 
-Normative claims are legitimate. They are not unscientific. Education, medicine, public policy — all of these fields exist to make normative recommendations, and a research paper that never says anything about what should happen is often failing its audience. But normative claims cannot be settled by data alone. They require a value judgment about what matters, and that judgment is separate from the empirical evidence even when the evidence is relevant.
+Normative claims are legitimate. They are not unscientific. Education, medicine, public policy — all of these fields exist to make normative recommendations, and a research paper that never says anything about what should happen is often failing its audience. But normative claims cannot be settled by data alone. They require a value judgment about what matters, and that judgment is separate from the empirical evidence even when the evidence is relevant. This is the oldest fault line in the philosophy of science: David Hume's observation that you cannot derive an *ought* from an *is* (*A Treatise of Human Nature*, 1739–40). No accumulation of facts about what produces retention will, by itself, entail what an instructor *should* do — that step always smuggles in a premise about what is worth wanting.
 
 The common mistake is to slide between normative and empirical claims without marking the transition. "Students who receive Socratic feedback retain more, therefore instructors should use Socratic feedback" treats a causal finding as if it settles a normative question. It doesn't — not because the finding is wrong, but because "should use" involves a judgment about tradeoffs (time, implementation cost, equity of access, what other goals matter) that the data can inform but not resolve.
 
@@ -128,6 +136,12 @@ Separate the claims. Say: "These findings suggest that Socratic feedback produce
 ---
 
 ## LLM Exercises
+
+> **Running project — *Your Research Paper*.** This book is a fill-in template: you carry one real paper of your own from first question to submission-ready draft, building one piece per chapter. Replace the bracketed placeholders in the prompts below with your own topic, data, and field.
+>
+> **This chapter adds:** your hypothesis restated as falsifiable H₀/H₁, with the specific conditions that would prove it wrong.
+>
+> **Carries into the next chapter:** Chapter 4 pins down whether your claim is causal — and what design that demands.
 
 ### Exercise 1 — When to Use AI
 
@@ -275,3 +289,36 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 > *Sentence 2:* One specific thing the AI could not determine that required your judgment.
 
 **Series connection:** This exercise trains Tier 4 Metacognitive: the capacity to catch when machine output is fluent, useful, and still not sufficient for the human conclusion.
+
+---
+
+---
+
+##  AI Wayback Machine
+
+The ideas in this chapter didn't appear from nowhere. **Mary Hesse** worked out how scientific models, analogies, and evidence actually confirm or undermine a theory — the machinery beneath the words "test" and "falsify." Here's a prompt to find out more — and then make it better.
+
+**Run this:**
+
+```text
+Who was Mary Hesse, and how does her work on models, analogies, and confirmation in science connect to what it means to test a hypothesis? Keep it to three paragraphs. End with the single most surprising thing about her career or ideas.
+```
+
+→ Search **"Mary Hesse"** on Wikipedia after you run this. See what the model got right, got wrong, or left out.
+
+**Now make the prompt better.** Try one of these:
+
+- Ask it to explain how an analogy can count as "evidence" in plain language, with one concrete example
+- Ask how Hesse's view of confirmation compares to the falsifiability test this chapter uses
+- Add a constraint: "Answer as a footnote in a philosophy-of-science textbook"
+
+What changes? What gets better? What gets worse?
+
+## Sources
+
+- Popper, K. R. *The Logic of Scientific Discovery*. London: Hutchinson, 1959. Originally published as *Logik der Forschung* (Vienna: Springer, 1934). — Falsifiability as the demarcation criterion; the verifiability/falsifiability asymmetry.
+- Neyman, J., & Pearson, E. S. (1933). "On the problem of the most efficient tests of statistical hypotheses." *Philosophical Transactions of the Royal Society of London, Series A*, 231, 289–337. https://doi.org/10.1098/rsta.1933.0009 — Hypothesis testing as a decision procedure with an explicit alternative and Type I / Type II errors.
+- Altman, D. G., & Bland, J. M. (1995). "Statistics notes: Absence of evidence is not evidence of absence." *BMJ*, 311(7003), 485. https://doi.org/10.1136/bmj.311.7003.485 — A non-significant result usually reflects insufficient power, not a demonstrated null.
+- Lakens, D. (2017). "Equivalence Tests: A Practical Primer for t Tests, Correlations, and Meta-Analyses." *Social Psychological and Personality Science*, 8(4), 355–362. https://doi.org/10.1177/1948550617697177 — The TOST procedure for making a positive claim that an effect is absent within specified bounds.
+- Hume, D. *A Treatise of Human Nature* (1739–40), Book III, Part I, §1. — The is/ought problem: no normative conclusion follows from descriptive premises alone.
+- Moore, G. E. *Principia Ethica*. Cambridge: Cambridge University Press, 1903. — The naturalistic fallacy, the closely related warning against defining the good in purely factual terms.

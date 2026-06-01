@@ -7,7 +7,7 @@ That sentence may be true. The study has not shown it.
 
 Here is the problem, stated precisely: high-motivation students may have used the tutor more, studied harder, attended more office hours, and scored higher on the final exam for reasons that had nothing to do with what the tutor specifically contributed. The causal verb — "caused" — has smuggled in a comparison that the study never made. It has claimed to answer the question: *what would have happened to these same students if the tutor had not existed?* That question has a name. It is called a counterfactual. And the reason causal inference is hard is that you can never observe both sides of a counterfactual at the same time.
 
-You either gave a student the AI tutor or you didn't. You cannot do both and compare. This is what statisticians call the fundamental problem of causal inference, and it is the reason that "correlation is not causation" is not just a methodological slogan — it is pointing at something real about what observational data can and cannot show.
+You either gave a student the AI tutor or you didn't. You cannot do both and compare. This is what Paul Holland named the *fundamental problem of causal inference* (Holland, 1986), and it is the reason that "correlation is not causation" is not just a methodological slogan — it is pointing at something real about what observational data can and cannot show.
 
 ---
 
@@ -17,7 +17,7 @@ When a researcher says "the intervention caused the outcome," what they are real
 
 The problem is that you only ever see one of those. A student either got the Socratic feedback or the direct-answer feedback. You can't give both and compare the same student against themselves. The counterfactual — what would have happened otherwise — is unobservable by definition.
 
-This is Rubin's potential outcomes framework, and it clarifies why experimental design is so valuable. When you randomly assign students to conditions, you make the two groups — on average, across many students — interchangeable in all the ways that matter. The students who got Socratic feedback and the students who got direct-answer feedback are, by random assignment, similar in prior knowledge, motivation, study habits, and all the other things you didn't measure and couldn't control for. Which means the group that got direct-answer feedback is a credible stand-in for what the Socratic-feedback group would have scored if they'd gotten direct-answer feedback instead.
+This is Rubin's potential outcomes framework (Rubin, 1974), and it clarifies why experimental design is so valuable. When you randomly assign students to conditions, you make the two groups — on average, across many students — interchangeable in all the ways that matter. The students who got Socratic feedback and the students who got direct-answer feedback are, by random assignment, similar in prior knowledge, motivation, study habits, and all the other things you didn't measure and couldn't control for. Which means the group that got direct-answer feedback is a credible stand-in for what the Socratic-feedback group would have scored if they'd gotten direct-answer feedback instead.
 
 Random assignment doesn't let you observe the counterfactual for any individual. It creates a comparison group that approximates the counterfactual for the group on average. That's why it works. And that's why observational data — where students chose which condition they ended up in, or where assignment was based on something correlated with the outcome — struggles to support causal claims.
 
@@ -25,7 +25,7 @@ Random assignment doesn't let you observe the counterfactual for any individual.
 
 ---
 
-Judea Pearl organized the kinds of questions a researcher can ask into a three-level hierarchy, and it is one of the most clarifying frameworks I know for thinking about what a study can and cannot answer.
+Judea Pearl organized the kinds of questions a researcher can ask into a three-level hierarchy — what he and Dana Mackenzie call the *ladder of causation* (Pearl & Mackenzie, *The Book of Why*, 2018) — and it is one of the most clarifying frameworks I know for thinking about what a study can and cannot answer. Pearl's shorthand for the three rungs is *seeing, doing, imagining*.
 
 The first level is **association**: what do we see in the data? "Students who used the AI tutor more often scored higher." This is a statement about covariation. It requires only that you measure both variables. It makes no claim about why the pattern exists or what would happen if you intervened.
 
@@ -79,7 +79,9 @@ Drawing a DAG does not prove anything. A DAG is a map of your assumptions, not e
 
 This is not a flaw in the DAG approach. It is a feature. Making your assumptions explicit is better than leaving them implicit, because explicit assumptions can be challenged and defended. When you write "we controlled for motivation because we believe motivation independently affects both tutor use and outcomes," you have made a claim that readers can evaluate. When you write "we controlled for all available covariates," you have hidden your causal assumptions behind a procedure.
 
-The deep point, which Pearl has argued extensively, is that causal inference is never purely statistical. Statistics can tell you about patterns in data. Causal inference requires assumptions about the data-generating process — assumptions that come from the researcher's understanding of the domain, not from the data itself. The DAG is the place where those assumptions live.
+The deep point, which Pearl has argued extensively, is that causal inference is never purely statistical. Statistics can tell you about patterns in data. Causal inference requires assumptions about the data-generating process — assumptions that come from the researcher's understanding of the domain, not from the data itself. The DAG is the place where those assumptions live. (When you need the rigorous treatment of confounding, colliders, and identification that this section only sketches, the current standard references are Hernán and Robins, *Causal Inference: What If*, 2020, and — for a worked, code-first tour of the same ideas — Cunningham, *Causal Inference: The Mixtape*, 2021.)
+
+It is worth noting that this formal machinery is relatively recent. Before it, the canonical guidance for reasoning about causation from observational association was Austin Bradford Hill's nine "viewpoints" — strength, consistency, specificity, temporality, biological gradient, plausibility, coherence, experiment, and analogy (Hill, 1965). The contrast is instructive. Hill offered heuristics for deciding *when to believe* an observed association is causal; Pearl and Rubin offer formal machinery for specifying *what a causal claim even means* and what design could license it. And Hill was emphatic about how his list should be used: these were "viewpoints," he wrote, **not a checklist**, and none of them could be required as a *sine qua non*. Treating his nine points as boxes to tick is exactly the misuse he warned against.
 
 ---
 
@@ -87,7 +89,15 @@ Now let's return to the original paper, and look at it with everything we've bui
 
 "Students who used an AI tutor more often scored higher on the final exam. The AI tutor caused the improvement."
 
-The first sentence is association-level. It is supported by the observational data. The second sentence is intervention-level — it claims that if you gave students the tutor, scores would improve. To support that claim, the design needs something that creates a credible counterfactual: random assignment, a natural experiment where tutor access was assigned by something unrelated to motivation, an instrumental variable that predicts tutor use but doesn't independently affect scores.
+The first sentence is association-level. It is supported by the observational data. The second sentence is intervention-level — it claims that if you gave students the tutor, scores would improve. Here is the blunt operating rule that follows from everything above: **a causal claim needs a randomized experiment or a strong quasi-experiment; there is no statistical workaround.** You cannot climb to the intervention rung with cleverer statistics applied to rung-one data — no quantity of controls turns an association into a counterfactual. What you need is a design that manufactures a credible counterfactual.
+
+Beyond the randomized controlled trial, there is a known toolkit of quasi-experimental designs that approximate randomization by exploiting some external source of as-good-as-random variation (Angrist & Pischke, *Mostly Harmless Econometrics*, 2009):
+
+- **Instrumental variables (IV)** — find a variable that predicts tutor use but has no independent path to the outcome, and use only the variation it explains.
+- **Difference-in-differences (DiD)** — compare the before/after change in a group that gained access against the change in a group that didn't.
+- **Regression discontinuity (RDD)** — exploit a sharp cutoff (a score threshold, an enrollment date) that assigns access nearly at random for students near the line.
+
+Each of these is a way of creating the comparison the raw observational data cannot: a natural experiment where tutor access was assigned by something unrelated to motivation, or an instrumental variable that predicts tutor use but doesn't independently affect scores.
 
 If none of those design features are present, the paper has two honest options. It can rewrite the second sentence in association language: "AI tutor use was associated with higher exam scores; whether this reflects a causal effect remains to be tested." Or it can propose a follow-up design that would support the causal claim: "Future work should randomly assign tutor access to isolate the effect of the tool from the selection effects that likely confound this analysis."
 
@@ -124,6 +134,12 @@ The verb "caused" is not a prize for a strong correlation. It is a commitment to
 ---
 
 ## LLM Exercises
+
+> **Running project — *Your Research Paper*.** This book is a fill-in template: you carry one real paper of your own from first question to submission-ready draft, building one piece per chapter. Replace the bracketed placeholders in the prompts below with your own topic, data, and field.
+>
+> **This chapter adds:** a ruling on what your claim actually is — causal, correlational, or descriptive — and the design that claim requires.
+>
+> **Carries into the next chapter:** Chapter 5 turns your variables into measures you can defend.
 
 ### Exercise 1 — When to Use AI
 
@@ -271,3 +287,37 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 > *Sentence 2:* One specific thing the AI could not determine that required your judgment.
 
 **Series connection:** This exercise trains Tier 5 Causal and Counterfactual: the capacity to catch when machine output is fluent, useful, and still not sufficient for the human conclusion.
+
+---
+
+---
+
+##  AI Wayback Machine
+
+The ideas in this chapter didn't appear from nowhere. **Sewall Wright** drew the first causal path diagrams in the 1920s — the direct ancestors of the arrows-and-nodes graphs researchers use to reason about cause today. Here's a prompt to find out more — and then make it better.
+
+**Run this:**
+
+```text
+Who was Sewall Wright, and how does his invention of path analysis connect to modern causal diagrams and the problem of separating correlation from causation? Keep it to three paragraphs. End with the single most surprising thing about his career or ideas.
+```
+
+→ Search **"Sewall Wright"** on Wikipedia after you run this. See what the model got right, got wrong, or left out.
+
+**Now make the prompt better.** Try one of these:
+
+- Ask it to explain a "path coefficient" in plain language, as if you've never seen a causal diagram
+- Ask how Wright's 1920s path diagrams compare to the DAGs and the do-operator you'd use today
+- Add a constraint: "Answer as a museum placard explaining where the arrows in a causal graph came from"
+
+What changes? What gets better? What gets worse?
+
+## Sources
+
+- Rubin, D. B. (1974). "Estimating causal effects of treatments in randomized and nonrandomized studies." *Journal of Educational Psychology*, 66(5), 688–701. https://doi.org/10.1037/h0037350 — The potential-outcomes framework (Y₁ vs. Y₀ for the same unit).
+- Holland, P. W. (1986). "Statistics and causal inference." *Journal of the American Statistical Association*, 81(396), 945–960. https://doi.org/10.1080/01621459.1986.10478354 — Coined "the fundamental problem of causal inference" and named the Rubin Causal Model.
+- Pearl, J., & Mackenzie, D. (2018). *The Book of Why: The New Science of Cause and Effect*. New York: Basic Books. — The ladder of causation (association → intervention → counterfactual; "seeing, doing, imagining") and the thesis that causal inference is not purely statistical.
+- Hernán, M. A., & Robins, J. M. (2020). *Causal Inference: What If*. Boca Raton: Chapman & Hall/CRC. Free full text: https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/ — Rigorous treatment of confounding, colliders/selection bias, and identification; the standard graduate reference.
+- Cunningham, S. (2021). *Causal Inference: The Mixtape*. New Haven: Yale University Press. Free: https://mixtape.scunning.com — Code-first introduction to the quasi-experimental toolkit (DiD, RDD, IV, matching).
+- Angrist, J. D., & Pischke, J.-S. (2009). *Mostly Harmless Econometrics: An Empiricist's Companion*. Princeton: Princeton University Press. — Natural experiments, instrumental variables, difference-in-differences, and regression discontinuity as the strong quasi-experimental designs that approximate randomization.
+- Hill, A. B. (1965). "The Environment and Disease: Association or Causation?" *Proceedings of the Royal Society of Medicine*, 58(5), 295–300. — The nine "viewpoints" for judging observational association — offered explicitly as viewpoints, not a checklist, with none a *sine qua non*.

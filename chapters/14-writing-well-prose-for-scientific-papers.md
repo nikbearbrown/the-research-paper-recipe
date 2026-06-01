@@ -17,7 +17,7 @@ This is the problem that prose quality addresses — not whether the writing is 
 
 Nominalization is the most common source of fog in scientific writing, and it is worth understanding specifically because it is so easy to produce and so hard to notice in your own prose.
 
-A nominalization is a verb or adjective that has been converted into a noun. "Improve" becomes "improvement." "Analyze" becomes "analysis." "Measure" becomes "measurement." "Intervene" becomes "intervention." Each of these conversions moves the action from the verb position — where it carries the sentence's energy and makes actors visible — to the noun position, where it sits passively and hides who did what to whom.
+A nominalization is a verb or adjective that has been converted into a noun. "Improve" becomes "improvement." "Analyze" becomes "analysis." "Measure" becomes "measurement." "Intervene" becomes "intervention." Each of these conversions moves the action from the verb position — where it carries the sentence's energy and makes actors visible — to the noun position, where it sits passively and hides who did what to whom. Helen Sword's name for these is the most memorable one available: *zombie nouns*, because they "cannibalize active verbs, suck the lifeblood from adjectives, and substitute abstract entities for human beings" (Sword, 2012). A sentence overrun by zombie nouns is grammatically alive and informationally dead.
 
 The test for a nominalization: find any noun ending in -tion, -ment, -ance, -ence, -ity, or -al, and ask whether it was once a verb or adjective. If it was, ask whether restoring it to its original form would make the sentence clearer. Often it would. "The observation of improvement in performance" restores to "Students in the Socratic group improved their performance" — and that version has a subject (students), a verb (improved), and an object (performance), which gives the sentence a structure the reader can follow.
 
@@ -39,7 +39,9 @@ The vague quantifier often appears because the writer doesn't have the number �
 
 ---
 
-Passive voice is the element of scientific prose that generates the most categorical advice and the least nuanced guidance. "Never use passive" is wrong. "Passive voice hides important information" is right as a caution but wrong as a rule. The distinction is between informative passive and evasive passive.
+Throat-clearing is the third source of fog, and it is the easiest to miss because it does no harm one phrase at a time. These are the empty openers that announce that something is about to be said without saying it: "It is important to note that," "It should be mentioned that," "It is worth pointing out that," "Interestingly," "Notably." Each one delays the actual content by a clause and signals the reader's attention without earning it. "It is important to note that the Socratic group scored higher" carries exactly the information of "The Socratic group scored higher," with five words of front matter that say only *pay attention now*. If the sentence is in the paper, it is presumably worth noting; the announcement is redundant. The remedy is mechanical: when a sentence opens with a phrase whose only function is to flag importance, delete the phrase and start with the content. The rare exception is genuine signposting — "Note that this excludes the pilot sample" does real work because it warns of a specific scope limit — but most throat-clearing flags nothing the reader couldn't see on their own.
+
+Passive voice is the fourth element of scientific prose, and it generates the most categorical advice and the least nuanced guidance. "Never use passive" is wrong. "Passive voice hides important information" is right as a caution but wrong as a rule. The distinction is between informative passive and evasive passive.
 
 **Informative passive** makes the actor irrelevant or suppresses the actor appropriately. "Samples were analyzed using a high-performance liquid chromatography method." The actor — whoever ran the machine — is genuinely irrelevant to what the reader needs to know. Passive is correct here. "Participants were randomly assigned to conditions using a computer-generated sequence." The procedure is what matters, not who ran the randomization software. Passive is correct.
 
@@ -63,15 +65,17 @@ The calibration between verb and evidence is not a matter of tone. It is a matte
 
 Here is the practical rule: for each epistemic verb in your Discussion, ask what kind of evidence would justify that verb. Then ask whether your study provides that kind of evidence. If the answer is no, change the verb.
 
+A caution on how to read this scale. The *ordering* — boosters like "demonstrates" carry strong commitment, hedges like "suggests" and "is consistent with" carry weak commitment — is well established in the linguistics of academic writing (Hyland, 1998; 2005), and the principle of matching causal language to design is endorsed by the APA's *Publication Manual* (7th edition). But the precise mapping of each verb to a specific study design — "demonstrates = a randomized controlled trial," "suggests = one correlational study" — is this book's own pedagogical heuristic, not a codified standard. No style manual publishes a verb-to-design lookup table. The literature supports the *direction*; the exact rungs are a teaching device. Use the ladder to calibrate, not as a citation.
+
 ![Figure 14.3 — Epistemic verbs form an ordered scale from strongest to weakest evidential commitment — demonstrates, shows, indicates, suggests, is consistent with — and the verb must be matched to the actual strength of the study's evidence.](../images/14-writing-well-prose-for-scientific-papers-fig-03.png)
 
-A related issue: excessive hedging. A paper that uses "appears to suggest" and "may perhaps indicate" throughout its Discussion has been hedged into incoherence. Some of this hedging is genuine epistemic humility — the evidence is uncertain and the writer is being honest. But some of it is defensive writing — the writer is protecting against every possible objection by refusing to commit to any claim. Defensive hedging does not produce a safer claim. It produces an unreadable one. Calibrated hedging names the actual uncertainty. Defensive hedging names no uncertainty at all, because it is hiding, not disclosing.
+A related issue: excessive hedging. A paper that uses "appears to suggest" and "may perhaps indicate" throughout its Discussion has been hedged into incoherence. Some of this hedging is genuine epistemic humility — the evidence is uncertain and the writer is being honest. But some of it is defensive writing — the writer is protecting against every possible objection by refusing to commit to any claim. Defensive hedging does not produce a safer claim. It produces an unreadable one. Hyland's (1998) account is useful here: a hedge carries genuine epistemic content — it names a specific uncertainty the writer has reason to flag. Stacking hedges that name no particular uncertainty empties them of that content. Calibrated hedging names the actual uncertainty. Defensive hedging names no uncertainty at all, because it is hiding, not disclosing. Over-hedging, in other words, is as dishonest as overclaiming — both put a number on the writer's confidence that the evidence does not support.
 
 <!-- → [TABLE: Epistemic verb calibration — rows: demonstrates, shows, indicates, suggests, is consistent with — columns: what strength of evidence it implies, what design would justify it, example in context] -->
 
 ---
 
-The sentence structure principle that runs through all of this comes from a paper by George Gopen and Judith Swan that argued for a model of reading as expectation-based. Readers, they argued, expect certain kinds of information in certain positions. The subject position sets up what the sentence is about. The stress position — usually the end of the sentence — is where new, important information lands.
+The sentence structure principle that runs through all of this comes from a paper by George Gopen and Judith Swan, "The Science of Scientific Writing" (1990), that argued for a model of reading as expectation-based. Readers, they argued, expect certain kinds of information in certain positions. The subject position sets up what the sentence is about. The stress position — usually the end of the sentence — is where new, important information lands.
 
 The implication for scientific prose: the sentence should open on what the reader already knows (topic position) and close on the new information that the sentence is adding (stress position). A sentence that buries its finding in a subordinate clause at the beginning and ends on a reference number has put its information in the wrong positions. The reader's cognitive machinery reads the reference number as the sentence's most important element.
 
@@ -79,13 +83,13 @@ The implication for scientific prose: the sentence should open on what the reade
 
 This is a subtle principle and it does not need to be followed mechanically. But it is useful for diagnosing why a paragraph that seems clear on re-reading was confusing on first reading. Often the culprit is information in the wrong position — the new claim buried where the familiar context should be, the qualification at the end where the finding should be.
 
-The Williams and Bizup principle complements this: when a sentence is hard to follow, look for the central actor and the central action. Make the actor the grammatical subject. Make the action the main verb. Everything else is secondary. "The intervention, which was implemented over six weeks in an introductory programming course, resulted in outcomes that were significantly better in the treatment group" has an actor (the intervention) in subject position, but the action is buried in "resulted in outcomes that were significantly better." Restored: "Students who received the intervention for six weeks scored significantly higher on the post-test than control students." Actor clear. Action clear. Information in the right positions.
+The Williams and Bizup principle, from *Style: Lessons in Clarity and Grace*, complements this: when a sentence is hard to follow, look for the central actor and the central action. Make the actor the grammatical subject. Make the action the main verb. Everything else is secondary. "The intervention, which was implemented over six weeks in an introductory programming course, resulted in outcomes that were significantly better in the treatment group" has an actor (the intervention) in subject position, but the action is buried in "resulted in outcomes that were significantly better." Restored: "Students who received the intervention for six weeks scored significantly higher on the post-test than control students." Actor clear. Action clear. Information in the right positions.
 
 ---
 
 One last thing, because prose quality occupies a specific position in the book's sequence that is worth naming.
 
-This chapter comes after the claim audit, the peer-review simulation, and the ethics screen. That sequence is intentional. Prose quality is the last thing to address, not the first, because improving the prose before the claims are correct can make the wrong thing more convincing. An elegant sentence that overstates the evidence is more dangerous than an awkward sentence that overstates the evidence, because elegance suppresses critical reading. Clean it last.
+This chapter comes after the claim audit, the peer-review simulation, and the ethics screen. That sequence is intentional. It is the spine of the whole book: a Thinking phase, then a Writing phase, then an Auditing phase, with gates between them — and prose quality is the last gate of the last phase. Prose quality is the last thing to address, not the first, because improving the prose before the claims are correct can make the wrong thing more convincing. An elegant sentence that overstates the evidence is more dangerous than an awkward sentence that overstates the evidence, because elegance suppresses critical reading. Clean it last.
 
 But clean it. A correct claim expressed in fog is harder to evaluate than a correct claim expressed clearly. The reader who cannot find the actor, the comparison, the measure, and the scope in your sentence cannot tell whether the claim is supported. Opacity protects nothing. It just makes the reader's job harder and creates the impression — usually wrong — that you are hiding something.
 
@@ -120,6 +124,14 @@ Scientific prose is a precision instrument. Its job is not to sound scientific. 
 ---
 
 ## LLM Exercises
+
+> **Running project — *Your Research Paper*.** This book is a fill-in template: you carry one real paper of your own from first question to submission-ready draft, building one piece per chapter. Replace the bracketed placeholders in the prompts below with your own topic, data, and field.
+>
+> **This chapter adds:** a fog audit and final prose polish — your paper becomes submission-ready.
+>
+> **Carries into the next chapter:** Nothing further: you now hold a complete, defensible paper — and you can explain every claim in it without AI and without your notes.
+
+> **CRITIQ (Appendix).** Run `/writing` for a sentence-level fog audit — nominalizations, hedging, claim calibration. Clarity it can improve; whether a claim is *true* remains yours to decide.
 
 ### Exercise 1 — When to Use AI
 
@@ -267,3 +279,36 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 > *Sentence 2:* One specific thing the AI could not determine that required your judgment.
 
 **Series connection:** This exercise trains Tier 4 Metacognitive and Tier 7 Wisdom: the capacity to catch when machine output is fluent, useful, and still not sufficient for the human conclusion.
+
+---
+
+---
+
+##  AI Wayback Machine
+
+The ideas in this chapter didn't appear from nowhere. **Rudolf Flesch** turned "is this sentence clear?" into a number, launching a century-long campaign against foggy, self-important prose. Here's a prompt to find out more — and then make it better.
+
+**Run this:**
+
+```text
+Who was Rudolf Flesch, and how does his work on readability and plain language connect to writing scientific prose that is clear rather than foggy? Keep it to three paragraphs. End with the single most surprising thing about his career or ideas.
+```
+
+→ Search **"Rudolf Flesch"** on Wikipedia after you run this. See what the model got right, got wrong, or left out.
+
+**Now make the prompt better.** Try one of these:
+
+- Ask it to explain what a readability score actually measures, in plain language
+- Ask how Flesch's plain-language rules would rewrite a nominalization-heavy methods sentence
+- Add a constraint: "Answer in the plainest possible English, then point out what it cut"
+
+What changes? What gets better? What gets worse?
+
+## Sources
+
+- Gopen, G. D., & Swan, J. A. (1990). The science of scientific writing. *American Scientist*, 78(6), 550–558.
+- Williams, J. M., & Bizup, J. (2017). *Style: Lessons in Clarity and Grace* (12th ed.). Pearson.
+- Sword, H. (2012, July 23). Zombie nouns. *The New York Times* (Opinionator). [See also Sword, H. (2012). *Stylish Academic Writing.* Harvard University Press.]
+- Hyland, K. (1998). *Hedging in Scientific Research Articles.* John Benjamins.
+- Hyland, K. (2005). *Metadiscourse: Exploring Interaction in Writing.* Continuum.
+- American Psychological Association. (2020). *Publication Manual of the American Psychological Association* (7th ed.). APA. [On matching causal language to study design.]

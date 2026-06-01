@@ -13,7 +13,7 @@ Quality control starts with claims, not commas. The sentence sounds good. The se
 
 The procedure I call a claim audit is simple in principle and uncomfortable in practice.
 
-Read through your draft and highlight every sentence that makes a claim about the world — not about what prior research found, not about what the study did, but about what is true. "The intervention improves learning" is a claim about the world. "Socratic feedback produced higher delayed retention scores" is a claim about the world. "AI tutoring is increasingly common in undergraduate settings" is a claim about the world.
+Read through your draft and highlight every sentence that makes a claim about the world — not about what prior research found, not about what the study did, but about what is true. "The intervention improves learning" is a claim about the world. "Socratic feedback produced higher delayed retention scores" is a claim about the world. "AI tutoring is increasingly common in undergraduate settings" is a claim about the world. The causal verbs are the ones to hunt hardest for — *causes*, *leads to*, *produces*, *improves*, *increases* — because each one asserts a relationship the design has to earn.
 
 For each highlighted sentence, ask: what specific evidence supports this, and is that evidence sufficient for the scope of this claim? Then label the sentence as one of: supported (the evidence I have licenses this specific claim in this specific scope), partially supported (some evidence supports this but it requires qualification), overstated (the scope is broader than the evidence), unsupported (no evidence provided or referenced), needs citation (the claim requires a source and doesn't have one), or needs qualification (the claim is true under some conditions but stated as universal).
 
@@ -37,6 +37,16 @@ Revised claim: "The intervention improved immediate performance on the aligned p
 
 The revised claim is less dramatic. It is also more true. It is the claim the evidence can carry. A reviewer who pushes back on this sentence will need to argue that the immediate aligned post-test is not a valid measure of what it says it measures — which is a more specific and answerable objection than "you haven't demonstrated learning across all students." The narrower claim is harder to attack because it makes fewer promises. Making fewer promises than you can keep is not timidity. It is precision.
 
+A useful heuristic for matching the verb to the design — this book's own ladder, not a codified style standard, though it runs in the same direction as APA 7th's caution against causal language outpacing the design and Hyland's account of hedges and boosters as carrying real epistemic weight:
+
+- *raises the possibility* — a single case or anecdote
+- *suggests* — one correlational study
+- *indicates* — a correlational study with large N
+- *demonstrates* — a randomized controlled trial
+- *proves* — a multi-site, replicated result
+
+No style manual publishes this exact verb-to-design table; treat it as a calibration target, not a rule. The worked example's "demonstrates" sits two rungs above what a single-sample, single-measure study can support, which is why the audit flags it.
+
 There is a real limit here, worth naming: excessive qualification makes real findings unreadable. "In this sample of 70 undergraduate students at one research university, using one AI tutoring platform for one semester, on one aligned immediate post-test, the intervention group scored numerically higher than the control group with a moderate effect size, though this may not generalize" is technically accurate and practically useless. The goal is calibration — claims scoped to what the evidence supports — not maximum hedging. The test is: does the claim make promises the evidence can't keep? If yes, narrow it. If no, leave it.
 
 ---
@@ -45,7 +55,7 @@ A claim audit handles the logic layer of quality control. There is a second laye
 
 Statistical integrity is a claim audit for numbers. Every quantitative claim in the paper — every p-value, every effect size, every confidence interval, every comparison stated in words — needs to match what the output and tables actually show. This sounds obvious. The failure rate in published papers is not negligible.
 
-The GRIM test (Granularity-Related Inconsistency of Means) and related methods have identified systematic reporting errors in published research — means that are mathematically impossible given the sample size and scale, p-values that don't correspond to the stated test statistics and degrees of freedom. Some of these are mistakes. Some are errors introduced during transcription between software output and manuscript. None of them are caught by prose editing, because the error lives in the number, not in the sentence surrounding it.
+The GRIM test (Granularity-Related Inconsistency of Means), introduced by Brown and Heathers (2017), and related methods have identified systematic reporting errors in published research — means that are mathematically impossible given the sample size and scale, p-values that don't correspond to the stated test statistics and degrees of freedom. In their original sample of 71 testable psychology articles, roughly half contained at least one impossible mean, and every dataset they were able to obtain confirmed a genuine reporting error. Some of these are mistakes. Some are errors introduced during transcription between software output and manuscript. None of them are caught by prose editing, because the error lives in the number, not in the sentence surrounding it.
 
 The statistical integrity check: for every quantitative claim, trace it to its source. The p-value in the Discussion discussion should match the p-value in the Results table, which should match the output file. The effect size described in the Abstract should match the effect size reported in Results. The comparison described in words in the Discussion ("Socratic feedback produced significantly better retention") should correspond to a specific test with a specific result reported somewhere in Results, not to a general impression of the findings.
 
@@ -103,7 +113,7 @@ The claim audit sorts these. A sentence labeled overstated needs a logic revisio
 
 One last note about the claim audit in the context of what's come before in this book.
 
-Chapters 1 through 10 are about getting things right before the draft exists: the right hypothesis, the right design, the right measures, the right data quality, the right statistical test, the right framing. Chapter 11 is about what to do after the draft exists. The premise is that you followed the earlier steps, the draft is broadly honest, and now you are checking whether any drift crept in during the writing — whether any sentence outran the evidence in ways that the drafting process introduced.
+The book moves through three phases with gates between them: a Thinking phase, a Writing phase, and an Auditing phase. Chapters 1 through 10 are the Thinking and Writing phases — getting things right before and during drafting: the right hypothesis, the right design, the right measures, the right data quality, the right statistical test, the right framing. Chapter 11 opens the Auditing phase — what to do after the draft exists. The claim audit is the first gate in that phase; the peer-review simulation and the ethics screen are the gates that follow. The premise is that you followed the earlier steps, the draft is broadly honest, and now you are checking whether any drift crept in during the writing — whether any sentence outran the evidence in ways that the drafting process introduced.
 
 The claim audit cannot fix a study with a wrong design, a measure that doesn't capture the construct, or data that was missing for outcome-relevant reasons. Those problems were addressed, or not, before the draft was written. What the claim audit can do is ensure that the draft accurately represents what the study actually showed — no more, no less.
 
@@ -138,6 +148,14 @@ The strongest sentence is not the most confident sentence. It is not the most im
 ---
 
 ## LLM Exercises
+
+> **Running project — *Your Research Paper*.** This book is a fill-in template: you carry one real paper of your own from first question to submission-ready draft, building one piece per chapter. Replace the bracketed placeholders in the prompts below with your own topic, data, and field.
+>
+> **This chapter adds:** a claim-calibration audit of your draft, matching every verb ("suggests," "demonstrates," "proves") to the evidence behind it.
+>
+> **Carries into the next chapter:** Chapter 12 stress-tests the paper under simulated peer review.
+
+> **CRITIQ (Appendix).** Run `/writing` for a claim-calibration and jargon audit: does every verb match the evidence behind it? Use it alongside this chapter's claim audit — CRITIQ surfaces the overclaims, you choose the wording.
 
 ### Exercise 1 — When to Use AI
 
@@ -285,3 +303,34 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 > *Sentence 2:* One specific thing the AI could not determine that required your judgment.
 
 **Series connection:** This exercise trains Tier 4 Metacognitive: the capacity to catch when machine output is fluent, useful, and still not sufficient for the human conclusion.
+
+---
+
+---
+
+##  AI Wayback Machine
+
+The ideas in this chapter didn't appear from nowhere. **Frank Benford** noticed that the leading digits of real-world numbers follow a strange, predictable pattern — now a frontline tool for catching numbers that were faked or fumbled. Here's a prompt to find out more — and then make it better.
+
+**Run this:**
+
+```text
+Who was Frank Benford, and how does Benford's Law connect to detecting errors, fabrication, or anomalies in a dataset or a results table? Keep it to three paragraphs. End with the single most surprising thing about his career or ideas.
+```
+
+→ Search **"Frank Benford"** on Wikipedia after you run this. See what the model got right, got wrong, or left out.
+
+**Now make the prompt better.** Try one of these:
+
+- Ask it to explain why first digits aren't evenly distributed, in plain language, with one example
+- Ask how a Benford check compares to the GRIM test or a recomputation audit you'd run on a paper
+- Add a constraint: "Answer as a forensic accountant explaining the trick to a jury"
+
+What changes? What gets better? What gets worse?
+
+## Sources
+
+- Brown, N. J. L., & Heathers, J. A. J. (2017). The GRIM test: A simple technique detects numerous anomalies in the reporting of results in psychology. *Social Psychological and Personality Science*, 8(4), 363–369. https://doi.org/10.1177/1948550616673876
+- American Psychological Association. (2020). *Publication Manual of the American Psychological Association* (7th ed.). APA. [On matching causal language to study design.]
+- Hyland, K. (1998). *Hedging in Scientific Research Articles*. John Benjamins. [On hedges and boosters as carriers of epistemic weight; supports the claim-calibration ladder's direction.]
+- Reber, R., & Schwarz, N. (1999). Effects of perceptual fluency on judgments of truth. *Consciousness and Cognition*, 8(3), 338–342. [On why fluent prose is accepted more readily — the mechanism behind the AI-polish danger.]

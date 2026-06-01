@@ -25,15 +25,15 @@ Before the drafting order makes sense, the sections themselves need to be clear 
 
 The empirical paper has a conventional reading order: Introduction, Methods, Results, Discussion, Abstract. That order was designed for readers, not writers. It presents the context before the findings, which is what a reader needs to understand what they're about to encounter. But a writer who drafts in reading order is constantly working with information they don't yet have: writing an Introduction before knowing what the results are, writing a Discussion before knowing what the Results section will say.
 
-And even that conventional order is only how the paper is *arranged*, not how an experienced reader moves through it. Few researchers read front to back. They triage: the title and abstract decide whether to read at all; then the eye goes to the figures and tables, where the findings sit in their most compressed form; then to the Discussion, to see what the authors claim it all means; and only if the result is worth scrutinizing do they return to the Methods and, last of all, the Introduction. So there are really two reading orders — the linear one a first-time reader follows and the figures-first one an expert uses — and neither is the order you write in. (This is also why the figures have to stand on their own, the argument of Chapter 8: for many readers they are the first real content encountered, and sometimes the only.)
+And even that conventional order is only how the paper is *arranged*, not how an experienced reader moves through it. Few researchers read front to back. Experienced readers report that they triage: the title and abstract decide whether to read at all; then the eye goes to the figures and tables, where the findings sit in their most compressed form; then to the Discussion, to see what the authors claim it all means; and only if the result is worth scrutinizing do they return to the Methods and, last of all, the Introduction. (This sequence is practitioner self-report, not measured reading-behavior research: when *Science* asked working scientists how they read a paper, many described some version of abstract-then-figures-then-discussion, several adding that the figures are the part they trust most because the prose can be shaped to tell a compelling story.) So there are really three orders in play — the **naive reading order**, the linear front-to-back path a first-time reader follows; the **expert reading order**, the figures-first triage just described; and the **writing order**, which is neither of those. (The expert order is also why the figures have to stand on their own, the argument of Chapter 8: for many readers they are the first real content encountered, and sometimes the only.)
 
-The drafting order that protects honesty runs almost in reverse. It starts with what you actually did and found, and works outward from there.
+The drafting order that protects honesty runs almost in reverse. It starts with what you actually did and found, and works outward from there. This is not a novel prescription: George Whitesides, in his much-circulated note on writing a paper (2004), argues that you should outline and draft *around the data first* — the figures and tables are the spine, and the prose, including the framing in the introduction, is built once the results are known. Text is secondary to evidence, not the other way around.
 
 ![Figure 10.1 — Papers are read Introduction-first but should be drafted Methods-first, because each drafting step only becomes possible once the prior step's content exists.](../images/10-drafting-section-by-section-fig-01.png)
 
 **Methods first.** Methods report what was done — the design, participants, materials, procedure, and analysis plan. This section can be drafted from the protocol and the actual record of what happened, without waiting for results. It is the most purely procedural section of the paper. Its job is replicability: a reader who follows the Methods description should be able to run the same study. If you cannot describe the procedure clearly enough for that, the description is incomplete, not the study.
 
-Reporting standards exist precisely because readers cannot evaluate findings without design details. JARS specifies what a psychology study's methods must report. CONSORT does the same for clinical trials. STROBE for observational epidemiology. The details vary, but the underlying logic is consistent: the reader's ability to judge your results depends entirely on knowing how those results were produced. A Methods section that omits how outliers were handled, how randomization was implemented, or what the pre-specified primary outcome was is a Methods section that prevents evaluation.
+Reporting standards exist precisely because readers cannot evaluate findings without design details. JARS — the APA Journal Article Reporting Standards (Appelbaum et al., 2018) — specifies what a psychology study's methods must report. CONSORT does the same for clinical trials. STROBE for observational epidemiology. The details vary, but the underlying logic is consistent: the reader's ability to judge your results depends entirely on knowing how those results were produced. A Methods section that omits how outliers were handled, how randomization was implemented, or what the pre-specified primary outcome was is a Methods section that prevents evaluation.
 
 **Results next.** Results report what was found. Not what it means. Not why it happened. Not what it implies for practice or theory. What happened, expressed in the strongest, most precise terms the evidence supports, organized in hypothesis order so the paper's central question gets answered before secondary analyses are reported.
 
@@ -46,6 +46,15 @@ This separation is not bureaucratic formalism. It is epistemically important. Re
 The Discussion is also where honest limits live. A finding from an underpowered study, or a finding with wide confidence intervals, or a finding that was the third of seven comparisons — the Discussion is where those qualifications belong. Not as apologies, but as honest accounting of what the evidence can and cannot support.
 
 A Discussion that only elaborates the positive findings and buries the limitations in a final paragraph is not doing its job. The limits shape the claim. A claim without its limits is a different claim — a stronger one than the evidence supports.
+
+Underneath all of that, a strong Discussion makes four moves, in order:
+
+1. **State the central finding and what it means** — open with the main result and its interpretation, not with a restatement of the Results section.
+2. **Connect it to prior work, with a stance** — show how the finding agrees with, extends, or contradicts the literature; take a position rather than merely listing neighbors.
+3. **Address what doesn't fit** — null results, unexpected patterns, and the comparisons that didn't reach significance, handled honestly rather than hidden.
+4. **Name limits and implications together** — what the evidence can and cannot support, and what follows from it for theory or practice.
+
+Two anti-patterns sink Discussions reliably. The first is **opening with a restatement of the Results** — the reader has just read them; repeating them wastes the most valuable position in the section. The second is **closing with "more research is needed."** As in the literature review (Chapter 9), that phrase is not a finding; it is a placeholder where a specific implication should be. Every paper could end that way, which is exactly why no paper should. Name *what* research, *why*, and what your result has changed about the question — or say nothing.
 
 ![Figure 10.2 — Each paper section has one specific job and one boundary it must not cross, and the violations are the places adjacent sections leak into each other.](../images/10-drafting-section-by-section-fig-02.png)
 
@@ -65,11 +74,13 @@ A good abstract stands alone. A reader who encounters the abstract without acces
 
 The most common abstract failure is misalignment with the Results section: the abstract claims a stronger finding than the Results report, or claims certainty about a mechanism the Discussion carefully hedges. This happens when the abstract is written from memory or from notes rather than from the finished paper. The remedy is to write the abstract last, and to check it line-by-line against the sections it compresses.
 
+A useful skeleton is five sentences, one job apiece: **problem** (the broad area and why it matters), **gap** (the specific thing not yet known), **method** (what you did to address it), **finding** (what you actually found, with magnitude and uncertainty), and **implication** (what it changes). Drafting against this skeleton exposes the element that goes missing most often — the finding. Research on structured abstracts has documented for years that authors routinely omit the actual result, the effect size, or the confidence interval even when the format has a slot reserved for them (Hartley, 2014). An abstract that names the problem, the gap, the method, and the implication but states the finding only vaguely — "results are discussed" — has skipped the one sentence the reader most needs. If your abstract cannot say in one sentence what you found and how large it was, the abstract is not finished.
+
 **Title last.** The title is a search tool and a promise. It is a search tool because researchers find papers through keywords, and the title is the most weighted location for keywords in most search systems. It is a promise because the title names what the paper delivers, and a reader who follows up on a title that doesn't match the paper's content has been misled.
 
 A good title names the specific contribution with enough context to be useful to a searching reader: the intervention, the outcome, the population, and ideally the key finding or frame. "AI Tutoring and Student Learning" is a title about a topic. "Socratic AI Feedback Improves Two-Week Retention in Undergraduate Programming: A Randomized Study" is a title about a specific claim. The second title tells a searching researcher whether this paper is relevant to their question without requiring them to open it.
 
-<!-- → [INFOGRAPHIC: Drafting order vs. reading order — two parallel sequences — reading order (Intro → Methods → Results → Discussion → Abstract) alongside drafting order (Methods → Results → Discussion → Introduction → Abstract → Title) — with arrows showing why each drafting step is possible once prior steps are complete] -->
+<!-- → [INFOGRAPHIC: Three orders — three parallel sequences side by side — naive reading order (Intro → Methods → Results → Discussion → Abstract), expert reading order (Title/Abstract → Figures & Tables → Discussion → Methods → Introduction), and writing order (Methods → Results → Discussion → Introduction → Abstract → Title) — with arrows showing why each drafting step is possible once prior steps are complete] -->
 
 ---
 
@@ -126,6 +137,14 @@ The common thread is protection against a specific kind of failure: writing a fr
 ---
 
 ## LLM Exercises
+
+> **Running project — *Your Research Paper*.** This book is a fill-in template: you carry one real paper of your own from first question to submission-ready draft, building one piece per chapter. Replace the bracketed placeholders in the prompts below with your own topic, data, and field.
+>
+> **This chapter adds:** your full draft — Methods, Results, Discussion, Introduction, Abstract, Title — written in the order discovery happened.
+>
+> **Carries into the next chapter:** Chapter 11 audits every claim in that draft.
+
+> **CRITIQ (Appendix).** Run `/outline` to build an IMRaD scaffold, `/draft [section]` to draft in discovery order, and `/abstract` for the five-sentence abstract. It holds a phase gate — it will not write the Discussion until your Results are locked.
 
 ### Exercise 1 — When to Use AI
 
@@ -273,3 +292,35 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 > *Sentence 2:* One specific thing the AI could not determine that required your judgment.
 
 **Series connection:** This exercise trains Tier 4 Metacognitive: the capacity to catch when machine output is fluent, useful, and still not sufficient for the human conclusion.
+
+---
+
+---
+
+##  AI Wayback Machine
+
+The ideas in this chapter didn't appear from nowhere. **Janet Emig** showed that writing is not the transcription of finished thoughts but a process of discovery — the reason this chapter tells you to draft in the order your findings actually arrived. Here's a prompt to find out more — and then make it better.
+
+**Run this:**
+
+```text
+Who was Janet Emig, and how does her research on writing as a process of discovery connect to drafting a paper's sections in the order the work happened rather than the order they're read? Keep it to three paragraphs. End with the single most surprising thing about her career or ideas.
+```
+
+→ Search **"Janet Emig"** on Wikipedia after you run this. See what the model got right, got wrong, or left out.
+
+**Now make the prompt better.** Try one of these:
+
+- Ask it to explain "writing as a process, not a product" in plain language
+- Ask how Emig's findings support writing the Methods and Results before the Introduction
+- Add a constraint: "Answer as a note taped to the laptop of someone who keeps writing the introduction first"
+
+What changes? What gets better? What gets worse?
+
+## Sources
+
+- Whitesides, G. M. (2004). Whitesides' Group: Writing a paper. *Advanced Materials*, 16(15), 1375–1377. https://doi.org/10.1002/adma.200400767 [Backing for drafting in discovery order and treating text as secondary to figures and data.]
+- Pain, E. (2016). How to (seriously) read a scientific paper. *Science* (AAAS). https://www.science.org/content/article/how-seriously-read-scientific-paper [Compiled self-report from working scientists on figures-first reading; practitioner wisdom, not measured reading-behavior research.]
+- Appelbaum, M., Cooper, H., Kline, R. B., Mayo-Wilson, E., Nezu, A. M., & Rao, S. M. (2018). Journal article reporting standards for quantitative research in psychology: The APA Publications and Communications Board Task Force Report. *American Psychologist*, 73(1), 3–25. https://doi.org/10.1037/amp0000191
+- Hartley, J. (2014). Current findings from research on structured abstracts: an update. *Journal of the Medical Library Association*, 102(3), 146–148. [Documents persistent omission of results/findings in abstracts even under structured formats.]
+- Swales, J. M. (1990). *Genre Analysis: English in Academic and Research Settings*. Cambridge University Press. [Primary source for the CARS model referenced in the Introduction section; see Chapter 9.]

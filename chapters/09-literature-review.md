@@ -35,13 +35,15 @@ The matrix forces you to read actively — you have to decide, for each source, 
 
 Those patterns are your gap. The gap is not something you find by reading all the sources and then waiting for inspiration. It is something that emerges from the structure of what exists — the combination of what has been done and what hasn't.
 
+The matrix is an informal tool for synthesizing a body of work that supports your own study. When the review *is* the study — a systematic review or meta-analysis, where the literature itself is the object of investigation — the informal matrix gives way to a formal reporting standard. The PRISMA 2020 statement (Page et al., 2021) supplies a 27-item checklist for how such a review should be searched, screened, and reported, so that another researcher could reconstruct exactly which studies were included, which were excluded, and why. The principle is the same one driving the matrix — make the structure of the evidence visible — but the rigor is higher because the review's conclusions stand or fall on it.
+
 ![Figure 9.2 — A theme-by-source matrix forces active reading and makes patterns and gaps visible — an empty region in the grid is precisely the unfilled space your study can occupy.](../images/09-literature-review-fig-02.png)
 
 <!-- → [TABLE: Sample synthesis matrix — rows: feedback type, study design, outcome measure, retention timescale, sample population, key limitation — columns: five hypothetical sources — cells showing variation across studies — gap visible where certain row-column combinations are empty] -->
 
 ---
 
-John Swales developed a model for how research introductions establish their territory that has proven remarkably durable because it describes what the best introductions actually do rather than prescribing a format. He called it the Create a Research Space model — CARS — and it identifies three moves that introductions make in sequence.
+John Swales developed a model for how research introductions establish their territory that has proven remarkably durable because it describes what the best introductions actually do rather than prescribing a format. He derived it from a corpus of real introductions in *Genre Analysis: English in Academic and Research Settings* (1990). He called it the Create a Research Space model — CARS — and it identifies three moves that introductions make in sequence.
 
 **Move 1: Establish the territory.** Claim that the topic is important, review previous research, define key concepts. This is the "here is what the field has been doing" section. Its job is to establish that the domain matters and that prior work exists. Crucially, this move is not the whole introduction — it is the first step, and spending too long in Move 1 is a common way that introductions become literature parades rather than arguments.
 
@@ -77,7 +79,7 @@ The antidote is not to cite every adjacent study that exists. It is to actively 
 
 Now a hard rule, because it matters and AI tools make it easy to violate: every citation in a literature review belongs to a source the author has located, opened, and verified.
 
-AI language models generate plausible-sounding citations. They produce author names, journal names, volume numbers, page ranges. Many of these citations are invented — the authors may be real, the journals may be real, the papers do not exist. This is not a hallucination in the colloquial sense. It is a provenance failure. The citation exists in the text without corresponding to a real document in the world.
+AI language models generate plausible-sounding citations. They produce author names, journal names, volume numbers, page ranges. Many of these citations are invented — the authors may be real, the journals may be real, the papers do not exist. The rate is not trivial: in one peer-reviewed audit, Walters and Wilder (2023) found that of the bibliographic citations ChatGPT generated, roughly 55 percent were fabricated when GPT-3.5 produced them and roughly 18 percent when GPT-4 did, and even the genuine references carried substantial citation errors. (The rates are model- and version-dependent and have generally fallen over time; treat them as illustrative of the failure mode, not as fixed constants.) This is not a hallucination in the colloquial sense. It is a provenance failure. The citation exists in the text without corresponding to a real document in the world.
 
 A citation hallucination is not a formatting error. It is a false claim about the state of knowledge. It tells readers that something was demonstrated, argued, or shown in a specific paper — a paper that cannot be read, because it doesn't exist. The reader who trusts the citation and builds on it is building on air.
 
@@ -130,6 +132,14 @@ That is the standard. It's harder to meet than "I cited eight sources." It is th
 ---
 
 ## LLM Exercises
+
+> **Running project — *Your Research Paper*.** This book is a fill-in template: you carry one real paper of your own from first question to submission-ready draft, building one piece per chapter. Replace the bracketed placeholders in the prompts below with your own topic, data, and field.
+>
+> **This chapter adds:** your synthesis matrix and the specific gap your paper fills — your CARS niche.
+>
+> **Carries into the next chapter:** Chapter 10 drafts the whole paper, in discovery order.
+
+> **CRITIQ (Appendix).** Run `/lit` to draft a *synthesized* review organized by theme and gap rather than author-by-author. It will not invent citations — but you must still confirm that every source it works from is real and read it yourself.
 
 ### Exercise 1 — When to Use AI
 
@@ -277,3 +287,34 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 > *Sentence 2:* One specific thing the AI could not determine that required your judgment.
 
 **Series connection:** This exercise trains Tier 4 Metacognitive and Tier 6 Collective: the capacity to catch when machine output is fluent, useful, and still not sufficient for the human conclusion.
+
+---
+
+---
+
+##  AI Wayback Machine
+
+The ideas in this chapter didn't appear from nowhere. **Henriette Avram** invented the format that let computers catalog and search the world's libraries — the reason a literature search is possible at all. Here's a prompt to find out more — and then make it better.
+
+**Run this:**
+
+```text
+Who was Henriette Avram, and how does her creation of the MARC machine-readable cataloging standard connect to how researchers find and organize prior literature? Keep it to three paragraphs. End with the single most surprising thing about her career or ideas.
+```
+
+→ Search **"Henriette Avram"** on Wikipedia after you run this. See what the model got right, got wrong, or left out.
+
+**Now make the prompt better.** Try one of these:
+
+- Ask it to explain what "machine-readable cataloging" made possible, in plain language
+- Ask how Avram's cataloging logic compares to how you'd build a synthesis matrix for your own review
+- Add a constraint: "Answer as a thank-you note from a researcher who just finished a database search"
+
+What changes? What gets better? What gets worse?
+
+## Sources
+
+- Swales, J. M. (1990). *Genre Analysis: English in Academic and Research Settings*. Cambridge University Press. [Primary source for the CARS model and its three rhetorical moves.]
+- Swales, J. M., & Feak, C. B. (2012). *Academic Writing for Graduate Students: Essential Tasks and Skills* (3rd ed.). University of Michigan Press. [Standard pedagogical companion that operationalizes CARS for student writers.]
+- Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., et al. (2021). The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. *BMJ*, 372, n71. https://doi.org/10.1136/bmj.n71
+- Walters, W. H., & Wilder, E. I. (2023). Fabrication and errors in the bibliographic citations generated by ChatGPT. *Scientific Reports*, 13, 14045. https://doi.org/10.1038/s41598-023-41032-5

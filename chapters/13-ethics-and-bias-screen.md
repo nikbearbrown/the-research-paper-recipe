@@ -17,7 +17,7 @@ Disclosure is the most procedurally clear layer of the ethics screen, so it is a
 
 ![Figure 13.1 — The ethics screen is a stack of four distinct accountability layers — disclosure, overgeneralization, citation bias, and replication fitness — each auditing a different way a paper can mislead readers.](../images/13-ethics-and-bias-screen-fig-01.png)
 
-Publication ethics bodies have established that authors are accountable for all content in a paper — regardless of who or what produced any of it. The COPE (Committee on Publication Ethics) guidelines and ICMJE statements both address this: AI tools cannot be listed as authors, because authorship carries accountability for the work, and AI systems cannot take that accountability. The human authors who used AI tools remain fully responsible for the content those tools helped produce.
+Publication ethics bodies have established that authors are accountable for all content in a paper — regardless of who or what produced any of it. COPE's (Committee on Publication Ethics) position statement of February 2023 and the ICMJE's January 2025 *Recommendations* both address this directly, and Nature has stated flatly that a generative AI tool cannot be a listed author: AI tools cannot be listed as authors, because authorship carries accountability for the work — taking responsibility for it, asserting conflicts of interest, managing copyright — and an AI system can do none of those things. The human authors who used AI tools remain fully responsible for the content those tools helped produce, and any substantive use must be disclosed.
 
 The practical implication is disclosure: when AI tools contributed to the work in any substantive way, that contribution should be named. What "substantive" means is not universally defined, and different journals have different thresholds. Some require disclosure of any AI assistance in the manuscript preparation process. Some require disclosure only for AI involvement in data analysis or interpretation. Some are still developing their policies. The only reliable approach is to check the target journal's current author guidelines before submission.
 
@@ -53,7 +53,7 @@ Citation bias is the third layer, and it is the one that is easiest to rationali
 
 The natural impulse when building a literature review is to find sources that support the argument you want to make. This is partly appropriate — you are building a case, and the sources are your evidence. The problem arises when the selection becomes systematically one-sided: citing only the studies that found positive effects, omitting the null findings, citing the larger effects and not the smaller ones, ignoring the methodological critiques.
 
-Research on publication bias and citation bias documents that this is not a hypothetical problem. Fanelli demonstrated that the proportion of positive results in published papers has increased over time, which suggests either that research has become more efficient or that negative findings are systematically underrepresented. A literature review built on published sources inherits that bias unless the author actively looks for contrary evidence.
+Research on publication bias and citation bias documents that this is not a hypothetical problem. Fanelli (2012) found that the proportion of positive results reported in published papers has increased over time — negative results, his analysis showed, are disappearing from most disciplines and countries — which suggests either that research has become more efficient or, more plausibly, that negative findings are systematically underrepresented. A literature review built on published sources inherits that bias unless the author actively looks for contrary evidence.
 
 The citation audit asks: is this literature review representative of what the field actually found, or only of what got published and what I chose to cite? The check is not just about whether disconfirming evidence exists — it's about whether the review's characterization of the field is accurate.
 
@@ -67,7 +67,9 @@ This is not the same as both-sidesing every literature review with artificial ba
 
 There is a fourth layer of the ethics screen that is less about disclosure and more about future-use accountability: replication fitness.
 
-A paper that cannot be replicated is a paper that makes a claim the field cannot verify. Replication fitness is not identical to full open science — some data is legitimately sensitive or proprietary, some materials are protected, some analyses require specific software licenses. But it is a question every author should ask: if another researcher wanted to test whether this finding holds in a different sample, what would they need, and is that information available?
+A paper that cannot be replicated is a paper that makes a claim the field cannot verify. This is not an abstract worry: the Open Science Collaboration's (2015) large-scale replication project found that only a minority of published psychology findings reproduced at their original effect size, and the gap was wide enough to be called a crisis. Replication fitness is not identical to full open science — some data is legitimately sensitive or proprietary, some materials are protected, some analyses require specific software licenses. But it is a question every author should ask: if another researcher wanted to test whether this finding holds in a different sample, what would they need, and is that information available?
+
+There is a specific, auditable remedy for the selective-reporting problem that drives much of this gap: pre-register the analysis and report *all* the comparisons you ran, not only the ones that reached significance. A study that runs twelve comparisons and reports the three that "worked" is not lying about those three — but it is concealing the denominator, and the concealment is what turns noise into a false positive. Pre-registration fixes the primary outcome and analysis plan in advance; reporting all comparisons makes the full search space visible to the reader. The instruction is concrete: state what you pre-specified, then report every test against it, including the ones that found nothing.
 
 At minimum, replication fitness requires that the methods be described in enough detail that another researcher could implement the same design. The intervention should be specified precisely enough to reproduce. The measures should be named and referenced. The analysis decisions — the ones that matter, including the pre-specified primary outcome, the exclusion criteria, the covariates — should be reported.
 
@@ -114,6 +116,14 @@ Ethics is the final form of claim calibration. The earlier chapters calibrated t
 ---
 
 ## LLM Exercises
+
+> **Running project — *Your Research Paper*.** This book is a fill-in template: you carry one real paper of your own from first question to submission-ready draft, building one piece per chapter. Replace the bracketed placeholders in the prompts below with your own topic, data, and field.
+>
+> **This chapter adds:** an ethics and bias screen of your study, plus your AI-use disclosure statement.
+>
+> **Carries into the next chapter:** Chapter 14 polishes the prose until the paper is submission-ready.
+
+> **CRITIQ (Appendix).** Run `/ethics` for a conflict-of-interest, citation-bias, and overgeneralization screen. It surfaces what to examine — but the values judgment, per Exercise 2, stays yours.
 
 ### Exercise 1 — When to Use AI
 
@@ -261,3 +271,39 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 > *Sentence 2:* One specific thing the AI could not determine that required your judgment.
 
 **Series connection:** This exercise trains Tier 7 Wisdom and Tier 4 Metacognitive: the capacity to catch when machine output is fluent, useful, and still not sufficient for the human conclusion.
+
+---
+
+---
+
+##  AI Wayback Machine
+
+The ideas in this chapter didn't appear from nowhere. **Alice Stewart** found that X-raying pregnant women raised childhood-cancer risk — then spent decades fighting an establishment that did not want the finding to be true. Here's a prompt to find out more — and then make it better.
+
+![Alice Stewart](../images/alice-stewart-ckx.png)
+
+*Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
+
+**Run this:**
+
+```text
+Who was Alice Stewart, and how does her struggle to publish and defend an unwelcome finding connect to research ethics, publication bias, and the duty to report disconfirming evidence? Keep it to three paragraphs. End with the single most surprising thing about her career or ideas.
+```
+
+→ Search **"Alice Stewart"** on Wikipedia after you run this. See what the model got right, got wrong, or left out.
+
+**Now make the prompt better.** Try one of these:
+
+- Ask it to explain "publication bias" in plain language, using her story
+- Ask how Stewart's experience argues for pre-registration and reporting all results
+- Add a constraint: "Answer as a case study written for a research-ethics syllabus"
+
+What changes? What gets better? What gets worse?
+
+## Sources
+
+- Fanelli, D. (2012). Negative results are disappearing from most disciplines and countries. *Scientometrics*, 90, 891–904. https://doi.org/10.1007/s11192-011-0494-7
+- Committee on Publication Ethics (COPE). (2023). *Authorship and AI tools — COPE position statement.* Published 13 February 2023. https://publicationethics.org/guidance/cope-position/authorship-and-ai-tools
+- International Committee of Medical Journal Editors. (2025). *Recommendations for the Conduct, Reporting, Editing, and Publication of Scholarly Work in Medical Journals* (January 2025 update; Section II.A.4 on AI). https://www.icmje.org/recommendations/
+- *Nature* / Springer Nature. (2023). Tools such as ChatGPT threaten transparent science; here are our ground rules for their use. *Nature*, 613, 612. https://doi.org/10.1038/d41586-023-00191-1 [Generative AI cannot be a listed author.]
+- Open Science Collaboration. (2015). Estimating the reproducibility of psychological science. *Science*, 349(6251), aac4716. https://doi.org/10.1126/science.aac4716

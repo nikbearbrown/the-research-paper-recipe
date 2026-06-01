@@ -17,7 +17,7 @@ A p-value is not the probability that the null hypothesis is true. It is almost 
 
 What a p-value tells you is this: *assuming* the null hypothesis were true — assuming there is no real effect, no real difference, nothing going on — how likely would it be to observe data at least as extreme as what you actually got? A p-value of 0.04 means that if the null were true, data this surprising would occur by chance about 4% of the time. That's evidence against the null — it's saying the data are inconsistent with a world where nothing is happening — but it is not a 96% probability that your hypothesis is correct. The probability that your hypothesis is correct is a different quantity, one that depends not just on the data but on how plausible your hypothesis was to begin with.
 
-The American Statistical Association issued a formal statement in 2016 specifically because this confusion is so widespread and so consequential. The statement is worth reading in full, but the core message is this: a p-value below some threshold is not, by itself, proof of an effect, evidence of its importance, or a guarantee that the result will replicate. It is a measure of surprise under a model.
+The American Statistical Association issued a formal statement in 2016 specifically because this confusion is so widespread and so consequential (Wasserstein & Lazar, 2016). The statement is worth reading in full, but the core message is this: a p-value below some threshold is not, by itself, proof of an effect, evidence of its importance, or a guarantee that the result will replicate. It is a measure of surprise under a model. Three years later the ASA went further still: a 2019 editorial fronting a 43-article special issue recommended dropping the phrase "statistically significant" altogether (Wasserstein, Schirm & Lazar, 2019), and that same year a *Nature* comment co-signed by more than 800 researchers called to retire the dichotomous use of significance entirely (Amrhein, Greenland & McShane, 2019). The field is not settled on the fix — a competing camp argues for redefining rather than retiring the threshold, lowering the default for new discoveries from p < .05 to p < .005 (Benjamin et al., 2018) — but it is united on the diagnosis: a bright line at .05 carries more weight than the number can bear.
 
 ![Figure 7.1 — A p-value is the probability of observing data at least as extreme as the actual data assuming the null hypothesis is true — the shaded tail under the null distribution, not the probability the null is true.](../images/07-statistics-fig-01.png)
 
@@ -73,7 +73,15 @@ There is a second layer to this machinery worth understanding, because it shows 
 
 The thing the t-distribution exists to handle is whether you *know* the population's standard deviation or are *estimating* it. A Z-test assumes you know the population σ — which almost never happens, because if you knew the population that completely you could simply count rather than do statistics at all. A t-test estimates the spread from your own sample, which is the real situation in nearly every study. At small n that estimate is shaky, so the t-distribution widens to compensate. At large n the sample estimate becomes an extraordinarily reliable stand-in for the true value, the compensation shrinks to nothing, and t and Z converge — not because the assumption changed, but because the estimation error approached zero.
 
-Stand back and you can watch the whole edifice quietly retire as data grows. The degrees-of-freedom correction stops doing real work by around n = 60. The t-versus-Z distinction stops mattering by around n = 120. The p-value's role as a filter stops mattering somewhere near n = 10,000, where it goes nearly automatic. And the standard error keeps shrinking until it is less an asset than a liability — a magnifying glass held to noise. What survives the move to scale is a short list: the effect size, which stays honest at any n; the confidence interval, which still reports magnitude; and the human judgment of whether that magnitude is worth acting on, which was never a statistical question in the first place.
+Stand back and you can watch the whole edifice quietly retire as data grows — each safeguard switching off at a rough threshold, in order:
+
+| What switches off | Roughly when | Why |
+| --- | --- | --- |
+| Degrees-of-freedom correction | around n = 60 | the t-correction is down to about 2% |
+| t-versus-Z distinction | around n = 120 | the gap between the two critical values is about 1% |
+| p-value as a filter | somewhere near n = 10,000 | nearly any nonzero effect clears p < .05 |
+
+These are illustrative rules of thumb, not laws — the exact thresholds shift with the design — but the direction is fixed: every classical correction was built to compensate for scarce data, so every one of them fades as data becomes abundant. The degrees-of-freedom correction stops doing real work by around n = 60. The t-versus-Z distinction stops mattering by around n = 120. The p-value's role as a filter stops mattering somewhere near n = 10,000, where it goes nearly automatic. And the standard error keeps shrinking until it is less an asset than a liability — a magnifying glass held to noise. What survives the move to scale is a short list: the effect size, which stays honest at any n; the confidence interval, which still reports magnitude; and the human judgment of whether that magnitude is worth acting on, which was never a statistical question in the first place.
 
 And exactly zero is the catch. The null hypothesis asserts that the true difference is precisely nothing — not small, not negligible, but zero. With enough data you can resolve differences so fine that the assumption of an exact zero is essentially never true: you begin detecting the faint asymmetries of your own apparatus, the residue of slightly different conditions, gaps that are real but meaningless. The uncomfortable consequence is that the p-value is only well-behaved in a moderate middle range of sample sizes. Too small, and it is insensitive — it misses effects that are really there. Too large, and it is hypersensitive — it flags noise as signal. For the most widely used statistic in science, that is a striking admission. The tools did not scale with the data; the publication standards built around p < .05 did not either; and the fields now drowning in big data — medicine, public health, technology — are precisely the ones where the p-value misleads most. This is no small part of why so much published research has failed to replicate over the past fifteen years, and it is why the ASA's 2016 warning landed where it did. Report the effect size. It is the honest number.
 
@@ -166,6 +174,14 @@ The statistics section of a paper is the last step in a chain. If the earlier st
 ---
 
 ## LLM Exercises
+
+> **Running project — *Your Research Paper*.** This book is a fill-in template: you carry one real paper of your own from first question to submission-ready draft, building one piece per chapter. Replace the bracketed placeholders in the prompts below with your own topic, data, and field.
+>
+> **This chapter adds:** your analysis plan — the tests, effect sizes, power, and the reporting template you will later fill with real numbers.
+>
+> **Carries into the next chapter:** Chapter 8 turns those results into honest figures.
+
+> **CRITIQ (Appendix).** Run `/stats` on your Results and Methods for a statistical-integrity audit — effect sizes, exact p-values, multiple-comparison checks, and the p-hacking / HARKing / selective-reporting trifecta. It flags the patterns; you make the call.
 
 ### Exercise 1 — When to Use AI
 
@@ -313,3 +329,42 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 > *Sentence 2:* One specific thing the AI could not determine that required your judgment.
 
 **Series connection:** This exercise trains Tier 4 Metacognitive: the capacity to catch when machine output is fluent, useful, and still not sufficient for the human conclusion.
+
+---
+
+---
+
+##  AI Wayback Machine
+
+The ideas in this chapter didn't appear from nowhere. **Florence Nightingale David** computed statistical tables by hand and helped build the theory of significance testing — then spent decades watching it get misused. Here's a prompt to find out more — and then make it better.
+
+![Florence Nightingale David](../images/florence-nightingale-vuo.png)
+
+*Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
+
+**Run this:**
+
+```text
+Who was Florence Nightingale David, and how does her work in statistical theory and significance testing connect to the difference between a p-value and an effect size? Keep it to three paragraphs. End with the single most surprising thing about her career or ideas.
+```
+
+→ Search **"Florence Nightingale David"** on Wikipedia after you run this. See what the model got right, got wrong, or left out.
+
+**Now make the prompt better.** Try one of these:
+
+- Ask it to explain what a p-value does and does not tell you, in plain language
+- Ask how the small-sample world David worked in compares to running the same test on a million rows
+- Add a constraint: "Answer as a warning label printed beside every reported p-value"
+
+What changes? What gets better? What gets worse?
+
+## Sources
+
+- Amrhein, V., Greenland, S., & McShane, B. (2019). Scientists rise up against statistical significance. *Nature*, 567(7748), 305–307. https://doi.org/10.1038/d41586-019-00857-9
+- Benjamin, D. J., Berger, J. O., Johannesson, M., Nosek, B. A., Wagenmakers, E.-J., et al. (2018). Redefine statistical significance. *Nature Human Behaviour*, 2, 6–10. https://doi.org/10.1038/s41562-017-0189-z
+- Cohen, J. (1988). *Statistical power analysis for the behavioral sciences* (2nd ed.). Lawrence Erlbaum Associates.
+- Fisher, R. A. (1925). *Statistical methods for research workers*. Oliver & Boyd.
+- Fisher, R. A. (1935). *The design of experiments*. Oliver & Boyd.
+- Student [Gosset, W. S.]. (1908). The probable error of a mean. *Biometrika*, 6(1), 1–25. https://doi.org/10.1093/biomet/6.1.1
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: Context, process, and purpose. *The American Statistician*, 70(2), 129–133. https://doi.org/10.1080/00031305.2016.1154108
+- Wasserstein, R. L., Schirm, A. L., & Lazar, N. A. (2019). Moving to a world beyond "p < 0.05." *The American Statistician*, 73(sup1), 1–19. https://doi.org/10.1080/00031305.2019.1583913

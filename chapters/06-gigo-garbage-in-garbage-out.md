@@ -19,7 +19,7 @@ Let me start with the thing that is most dangerous, because it is the easiest to
 
 A blank cell in a spreadsheet does not mean "this person had no value." It means "we do not know this person's value." Those are different epistemic states, and the difference matters enormously for what you can claim.
 
-Roderick Little and Donald Rubin introduced a taxonomy of missingness mechanisms that has become standard because it captures the three structurally distinct ways data can be absent. Understanding which mechanism is operating determines whether your missing data is a minor annoyance or a fundamental threat to your conclusions.
+The formal framework for thinking about missingness originates with Donald Rubin (1976), who defined "missing at random" and the conditions under which the missingness mechanism can be ignored; the now-standard three-way labeling was consolidated in Little and Rubin's *Statistical Analysis with Missing Data* (Little & Rubin, 2019). The taxonomy has become standard because it captures the three structurally distinct ways data can be absent. Understanding which mechanism is operating determines whether your missing data is a minor annoyance or a fundamental threat to your conclusions.
 
 ![Figure 6.2 — The three missingness mechanisms differ by what the probability of being missing depends on: nothing (MCAR), observed variables (MAR), or the unobserved missing value itself (MNAR).](../images/06-gigo-garbage-in-garbage-out-fig-02.png)
 
@@ -47,11 +47,11 @@ That sentence reduces the apparent strength of the finding. It is still the righ
 
 ---
 
-Missingness is the most conceptually important data-quality problem, but it is far from the only one. The list of things that can corrupt a dataset before analysis is long enough to be humbling.
+Missingness is the most conceptually important data-quality problem, but it is far from the only one. It is worth naming the failure modes as a discrete set, because they are easy to conflate and each fails differently. There are five that recur before any analysis begins: (1) **measurement error** — noise in the instrument that obscures the signal; (2) **systematic bias** — an instrument or procedure that is consistently off in one direction, like the four-degrees-too-high thermometer of the previous chapter; (3) **non-random missingness** — the MAR/MNAR problem just discussed, where the absent data are not absent by chance; (4) **inconsistent outlier handling** — exclusion rules applied unevenly or chosen after seeing which result they produce; and (5) **unreliable composites** — summed or averaged scales whose items do not cohere into a single construct. The list is long enough to be humbling, and three of these — non-random missingness, inconsistent outlier handling, and unreliable composites — get individual treatment below.
 
 **Impossible values** are the most obvious: a test score that exceeds the maximum possible, a response time that is negative, an age of 247. These are coding errors. They enter through data entry mistakes, system glitches, merge failures where records get shifted by a row. The remedy is simple — a range check before analysis — but the step is frequently skipped because researchers assume their data pipeline is clean until it demonstrably isn't.
 
-**Composite scale failures** are subtler. When you sum or average several items into a single score — a motivation scale, a learning self-efficacy measure, an anxiety composite — you are assuming those items are measuring the same underlying construct. The standard check is internal consistency, usually reported as Cronbach's alpha. A low alpha (roughly, below 0.7 as a rule of thumb, though the threshold is not sacred) tells you the items are not behaving as a coherent construct. Summing them into a single score is averaging things that are measuring different things, and the resulting composite may not measure anything real.
+**Composite scale failures** are subtler. When you sum or average several items into a single score — a motivation scale, a learning self-efficacy measure, an anxiety composite — you are assuming those items are measuring the same underlying construct. The standard check is internal consistency, usually reported as Cronbach's alpha. A low alpha (roughly, below 0.7 as a rule of thumb, though the threshold is not sacred) tells you the items are not behaving as a coherent construct. Summing them into a single score is averaging things that are measuring different things, and the resulting composite may not measure anything real. (A note on currency: alpha assumes the items are tau-equivalent — equally related to the underlying construct — and methodologists increasingly recommend coefficient omega (ω) as the better default reliability estimate when that assumption does not hold; see McNeish, 2018, and Flora, 2020. For the teaching purpose here — using low internal consistency as a warning that the items are not cohering — alpha and omega point the same direction.)
 
 The right response to a low alpha is not to compute the composite anyway and report the alpha in a footnote. The right response is to investigate which items are causing the incoherence, decide whether the scale can be salvaged by removing problematic items (with justification that predates seeing the outcomes), or report that the intended composite could not be formed and adjust the analysis accordingly.
 
@@ -63,13 +63,15 @@ The right response to a low alpha is not to compute the composite anyway and rep
 
 There is a category of data problem that is not about the data at all. It is about the researcher's decisions.
 
-Andrew Gelman and Eric Loken described what they called the garden of forking paths: the many analytic choices a researcher faces between collecting data and reporting results. How should outliers be handled? Which covariates should be included? Should the primary outcome be the immediate post-test, the delayed post-test, or the transfer measure? Should the analysis include all enrolled participants or only those who completed the protocol? Should scores be log-transformed to address skew? Should subgroups be analyzed separately?
+Andrew Gelman and Eric Loken (2014) described what they called the garden of forking paths: the many analytic choices a researcher faces between collecting data and reporting results. How should outliers be handled? Which covariates should be included? Should the primary outcome be the immediate post-test, the delayed post-test, or the transfer measure? Should the analysis include all enrolled participants or only those who completed the protocol? Should scores be log-transformed to address skew? Should subgroups be analyzed separately?
 
 Each of these choices is defensible in isolation. Most of them have legitimate arguments on multiple sides. The problem is that when choices are made after looking at the data — when the researcher, consciously or not, gravitates toward the specification that produces the most interesting result — the p-values are no longer calibrated. A p-value of 0.04 means: if the null were true, data this extreme or more extreme would occur by chance 4% of the time, assuming the analysis was specified before the data were examined. If the analysis was adjusted to fit the data, that probability doesn't apply. The result looks like a 4% chance of a false positive. It is not.
 
 ![Figure 6.4 — Between collected data and reported result lies a tree of defensible analytic choices, and choosing among them after seeing the data multiplies possible results and breaks the calibration of p-values.](../images/06-gigo-garbage-in-garbage-out-fig-04.png)
 
 This is not fraud. Most researchers doing this are not aware they're doing it. The human mind is extraordinarily good at generating post-hoc justifications for decisions that were actually driven by what the data showed. "We excluded those three participants because their response times indicated they weren't engaged" sounds principled. It may be true. It may also be that those three participants had anomalously low scores in the treatment condition, and the exclusion rule was constructed after noticing that.
+
+Outlier handling is the clearest case. The defense against it is conceptually simple: outlier-exclusion rules should be blind to the hypothesis — specified, and ideally applied to the outcome variable, before anyone has seen how exclusion would move the result. A rule chosen in ignorance of which direction it pushes the effect cannot be a vehicle for the bias; a rule chosen after seeing the effect almost certainly is, whether or not the researcher intends it.
 
 The remedy is pre-specification: deciding, and documenting, the primary analysis, the outcome measure, the exclusion criteria, and the covariate set before looking at the outcomes. This is what preregistration does — it creates a time-stamped record of the analysis plan that predates the data. A preregistered analysis is not guaranteed to be correct, but its degrees of freedom are bounded in a way that makes the reported statistics interpretable.
 
@@ -116,6 +118,12 @@ The question to ask before beginning analysis is not "do these data look reasona
 ---
 
 ## LLM Exercises
+
+> **Running project — *Your Research Paper*.** This book is a fill-in template: you carry one real paper of your own from first question to submission-ready draft, building one piece per chapter. Replace the bracketed placeholders in the prompts below with your own topic, data, and field.
+>
+> **This chapter adds:** a data-quality and cleaning plan, with your pre-analysis decisions fixed in advance — before you see any results.
+>
+> **Carries into the next chapter:** Chapter 7 sets the analysis you'll run on the clean data.
 
 ### Exercise 1 — When to Use AI
 
@@ -263,3 +271,39 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 > *Sentence 2:* One specific thing the AI could not determine that required your judgment.
 
 **Series connection:** This exercise trains Tier 4 Metacognitive: the capacity to catch when machine output is fluent, useful, and still not sufficient for the human conclusion.
+
+---
+
+---
+
+##  AI Wayback Machine
+
+The ideas in this chapter didn't appear from nowhere. **Prasanta Chandra Mahalanobis** built the science of large-scale surveys and a famous way to spot the data points that don't belong — long before anyone said "garbage in, garbage out." Here's a prompt to find out more — and then make it better.
+
+**Run this:**
+
+```text
+Who was Prasanta Chandra Mahalanobis, and how does his work on sample surveys and the Mahalanobis distance connect to data quality, outliers, and sampling bias? Keep it to three paragraphs. End with the single most surprising thing about his career or ideas.
+```
+
+→ Search **"Prasanta Chandra Mahalanobis"** on Wikipedia after you run this. See what the model got right, got wrong, or left out.
+
+**Now make the prompt better.** Try one of these:
+
+- Ask it to explain what "Mahalanobis distance" detects in plain language, with one example
+- Ask how his approach to flawed survey data compares to how you'd screen a dataset before analysis today
+- Add a constraint: "Answer as a checklist a data-cleaning analyst would pin above their desk"
+
+What changes? What gets better? What gets worse?
+
+## Sources
+
+- Flora, D. B. (2020). Your coefficient alpha is probably wrong, but which coefficient omega is right? A tutorial on using R to obtain better reliability estimates. *Advances in Methods and Practices in Psychological Science*, 3(4), 484–501. https://doi.org/10.1177/2515245920951747
+- Gelman, A., & Loken, E. (2014). The statistical crisis in science. *American Scientist*, 102(6), 460–465. https://doi.org/10.1511/2014.111.460
+- Little, R. J. A., & Rubin, D. B. (2019). *Statistical Analysis with Missing Data* (3rd ed.). Hoboken, NJ: Wiley. https://doi.org/10.1002/9781119482260
+- McNeish, D. (2018). Thanks coefficient alpha, we'll take it from here. *Psychological Methods*, 23(3), 412–433. https://doi.org/10.1037/met0000144
+- Rubin, D. B. (1976). Inference and missing data. *Biometrika*, 63(3), 581–592. https://doi.org/10.1093/biomet/63.3.581
+
+## Tags
+
+#the #research #paper #recipe #GIGO #data-quality #missingness #MCAR #MAR #MNAR #forking-paths #reliability #intelligent-textbook

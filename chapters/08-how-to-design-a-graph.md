@@ -9,7 +9,7 @@ The second chart starts its y-axis at 83. Now the bar for condition A barely cle
 
 No number has been changed. No data has been altered. The visual claim has changed entirely.
 
-This is the thing worth understanding about graphs before anything else: a graph is not a neutral container for data. It is a representation — a set of design choices about how to encode values into visual properties. Those choices carry arguments. They can make a real difference look negligible or a trivial difference look decisive. Getting them right is not an aesthetic concern. It is an epistemic one.
+This is the thing worth understanding about graphs before anything else: a graph is not a neutral container for data. It is a representation — a set of design choices about how to encode values into visual properties. Those choices carry arguments. They can make a real difference look negligible or a trivial difference look decisive. Getting them right is not an aesthetic concern. It is an epistemic one. The truncated-axis trick that opens this chapter is the canonical case in Alberto Cairo's *How Charts Lie* (2019), which treats a chart as a claim that can be true or false rather than a decoration that can only be pretty or ugly.
 
 ![Figure 8.1 — Identical two-condition values look modestly different when bars start at zero and dramatically different when the baseline is truncated, while an honest dot plot shows the gap without inflating it.](../images/08-how-to-design-a-graph-fig-01.png)
 
@@ -17,7 +17,7 @@ This is the thing worth understanding about graphs before anything else: a graph
 
 William Cleveland and Robert McGill ran a series of experiments in the 1980s to answer a question that sounds simple but had never been properly tested: when people read a graph, how accurately do they judge the quantities it represents? The answer depends, and it depends specifically on which visual property the data is encoded in.
 
-Their finding, replicated and extended by later researchers, is that visual encoding channels are not equal. People judge **position along a common scale** most accurately — which is what a well-designed bar chart or dot plot provides. They judge **length** (bars anchored at a common baseline) slightly less accurately. **Angle** is worse — which is why pie charts are poor at communicating precise differences. **Area** is worse still, which is why bubble charts require careful handling. **Color hue** and **shading** are the weakest channels for quantitative judgment — they are useful for distinguishing categories but unreliable for communicating magnitude.
+Their finding (Cleveland & McGill, 1984), replicated and extended by later researchers and now a fixture of modern practitioner references such as Claus Wilke's *Fundamentals of Data Visualization* (2019), is that visual encoding channels are not equal. People judge **position along a common scale** most accurately — which is what a well-designed bar chart or dot plot provides. They judge **length** (bars anchored at a common baseline) slightly less accurately. **Angle** is worse — which is why pie charts are poor at communicating precise differences. **Area** is worse still, which is why bubble charts require careful handling. **Color hue** and **shading** are the weakest channels for quantitative judgment — they are useful for distinguishing categories but unreliable for communicating magnitude.
 
 This ordering has a practical consequence for chart design: use the most accurate encoding channel available for the comparison the reader needs to make. If you're asking the reader to compare quantities, position or length is almost always better than area or color. If you're encoding one variable as area (bubble size, for instance), the reader's judgment of relative values will be imprecise, and you need to decide whether that imprecision matters for your claim.
 
@@ -35,7 +35,7 @@ This sounds obvious, but it is the step that gets skipped when researchers reach
 
 If the task is **compare discrete values** — how does the mean score in condition A differ from condition B? — then bars or dot plots work well. Bars use length to encode the quantity; dot plots use position. Both are accurate. Dot plots are often cleaner for comparisons across several groups.
 
-If the task is **understand a distribution** — what is the spread of individual scores? Are there outliers? Is the distribution skewed? — then bars of means are actively misleading. A bar showing a mean of 72 tells you nothing about whether everyone scored near 72, or whether half the students scored 50 and half scored 94. For distribution questions, you need histograms, box plots, violin plots, or — for modest sample sizes — raw data points with jittering. Weissgerber and colleagues demonstrated that bar graphs in biomedical research routinely hide distributional structure in ways that change the scientific interpretation; the same is true in educational research.
+If the task is **understand a distribution** — what is the spread of individual scores? Are there outliers? Is the distribution skewed? — then bars of means are actively misleading. A bar showing a mean of 72 tells you nothing about whether everyone scored near 72, or whether half the students scored 50 and half scored 94. For distribution questions, you need histograms, box plots, violin plots, or — for modest sample sizes — raw data points with jittering. Weissgerber and colleagues (2015) demonstrated that bar graphs in biomedical research routinely hide distributional structure in ways that change the scientific interpretation — across 703 articles in top physiology journals they show that four very different underlying distributions can collapse into the same bar graph; the same is true in educational research.
 
 ![Figure 8.5 — Two conditions with the same mean can have entirely different distributions — a bar of means conceals this, while a dot plot of individual scores reveals whether the spread or skew differs.](../images/08-how-to-design-a-graph-fig-05.png)
 
@@ -138,6 +138,12 @@ No chart can compensate for weak measurement. But a poorly designed chart can ma
 ---
 
 ## LLM Exercises
+
+> **Running project — *Your Research Paper*.** This book is a fill-in template: you carry one real paper of your own from first question to submission-ready draft, building one piece per chapter. Replace the bracketed placeholders in the prompts below with your own topic, data, and field.
+>
+> **This chapter adds:** the key figure(s) for your paper, designed to reveal the data rather than decorate it.
+>
+> **Carries into the next chapter:** Chapter 9 situates your finding against the existing literature.
 
 ### Exercise 1 — When to Use AI
 
@@ -285,3 +291,38 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 > *Sentence 2:* One specific thing the AI could not determine that required your judgment.
 
 **Series connection:** This exercise trains Tier 4 Metacognitive: the capacity to catch when machine output is fluent, useful, and still not sufficient for the human conclusion.
+
+---
+
+---
+
+##  AI Wayback Machine
+
+The ideas in this chapter didn't appear from nowhere. **Mary Eleanor Spear** spent a career inside U.S. government agencies turning numbers into honest charts, and wrote down the rules for it before "data visualization" had a name. Here's a prompt to find out more — and then make it better.
+
+![Mary Eleanor Spear](../images/mary-eleanor-spear-vir.png)
+
+*Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
+
+**Run this:**
+
+```text
+Who was Mary Eleanor Spear, and how does her work on charting and data presentation connect to designing a graph that reveals rather than hides the data? Keep it to three paragraphs. End with the single most surprising thing about her career or ideas.
+```
+
+→ Search **"Mary Eleanor Spear"** on Wikipedia after you run this. See what the model got right, got wrong, or left out.
+
+**Now make the prompt better.** Try one of these:
+
+- Ask it to explain why a bar chart can mislead, in plain language, with one example
+- Ask how Spear's hand-drawn charting rules compare to the data-visualization guidance you'd follow today
+- Add a constraint: "Answer as a one-paragraph style guide for someone's first scientific figure"
+
+What changes? What gets better? What gets worse?
+
+## Sources
+
+- Cairo, A. (2019). *How charts lie: Getting smarter about visual information*. W. W. Norton.
+- Cleveland, W. S., & McGill, R. (1984). Graphical perception: Theory, experimentation, and application to the development of graphical methods. *Journal of the American Statistical Association*, 79(387), 531–554. https://doi.org/10.1080/01621459.1984.10478080
+- Weissgerber, T. L., Milic, N. M., Winham, S. J., & Garovic, V. D. (2015). Beyond bar and line graphs: Time for a new data presentation paradigm. *PLOS Biology*, 13(4), e1002128. https://doi.org/10.1371/journal.pbio.1002128
+- Wilke, C. O. (2019). *Fundamentals of data visualization*. O'Reilly Media. https://clauswilke.com/dataviz/

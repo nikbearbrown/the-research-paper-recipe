@@ -19,7 +19,7 @@ Before designing the simulation, it helps to understand what peer reviewers are 
 
 A peer reviewer is being asked to make a judgment about several things simultaneously: whether the paper's contribution is real and significant enough to warrant publication, whether the methods are appropriate and executed well enough to support the claims, whether the evidence actually supports the conclusions, whether the paper communicates clearly enough for its intended audience, whether it fits the venue's scope and standards, and whether it meets ethical requirements for research conduct and reporting.
 
-That is a large and heterogeneous set of judgments, and the peer review literature documents extensively that reviewers vary widely in which of these they prioritize, how consistently they apply standards, and how much their assessments reflect the paper's actual quality versus factors like the authors' institutional affiliation, the favorability of the results, or the reviewer's own theoretical commitments. A landmark analysis documented that reviewer agreement is often not much better than chance. This is not a scandal — it is a description of what expert judgment under uncertainty looks like — but it does mean that peer review is not a proof of anything. Acceptance does not mean the paper is right. Rejection does not mean the paper is wrong.
+That is a large and heterogeneous set of judgments, and the peer review literature documents extensively that reviewers vary widely in which of these they prioritize, how consistently they apply standards, and how much their assessments reflect the paper's actual quality versus factors like the authors' institutional affiliation, the favorability of the results, or the reviewer's own theoretical commitments. A landmark analysis — Rothwell and Martyn's (2000) study of clinical neuroscience journals in *Brain* — found that agreement between reviewers was at or near what chance alone would produce, a result later corroborated by Bornmann, Mutz, and Daniel's (2010) meta-analysis reporting low pooled inter-rater reliability. This is not a scandal — it is a description of what expert judgment under uncertainty looks like — but it does mean that peer review is not a proof of anything. Acceptance does not mean the paper is right. Rejection does not mean the paper is wrong.
 
 What peer review provides, at its best, is informed external perspective from someone who has read the paper carefully and is accountable for their assessment. What simulation can approximate is the careful reading and the structured critique — not the domain expertise, the venue knowledge, or the accountability.
 
@@ -77,11 +77,13 @@ The cross-section mismatches and the overclaim flags are the comments to take mo
 
 There is a constraint that must be stated clearly, because it varies by venue and has legal and professional implications.
 
-Some journals explicitly prohibit uploading unpublished manuscripts to third-party AI systems for peer-review simulation, on the grounds that this exposes confidential pre-publication work to systems whose data handling practices are not covered by the journal's confidentiality expectations. Before running any simulation that involves uploading your full manuscript to an external tool, check your target journal's author guidelines and your institution's policies. "I ran the paper through an AI tool" may need to be disclosed in the submission, depending on the venue.
+By 2024–2026 this has hardened from a caution into near-consensus policy among major funders and publishers: uploading unpublished manuscripts to third-party AI systems is prohibited, on the grounds that it exposes confidential pre-publication work to systems whose data handling is not covered by the venue's confidentiality expectations. The NIH banned the use of generative AI tools in the peer review of grant applications effective June 23, 2023 (Notice NOT-OD-23-149), explicitly because uploading application content to online AI services breaches the confidentiality reviewers agree to. The ICMJE recommends that reviewers not upload manuscripts to AI platforms that cannot guarantee confidentiality, and *Science* (AAAS) prohibits reviewers from doing so. So this is no longer an "some journals" matter at the edges — it is the default expectation across the major venues. Before running any simulation that involves uploading your full manuscript to an external tool, check your target journal's author guidelines and your institution's policies; the named policies move quickly, but the direction is settled. "I ran the paper through an AI tool" may need to be disclosed in the submission, depending on the venue.
 
 The practical alternative for venues with restrictive policies: run the simulation on individual sections rather than the full manuscript, or on synthetic versions of your arguments rather than the actual text. You can describe your study design and claim to a simulation tool without submitting the manuscript, and ask the targeted questions about logical consistency and overclaiming on that description. This is less thorough but still useful, and it stays within appropriate boundaries.
 
-The ICMJE (International Committee of Medical Journal Editors) has addressed AI use in research writing, and editorial guidance across fields has been evolving toward treating authors as accountable for AI-assisted work and requiring disclosure when AI played a role in manuscript preparation. Check the current guidance for your specific venue rather than assuming a uniform policy.
+The ICMJE (International Committee of Medical Journal Editors) addressed AI use in its January 2025 *Recommendations*, and editorial guidance across fields has converged: authors are accountable for AI-assisted work, AI cannot be listed as an author, and substantive AI use must be disclosed. *Science* (AAAS) has required disclosure of generative-AI use since November 2023. This is now settled enough to treat as the baseline rather than the exception — but the specific thresholds still differ by venue and move fast, so check the current guidance for your target journal rather than assuming a uniform policy.
+
+It is worth placing the peer-review simulation in the book's larger sequence. It is not a free-floating step. It is the second gate in the Auditing phase: the claim audit comes first, the peer-review simulation runs next, and the ethics screen follows. The registered-reports model — where review precedes results entirely — pushes this logic to its limit (Chambers and Tzavella, 2022), and it is a useful reminder that the point of review is to catch problems while they can still be fixed, not to certify a finished object.
 
 ---
 
@@ -122,6 +124,14 @@ The difference between a useful review and a reassuring one is whether the revie
 ---
 
 ## LLM Exercises
+
+> **Running project — *Your Research Paper*.** This book is a fill-in template: you carry one real paper of your own from first question to submission-ready draft, building one piece per chapter. Replace the bracketed placeholders in the prompts below with your own topic, data, and field.
+>
+> **This chapter adds:** your paper run through a peer-review simulation, plus your point-by-point response to the reviews.
+>
+> **Carries into the next chapter:** Chapter 13 screens the study for ethics and bias.
+
+> **CRITIQ (Appendix; also at https://www.nikbearbrown.com/tools).** This chapter is CRITIQ's home turf. Run `/review` for a full eight-dimension peer review, or `/methods`, `/structure`, `/stats`, `/ethics` for a single dimension; `/respond` drafts a point-by-point reply to reviewers and `/submit` runs journal selection plus a pre-submission checklist. Read its verdict as a reviewer's, not a verdict you outsource.
 
 ### Exercise 1 — When to Use AI
 
@@ -269,3 +279,35 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 > *Sentence 2:* One specific thing the AI could not determine that required your judgment.
 
 **Series connection:** This exercise trains Tier 4 Metacognitive and Tier 6 Collective: the capacity to catch when machine output is fluent, useful, and still not sufficient for the human conclusion.
+
+---
+
+---
+
+##  AI Wayback Machine
+
+The ideas in this chapter didn't appear from nowhere. **Henry Oldenburg** invented scientific peer review in the 1660s, when he began sending submitted manuscripts to knowledgeable readers before printing them. Here's a prompt to find out more — and then make it better.
+
+**Run this:**
+
+```text
+Who was Henry Oldenburg, and how does his creation of editorial refereeing for the Philosophical Transactions connect to how peer review works — and fails — today? Keep it to three paragraphs. End with the single most surprising thing about his career or ideas.
+```
+
+→ Search **"Henry Oldenburg"** on Wikipedia after you run this. See what the model got right, got wrong, or left out.
+
+**Now make the prompt better.** Try one of these:
+
+- Ask it to explain what problem peer review was invented to solve, in plain language
+- Ask how Oldenburg's 1660s refereeing compares to the reviewer disagreement and reform debates of today
+- Add a constraint: "Answer as a letter from Oldenburg advising a modern journal editor"
+
+What changes? What gets better? What gets worse?
+
+## Sources
+
+- Rothwell, P. M., & Martyn, C. N. (2000). Reproducibility of peer review in clinical neuroscience: Is agreement between reviewers any greater than would be expected by chance alone? *Brain*, 123(9), 1964–1969. https://doi.org/10.1093/brain/123.9.1964
+- Bornmann, L., Mutz, R., & Daniel, H.-D. (2010). A reliability-generalization study of journal peer reviews: A multilevel meta-analysis of inter-rater reliability and its determinants. *PLOS ONE*, 5(12), e14331. https://doi.org/10.1371/journal.pone.0014331
+- National Institutes of Health. (2023). *The use of generative artificial intelligence technologies is prohibited for the NIH peer review process.* Notice NOT-OD-23-149, effective June 23, 2023. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-23-149.html
+- International Committee of Medical Journal Editors. (2025). *Recommendations for the Conduct, Reporting, Editing, and Publication of Scholarly Work in Medical Journals* (January 2025 update). https://www.icmje.org/recommendations/
+- Chambers, C. D., & Tzavella, L. (2022). The past, present and future of Registered Reports. *Nature Human Behaviour*, 6, 29–42. https://doi.org/10.1038/s41562-021-01193-7
