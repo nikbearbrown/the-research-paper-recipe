@@ -280,7 +280,7 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 
 The ideas in this chapter didn't appear from nowhere. **Alice Stewart** found that X-raying pregnant women raised childhood-cancer risk — then spent decades fighting an establishment that did not want the finding to be true. Here's a prompt to find out more — and then make it better.
 
-![Alice Stewart](../images/alice-stewart-ckx.png)
+![Alice Stewart](../images/alice-stewart-ckx.jpg)
 
 *Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
 

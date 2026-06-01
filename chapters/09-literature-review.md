@@ -296,7 +296,7 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 
 The ideas in this chapter didn't appear from nowhere. **Henriette Avram** invented the format that let computers catalog and search the world's libraries — the reason a literature search is possible at all. Here's a prompt to find out more — and then make it better.
 
-![Henriette Avram](../images/henriette-avram-m8t.png)
+![Henriette Avram](../images/henriette-avram-m8t.jpg)
 
 *Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
 

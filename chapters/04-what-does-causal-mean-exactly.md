@@ -296,7 +296,7 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 
 The ideas in this chapter didn't appear from nowhere. **Sewall Wright** drew the first causal path diagrams in the 1920s — the direct ancestors of the arrows-and-nodes graphs researchers use to reason about cause today. Here's a prompt to find out more — and then make it better.
 
-![Sewall Wright](../images/sewall-wright-7wq.png)
+![Sewall Wright](../images/sewall-wright-7wq.jpg)
 
 *Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
 

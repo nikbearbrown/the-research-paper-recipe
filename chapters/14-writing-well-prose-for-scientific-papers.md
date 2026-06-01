@@ -288,7 +288,7 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 
 The ideas in this chapter didn't appear from nowhere. **Rudolf Flesch** turned "is this sentence clear?" into a number, launching a century-long campaign against foggy, self-important prose. Here's a prompt to find out more — and then make it better.
 
-![Rudolf Flesch](../images/rudolf-flesch-87v.png)
+![Rudolf Flesch](../images/rudolf-flesch-87v.jpg)
 
 *Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
 

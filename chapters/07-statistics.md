@@ -338,7 +338,7 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 
 The ideas in this chapter didn't appear from nowhere. **Florence Nightingale David** computed statistical tables by hand and helped build the theory of significance testing — then spent decades watching it get misused. Here's a prompt to find out more — and then make it better.
 
-![Florence Nightingale David](../images/florence-nightingale-vuo.png)
+![Florence Nightingale David](../images/florence-nightingale-vuo.jpg)
 
 *Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
 

@@ -300,7 +300,7 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 
 The ideas in this chapter didn't appear from nowhere. **Mary Eleanor Spear** spent a career inside U.S. government agencies turning numbers into honest charts, and wrote down the rules for it before "data visualization" had a name. Here's a prompt to find out more — and then make it better.
 
-![Mary Eleanor Spear](../images/mary-eleanor-spear-vir.png)
+![Mary Eleanor Spear](../images/mary-eleanor-spear-vir.jpg)
 
 *Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
 

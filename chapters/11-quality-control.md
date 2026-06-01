@@ -312,7 +312,7 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 
 The ideas in this chapter didn't appear from nowhere. **Frank Benford** noticed that the leading digits of real-world numbers follow a strange, predictable pattern — now a frontline tool for catching numbers that were faked or fumbled. Here's a prompt to find out more — and then make it better.
 
-![Frank Benford](../images/frank-benford-qf1.png)
+![Frank Benford](../images/frank-benford-qf1.jpg)
 
 *Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
 
