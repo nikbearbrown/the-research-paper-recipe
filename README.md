@@ -9,7 +9,7 @@ AI+1, Hands on. Domain specific. No generic prompts.
 
 ## Summary
 
-*The Research Paper Recipe* is a structured textbook for readers who need a clear path through the subject rather than a loose collection of explanations. It begins with Chapter 1 — Before You Write Anything, moves through 14 core chapters, and ends with Chapter 14 — Writing Well: Prose for Scientific Papers.
+*The Research Paper Recipe* began as a talk for HCI Summer Crunch at Northeastern, a summer writing group for undergraduate, master's, PhD, and faculty researchers working toward a completed manuscript for venues such as CHI, IEEE VR, TEI, IUI, or another appropriate conference or journal. The book turns that workshop logic into a structured path through research writing: claim, evidence, measurement, analysis, figures, literature, drafting, review, ethics, and prose. It begins with Chapter 1 — Before You Write Anything, moves through 14 core chapters, and ends with Chapter 14 — Writing Well: Prose for Scientific Papers.
 
 AI matters to *The Research Paper Recipe* because the modern textbook is no longer only a static container. It is also part of a learning system: searchable, remixable, explainable, and increasingly connected to tools such as Medhavy. The relevant question is not whether AI can replace the learner or the teacher. It cannot. The useful question is what AI can make easier to inspect: definitions, worked examples, misconceptions, practice sequences, alternate explanations, and the structure of an argument. This book treats AI as infrastructure for clearer learning and better research judgment. The chapters should still stand on their own as readable prose, but they are also designed to be legible to an intelligent textbook system.
 
