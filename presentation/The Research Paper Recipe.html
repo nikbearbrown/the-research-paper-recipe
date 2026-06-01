@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Research Paper Recipe</title>
+<link rel="stylesheet" href="colors_and_type.css">
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:#000;}
+  deck-stage:not(:defined){visibility:hidden;}
+
+  :root{
+    --pad-x:108px; --pad-top:80px; --pad-bottom:64px;
+    --type-display:124px;
+    --type-title:58px;
+    --type-h:38px;
+    --type-subtitle:34px;
+    --type-body:29px;
+    --type-small:24px;
+    --type-eyebrow:24px;
+  }
+
+  /* ---------- Base slide frame ---------- */
+  deck-stage section{
+    font-family:var(--font-sans);
+    color:var(--fg-1);
+    background:var(--bg-1);
+    display:flex; flex-direction:column;
+    padding:var(--pad-top) var(--pad-x) var(--pad-bottom);
+    overflow:hidden;
+  }
+  deck-stage section.s-dark{background:var(--nu-black); color:#fff;}
+  deck-stage section.s-red{background:var(--nu-red); color:#fff;}
+
+  /* ---------- Header system ---------- */
+  .head{margin-bottom:38px; flex:0 0 auto;}
+  .eyebrow{
+    font-size:var(--type-eyebrow); text-transform:uppercase; letter-spacing:.14em;
+    font-weight:700; color:var(--nu-red); margin:0 0 18px;
+  }
+  .s-red .eyebrow{color:#fff;}
+  .title{
+    font-size:var(--type-title); font-weight:400; line-height:1.04;
+    letter-spacing:-0.015em; margin:0; max-width:25ch; text-wrap:balance;
+  }
+  .title.long{font-size:48px;}
+  .rule{width:56px; height:4px; background:var(--nu-red); margin:26px 0 0;}
+  .s-dark .rule, .s-red .rule{background:var(--nu-red);}
+  .lede{font-size:var(--type-subtitle); color:var(--fg-2); margin:22px 0 0; max-width:42ch; line-height:1.3;}
+
+  /* ---------- Body region ---------- */
+  .body{flex:1 1 auto; display:flex; flex-direction:column; min-height:0;}
+  .body.center{justify-content:center;}
+  .fill{flex:1 1 auto; position:relative; display:flex; min-height:0;}
+
+  /* ---------- Footer ---------- */
+  .foot{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-top:22px; padding-top:16px; border-top:1px solid var(--border-1);
+    flex:0 0 auto;
+  }
+  .s-dark .foot{border-top-color:rgba(255,255,255,.18);}
+  .foot-l{display:flex; align-items:center; gap:13px;}
+  .foot-mono{height:24px; width:auto; display:block;}
+  .foot-name{font-size:var(--type-small); color:var(--fg-3); letter-spacing:.01em;}
+  .pageno{font-size:var(--type-small); color:var(--fg-3); font-weight:700; letter-spacing:.03em;}
+
+  .red{color:var(--nu-red);}
+  .arrow{color:var(--nu-red); flex:0 0 auto; display:flex; align-items:center; justify-content:center;}
+  .arrow svg{width:40px;height:40px;stroke-width:1.75;}
+
+  /* ---------- Cards ---------- */
+  .card{background:#fff; border:1px solid var(--border-1); padding:26px 30px;}
+  .card .ct{font-size:var(--type-h); font-weight:700; margin:0;}
+  .card .cr{width:32px; height:3px; background:var(--nu-red); margin:12px 0 16px;}
+  .card .cp{font-size:var(--type-body); color:var(--fg-2); margin:0; line-height:1.35;}
+
+  /* ---------- Tables ---------- */
+  table.nu{width:100%; border-collapse:collapse;}
+  table.nu thead th{
+    text-align:left; font-size:var(--type-small); text-transform:uppercase;
+    letter-spacing:.09em; font-weight:700; color:#fff; background:var(--nu-black);
+    padding:16px 24px;
+  }
+  table.nu td{
+    font-size:var(--type-body); padding:18px 24px;
+    border-bottom:1px solid var(--border-1); vertical-align:top; line-height:1.3;
+  }
+  table.nu tbody tr:last-child td{border-bottom:none;}
+  table.nu td.k{font-weight:700; white-space:nowrap;}
+  table.nu tr.hl td{background:var(--nu-red-tint);}
+  table.nu tr.hl td.k{color:var(--nu-red);}
+
+  /* ---------- Generic diagram pieces ---------- */
+  .cols{display:grid; gap:34px; flex:1 1 auto; min-height:0;}
+  .cols-2{grid-template-columns:1fr 1fr;}
+  .cols-3{grid-template-columns:1fr 1fr 1fr;}
+
+  .chain{display:flex; align-items:stretch; gap:18px; flex:1 1 auto;}
+  .chain .node{
+    flex:1; background:#fff; border:1px solid var(--border-1);
+    padding:30px 28px; display:flex; flex-direction:column; justify-content:center;
+  }
+  .chain .node .nk{font-size:var(--type-h); font-weight:700; margin:0 0 14px;}
+  .chain .node .ncr{width:32px;height:3px;background:var(--nu-red);margin:0 0 16px;}
+  .chain .node .nq{font-size:var(--type-body); color:var(--fg-2); margin:0; line-height:1.35;}
+
+  .punch{
+    font-size:var(--type-subtitle); font-weight:400; color:var(--fg-1);
+    margin:30px 0 0; line-height:1.3; text-wrap:balance;
+  }
+  .flag{
+    display:inline-flex; align-items:center; gap:10px; font-size:var(--type-small);
+    font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--nu-red);
+  }
+
+  /* ---------- Cover ---------- */
+  .cover{justify-content:center; padding-top:0; padding-bottom:0;}
+  .cover-top{position:absolute; top:0; left:0; right:0; height:8px; background:var(--nu-red);}
+  .cover-grid{display:grid; grid-template-columns:1fr auto; align-items:center; gap:70px;}
+  .cover-eyebrow{font-size:var(--type-eyebrow); text-transform:uppercase; letter-spacing:.14em; font-weight:700; color:var(--nu-red); margin:0;}
+  .cover-title{font-size:var(--type-display); font-weight:400; line-height:.97; letter-spacing:-0.025em; margin:30px 0 0;}
+  .cover-sub{font-size:var(--type-subtitle); color:var(--fg-2); margin:38px 0 0; max-width:22ch; line-height:1.3;}
+  .cover-meta{display:flex; align-items:center; gap:18px; margin-top:50px; font-size:var(--type-small); color:var(--fg-3); font-weight:700; text-transform:uppercase; letter-spacing:.07em;}
+  .cover-meta .dot{width:7px;height:7px;background:var(--nu-red);}
+  .cover-mono{width:480px; height:auto; display:block;}
+
+  /* ---------- Module dividers ---------- */
+  .divider .fill{flex-direction:column; justify-content:center;}
+  .div-num{
+    position:absolute; right:-18px; top:50%; transform:translateY(-50%);
+    font-size:430px; line-height:.8; font-weight:900; color:rgba(255,255,255,.05);
+    letter-spacing:-0.03em; z-index:0; user-select:none;
+  }
+  .divider .head{position:relative; z-index:1; margin-bottom:0; max-width:60%;}
+  .div-title{font-size:92px; font-weight:400; line-height:1.0; letter-spacing:-0.02em; color:#fff; margin:0;}
+  .div-desc{font-size:var(--type-subtitle); color:rgba(255,255,255,.66); margin:30px 0 0; max-width:26ch; line-height:1.32; position:relative; z-index:1;}
+  .div-range{font-size:var(--type-small); color:var(--nu-red); font-weight:700; text-transform:uppercase; letter-spacing:.1em; margin:36px 0 0; position:relative; z-index:1;}
+
+  /* ---------- Pause & Reflect ---------- */
+  .pause .fill{flex-direction:column; justify-content:center;}
+  .pause-tag{display:flex; align-items:center; gap:16px; margin-bottom:34px;}
+  .pause-tag .pe{font-size:var(--type-eyebrow); text-transform:uppercase; letter-spacing:.14em; font-weight:700; color:#fff;}
+  .pause-tag .pdot{width:7px;height:7px;background:#fff;}
+  .pause-tag .pmin{font-size:var(--type-small); font-weight:700; color:rgba(255,255,255,.8); border:1.5px solid rgba(255,255,255,.55); padding:5px 16px;}
+  .pause-q{font-size:52px; font-weight:400; line-height:1.18; letter-spacing:-0.01em; color:#fff; margin:0; max-width:30ch; text-wrap:balance;}
+  .pause-q .ul{ text-decoration:underline; text-decoration-color:rgba(255,255,255,.5); text-underline-offset:6px;}
+  .pause-mono{position:absolute; right:0; bottom:0; height:230px; opacity:.12;}
+
+  /* ---------- Misc helpers ---------- */
+  .stat-num{font-size:var(--type-display); font-weight:400; line-height:1; color:var(--nu-red); letter-spacing:-0.02em;}
+  .mono-tag{font-family:var(--font-mono); font-size:var(--type-small);}
+
+  /* Numbered question list */
+  .qn{flex:0 0 auto; width:54px; height:54px; background:var(--nu-red); color:#fff; font-size:var(--type-h); font-weight:700; display:flex; align-items:center; justify-content:center;}
+  .qt{font-size:var(--type-body); font-weight:700; margin:0 0 6px; line-height:1.2;}
+  .qd{font-size:var(--type-small); color:var(--fg-2); margin:0; line-height:1.3;}
+
+  /* GIGO pipeline */
+  .gigo-stage{flex:1; display:flex; flex-direction:column; gap:14px;}
+  .gigo-warn{font-size:var(--type-small); font-weight:700; color:var(--nu-red); min-height:56px; display:flex; align-items:flex-end;}
+  .gigo-box{background:var(--bg-3); border:1px solid var(--border-1); padding:26px 18px; font-size:var(--type-body); font-weight:700; text-align:center;}
+
+  /* Forking-path chips */
+  .fork-chip{border:1px solid var(--border-2); padding:14px 22px; font-size:var(--type-body); background:#fff;}
+
+  /* Reading/writing sequence chips */
+  .seq-label{font-size:var(--type-small); font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--fg-3); margin:0 0 14px;}
+  .seq-sub{text-transform:none; letter-spacing:0; font-weight:400; color:var(--fg-3);}
+  .seq{display:flex; gap:12px;}
+  .seq-chip{position:relative; flex:1; border:1px solid var(--border-1); background:#fff; padding:20px 12px; text-align:center; font-size:var(--type-body); font-weight:700; transition:background var(--t-fast) var(--ease-default), color var(--t-fast) var(--ease-default), border-color var(--t-fast) var(--ease-default);}
+  .seq-chip.hot{background:var(--nu-red); color:#fff; border-color:var(--nu-red);}
+  .seq-chip.pulse{background:var(--nu-red); color:#fff; border-color:var(--nu-red);}
+  .seq-ord{position:absolute; top:8px; left:10px; width:26px; height:26px; border:1.5px solid var(--border-2); color:var(--fg-3); font-size:var(--type-small); font-weight:700; display:flex; align-items:center; justify-content:center; line-height:1;}
+  .seq-chip.hot .seq-ord, .seq-chip.pulse .seq-ord{border-color:rgba(255,255,255,.6); color:#fff;}
+
+  /* Checklist */
+  .check{display:flex; align-items:center; gap:18px; font-size:var(--type-body); padding:14px 0; border-bottom:1px solid var(--border-1);}
+  .cbox{flex:0 0 auto; width:30px; height:30px; border:2px solid var(--nu-black);}
+
+  /* Tick lists (allowed / not) */
+  ul.tick{list-style:none; margin:22px 0 0; padding:0; display:flex; flex-direction:column; gap:18px;}
+  ul.tick li{position:relative; padding-left:42px; font-size:var(--type-body); line-height:1.3;}
+  ul.tick li::before{position:absolute; left:0; top:2px; font-size:26px; font-weight:700;}
+  ul.tick.ok li::before{content:"\2713"; color:var(--nu-red);}
+  ul.tick.no li{color:var(--fg-2);}
+  ul.tick.no li::before{content:"\2715"; color:var(--nu-neutral-3);}
+
+  /* CARS funnel bands */
+  .funnel{padding:24px 36px; display:flex; flex-direction:column; align-items:center; gap:4px; text-align:center;}
+  .fmove{font-size:var(--type-h); font-weight:700;}
+  .fdesc{font-size:var(--type-small);}
+
+  /* Abstract five-box */
+  .abx{flex:1; border:1px solid var(--border-1); background:#fff; padding:24px 22px; display:flex; flex-direction:column;}
+  .abx.hot{background:var(--nu-red); color:#fff; border-color:var(--nu-red);}
+  .abn{width:42px; height:42px; background:var(--nu-black); color:#fff; font-size:var(--type-body); font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:18px;}
+  .abx.hot .abn{background:#fff; color:var(--nu-red);}
+  .abt{font-size:var(--type-h); font-weight:700; margin:0 0 8px;}
+  .abd{font-size:var(--type-small); color:var(--fg-2); margin:0; line-height:1.3;}
+  .abx.hot .abd{color:rgba(255,255,255,.9);}
+
+  /* Calibration scale */
+  .cal-grid{display:grid; grid-template-columns:repeat(5,1fr); position:relative;}
+  .cal-grid::before{content:""; position:absolute; left:8%; right:8%; top:93px; height:2px; background:var(--nu-neutral-2); z-index:0;}
+  .cal-cell{display:flex; flex-direction:column; align-items:center;}
+  .cal-phrase{height:64px; display:flex; align-items:flex-end; text-align:center; font-size:var(--type-body); font-weight:700;}
+  .cal-phrase.red{color:var(--nu-red);}
+  .cal-tick{width:18px; height:18px; border-radius:50%; background:var(--nu-black); margin:20px 0; position:relative; z-index:1;}
+  .cal-tick.red{background:var(--nu-red);}
+  .cal-study{font-size:var(--type-small); color:var(--fg-2); text-align:center; max-width:80%; line-height:1.25;}
+  .cal-ends{display:flex; justify-content:space-between; margin-top:22px; padding:0 6%; font-size:var(--type-small); color:var(--fg-3); font-weight:700; text-transform:uppercase; letter-spacing:.06em;}
+
+  /* Fog before/after */
+  .fog-row{display:flex; align-items:center; gap:22px;}
+  .fog-tag{flex:0 0 210px; font-size:var(--type-small); font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--nu-red);}
+  .fog-before{flex:1; font-size:var(--type-body); color:var(--fg-3);}
+  .fog-after{flex:1; font-size:var(--type-body); color:var(--fg-1); font-weight:700;}
+  .fog-row .arrow svg{width:30px; height:30px;}
+
+  /* Phase ribbon */
+  .phase{flex:1; padding:0 40px;}
+  .phase:first-child{padding-left:0;}
+  .phase:last-child{padding-right:0;}
+  .phase-h{display:flex; align-items:center; gap:16px; font-size:var(--type-h); font-weight:700; margin-bottom:24px;}
+  .phase-n{flex:0 0 auto; width:50px; height:50px; background:var(--nu-red); color:#fff; font-size:var(--type-body); display:flex; align-items:center; justify-content:center;}
+  .phase-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:16px;}
+  .phase-list li{font-size:var(--type-body); padding-left:28px; position:relative;}
+  .phase-list li::before{content:""; position:absolute; left:0; top:15px; width:12px; height:2px; background:var(--nu-red);}
+  .gate{flex:0 0 2px; align-self:stretch; background:repeating-linear-gradient(to bottom, var(--nu-neutral-2) 0 8px, transparent 8px 16px);}
+
+  /* What-breaks-at-scale rows */
+  .scale-row{display:flex; justify-content:space-between; align-items:center; gap:20px; padding:18px 0; border-bottom:1px solid var(--border-1); font-size:var(--type-body);}
+  .scale-row:last-child{border-bottom:none;}
+  .scale-th{color:var(--nu-red); font-weight:700; white-space:nowrap; font-size:var(--type-small);}
+
+  /* Research-order steps */
+  .ro-phase{font-size:var(--type-small); font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--nu-red); margin:0 0 14px; display:flex; align-items:baseline; gap:14px;}
+  .ro-phase:not(:first-child){margin-top:22px;}
+  .ro-zoom{font-size:24px; font-weight:700; letter-spacing:.01em; text-transform:none; color:var(--fg-3);}
+  .ro-step{display:flex; align-items:flex-start; gap:18px; padding:9px 0;}
+  .ro-n{flex:0 0 auto; width:42px; height:42px; border:2px solid var(--nu-black); display:flex; align-items:center; justify-content:center; font-size:24px; font-weight:700;}
+  .ro-step.hot .ro-n{background:var(--nu-red); border-color:var(--nu-red); color:#fff;}
+  .ro-step.dim .ro-n{border-color:var(--border-2); color:var(--fg-3);}
+  .ro-t{font-size:var(--type-body); font-weight:700; margin:0; line-height:1.15; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;}
+  .ro-step.dim .ro-t{color:var(--fg-2);}
+  .ro-d{font-size:var(--type-small); color:var(--fg-2); margin:4px 0 0; line-height:1.25;}
+  .ro-tag{font-size:24px; font-weight:700; color:var(--nu-red); text-transform:uppercase; letter-spacing:.04em;}
+
+  /* CARS before/after example */
+  .ex-tag{display:inline-block; font-size:var(--type-small); font-weight:700; text-transform:uppercase; letter-spacing:.07em; padding:2px 10px; margin-bottom:8px; line-height:1.1;}
+  .ex-weak{color:var(--fg-3); border:1px solid var(--border-2);}
+  .ex-strong{color:var(--nu-red); border:1px solid var(--nu-red);}
+  .ex-line{font-size:var(--type-small); line-height:1.18; margin:0;}
+</style>
+</head>
+<body>
+<deck-stage width="1920" height="1080">
+
+  <!-- ============ COVER ============ -->
+  <section class="cover" data-label="Cover">
+    <div class="cover-top"></div>
+    <div class="cover-grid">
+      <div class="cover-main">
+        <p class="cover-eyebrow">Northeastern University · A field guide for researchers</p>
+        <h1 class="cover-title">The Research<br>Paper <span class="red">Recipe</span></h1>
+        <p class="cover-sub">A complete workflow from raw curiosity to submission.</p>
+        <div class="cover-meta">
+          <span>37 slides · 6 modules</span>
+          <span class="dot"></span>
+          <span>Thinking → Writing → Auditing</span>
+        </div>
+      </div>
+      <img class="cover-mono" src="assets/monogram-red.png" alt="Northeastern N monogram">
+    </div>
+  </section>
+
+  <!-- ============ MODULE 1 DIVIDER ============ -->
+  <section class="s-dark divider" data-label="Module 1">
+    <div class="fill">
+      <div class="div-num">01</div>
+      <div class="head">
+        <p class="eyebrow">Module 01</p>
+        <h2 class="div-title">Before you write</h2>
+        <div class="rule"></div>
+        <p class="div-desc">Turn a hunch into a claim that can fail — before a single sentence of prose.</p>
+        <p class="div-range">Slides 1–4</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 1 ============ -->
+  <section data-label="01 Papers fail before writing">
+    <div class="head">
+      <p class="eyebrow">Before you write</p>
+      <h1 class="title">Most papers fail before anyone writes a word</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div class="cols cols-2" style="align-items:center;">
+        <div class="card" style="position:relative; min-height:340px;">
+          <div class="ct" style="font-weight:400; font-size:var(--type-subtitle); color:var(--fg-3);">Polished draft</div>
+          <div style="color:var(--nu-gold); font-size:34px; letter-spacing:6px; margin:18px 0 22px;">★★★★★</div>
+          <div style="display:flex; flex-direction:column; gap:13px;">
+            <div style="height:12px; background:var(--border-1); width:100%;"></div>
+            <div style="height:12px; background:var(--border-1); width:92%;"></div>
+            <div style="height:12px; background:var(--border-1); width:96%;"></div>
+            <div style="height:12px; background:var(--border-1); width:74%;"></div>
+          </div>
+          <svg viewBox="0 0 400 200" preserveAspectRatio="none" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;">
+            <polyline points="172,0 196,70 150,108 210,160 178,200" fill="none" stroke="var(--nu-red)" stroke-width="3"></polyline>
+          </svg>
+          <div style="position:absolute; right:24px; bottom:22px; border:3px solid var(--nu-red); color:var(--nu-red); font-weight:900; text-transform:uppercase; letter-spacing:.12em; font-size:24px; padding:8px 18px; transform:rotate(-8deg);">Rejected</div>
+        </div>
+        <div class="card" style="min-height:340px; display:flex; flex-direction:column; justify-content:center;">
+          <div class="ct" style="font-weight:400; font-size:var(--type-subtitle); color:var(--fg-3); margin-bottom:24px;">Sound argument</div>
+          <div style="display:flex; flex-direction:column; align-items:stretch; gap:10px;">
+            <div style="background:var(--nu-black); color:#fff; padding:16px 22px; font-size:var(--type-body); font-weight:700;">Hypothesis</div>
+            <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>
+            <div style="background:var(--nu-neutral-7); color:#fff; padding:16px 22px; font-size:var(--type-body); font-weight:700;">Evidence</div>
+            <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>
+            <div style="background:var(--nu-neutral-5); color:#fff; padding:16px 22px; font-size:var(--type-body); font-weight:700;">Interpretation</div>
+          </div>
+        </div>
+      </div>
+      <p class="punch">Fluency <span class="red">≠</span> validity. Rejection is rarely about bad writing — polished prose cannot save a vague hypothesis.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">01</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 2 ============ -->
+  <section data-label="02 Topic Question Hypothesis">
+    <div class="head">
+      <p class="eyebrow">Before you write</p>
+      <h1 class="title">Topic &rarr; question &rarr; hypothesis: three different things</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div class="cols cols-2" style="align-items:center; gap:48px;">
+        <div style="display:flex; flex-direction:column; justify-content:flex-end; gap:14px; height:430px;">
+          <div style="background:var(--nu-red); color:#fff; padding:22px 26px; margin-left:120px;">
+            <div style="font-size:var(--type-small); text-transform:uppercase; letter-spacing:.1em; opacity:.85;">Rung 3</div>
+            <div style="font-size:var(--type-h); font-weight:700; margin-top:4px;">Hypothesis</div>
+            <div style="font-size:var(--type-small); opacity:.9;">testable · falsifiable</div>
+          </div>
+          <div style="background:var(--nu-neutral-7); color:#fff; padding:22px 26px; margin-left:60px;">
+            <div style="font-size:var(--type-small); text-transform:uppercase; letter-spacing:.1em; opacity:.7;">Rung 2</div>
+            <div style="font-size:var(--type-h); font-weight:700; margin-top:4px;">Research question</div>
+            <div style="font-size:var(--type-small); opacity:.75;">answerable</div>
+          </div>
+          <div style="background:var(--bg-3); color:var(--fg-1); padding:22px 26px;">
+            <div style="font-size:var(--type-small); text-transform:uppercase; letter-spacing:.1em; color:var(--fg-3);">Rung 1</div>
+            <div style="font-size:var(--type-h); font-weight:700; margin-top:4px;">Topic</div>
+            <div style="font-size:var(--type-small); color:var(--fg-3);">an area</div>
+          </div>
+        </div>
+        <table class="nu">
+          <thead><tr><th>Stage</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td class="k">Topic</td><td>AI tutoring in education</td></tr>
+            <tr><td class="k">Question</td><td>How does AI tutoring affect feedback quality in undergrad programming courses?</td></tr>
+            <tr class="hl"><td class="k">Hypothesis</td><td>AI tutoring improves learning when feedback is immediate and specific — but its benefit falls when used to bypass problem-solving.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="punch">A claim that can&rsquo;t fail isn&rsquo;t a hypothesis — it&rsquo;s advocacy.</p>
+      <p class="punch" style="color:var(--fg-3); font-style:italic; margin-top:18px;">The test at the end of this course: can you defend your hypothesis — and every claim that follows — without your notes and without AI?</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">02</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 3 ============ -->
+  <section data-label="03 Build the argument first">
+    <div class="head">
+      <p class="eyebrow">Before you write</p>
+      <h1 class="title">Build the argument before you build the prose</h1>
+      <div class="rule"></div>
+      <p class="lede">The schema is the chain from hypothesis to evidence to interpretation. Build it first and you find the holes before they are embedded in polished sentences.</p>
+    </div>
+    <div class="body center">
+      <div class="chain">
+        <div class="node">
+          <p class="nk">Intent layer</p>
+          <div class="ncr"></div>
+          <p class="nq">What is the central claim, who is the reader, and what should they understand after reading?</p>
+        </div>
+        <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="node">
+          <p class="nk">Evidence layer</p>
+          <div class="ncr"></div>
+          <p class="nq">What data supports each part of the claim, what is the comparison, and what would falsify it?</p>
+        </div>
+        <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="node">
+          <p class="nk">Structural layer</p>
+          <div class="ncr"></div>
+          <p class="nq">Which sections exist, what does each one do, and in what order must each be confirmed?</p>
+        </div>
+      </div>
+      <p class="flag" style="margin-top:30px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Miss a layer and the hole survives — fluently — into the prose.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">03</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 4 — PAUSE ============ -->
+  <section class="s-red pause" data-label="04 Pause">
+    <div class="fill">
+      <img class="pause-mono" src="assets/monogram-white.svg" alt="">
+      <div class="pause-tag">
+        <span class="pe">Pause &amp; reflect</span>
+        <span class="pdot"></span>
+        <span class="pe" style="font-weight:400;">Module 01</span>
+        <span class="pmin">≈ 3 min</span>
+      </div>
+      <p class="pause-q">Write your research question in one sentence. Now ask: is it <span class="ul">testable</span>? What evidence would prove it wrong? If nothing could — rewrite it.</p>
+    </div>
+  </section>
+
+  <!-- ============ MODULE 2 DIVIDER ============ -->
+  <section class="s-dark divider" data-label="Module 2">
+    <div class="fill">
+      <div class="div-num">02</div>
+      <div class="head">
+        <p class="eyebrow">Module 02</p>
+        <h2 class="div-title">Foundation &amp;<br>assertion types</h2>
+        <div class="rule"></div>
+        <p class="div-desc">Know what kind of claim you are making — before you design a study to test it.</p>
+        <p class="div-range">Slides 5–9</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 5 ============ -->
+  <section data-label="05 Assertion taxonomy">
+    <div class="head">
+      <p class="eyebrow">Foundation &amp; assertion types</p>
+      <h1 class="title">Not all claims are the same kind of thing</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <table class="nu">
+        <thead><tr><th style="width:30%;">Assertion type</th><th>What it claims</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Descriptive</td><td>Reports what is or what was.</td></tr>
+          <tr><td class="k">Causal</td><td>One thing produces another — requires ruling out alternatives.</td></tr>
+          <tr><td class="k">Correlational</td><td>Two things co-occur, with no claim that either causes the other.</td></tr>
+          <tr><td class="k">Predictive</td><td>Knowing one thing lets you anticipate another in new data.</td></tr>
+          <tr><td class="k">Mechanistic</td><td>Explains how or why a relationship holds.</td></tr>
+          <tr class="hl"><td class="k">Normative</td><td>What should be — cannot be settled by evidence alone.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">05</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 6 ============ -->
+  <section data-label="06 Falsifiability">
+    <div class="head">
+      <p class="eyebrow">Foundation &amp; assertion types</p>
+      <h1 class="title">A hypothesis must be able to fail</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div class="cols cols-2" style="align-items:stretch;">
+        <div class="card" style="display:flex; flex-direction:column;">
+          <div class="ct" style="font-weight:400; font-size:var(--type-subtitle); color:var(--fg-3);">Unfalsifiable</div>
+          <div class="cr"></div>
+          <div style="display:flex; align-items:center; gap:20px; flex:1;">
+            <div style="display:flex; flex-direction:column; gap:12px; flex:1;">
+              <div style="font-size:var(--type-small); font-weight:700;">Evidence for</div>
+              <div style="font-size:var(--type-small); font-weight:700;">Evidence against</div>
+              <div style="font-size:var(--type-small); font-weight:700;">Surprising result</div>
+            </div>
+            <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+            <div style="background:var(--nu-neutral-2); color:var(--nu-neutral-6); width:150px; height:150px; display:flex; align-items:center; justify-content:center; text-align:center; font-weight:700; font-size:var(--type-small);">All<br>absorbed</div>
+          </div>
+          <p style="font-size:var(--type-body); margin:20px 0 0; color:var(--fg-1);">If it absorbs everything, it proves nothing.</p>
+        </div>
+        <div class="card" style="display:flex; flex-direction:column;">
+          <div class="ct" style="font-weight:400; font-size:var(--type-subtitle); color:var(--fg-3);">Falsifiable</div>
+          <div class="cr"></div>
+          <div style="display:flex; flex-direction:column; gap:12px; flex:1; justify-content:center;">
+            <div style="border:1px solid var(--border-1); padding:14px 18px; font-size:var(--type-small); color:var(--fg-2);">Outcome A — consistent</div>
+            <div style="border:1px solid var(--border-1); padding:14px 18px; font-size:var(--type-small); color:var(--fg-2);">Outcome B — consistent</div>
+            <div style="border:2px solid var(--nu-red); padding:14px 18px; font-size:var(--type-small); font-weight:700; color:var(--nu-red); display:flex; align-items:center; gap:12px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6 6 18M6 6l12 12"/></svg>This result would defeat it</div>
+          </div>
+          <p style="font-size:var(--type-body); margin:20px 0 0; color:var(--fg-1);">Confirming instances are cheap. Falsifying instances are decisive.</p>
+        </div>
+      </div>
+      <p class="flag" style="margin-top:26px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>Cartesian test — &ldquo;What would I have to observe to conclude this is wrong?&rdquo;</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">06</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 7 ============ -->
+  <section data-label="07 Null and alternative">
+    <div class="head">
+      <p class="eyebrow">Foundation &amp; assertion types</p>
+      <h1 class="title">The null is not &ldquo;nothing&rdquo; — it&rsquo;s your baseline</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div style="display:flex; align-items:center; gap:22px; flex:1;">
+        <div style="background:var(--bg-3); padding:22px 26px; font-size:var(--type-body); font-weight:700; text-align:center;">Observation</div>
+        <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="border:2px solid var(--nu-black); padding:16px 22px;"><span style="font-weight:700; font-size:var(--type-body);">H₀ &middot; Null</span><br><span style="font-size:var(--type-small); color:var(--fg-2);">no effect, no difference</span></div>
+          <div style="background:var(--nu-red); color:#fff; padding:16px 22px;"><span style="font-weight:700; font-size:var(--type-body);">H₁ &middot; Alternative</span><br><span style="font-size:var(--type-small); opacity:.9;">the claim you are testing</span></div>
+        </div>
+        <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div style="background:var(--nu-black); color:#fff; padding:22px 26px; font-size:var(--type-body); font-weight:700; text-align:center;">Test</div>
+        <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div style="display:flex; flex-direction:column; gap:14px; flex:1;">
+          <div class="card" style="padding:16px 20px;"><span style="font-weight:700; font-size:var(--type-small);">Reject H₀</span><br><span style="font-size:var(--type-small); color:var(--fg-2);">evidence for H₁</span></div>
+          <div class="card" style="padding:16px 20px;"><span style="font-weight:700; font-size:var(--type-small);">Fail to reject H₀</span><br><span style="font-size:var(--type-small); color:var(--nu-red);">could be underpowered — not proof of the null</span></div>
+        </div>
+      </div>
+      <p class="punch">Statistical testing asks: how likely is this data if H₀ were true? It never proves the alternative — it only makes the null an unlikely story.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">07</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 8 ============ -->
+  <section data-label="08 Match design to claim">
+    <div class="head">
+      <p class="eyebrow">Foundation &amp; assertion types</p>
+      <h1 class="title">Match your design to your claim — no exceptions</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <table class="nu">
+        <thead><tr><th style="width:22%;">Assertion type</th><th style="width:38%;">Required design</th><th>What weaker designs produce</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td class="k">Causal</td><td>Randomized experiment (or strong quasi-experiment)</td><td>Association, not causation</td></tr>
+          <tr><td class="k">Correlational</td><td>Observational study with controls</td><td>Correlation, possibly confounded</td></tr>
+          <tr><td class="k">Predictive</td><td>Train/test split, held-out validation</td><td>In-sample accuracy, possibly overfit</td></tr>
+          <tr><td class="k">Mechanistic</td><td>Mediation analysis, manipulation check</td><td>Mechanism hypothesized, not verified</td></tr>
+          <tr><td class="k">Descriptive</td><td>Representative sample, reliable measures</td><td>Estimate of limited generalizability</td></tr>
+        </tbody>
+      </table>
+      <p class="punch">Change the hypothesis — or change the design. There is no statistical workaround.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">08</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 9 — PAUSE ============ -->
+  <section class="s-red pause" data-label="09 Pause">
+    <div class="fill">
+      <img class="pause-mono" src="assets/monogram-white.svg" alt="">
+      <div class="pause-tag">
+        <span class="pe">Pause &amp; reflect</span>
+        <span class="pdot"></span>
+        <span class="pe" style="font-weight:400;">Module 02</span>
+        <span class="pmin">≈ 5 min</span>
+      </div>
+      <p class="pause-q">Take your hypothesis. List three conditions under which it would be <span class="ul">false</span> — one that challenges your measure, one your sample, one that reverses the effect. Can&rsquo;t name all three? It needs work.</p>
+    </div>
+  </section>
+
+  <!-- ============ MODULE 3 DIVIDER ============ -->
+  <section class="s-dark divider" data-label="Module 3">
+    <div class="fill">
+      <div class="div-num">03</div>
+      <div class="head">
+        <p class="eyebrow">Module 03</p>
+        <h2 class="div-title">Measurement</h2>
+        <div class="rule"></div>
+        <p class="div-desc">The number is not the thing. Where most research quietly goes wrong.</p>
+        <p class="div-range">Slides 10–14</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 10 ============ -->
+  <section data-label="10 The hierarchy">
+    <div class="head">
+      <p class="eyebrow">Measurement</p>
+      <h1 class="title">A flaw at any level corrupts everything downstream</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:center; gap:26px; background:var(--nu-black); color:#fff; padding:20px 30px;">
+          <span style="font-size:var(--type-h); font-weight:700; min-width:280px;">Hypothesis</span>
+          <span style="font-size:var(--type-body); opacity:.85;">Specific and testable?</span>
+        </div>
+        <div class="arrow" style="justify-content:flex-start; padding-left:128px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>
+        <div style="display:flex; align-items:center; gap:26px; background:var(--nu-neutral-7); color:#fff; padding:20px 30px;">
+          <span style="font-size:var(--type-h); font-weight:700; min-width:280px;">Design</span>
+          <span style="font-size:var(--type-body); opacity:.85;">Could it detect a false result?</span>
+        </div>
+        <div class="arrow" style="justify-content:flex-start; padding-left:128px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>
+        <div style="display:flex; align-items:center; gap:26px; background:var(--nu-neutral-5); color:#fff; padding:20px 30px;">
+          <span style="font-size:var(--type-h); font-weight:700; min-width:280px;">Data &amp; evidence</span>
+          <span style="font-size:var(--type-body); opacity:.85;">Measures the construct, or something adjacent?</span>
+        </div>
+        <div class="arrow" style="justify-content:flex-start; padding-left:128px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>
+        <div style="display:flex; align-items:center; gap:26px; background:var(--nu-neutral-3); color:#fff; padding:20px 30px;">
+          <span style="font-size:var(--type-h); font-weight:700; min-width:280px;">Interpretation</span>
+          <span style="font-size:var(--type-body); opacity:.9;">Do the conclusions match the evidence?</span>
+        </div>
+      </div>
+      <p class="punch">Polished prose at the bottom cannot patch a crack anywhere above it.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">10</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 11 ============ -->
+  <section data-label="11 Measure-construct gap">
+    <div class="head">
+      <p class="eyebrow">Measurement</p>
+      <h1 class="title">The number is not the thing</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div style="display:flex; align-items:center; gap:0; flex:1;">
+        <div class="card" style="flex:1; min-height:280px; display:flex; flex-direction:column; justify-content:center;">
+          <p class="eyebrow" style="margin-bottom:14px;">Construct</p>
+          <p style="font-size:46px; font-weight:400; line-height:1.1; margin:0;">Learning,<br>understanding,<br>engagement</p>
+          <p style="font-size:var(--type-small); color:var(--fg-3); margin:18px 0 0;">what you actually care about</p>
+        </div>
+        <div style="flex:0 0 280px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px;">
+          <div style="width:100%; border-top:3px dashed var(--nu-neutral-2);"></div>
+          <div style="width:84px; height:84px; border:3px solid var(--nu-red); color:var(--nu-red); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:46px; font-weight:700;">?</div>
+          <p style="font-size:var(--type-small); font-weight:700; color:var(--nu-red); margin:0; text-align:center;">Valid? Reliable?<br>Aligned?</p>
+        </div>
+        <div class="card" style="flex:1; min-height:280px; display:flex; flex-direction:column; justify-content:center;">
+          <p class="eyebrow" style="margin-bottom:14px;">Instrument</p>
+          <p style="font-size:46px; font-weight:400; line-height:1.1; margin:0;">Post-test score,<br>time-on-task,<br>click patterns</p>
+          <p style="font-size:var(--type-small); color:var(--fg-3); margin:18px 0 0;">what you can actually observe</p>
+        </div>
+      </div>
+      <p class="punch">State the construct. Name the instrument. Acknowledge the gap. <span class="red">The score is not the student.</span></p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">11</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 12 ============ -->
+  <section data-label="12 Five measurement questions">
+    <div class="head">
+      <p class="eyebrow">Measurement</p>
+      <h1 class="title">Five questions to ask of any outcome measure</h1>
+      <div class="rule"></div>
+      <p class="lede">Apply them both ways — to your own study, and to every study you plan to cite.</p>
+    </div>
+    <div class="body center">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px 44px;">
+        <div style="display:flex; align-items:flex-start; gap:20px;"><span class="qn">1</span><div><p class="qt">Aligned to the intervention?</p><p class="qd">Aligned tests reliably inflate effect sizes.</p></div></div>
+        <div style="display:flex; align-items:flex-start; gap:20px;"><span class="qn">2</span><div><p class="qt">What is the baseline comparison?</p><p class="qd">Every effect size is a difference — against what?</p></div></div>
+        <div style="display:flex; align-items:flex-start; gap:20px;"><span class="qn">3</span><div><p class="qt">What population does the sample represent?</p><p class="qd">Your sample is your sample, not the population you invoke.</p></div></div>
+        <div style="display:flex; align-items:flex-start; gap:20px;"><span class="qn">4</span><div><p class="qt">What timescale — retrieval or storage?</p><p class="qd">Immediate performance is not durable retention.</p></div></div>
+        <div style="display:flex; align-items:flex-start; gap:20px; grid-column:1 / -1; max-width:50%;"><span class="qn">5</span><div><p class="qt">If the hypothesis were false, would this design detect it?</p><p class="qd">A study that confirms regardless is theater, not a test.</p></div></div>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">12</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 13 ============ -->
+  <section data-label="13 Retrieval vs storage">
+    <div class="head">
+      <p class="eyebrow">Measurement</p>
+      <h1 class="title">Retrieval strength &ne; storage strength</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:48px; align-items:center;">
+        <svg class="js-retention" viewBox="0 0 1000 480" style="width:100%; height:auto; font-family:var(--font-sans);"></svg>
+        <div>
+          <p style="font-size:var(--type-body); line-height:1.4; margin:0 0 22px;">Massed practice produces <strong>high immediate scores</strong> but low long-term retention.</p>
+          <p style="font-size:var(--type-body); line-height:1.4; margin:0 0 22px;">Spaced practice scores <strong>lower at first</strong>, then holds far stronger over weeks.</p>
+          <p class="flag"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>A claim about learning requires a delayed measure.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">13</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 14 — PAUSE ============ -->
+  <section class="s-red pause" data-label="14 Pause">
+    <div class="fill">
+      <img class="pause-mono" src="assets/monogram-white.svg" alt="">
+      <div class="pause-tag">
+        <span class="pe">Pause &amp; reflect</span>
+        <span class="pdot"></span>
+        <span class="pe" style="font-weight:400;">Module 03</span>
+        <span class="pmin">≈ 5 min</span>
+      </div>
+      <p class="pause-q">Pick one source from your review. Run all five measurement questions on it. Write two sentences: what the paper <span class="ul">actually shows</span>, and what it claims to show.</p>
+    </div>
+  </section>
+
+  <!-- ============ MODULE 4 DIVIDER ============ -->
+  <section class="s-dark divider" data-label="Module 4">
+    <div class="fill">
+      <div class="div-num">04</div>
+      <div class="head">
+        <p class="eyebrow">Module 04</p>
+        <h2 class="div-title">Data quality<br>&amp; statistics</h2>
+        <div class="rule"></div>
+        <p class="div-desc">Garbage in, garbage out — and what the numbers actually say.</p>
+        <p class="div-range">Slides 15–24</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 15 ============ -->
+  <section data-label="15 GIGO">
+    <div class="head">
+      <p class="eyebrow">Data quality &amp; statistics</p>
+      <h1 class="title long">Sophisticated analysis of bad data produces confident-looking bad results</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div style="display:flex; align-items:stretch; gap:16px;">
+        <div class="gigo-stage"><span class="gigo-warn">Systematic bias?</span><div class="gigo-box">Data collection</div></div>
+        <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="gigo-stage"><span class="gigo-warn">Post-hoc outlier removal?</span><div class="gigo-box">Cleaning</div></div>
+        <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="gigo-stage"><span class="gigo-warn">Wrong test for design?</span><div class="gigo-box">Analysis</div></div>
+        <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="gigo-stage"><span class="gigo-warn">Overclaimed?</span><div class="gigo-box" style="background:var(--nu-red); border-color:var(--nu-red); color:#fff; position:relative;">Conclusion<svg style="position:absolute; top:8px; right:10px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div></div>
+      </div>
+      <p class="punch">The confidence interval looks real. The inference isn&rsquo;t. The GIGO check happens <span class="red">before</span> any statistical test is run.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">15</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 16 ============ -->
+  <section data-label="16 p-value meaning">
+    <div class="head">
+      <p class="eyebrow">Data quality &amp; statistics</p>
+      <h1 class="title">A p-value is not the probability you&rsquo;re right</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div style="background:var(--nu-black); color:#fff; padding:40px 48px;">
+        <p style="font-family:var(--font-mono); font-size:var(--type-small); color:var(--nu-neutral-3); margin:0 0 22px;">// experimental vs. control, post-test</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:40px;">
+          <div style="border-top:3px solid var(--nu-neutral-5); padding-top:18px;">
+            <p style="font-family:var(--font-mono); font-size:40px; margin:0; font-weight:700;">t(62) = 2.47</p>
+            <p style="font-size:var(--type-small); color:var(--nu-neutral-2); margin:12px 0 0;">The raw signal in the data.</p>
+          </div>
+          <div style="border-top:3px solid var(--nu-red); padding-top:18px;">
+            <p style="font-family:var(--font-mono); font-size:40px; margin:0; font-weight:700; color:#fff;">p = .016</p>
+            <p style="font-size:var(--type-small); color:var(--nu-neutral-2); margin:12px 0 0;">How surprising this data would be if nothing were happening &mdash; <span style="color:#fff;">not a 98% chance it&rsquo;s real.</span></p>
+          </div>
+          <div style="border-top:3px solid var(--nu-red); padding-top:18px;">
+            <p style="font-family:var(--font-mono); font-size:40px; margin:0; font-weight:700; color:#fff;">d = 0.63</p>
+            <p style="font-size:var(--type-small); color:var(--nu-neutral-2); margin:12px 0 0;">How big the difference is. <span style="color:#fff;">This is what matters.</span></p>
+          </div>
+        </div>
+      </div>
+      <p class="punch">Report all four: test statistic, degrees of freedom, exact p, and effect size. Significance is necessary — never sufficient.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">16</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 17 (new) — Why large samples break the p-value ============ -->
+  <section data-label="17 SE vs SD and large samples">
+    <div class="head">
+      <p class="eyebrow">Data quality &amp; statistics</p>
+      <h1 class="title">Why large samples break the p-value</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div class="cols cols-2" style="align-items:stretch;">
+        <div class="card" style="display:flex; flex-direction:column;">
+          <div class="ct" style="font-weight:400; font-size:var(--type-subtitle); color:var(--fg-3);">Two denominators, often confused</div>
+          <div class="cr"></div>
+          <div style="display:flex; flex-direction:column; gap:22px; flex:1; justify-content:center;">
+            <div>
+              <p style="font-family:var(--font-mono); font-size:38px; font-weight:700; margin:0;">SD</p>
+              <p class="qd" style="font-size:var(--type-body);">Spread of the data — how different people are. Does <strong>not</strong> shrink as n grows.</p>
+            </div>
+            <div style="height:1px; background:var(--border-1);"></div>
+            <div>
+              <p style="font-family:var(--font-mono); font-size:38px; font-weight:700; margin:0;">SE = SD / &radic;n</p>
+              <p class="qd" style="font-size:var(--type-body);">Precision of the <em>mean</em> estimate. <strong>Shrinks</strong> as n grows.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="background:var(--nu-black); color:#fff; display:flex; flex-direction:column; gap:26px; justify-content:center;">
+          <p style="font-family:var(--font-mono); font-size:42px; font-weight:700; margin:0; text-align:center;">t = &Delta; / SE</p>
+          <div style="display:flex; align-items:center; justify-content:center; gap:14px; font-family:var(--font-mono); font-size:24px; color:var(--nu-neutral-2);">
+            <span>n &uarr;</span><span style="color:var(--nu-red);">&rarr;</span><span>SE &darr;</span><span style="color:var(--nu-red);">&rarr;</span><span>t &uarr;</span><span style="color:var(--nu-red);">&rarr;</span><span style="color:#fff;">p &darr;</span>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,.18); padding-top:24px;">
+            <p style="font-size:var(--type-small); color:var(--nu-neutral-2); margin:0 0 18px;">10,000 employees · app cuts stress 0.4 on a 100-point scale</p>
+            <div style="display:flex; gap:44px;">
+              <div><div style="font-family:var(--font-mono); font-size:46px; font-weight:700;">p = .0001</div><div style="font-size:var(--type-small); color:var(--nu-neutral-2);">looks decisive</div></div>
+              <div><div style="font-family:var(--font-mono); font-size:46px; font-weight:700; color:var(--nu-red);">d = 0.04</div><div style="font-size:var(--type-small); color:var(--nu-neutral-2);">practically zero</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="punch">Fisher built the p-value in the 1920s for 30-row field plots, where clearing t &asymp; 2 was a real filter. With millions of rows, p &lt; .05 is a formality — not a filter.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">17</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 18 (new) — Degrees of freedom & t vs Z ============ -->
+  <section data-label="18 Degrees of freedom and t vs Z">
+    <div class="head">
+      <p class="eyebrow">Data quality &amp; statistics</p>
+      <h1 class="title">Degrees of freedom — and t versus Z</h1>
+      <div class="rule"></div>
+      <p class="lede">df = n &minus; constraints. It sets the shape of the t-distribution — and the framework is self-calibrating.</p>
+    </div>
+    <div class="body center">
+      <div class="cols cols-2" style="align-items:center; gap:48px;">
+        <div>
+          <svg class="js-tdist" viewBox="0 0 1000 460" style="width:100%; height:auto; font-family:var(--font-sans);"></svg>
+          <p class="qd" style="font-size:var(--type-small); text-align:center; margin-top:8px;">Fewer df &rarr; fatter tails &rarr; a larger t is needed to clear significance.</p>
+        </div>
+        <div class="card" style="display:flex; flex-direction:column; gap:22px;">
+          <div>
+            <p style="font-family:var(--font-mono); font-size:36px; font-weight:700; margin:0;">Z</p>
+            <p class="qd" style="font-size:var(--type-body);">Assumes you <strong>know</strong> the population SD (&sigma;). Rare.</p>
+          </div>
+          <div style="height:1px; background:var(--border-1);"></div>
+          <div>
+            <p style="font-family:var(--font-mono); font-size:36px; font-weight:700; margin:0;">t</p>
+            <p class="qd" style="font-size:var(--type-body);">Estimates SD from your <strong>sample</strong>. Almost always.</p>
+          </div>
+          <div style="border-top:1px solid var(--border-1); padding-top:18px; display:flex; flex-direction:column; gap:12px; font-family:var(--font-mono); font-size:24px;">
+            <div style="display:flex; justify-content:space-between;"><span>df = 60</span><span style="color:var(--fg-2);">t 2.00 · Z 1.96</span></div>
+            <div style="display:flex; justify-content:space-between;"><span>df &asymp; 200</span><span style="color:var(--fg-2);">agree to 3 digits</span></div>
+            <div style="display:flex; justify-content:space-between;"><span>df = &infin;</span><span style="color:var(--nu-red);">t = Z</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="punch">Gosset published the t-distribution as &ldquo;Student&rdquo; at the Guinness brewery in 1908 — built for tiny samples. As df grows, t converges to Z on its own; you never switch by hand.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">18</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 19 (new) — Effect size is the honest number ============ -->
+  <section data-label="19 Effect size is the honest number">
+    <div class="head">
+      <p class="eyebrow">Data quality &amp; statistics</p>
+      <h1 class="title">Effect size is the honest number</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div class="cols cols-2" style="align-items:stretch;">
+        <div class="card" style="display:flex; flex-direction:column; justify-content:center; gap:26px;">
+          <p style="font-family:var(--font-mono); font-size:40px; font-weight:700; margin:0;">d = (M&#8321; &minus; M&#8322;) / SD</p>
+          <p style="font-size:var(--type-body); margin:0; line-height:1.35;">The denominator is <strong>SD, not SE</strong> — so &radic;n never enters. Sample size cannot inflate it.</p>
+          <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+            <span style="border:1px solid var(--border-2); padding:10px 20px; font-family:var(--font-mono); font-size:24px;">n = 30</span>
+            <span style="border:1px solid var(--border-2); padding:10px 20px; font-family:var(--font-mono); font-size:24px;">n = 30,000</span>
+            <span class="arrow" style="width:auto;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            <span style="font-size:var(--type-body); font-weight:700; white-space:nowrap;">&asymp; the same d</span>
+          </div>
+          <p class="qd" style="font-size:var(--type-small);">…but wildly different t and p.</p>
+        </div>
+        <div class="card" style="display:flex; flex-direction:column; justify-content:center;">
+          <div class="ct" style="font-weight:400; font-size:var(--type-subtitle); color:var(--fg-3);">Cohen&rsquo;s benchmarks for d</div>
+          <div class="cr"></div>
+          <div style="display:flex; align-items:flex-end; gap:18px; margin-top:10px;">
+            <div style="flex:1; text-align:center;"><div style="height:64px; background:var(--bg-3);"></div><div style="font-family:var(--font-mono); font-size:32px; font-weight:700; margin-top:14px;">0.2</div><div class="qd">small</div></div>
+            <div style="flex:1; text-align:center;"><div style="height:118px; background:var(--nu-neutral-5);"></div><div style="font-family:var(--font-mono); font-size:32px; font-weight:700; margin-top:14px;">0.5</div><div class="qd">medium</div></div>
+            <div style="flex:1; text-align:center;"><div style="height:170px; background:var(--nu-red);"></div><div style="font-family:var(--font-mono); font-size:32px; font-weight:700; margin-top:14px;">0.8</div><div class="qd">large</div></div>
+          </div>
+          <p class="qd" style="font-size:var(--type-small); margin-top:22px;">A starting point — magnitude is always judged in context.</p>
+        </div>
+      </div>
+      <p class="punch">The ASA formally warned against over-reliance on p &lt; .05 in 2016. Effect size measures the phenomenon itself — report it, always.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">19</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 20 (new) — What breaks down at scale ============ -->
+  <section data-label="20 What breaks down at scale">
+    <div class="head">
+      <p class="eyebrow">Data quality &amp; statistics</p>
+      <h1 class="title">What classical statistics stops doing at scale</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div class="cols cols-2" style="align-items:stretch;">
+        <div class="card" style="display:flex; flex-direction:column;">
+          <div class="ct" style="font-weight:400; font-size:var(--type-subtitle); color:var(--fg-3);">Stops doing useful work as n grows</div>
+          <div class="cr"></div>
+          <div style="display:flex; flex-direction:column; margin-top:6px;">
+            <div class="scale-row"><span>Degrees-of-freedom correction</span><span class="scale-th">gone by n &asymp; 60</span></div>
+            <div class="scale-row"><span>t vs Z distinction</span><span class="scale-th">gone by n &asymp; 120</span></div>
+            <div class="scale-row"><span>p-value as a filter</span><span class="scale-th">gone by n &asymp; 10,000</span></div>
+            <div class="scale-row"><span>Standard error (SE)</span><span class="scale-th">a liability, not an asset</span></div>
+          </div>
+        </div>
+        <div class="card" style="background:var(--nu-black); color:#fff; display:flex; flex-direction:column;">
+          <div class="ct" style="font-weight:400; font-size:var(--type-subtitle); color:var(--nu-neutral-2);">Stays honest at any n</div>
+          <div class="cr"></div>
+          <div style="display:flex; flex-direction:column; gap:26px; margin-top:12px; flex:1; justify-content:center;">
+            <div><p style="font-size:var(--type-h); font-weight:700; margin:0;">Effect size</p><p style="font-size:var(--type-small); color:var(--nu-neutral-2); margin:6px 0 0;">magnitude in SD units</p></div>
+            <div><p style="font-size:var(--type-h); font-weight:700; margin:0;">Confidence intervals</p><p style="font-size:var(--type-small); color:var(--nu-neutral-2); margin:6px 0 0;">the range that matters</p></div>
+            <div><p style="font-size:var(--type-h); font-weight:700; margin:0;">Practical significance</p><p style="font-size:var(--type-small); color:var(--nu-neutral-2); margin:6px 0 0;">human judgment, not statistical</p></div>
+          </div>
+        </div>
+      </div>
+      <p class="punch">P-values were a tool for statisticians. They got handed to everyone. <span class="red">Effect size is the honest number — report it, always.</span></p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">20</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 21 — Forking paths ============ -->
+  <section data-label="21 Forking paths">
+    <div class="head">
+      <p class="eyebrow">Data quality &amp; statistics</p>
+      <h1 class="title long">The garden of forking paths produces false positives without intent</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div style="display:flex; align-items:center; gap:28px; margin-bottom:30px;">
+        <div style="display:flex; flex-direction:column; gap:11px; flex:1;">
+          <div class="fork-chip">Include covariate A?</div>
+          <div class="fork-chip">Log-transform the outcome?</div>
+          <div class="fork-chip">Remove these outliers?</div>
+          <div class="fork-chip">Primary endpoint at 4 or 6 weeks?</div>
+        </div>
+        <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div style="display:flex; flex-direction:column; gap:14px; flex:0 0 360px;">
+          <div style="background:var(--nu-red); color:#fff; padding:18px 24px; font-size:var(--type-body); font-weight:700;">p = .04 &mdash; reported</div>
+          <div style="border:1px solid var(--border-1); color:var(--fg-3); padding:18px 24px; font-size:var(--type-body); text-decoration:line-through;">p = .23 &mdash; not reported</div>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+        <div><p class="qt">P-hacking</p><p class="qd">Analysis choices that nudge p below .05 — often unconscious.</p></div>
+        <div><p class="qt">HARKing</p><p class="qd">Writing the hypothesis after the result, as if predicted in advance.</p></div>
+      </div>
+      <p class="flag" style="margin-top:24px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Pre-registration separates confirmatory from exploratory — and makes each honest.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">21</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 18 ============ -->
+  <section data-label="22 Complete result">
+    <div class="head">
+      <p class="eyebrow">Data quality &amp; statistics</p>
+      <h1 class="title">Report everything — but lead with effect size</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div style="display:flex; align-items:center; gap:32px;">
+        <div class="card" style="flex:1; min-height:300px; display:flex; flex-direction:column;">
+          <p class="flag" style="color:var(--fg-3);"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>Incomplete — missing information</p>
+          <p style="font-size:34px; line-height:1.35; margin:24px 0 0; color:var(--fg-2);">&ldquo;Students in the experimental group performed significantly better (p &lt; .05).&rdquo;</p>
+        </div>
+        <div class="arrow" style="flex-direction:column; gap:8px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg><span style="font-size:var(--type-small); font-weight:700; color:var(--nu-red); text-transform:uppercase; letter-spacing:.06em; white-space:nowrap;">Add these</span></div>
+        <div style="flex:1; min-height:300px; background:var(--nu-black); color:#fff; padding:30px 34px; display:flex; flex-direction:column;">
+          <p class="flag" style="color:#fff;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Complete — read in this order</p>
+          <div style="margin:24px 0 0; display:flex; flex-direction:column; gap:14px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; gap:18px;"><span style="font-size:26px; color:var(--nu-neutral-2);">Experimental</span><span style="font-family:var(--font-mono); font-size:26px; color:var(--nu-neutral-2);">M = 74.3, SD = 8.1</span></div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline; gap:18px; border-bottom:1px solid rgba(255,255,255,.18); padding-bottom:18px;"><span style="font-size:26px; color:var(--nu-neutral-2);">Control</span><span style="font-family:var(--font-mono); font-size:26px; color:var(--nu-neutral-2);">M = 68.7, SD = 9.4</span></div>
+            <div style="padding-top:2px;">
+              <div style="font-size:var(--type-small); font-weight:700; color:var(--nu-red); text-transform:uppercase; letter-spacing:.06em; margin-bottom:8px;">1 · Does it matter?</div>
+              <div style="font-family:var(--font-mono); font-size:30px; font-weight:700; color:#fff;">d = 0.63, 95% CI [0.13, 1.13]</div>
+            </div>
+            <div>
+              <div style="font-size:var(--type-small); font-weight:700; color:var(--nu-neutral-3); text-transform:uppercase; letter-spacing:.06em; margin-bottom:8px;">2 · Could it be noise?</div>
+              <div style="font-family:var(--font-mono); font-size:26px; color:var(--nu-neutral-2);">t(62) = 2.47, p = .016</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="punch">Yes — still report the p-value. It only asks <em>could this be noise?</em> Lead with the effect size and its interval: that is what tells you <span class="red">whether it matters.</span></p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">22</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 23 (new) — The large-n p-value problem ============ -->
+  <section data-label="23 Large-n p-value problem">
+    <div class="head">
+      <p class="eyebrow">Data quality &amp; statistics</p>
+      <h1 class="title">&ldquo;Could this be noise?&rdquo; is not &ldquo;does this matter?&rdquo;</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div class="cols cols-2" style="align-items:stretch;">
+        <div class="card" style="display:flex; flex-direction:column;">
+          <div class="ct" style="font-weight:400; font-size:var(--type-subtitle); color:var(--fg-3);">Two different questions</div>
+          <div class="cr"></div>
+          <div style="display:flex; flex-direction:column; gap:22px; flex:1; justify-content:center;">
+            <div>
+              <p style="font-family:var(--font-mono); font-size:38px; font-weight:700; margin:0;">p-value</p>
+              <p class="qd" style="font-size:var(--type-body);"><strong>&ldquo;Could this be noise?&rdquo;</strong> — is the effect real?</p>
+            </div>
+            <div style="height:1px; background:var(--border-1);"></div>
+            <div>
+              <p style="font-family:var(--font-mono); font-size:38px; font-weight:700; margin:0; color:var(--nu-red);">Effect size</p>
+              <p class="qd" style="font-size:var(--type-body);"><strong>&ldquo;Does this matter?&rdquo;</strong> — is the difference important?</p>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="background:var(--nu-black); color:#fff; display:flex; flex-direction:column; gap:26px; justify-content:center;">
+          <p style="font-size:var(--type-small); color:var(--nu-neutral-2); margin:0;">50,000 employees · wellness app cuts stress 0.3 on a 100-point scale</p>
+          <div style="display:flex; gap:44px;">
+            <div><div style="font-family:var(--font-mono); font-size:46px; font-weight:700;">p &lt; .0001</div><div style="font-size:var(--type-small); color:var(--nu-neutral-2);">the effect is &ldquo;real&rdquo;</div></div>
+            <div><div style="font-family:var(--font-mono); font-size:46px; font-weight:700; color:var(--nu-red);">d = 0.03</div><div style="font-size:var(--type-small); color:var(--nu-neutral-2);">nobody&rsquo;s life changed</div></div>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,.18); padding-top:24px;">
+            <p style="font-size:var(--type-body); color:#fff; margin:0; line-height:1.35;">At large n, p almost always says &ldquo;yes, real.&rdquo; That answer stops being a filter — the only interesting question left is <span style="color:var(--nu-red);">magnitude</span>.</p>
+          </div>
+        </div>
+      </div>
+      <p class="punch">At large n, statistical significance is nearly guaranteed. Practical significance requires human judgment — not a threshold.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">23</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 19 — PAUSE ============ -->
+  <section class="s-red pause" data-label="24 Pause">
+    <div class="fill">
+      <img class="pause-mono" src="assets/monogram-white.svg" alt="">
+      <div class="pause-tag">
+        <span class="pe">Pause &amp; reflect</span>
+        <span class="pdot"></span>
+        <span class="pe" style="font-weight:400;">Module 04</span>
+        <span class="pmin">≈ 3 min</span>
+      </div>
+      <p class="pause-q">Find a Results paragraph. Does it contain the test statistic, degrees of freedom, <span class="ul">exact p-value</span>, and effect size? For anything missing — what would you need to add or find?</p>
+    </div>
+  </section>
+
+  <!-- ============ MODULE 5 DIVIDER ============ -->
+  <section class="s-dark divider" data-label="Module 5">
+    <div class="fill">
+      <div class="div-num">05</div>
+      <div class="head">
+        <p class="eyebrow">Module 05</p>
+        <h2 class="div-title">Drafting</h2>
+        <div class="rule"></div>
+        <p class="div-desc">Write the sections in the order discovery happened — and give each one its job.</p>
+        <p class="div-range">Slides 25–32</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 24 (new) — The research order ============ -->
+  <section data-label="25 Research order">
+    <div class="head">
+      <p class="eyebrow">Drafting</p>
+      <h1 class="title">The research order comes before the writing order</h1>
+      <div class="rule"></div>
+      <p class="lede">The writing-order slide that follows covers only the final stretch. The full arc starts long before the first sentence.</p>
+    </div>
+    <div class="body center">
+      <div class="cols cols-2" style="align-items:stretch; gap:54px;">
+        <div>
+          <div class="ro-phase">Find the question</div>
+          <div class="ro-step"><span class="ro-n">1</span><div><p class="ro-t">Idea</p><p class="ro-d">A puzzle, a gap, a contradiction in prior work</p></div></div>
+          <div class="ro-step"><span class="ro-n">2</span><div><p class="ro-t">Preliminary search</p><p class="ro-d">Is the gap real? Has it been done? Don&rsquo;t go deep yet</p></div></div>
+          <div class="ro-step hot"><span class="ro-n">3</span><div><p class="ro-t">Refine the question <span class="ro-tag">where research is won or lost</span></p><p class="ro-d">Sharpen it — most first ideas are too broad or already answered</p></div></div>
+          <div class="ro-phase">Build the foundation</div>
+          <div class="ro-step"><span class="ro-n">4</span><div><p class="ro-t">Deep literature review</p><p class="ro-d">Theoretical framework, methods, what was found and not found</p></div></div>
+          <div class="ro-step"><span class="ro-n">5</span><div><p class="ro-t">Methods design</p><p class="ro-d">How you will answer it, given what you now know</p></div></div>
+        </div>
+        <div>
+          <div class="ro-phase">Run it</div>
+          <div class="ro-step"><span class="ro-n">6</span><div><p class="ro-t">Data collection &amp; analysis</p></div></div>
+          <div class="ro-step"><span class="ro-n">7</span><div><p class="ro-t">Results</p><p class="ro-d">What you actually found</p></div></div>
+          <div class="ro-phase">Write it up <span class="ro-zoom">&rarr; the writing order, next slide</span></div>
+          <div class="ro-step dim"><span class="ro-n">8</span><div><p class="ro-t">Discussion</p></div></div>
+          <div class="ro-step dim"><span class="ro-n">9</span><div><p class="ro-t">Introduction</p></div></div>
+          <div class="ro-step dim"><span class="ro-n">10</span><div><p class="ro-t">Abstract</p></div></div>
+          <div class="ro-step dim"><span class="ro-n">11</span><div><p class="ro-t">Title</p><p class="ro-d">Very last — once the abstract crystallizes the contribution</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">25</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 25 — Discovery order ============ -->
+  <section data-label="26 Discovery order">
+    <div class="head">
+      <p class="eyebrow">Drafting</p>
+      <h1 class="title">Write the sections in discovery order, not display order</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div class="js-seq" style="display:flex; flex-direction:column; gap:28px;">
+        <div class="seqrow">
+          <p class="seq-label">Naive reading order <span class="seq-sub">— students &amp; general readers</span></p>
+          <div class="seq">
+            <div class="seq-chip"><span class="seq-ord">1</span>Title</div>
+            <div class="seq-chip"><span class="seq-ord">2</span>Abstract</div>
+            <div class="seq-chip"><span class="seq-ord">3</span>Introduction</div>
+            <div class="seq-chip"><span class="seq-ord">4</span>Methods</div>
+            <div class="seq-chip"><span class="seq-ord">5</span>Results</div>
+            <div class="seq-chip"><span class="seq-ord">6</span>Discussion</div>
+          </div>
+        </div>
+        <div class="seqrow">
+          <p class="seq-label">Expert reading order <span class="seq-sub">— how researchers actually read</span></p>
+          <div class="seq">
+            <div class="seq-chip"><span class="seq-ord">1</span>Title</div>
+            <div class="seq-chip"><span class="seq-ord">2</span>Abstract</div>
+            <div class="seq-chip hot"><span class="seq-ord">3</span>Figures &amp; tables</div>
+            <div class="seq-chip"><span class="seq-ord">4</span>Discussion</div>
+            <div class="seq-chip"><span class="seq-ord">5</span>Methods</div>
+            <div class="seq-chip"><span class="seq-ord">6</span>Introduction</div>
+          </div>
+        </div>
+        <div class="seqrow">
+          <p class="seq-label">Writing order <span class="seq-sub">— the discovery sequence</span></p>
+          <div class="seq">
+            <div class="seq-chip"><span class="seq-ord">1</span>Methods</div>
+            <div class="seq-chip"><span class="seq-ord">2</span>Results</div>
+            <div class="seq-chip"><span class="seq-ord">3</span>Discussion</div>
+            <div class="seq-chip hot"><span class="seq-ord">4</span>Introduction</div>
+            <div class="seq-chip"><span class="seq-ord">5</span>Abstract</div>
+            <div class="seq-chip"><span class="seq-ord">6</span>Title</div>
+          </div>
+        </div>
+      </div>
+      <p class="punch">Every reader starts at the Title and Abstract, then decides whether to go on. You write in nearly the reverse order — the Introduction can only frame a contribution you have already found.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">26</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 21 ============ -->
+  <section data-label="27 Methods">
+    <div class="head">
+      <p class="eyebrow">Drafting · Methods</p>
+      <h1 class="title">The Methods section: transparent enough to replicate</h1>
+      <div class="rule"></div>
+      <p class="lede">The one test: could an independent researcher run your study from this description alone?</p>
+    </div>
+    <div class="body center">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px 56px;">
+        <div class="check"><span class="cbox"></span>Participants — n, demographics, selection criteria</div>
+        <div class="check"><span class="cbox"></span>Design named and justified</div>
+        <div class="check"><span class="cbox"></span>Instruments named and cited</div>
+        <div class="check"><span class="cbox"></span>Procedure written step-by-step</div>
+        <div class="check"><span class="cbox"></span>Independent, dependent &amp; control variables</div>
+        <div class="check"><span class="cbox"></span>Data preparation described</div>
+        <div class="check"><span class="cbox"></span>Statistical tests, software &amp; version named</div>
+        <div class="check"><span class="cbox"></span>Ethics / IRB approval noted</div>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">27</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 22 ============ -->
+  <section data-label="28 Results">
+    <div class="head">
+      <p class="eyebrow">Drafting · Results</p>
+      <h1 class="title">Results: report what happened. Nothing else.</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--border-1);">
+        <div style="padding:36px 40px; border-right:3px solid var(--nu-red);">
+          <p class="eyebrow" style="color:var(--fg-1);">Results — OK</p>
+          <ul class="tick ok">
+            <li>Means, standard deviations, test statistics</li>
+            <li>Null and negative results, reported</li>
+            <li>&ldquo;Figure 2 shows the distribution by condition.&rdquo;</li>
+          </ul>
+        </div>
+        <div style="padding:36px 40px;">
+          <p class="eyebrow" style="color:var(--nu-red);">Move to Discussion</p>
+          <ul class="tick no">
+            <li>&ldquo;This suggests the intervention worked.&rdquo;</li>
+            <li>&ldquo;This is likely because&hellip;&rdquo;</li>
+            <li>&ldquo;Consistent with Smith et al.&rdquo;</li>
+          </ul>
+        </div>
+      </div>
+      <p class="punch">Any sentence that explains <span class="red">why</span> a result occurred has crossed the line.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">28</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 23 ============ -->
+  <section data-label="29 Discussion">
+    <div class="head">
+      <p class="eyebrow">Drafting · Discussion</p>
+      <h1 class="title">The Discussion is the argument. Argue.</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div class="chain">
+        <div class="node" style="padding:24px 22px;"><p class="nk" style="font-size:var(--type-subtitle);">1</p><div class="ncr"></div><p class="nq" style="font-size:24px; line-height:1.32;"><strong>Central finding + meaning.</strong> State the central finding in one sentence — not a results restatement. Then answer: so what? What does this finding change, resolve, or challenge? This is the only sentence a reviewer should need to understand your contribution.</p></div>
+        <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="node" style="padding:24px 22px;"><p class="nk" style="font-size:var(--type-subtitle);">2</p><div class="ncr"></div><p class="nq" style="font-size:24px; line-height:1.32;"><strong>Connect to prior work.</strong> Cite specifically — not decoratively. For each cited study: does your finding agree, extend, contradict, or refine it? A citation without a stance is not an argument. &ldquo;Consistent with Smith et al.&rdquo; is not analysis.</p></div>
+        <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="node" style="padding:24px 22px;"><p class="nk" style="font-size:var(--type-subtitle);">3</p><div class="ncr"></div><p class="nq" style="font-size:24px; line-height:1.32;"><strong>Address null &amp; unexpected results.</strong> Every null result and every surprise gets a sentence. Explain it — don&rsquo;t bury it. A discussion that only addresses significant findings is not a discussion, it is a press release.</p></div>
+        <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="node" style="padding:24px 22px;"><p class="nk" style="font-size:var(--type-subtitle);">4</p><div class="ncr"></div><p class="nq" style="font-size:24px; line-height:1.32;"><strong>Limitations + implications.</strong> Name the two or three real limits — sample, design, timescale. Then give specific implications: for whom, doing what, under which conditions. &ldquo;More research is needed&rdquo; is not an implication.</p></div>
+      </div>
+      <div style="display:flex; gap:40px; margin-top:26px;">
+        <p class="flag"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>Opening with a results restatement</p>
+        <p class="flag"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>Ending with &ldquo;more research is needed&rdquo;</p>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">29</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 24 ============ -->
+  <section data-label="30 CARS funnel" style="padding-top:46px; padding-bottom:14px;">
+    <div class="head" style="margin-bottom:22px;">
+      <p class="eyebrow">Drafting · Introduction</p>
+      <h1 class="title">Three moves: territory &rarr; niche &rarr; occupation</h1>
+      <div class="rule" style="margin-top:14px;"></div>
+    </div>
+    <div class="body center">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:7px;">
+        <div class="funnel" style="width:100%; background:var(--bg-3); color:var(--fg-1);">
+          <span class="fmove">Move 1 · Territory</span><span class="fdesc">The domain and why it matters</span>
+        </div>
+        <div class="funnel" style="width:70%; background:var(--nu-red); color:#fff;">
+          <span class="fmove">Move 2 · Niche</span><span class="fdesc" style="opacity:.92;">What the field still does not know — the unresolved gap in the literature</span>
+        </div>
+        <div class="funnel" style="width:42%; background:var(--nu-black); color:#fff;">
+          <span class="fmove">Move 3 · Occupation</span><span class="fdesc" style="opacity:.85;">How this paper answers exactly that gap</span>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-top:7px;">
+        <div class="card" style="padding:14px 22px;">
+          <div style="font-size:var(--type-small); font-weight:700; text-transform:uppercase; letter-spacing:.08em; margin-bottom:10px;">Move 2 · Niche</div>
+          <div style="display:flex; flex-direction:column; gap:9px;">
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span class="ex-tag ex-weak" style="flex:0 0 auto;">Too broad</span>
+              <p class="ex-line" style="color:var(--fg-3); flex:1;">&ldquo;Despite growing interest in AI tutoring, little research has examined its effects on student learning.&rdquo;</p>
+            </div>
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span class="ex-tag ex-strong" style="flex:0 0 auto;">Specific</span>
+              <p class="ex-line" style="color:var(--fg-1); font-weight:700; flex:1;">&ldquo;No study has tested whether AI feedback specificity — not frequency — drives the retention gap between immediate and delayed post-tests in undergraduate programming courses.&rdquo;</p>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="padding:14px 22px;">
+          <div style="font-size:var(--type-small); font-weight:700; text-transform:uppercase; letter-spacing:.08em; margin-bottom:10px;">Move 3 · Occupation</div>
+          <div style="display:flex; flex-direction:column; gap:9px;">
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span class="ex-tag ex-weak" style="flex:0 0 auto;">Too broad</span>
+              <p class="ex-line" style="color:var(--fg-3); flex:1;">&ldquo;This study investigates AI tutoring in undergraduate programming courses.&rdquo;</p>
+            </div>
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span class="ex-tag ex-strong" style="flex:0 0 auto;">Specific</span>
+              <p class="ex-line" style="color:var(--fg-1); font-weight:700; flex:1;">&ldquo;This study isolates feedback specificity as the independent variable in a randomized trial with 91 undergraduates, measuring both immediate and six-week delayed retention.&rdquo;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:8px; margin-top:7px;">
+        <p class="flag" style="margin:0;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>If the niche could motivate any study in the area, rewrite it.</p>
+        <p class="flag" style="margin:0;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>If the occupation doesn&rsquo;t answer the niche directly, rewrite both.</p>
+        <p class="punch" style="text-align:center; margin:0;">Ends here — a clear, testable research question or hypothesis.</p>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">30</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 25 ============ -->
+  <section data-label="31 Abstract">
+    <div class="head">
+      <p class="eyebrow">Drafting · Abstract</p>
+      <h1 class="title">Five sentences. The complete argument.</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div style="display:flex; align-items:stretch; gap:16px;">
+        <div class="abx"><span class="abn">1</span><p class="abt">Problem</p><p class="abd">What issue does this address?</p></div>
+        <div class="abx"><span class="abn">2</span><p class="abt">Gap</p><p class="abd">What does existing work not resolve?</p></div>
+        <div class="abx"><span class="abn">3</span><p class="abt">Method</p><p class="abd">What did you do?</p></div>
+        <div class="abx hot"><span class="abn">4</span><p class="abt">Finding</p><p class="abd">What did you find — specifically?</p></div>
+        <div class="abx"><span class="abn">5</span><p class="abt">Implication</p><p class="abd">What does it mean or change?</p></div>
+      </div>
+      <p class="punch">If someone reads only this — do they know the claim, the evidence, and the takeaway? The finding is the element most often missing.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">31</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 26 — PAUSE ============ -->
+  <section class="s-red pause" data-label="32 Pause">
+    <div class="fill">
+      <img class="pause-mono" src="assets/monogram-white.svg" alt="">
+      <div class="pause-tag">
+        <span class="pe">Pause &amp; reflect</span>
+        <span class="pdot"></span>
+        <span class="pe" style="font-weight:400;">Module 05</span>
+        <span class="pmin">≈ 3 min</span>
+      </div>
+      <p class="pause-q">Pick one section of your draft. Without your notes, explain in two minutes: the central claim, the evidence for it, and what it does <span class="ul">not</span> show. Can&rsquo;t? Go find the claim.</p>
+    </div>
+  </section>
+
+  <!-- ============ MODULE 6 DIVIDER ============ -->
+  <section class="s-dark divider" data-label="Module 6">
+    <div class="fill">
+      <div class="div-num">06</div>
+      <div class="head">
+        <p class="eyebrow">Module 06</p>
+        <h2 class="div-title">Quality control<br>&amp; submission</h2>
+        <div class="rule"></div>
+        <p class="div-desc">Calibrate every claim, clear the fog, and pass the gates before you submit.</p>
+        <p class="div-range">Slides 33–37</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 27 ============ -->
+  <section data-label="33 Calibrate claims">
+    <div class="head">
+      <p class="eyebrow">Quality control &amp; submission</p>
+      <h1 class="title">Match your language to your evidence</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div class="cal-grid js-cal">
+        <div class="cal-cell"><span class="cal-phrase">&ldquo;raises the possibility&rdquo;</span><span class="cal-tick"></span><span class="cal-study">single case study</span></div>
+        <div class="cal-cell"><span class="cal-phrase">&ldquo;suggests&rdquo;</span><span class="cal-tick"></span><span class="cal-study">one correlational study</span></div>
+        <div class="cal-cell"><span class="cal-phrase">&ldquo;indicates&rdquo;</span><span class="cal-tick"></span><span class="cal-study">correlational, large N</span></div>
+        <div class="cal-cell"><span class="cal-phrase">&ldquo;demonstrates&rdquo;</span><span class="cal-tick"></span><span class="cal-study">randomized experiment</span></div>
+        <div class="cal-cell"><span class="cal-phrase red">&ldquo;proves&rdquo;</span><span class="cal-tick red"></span><span class="cal-study">RCT, multi-site, replicated</span></div>
+      </div>
+      <div class="cal-ends"><span>Lower confidence · exploratory</span><span>Well-established</span></div>
+      <p class="punch">Your language is the claim. Choose it as carefully as the hypothesis — then audit every &ldquo;causes,&rdquo; &ldquo;leads to,&rdquo; and &ldquo;produces.&rdquo;</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">33</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 28 ============ -->
+  <section data-label="34 Fog audit">
+    <div class="head">
+      <p class="eyebrow">Quality control &amp; submission</p>
+      <h1 class="title">Fog is the distance between what a sentence says and what it means</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div style="display:flex; flex-direction:column; gap:18px;">
+        <div class="fog-row"><span class="fog-tag">Nominalization</span><span class="fog-before">&ldquo;The investigation of the relationship was conducted.&rdquo;</span><div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><span class="fog-after">&ldquo;We investigated how X relates to Y.&rdquo;</span></div>
+        <div class="fog-row"><span class="fog-tag">Vague quantifier</span><span class="fog-before">&ldquo;Many students improved.&rdquo;</span><div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><span class="fog-after">&ldquo;74 of 91 students (81%) improved.&rdquo;</span></div>
+        <div class="fog-row"><span class="fog-tag">Throat-clearing</span><span class="fog-before">&ldquo;It is important to note that the effect was large.&rdquo;</span><div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><span class="fog-after">&ldquo;The effect was large (d = 0.63).&rdquo;</span></div>
+        <div class="fog-row"><span class="fog-tag">Over-hedging</span><span class="fog-before">&ldquo;Results were somewhat significant.&rdquo;</span><div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><span class="fog-after">&ldquo;p = .02, d = 0.41.&rdquo;</span></div>
+      </div>
+      <p class="flag" style="margin-top:24px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>Fog test — is every word earning its place?</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">34</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 29 ============ -->
+  <section data-label="35 Ethics screen">
+    <div class="head">
+      <p class="eyebrow">Quality control &amp; submission</p>
+      <h1 class="title">A paper that can&rsquo;t survive replication is an ethical failure</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <table class="nu">
+        <thead><tr><th style="width:26%;">Risk</th><th style="width:40%;">Check</th><th>Fix</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Selective reporting</td><td>Reporting 2 wins from 20 tests?</td><td>Pre-register; report all comparisons</td></tr>
+          <tr><td class="k">Overgeneralization</td><td>Claiming beyond the sample?</td><td>Scope conclusions to who was studied</td></tr>
+          <tr><td class="k">Undisclosed AI use</td><td>Know the journal&rsquo;s policy?</td><td>When in doubt, disclose</td></tr>
+          <tr><td class="k">Confirmatory review</td><td>Citing only supporting evidence?</td><td>Include disconfirming findings</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">35</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 30 ============ -->
+  <section data-label="36 The complete sequence">
+    <div class="head">
+      <p class="eyebrow">Quality control &amp; submission</p>
+      <h1 class="title">The complete sequence</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="body center">
+      <div style="display:flex; align-items:stretch; gap:0;">
+        <div class="phase">
+          <div class="phase-h"><span class="phase-n">01</span>Thinking</div>
+          <ul class="phase-list"><li>Hypothesis</li><li>Design</li><li>Measurement plan</li><li>GIGO check</li><li>Stats plan</li></ul>
+        </div>
+        <div class="gate"></div>
+        <div class="phase">
+          <div class="phase-h"><span class="phase-n">02</span>Writing</div>
+          <ul class="phase-list"><li>Methods</li><li>Results</li><li>Discussion</li><li>Introduction</li><li>Abstract · Title</li></ul>
+        </div>
+        <div class="gate"></div>
+        <div class="phase">
+          <div class="phase-h"><span class="phase-n">03</span>Auditing</div>
+          <ul class="phase-list"><li>Claim audit</li><li>Statistical integrity</li><li>Fog audit</li><li>Ethics screen</li><li>Peer-review simulation</li></ul>
+        </div>
+      </div>
+      <p class="punch">Nothing in Phase 2 before Phase 1 is solid. Nothing submitted before Phase 3 is done.</p>
+    </div>
+    <div class="foot">
+      <div class="foot-l"><img class="foot-mono" src="assets/monogram-red.svg" alt=""><span class="foot-name">The Research Paper Recipe</span></div>
+      <span class="pageno">36</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 31 — CLOSING ============ -->
+  <section class="s-red pause" data-label="37 Closing">
+    <div class="fill">
+      <img class="pause-mono" src="assets/monogram-white.svg" alt="">
+      <div class="pause-tag">
+        <span class="pe">Before you submit</span>
+        <span class="pdot"></span>
+        <span class="pe" style="font-weight:400;">Final reflection</span>
+      </div>
+      <p class="pause-q">Can you explain — without AI, without your notes — every major claim, the evidence behind it, and the reasoning that connects them?</p>
+      <p style="font-size:var(--type-subtitle); color:rgba(255,255,255,.92); margin:36px 0 0; max-width:34ch; line-height:1.3;">If not, no amount of polishing will fix it. But the fix is available: <span style="text-decoration:underline; text-underline-offset:6px;">go back to the schema.</span></p>
+    </div>
+  </section>
+
+</deck-stage>
+
+<script type="application/json" id="speaker-notes">
+[
+  "The Research Paper Recipe. A complete workflow from raw curiosity to submission. The core principle: a research paper is not a writing product, it is a public knowledge claim. We separate the intellectual work from the writing work, and put gates between them. Six modules: thinking, writing, auditing.",
+  "Module 1 — Before you write. The aim of this module is to turn a hunch into a claim that can fail, before a single sentence of prose exists.",
+  "Open with the central paradox: AI makes polished prose trivially easy, but polished prose can hide an argument that does not hold. The crack in the paper is the metaphor we return to all course. Rejection is rarely about bad writing — it is about submitting before the thinking is done.",
+  "Walk through the ladder with the AI-tutoring example. A topic is an area; a research question is answerable; a hypothesis is testable and names a mechanism or direction. A claim that cannot fail is advocacy, not research. This pre-training lets students engage with design and methods later.",
+  "The schema is not a bureaucratic step — it is the only way to catch logical problems before they are dressed in fluent sentences. Three layers: intent, evidence, structure. If a layer is missing, the hole survives into the prose. Return to this diagram in the Drafting module.",
+  "Engagement, about 3 minutes. Have students write their current research question in one sentence and pressure-test it: is it testable, and what would prove it wrong? If nothing could, rewrite it.",
+  "Module 2 — Foundation and assertion types. Getting the assertion right before the study begins determines whether the paper is a contribution to knowledge or circular reasoning.",
+  "The most important pre-work for the measurement and statistics modules. Students who mix causal language with correlational designs made the error here, at the assertion stage. The normative row is highlighted: science cannot settle questions of value by evidence alone.",
+  "Build the sponge metaphor. A hypothesis structured to explain away its own disconfirmation is not doing scientific work. Popper: confirming instances are cheap, falsifying instances are decisive. Ask: does the study give the hypothesis a genuine chance to fail?",
+  "Ground this in the asymmetry of evidence. The null is a specific baseline, not nothing. The test asks how likely the data would be if the null were true. Failing to reject is not proof of the null — it could mean the study was underpowered. This is where students misread null results.",
+  "This is the anchor slide for the assertion modules. Every time a student writes causes, leads to, or produces in a Discussion, they should hear this slide. The design determines what claims the paper can make. Change the hypothesis, or change the design — there is no statistical workaround.",
+  "Engagement, about 5 minutes. The Cartesian test, used as a pre-registration checklist. Three falsifying conditions: one for the measure, one for the sample, one that reverses the effect.",
+  "Module 3 — Measurement. This is where most research papers, and whole fields, go wrong without knowing it. The question is conceptual, not statistical: does your instrument actually observe what you claim?",
+  "The structural spine for measurement and statistics. Use this pipeline at the start of every session here. A flaw at any level corrupts everything downstream; polished prose at the bottom cannot fix a crack above it.",
+  "Plato's Cave, brought into practice. The construct is what you care about; the instrument is what you can observe. Every measurement is a shadow. The researcher's job is to minimize and acknowledge the gap, not pretend it does not exist. The score is not the student.",
+  "These five questions apply both ways: to the student's own study and to every study they cite. A study that fails questions 1, 4, or 5 can still be cited — but only with explicit qualification stated in the paper.",
+  "Bjork's storage-versus-retrieval distinction is the sharpest tool for calibrating the scope of a learning claim. Massed practice looks better immediately; spaced practice wins over time. If your outcome measure is an immediate aligned post-test, your conclusion must say so.",
+  "Engagement, about 5 minutes. Run the five measurement questions on a single cited paper. Two sentences: what it actually shows, and what it claims to show.",
+  "Module 4 — Data quality and statistics. GIGO is about the raw material, not the math. Then we cover what the numbers actually say.",
+  "GIGO: sophisticated analysis of bad data produces confident-looking bad results, which travel further than obviously bad ones. Walk the five pre-analysis failures: measurement error, systematic bias, non-random missingness, inconsistent outlier handling, unreliable composites.",
+  "The most common single failure in student results sections is reporting only p < .05. A p-value is how surprising the data would be if nothing were happening — not the probability the finding is real. Effect size carries the magnitude. Report all four every time.",
+  "This is the slide to make the SD-versus-SE distinction explicit. SD is the spread of the data — how different people are — and it does not shrink as the sample grows. SE is SD divided by the square root of n: the precision of the mean estimate, which does shrink as n grows. Because the t-statistic is the mean difference divided by SE, a larger sample shrinks SE, inflates t, and drives p down — for any nonzero difference. The 10,000-employee example: a 0.4-point change on a 100-point scale yields p = .0001 but d = 0.04, essentially nothing. Fisher designed p-values in the 1920s for roughly 30-observation field plots, where clearing t near 2 was a genuine filter; with millions of rows it becomes a formality.",
+  "Degrees of freedom is n minus the number of constraints — every quantity you estimate from the data, like a mean or variance, spends one, and what remains is the independent information doing the work. df sets the shape of the t-distribution: small df means fat tails, so you need a larger t to clear significance; as df grows the t-distribution converges to the normal. The framework is self-calibrating — you never decide by hand to switch from t to Z. The real distinction: a Z-test assumes you know the population SD, which is rare; a t-test estimates SD from the sample, which is almost always the case. At large n the sample SD becomes a near-perfect estimate, so t and Z agree — about 2% apart at df = 60, three significant digits by df = 200. Gosset published the t-distribution as 'Student' in 1908, working on very small samples at the Guinness brewery.",
+  "Effect size is the honest number because n is not in its denominator. Cohen's d is the mean difference over the pooled SD, so the square root of n never enters. Run the same study at n = 30 or n = 30,000 and you get wildly different t and p but roughly the same d. That is the point: d measures the phenomenon, while p conflates the phenomenon with how hard you looked. Cohen's benchmarks — 0.2 small, 0.5 medium, 0.8 large — are a rough starting point, always judged in context. The American Statistical Association formally warned against over-reliance on p < .05 in 2016. Report effect size, always.",
+  "The synthesis. As n grows, the classical apparatus quietly stops doing useful work, piece by piece: the df correction is irrelevant by about n = 60, the t-versus-Z distinction by about n = 120, and the p-value as a filter by about n = 10,000 — where SE becomes so small it is a liability rather than an asset. What stays meaningful at any sample size: effect size, confidence intervals around magnitude, and a human judgment of practical significance. The machinery was engineered for a data-scarce world and never revisited when data became cheap. P-values were a tool for statisticians; they got handed to everyone. Effect size is the honest number — report it, always.",
+  "Stress that p-hacking rarely involves conscious dishonesty. It is the natural result of treating .05 as a publication threshold and making small, reasonable-seeming decisions under that pressure. HARKing dresses an exploratory finding as a prediction. Pre-registration is the structural fix.",
+  "Treat this slide as the reconciliation: we criticized p-values, but the answer is not to drop them — it is to put them in their place. Report everything, but read it in order. First, effect size and its confidence interval, which answer 'does it matter?' Then the test statistic and exact p, which only answer 'could this be noise?' The incomplete version — 'significant, p < .05' alone — leads with the weakest part and omits the magnitude entirely. Lead with the effect size; the p-value rides along for transparency, never as the verdict.",
+  "The large-n problem, framed as two questions. A p-value answers only 'could this be noise?' — is the effect real. Effect size answers 'does this matter?' — is the difference big enough to care about. These are different questions, and at large n they come apart completely. A wellness app tested on 50,000 employees that drops stress 0.3 points on a 100-point scale clears p < .0001, so the effect is 'real,' while Cohen's d is 0.03 — nobody's life changed. With samples this large, statistical significance is nearly automatic, so it stops working as a filter and the only interesting question left is magnitude. Practical significance is a human judgment, not a threshold a test can clear.",
+  "Engagement, about 3 minutes. Audit one Results paragraph for the four required elements. Name what is missing and where to find it.",
+  "Module 5 — Drafting. Write the sections in the order discovery happened, and give each section its single job.",
+  "This is the slide students most need and most often miss. The writing-order slide that follows covers only the last stretch — the write-up. The research order is the whole arc: an idea or noticed gap; a preliminary search to check the gap is real and not already filled; refining the question; the deep literature review; methods design; data collection and analysis; results; discussion; introduction; abstract; and finally the title. The step to dwell on is step three — refining the question. Most people fall in love with their first idea, do a cursory check, and dive into methods, only to discover halfway through that the question was too broad, already answered, or unanswerable with the data they can get. Refining the question is where research actually succeeds or fails. The next slide zooms into the writing portion of this arc.",
+  "Three sequences, three different orders. Readers do not march front to back. Everyone — novice or expert — starts at the Title and the Abstract, and decides right there whether to read at all. A naive reader then goes straight through: Introduction, Methods, Results, Discussion. An expert jumps to the figures and tables, then the Discussion, and only consults Methods and Introduction if the result is worth scrutinizing. You write in nearly the reverse of all of this. This is the most counterintuitive structural lesson in the course: students who write the Introduction first produce papers that promise one thing and deliver another, because the Introduction can only frame a contribution you have already found. It is also why AI should never draft the Introduction early — it is accurate only once the findings exist.",
+  "The checklist is the assessment tool. Hand it to a colleague who was not in the study and have them check each box. Every unchecked box is an omission to fix before submission.",
+  "The single most common Results failure: sentences that begin with this suggests or this demonstrates. Those are Discussion moves. Have students do a find for suggest and demonstrate in their Results sections.",
+  "The Discussion is the one section where students take a position and argue. Remind them of the register shift — not a procedural voice, an analytical one with a view. Do not open with a results restatement; do not close with more research is needed.",
+  "The CARS model, from Swales. Most weak introductions fail at Move 2 — they describe the territory at length but never name a specific gap. More research is needed is a gap statement without content. Name exactly what is not known, and why it matters.",
+  "Walk the common abstract failures: opening with this paper examines, ending with results are discussed, or reporting a method with no finding. The five-sentence test is a diagnostic. The finding is the element most often vague or missing.",
+  "Engagement, about 3 minutes. The Feynman test on one draft section: the central claim, the evidence, and what it does not show — in two minutes, without notes.",
+  "Module 6 — Quality control and submission. Calibrate every claim, clear the fog, and pass the gates before submitting.",
+  "The prose-level counterpart to the assertion taxonomy. The causal language audit is the final-draft pass that catches overclaiming — run it after AI edits, when the prose is most fluent and the holes are hardest to see.",
+  "Fog is not a stylistic preference — it is lost precision. Run the nominalization hunt and the vague-quantifier check as separate passes before peer review. Over-hedging is as dishonest as overclaiming.",
+  "Frame replication fitness as an ethical obligation, not just methodological hygiene. A paper that could not be replicated contributes noise that future researchers build on in good faith.",
+  "Return to the schema from the start of the course. The crack in the paper is the cost of skipping a phase gate. Nothing in Phase 2 before Phase 1 is solid; nothing submitted before Phase 3 is done.",
+  "Closing reflection. The readiness test: can you explain every major claim, its evidence, and the reasoning that connects them — without AI and without your notes? If not, no polishing will fix it. The fix is to go back to the schema."
+]
+</script>
+<script src="deck-stage.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script>
+(function(){
+  const stage = document.querySelector('deck-stage');
+  if(!stage || typeof d3==='undefined') return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Retrieval vs storage chart (D3 line-draw) ---------- */
+  const X = d3.scaleLinear().domain([0,2]).range([150,860]);
+  const Y = d3.scaleLinear().domain([0,1]).range([400,70]);
+  const massed = [{t:0,y:.93},{t:1,y:.42},{t:2,y:.20}];
+  const spaced = [{t:0,y:.55},{t:1,y:.60},{t:2,y:.66}];
+  const lineGen = d3.line().x(d=>X(d.t)).y(d=>Y(d.y)).curve(d3.curveMonotoneX);
+
+  function drawRetention(svgEl, animate){
+    const go = animate && !reduce;
+    const svg = d3.select(svgEl);
+    svg.selectAll('*').remove();
+    svg.append('line').attr('x1',150).attr('y1',55).attr('x2',150).attr('y2',400).attr('stroke','#909090').attr('stroke-width',2);
+    svg.append('line').attr('x1',150).attr('y1',400).attr('x2',900).attr('y2',400).attr('stroke','#909090').attr('stroke-width',2);
+    svg.append('text').attr('x',128).attr('y',78).attr('text-anchor','end').attr('fill','#545454').attr('font-size',24).text('High');
+    svg.append('text').attr('x',128).attr('y',398).attr('text-anchor','end').attr('fill','#545454').attr('font-size',24).text('Low');
+    [['Immediate',0],['2 weeks',1],['6 weeks',2]].forEach(function(d){
+      svg.append('text').attr('x',X(d[1])).attr('y',440).attr('text-anchor','middle').attr('fill','#545454').attr('font-size',24).text(d[0]);
+    });
+    const guides = svg.append('g').attr('opacity', go?0:1);
+    guides.append('line').attr('x1',X(0)).attr('y1',Y(massed[0].y)).attr('x2',X(0)).attr('y2',400).attr('stroke','#C4C4C4').attr('stroke-width',1.5).attr('stroke-dasharray','5 5');
+    guides.append('text').attr('x',X(0)+18).attr('y',388).attr('fill','#787878').attr('font-size',24).text('measured here');
+    guides.append('line').attr('x1',X(2)).attr('y1',Y(spaced[2].y)).attr('x2',X(2)).attr('y2',400).attr('stroke','#C4C4C4').attr('stroke-width',1.5).attr('stroke-dasharray','5 5');
+    guides.append('text').attr('x',X(2)-6).attr('y',388).attr('text-anchor','end').attr('fill','#787878').attr('font-size',24).text('\u201Clearning\u201D claimed here');
+
+    function series(data,color,label,delay){
+      const path = svg.append('path').datum(data).attr('fill','none').attr('stroke',color).attr('stroke-width',4).attr('stroke-linecap','round').attr('stroke-linejoin','round').attr('d',lineGen);
+      const dots = svg.append('g').selectAll('circle').data(data).enter().append('circle').attr('cx',d=>X(d.t)).attr('cy',d=>Y(d.y)).attr('r',8).attr('fill',color);
+      const lbl = svg.append('text').attr('x',X(2)).attr('y',Y(data[2].y)-18).attr('text-anchor','end').attr('fill',color).attr('font-size',24).attr('font-weight',700).text(label);
+      if(go){
+        const L = path.node().getTotalLength();
+        path.attr('stroke-dasharray',L+' '+L).attr('stroke-dashoffset',L)
+            .transition().delay(delay).duration(1000).ease(d3.easeCubicInOut).attr('stroke-dashoffset',0);
+        dots.attr('opacity',0).transition().delay((d,i)=>delay+260+i*240).duration(300).attr('opacity',1);
+        lbl.attr('opacity',0).transition().delay(delay+900).duration(400).attr('opacity',1);
+      }
+    }
+    series(massed,'#2D2926','Massed',0);
+    series(spaced,'#C8102E','Spaced',500);
+    if(go) guides.transition().delay(1500).duration(500).attr('opacity',1);
+  }
+
+  /* ---------- t-distribution vs normal (D3) ---------- */
+  function normPdf(x){ return 0.3989422804*Math.exp(-x*x/2); }
+  function t3Pdf(x){ return 0.3675525969*Math.pow(1+x*x/3, -2); }
+  const TX = d3.scaleLinear().domain([-4,4]).range([90,910]);
+  const TY = d3.scaleLinear().domain([0,0.42]).range([400,70]);
+  const tdata = d3.range(-4,4.001,0.1);
+  const tline = d3.line().x(d=>TX(d.x)).y(d=>TY(d.y)).curve(d3.curveBasis);
+
+  function drawTDist(svgEl, animate){
+    const go = animate && !reduce;
+    const svg = d3.select(svgEl);
+    svg.selectAll('*').remove();
+    svg.append('line').attr('x1',90).attr('y1',400).attr('x2',910).attr('y2',400).attr('stroke','#909090').attr('stroke-width',2);
+    [-2,0,2].forEach(function(v){
+      svg.append('line').attr('x1',TX(v)).attr('y1',396).attr('x2',TX(v)).attr('y2',406).attr('stroke','#909090').attr('stroke-width',2);
+      svg.append('text').attr('x',TX(v)).attr('y',438).attr('text-anchor','middle').attr('fill','#787878').attr('font-size',24).text(v===0?'0':(v>0?'+2 SE':'\u22122 SE'));
+    });
+    function curve(fn,color,dash,delay){
+      const pts = tdata.map(x=>({x:x,y:fn(x)}));
+      const path = svg.append('path').datum(pts).attr('fill','none').attr('stroke',color).attr('stroke-width',4).attr('stroke-linejoin','round').attr('d',tline);
+      if(dash) path.attr('stroke-dasharray','1 9').attr('stroke-linecap','round');
+      if(go){
+        if(dash){ path.attr('opacity',0).transition().delay(delay).duration(800).attr('opacity',1); }
+        else { const L=path.node().getTotalLength(); path.attr('stroke-dasharray',L+' '+L).attr('stroke-dashoffset',L).transition().delay(delay).duration(1100).ease(d3.easeCubicInOut).attr('stroke-dashoffset',0).on('end',function(){ d3.select(this).attr('stroke-dasharray',null); }); }
+      }
+      return path;
+    }
+    curve(normPdf,'#C8102E',false,0);
+    curve(t3Pdf,'#2D2926',true,400);
+    const l1=svg.append('text').attr('x',TX(1.75)).attr('y',TY(0.33)).attr('fill','#C8102E').attr('font-size',24).attr('font-weight',700).text('Normal (Z)');
+    const l2=svg.append('text').attr('x',TX(-2.15)).attr('y',TY(0.085)).attr('fill','#2D2926').attr('font-size',24).attr('font-weight',700).text('t, df = 3');
+    if(go){ [l1,l2].forEach(function(l,i){ l.attr('opacity',0).transition().delay(900+i*200).duration(400).attr('opacity',1); }); }
+  }
+
+  /* ---------- Generic staggered reveal (D3 transitions) ---------- */
+  const GROUP_SEL = 'tbody tr, .chain > .node, .chain > .arrow, .seqrow, .funnel, .phase, .abx, .cal-cell, .gigo-stage, .fork-chip, .fog-row, .check, .cols-2 > .card, .ro-step, .ro-phase';
+
+  function revealTargets(slide){
+    if(slide.classList.contains('cover'))
+      return Array.from(slide.querySelectorAll('.cover-eyebrow, .cover-title, .cover-sub, .cover-meta, .cover-mono'));
+    if(slide.classList.contains('divider'))
+      return Array.from(slide.querySelectorAll('.div-num, .eyebrow, .div-title, .rule, .div-desc, .div-range'));
+    if(slide.classList.contains('pause'))
+      return Array.from(slide.querySelectorAll('.pause-tag, .pause-q, .fill > p'));
+    const arr = [];
+    const head = slide.querySelector('.head'); if(head) arr.push(head);
+    slide.querySelectorAll(GROUP_SEL).forEach(n=>arr.push(n));
+    slide.querySelectorAll('.punch, .flag').forEach(n=>{ if(arr.indexOf(n)<0) arr.push(n); });
+    // slide 12 question rows have no shared class
+    slide.querySelectorAll('.body > div > div > .qn').forEach(n=>{ const row=n.parentElement; if(arr.indexOf(row)<0) arr.push(row); });
+    // calibration cells are driven by their own sweep, not the generic reveal
+    if(slide.querySelector('.js-cal')) return [...new Set(arr)].filter(n=>!n.classList.contains('cal-cell'));
+    return [...new Set(arr)];
+  }
+
+  /* ---------- Calibration scale sweep (dots drop onto the line, left to right) ---------- */
+  const calTimers = new WeakMap();
+  function sweepCal(grid, animate){
+    const prev = calTimers.get(grid);
+    if(prev) prev.forEach(t=>clearTimeout(t));
+    const timers = [];
+    calTimers.set(grid, timers);
+    const cells = [...grid.querySelectorAll('.cal-cell')];
+    if(!animate || reduce){
+      cells.forEach(c=>{ c.style.opacity=''; c.style.transform=''; const t=c.querySelector('.cal-tick'); if(t)t.style.transform=''; });
+      return;
+    }
+    cells.forEach((c,i)=>{
+      const tick = c.querySelector('.cal-tick');
+      c.style.transition='none'; c.style.opacity='0'; c.style.transform='translateY(14px)';
+      if(tick){ tick.style.transition='none'; tick.style.transform='scale(0)'; }
+      const on = setTimeout(()=>{
+        c.style.transition='opacity .4s ease, transform .4s ease';
+        if(tick) tick.style.transition='transform .34s cubic-bezier(.34,1.56,.64,1)';
+        c.style.opacity='1'; c.style.transform='translateY(0)';
+        if(tick) tick.style.transform='scale(1)';
+      }, 420 + i*190);
+      timers.push(on);
+    });
+  }
+
+  /* ---------- Sequence sweep (playhead across reading/writing rows) ---------- */
+  const seqTimers = new WeakMap();
+  function sweepSeq(seq, animate){
+    // clear any prior run for this element
+    const prev = seqTimers.get(seq);
+    if(prev) prev.forEach(t=>clearTimeout(t));
+    const timers = [];
+    seqTimers.set(seq, timers);
+    const rows = seq.querySelectorAll('.seqrow');
+    rows.forEach(row=>row.querySelectorAll('.seq-chip').forEach(c=>c.classList.remove('pulse')));
+    if(!animate || reduce) return;
+    rows.forEach((row, ri)=>{
+      const chips = row.querySelectorAll('.seq-chip');
+      chips.forEach((c,i)=>{
+        const on = setTimeout(()=>c.classList.add('pulse'), 520 + ri*820 + i*150);
+        const off = setTimeout(()=>c.classList.remove('pulse'), 520 + ri*820 + i*150 + 300);
+        timers.push(on, off);
+      });
+    });
+  }
+
+  function animateSlide(slide, reason){
+    if(!slide) return;
+    try{
+      const chart = slide.querySelector('.js-retention');
+      if(chart) drawRetention(chart, reason!=='init');
+      const tchart = slide.querySelector('.js-tdist');
+      if(tchart) drawTDist(tchart, reason!=='init');
+      const seq = slide.querySelector('.js-seq');
+      if(seq) sweepSeq(seq, reason!=='init');
+      const cal = slide.querySelector('.js-cal');
+      if(cal) sweepCal(cal, reason!=='init');
+      if(reduce) return;
+      const targets = revealTargets(slide);
+      if(!targets.length) return;
+      targets.forEach(n=>{ n.__noT = getComputedStyle(n).transform !== 'none'; });
+      const sel = d3.selectAll(targets);
+      sel.interrupt()
+         .style('opacity',0)
+         .style('transform', function(){ return this.__noT ? null : 'translateY(18px)'; });
+      sel.transition().duration(560).delay((d,i)=>i*60).ease(d3.easeCubicOut)
+         .style('opacity',1)
+         .style('transform', function(){ return this.__noT ? null : 'translateY(0px)'; });
+    }catch(err){ /* never let animation break the deck */ }
+  }
+
+  // render charts in final state first (print + unvisited slides safe)
+  document.querySelectorAll('.js-retention').forEach(el=>drawRetention(el, false));
+  document.querySelectorAll('.js-tdist').forEach(el=>drawTDist(el, false));
+  stage.addEventListener('slidechange', e=> animateSlide(e.detail.slide, e.detail.reason));
+  // the initial slidechange may fire before this listener attaches — animate the visible slide now
+  const sections = Array.from(stage.querySelectorAll(':scope > section'));
+  const active = sections.find(s=>getComputedStyle(s).visibility!=='hidden') || sections[0];
+  requestAnimationFrame(()=>animateSlide(active, 'enter'));
+})();
+</script>
+</body>
+</html>
