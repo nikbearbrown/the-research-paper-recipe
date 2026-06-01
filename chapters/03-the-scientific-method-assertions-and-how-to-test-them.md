@@ -298,6 +298,10 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 
 The ideas in this chapter didn't appear from nowhere. **Mary Hesse** worked out how scientific models, analogies, and evidence actually confirm or undermine a theory — the machinery beneath the words "test" and "falsify." Here's a prompt to find out more — and then make it better.
 
+![Mary Hesse](../images/mary-hesse-hni.png)
+
+*Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
+
 **Run this:**
 
 ```text

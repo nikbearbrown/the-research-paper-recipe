@@ -280,6 +280,10 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 
 The ideas in this chapter didn't appear from nowhere. **Prasanta Chandra Mahalanobis** built the science of large-scale surveys and a famous way to spot the data points that don't belong — long before anyone said "garbage in, garbage out." Here's a prompt to find out more — and then make it better.
 
+![Prasanta Chandra Mahalanobis](../images/prasanta-chandra-mahalanobis-i48.png)
+
+*Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
+
 **Run this:**
 
 ```text

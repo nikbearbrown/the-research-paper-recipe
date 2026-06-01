@@ -288,6 +288,10 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 
 The ideas in this chapter didn't appear from nowhere. **Henry Oldenburg** invented scientific peer review in the 1660s, when he began sending submitted manuscripts to knowledgeable readers before printing them. Here's a prompt to find out more — and then make it better.
 
+![Henry Oldenburg](../images/henry-oldenburg-bp7.png)
+
+*Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
+
 **Run this:**
 
 ```text
