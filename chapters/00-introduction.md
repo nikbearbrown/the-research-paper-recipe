@@ -43,7 +43,7 @@ Read the chapters in order if you are new to the subject. If you already know th
 
 ## A Note About AI
 
-AI matters to *The Research Paper Recipe* because the modern textbook is no longer only a static container. It is also part of a learning system: searchable, remixable, explainable, and increasingly connected to tools such as Medhavy. For Humanitarians AI books, the relevant question is not whether AI can replace the learner or the teacher. It cannot. The useful question is what AI can make easier to inspect: definitions, worked examples, misconceptions, practice sequences, alternate explanations, and the structure of an argument. This book treats AI as infrastructure for open, public-interest learning infrastructure. The chapters should still stand on their own as readable prose, but they are also designed to be legible to an intelligent textbook system.
+AI matters to *The Research Paper Recipe* because the modern textbook is no longer only a static container. It is also part of a learning system: searchable, remixable, explainable, and increasingly connected to tools such as Medhavy. The relevant question is not whether AI can replace the learner or the teacher. It cannot. The useful question is what AI can make easier to inspect: definitions, worked examples, misconceptions, practice sequences, alternate explanations, and the structure of an argument. This book treats AI as infrastructure for clearer learning and better research judgment. The chapters should still stand on their own as readable prose, but they are also designed to be legible to an intelligent textbook system.
 
 ## Closing Return
 
@@ -53,4 +53,4 @@ Let's go.
 
 ## Tags
 
-The Research Paper Recipe, textbook, Medhavy, AI-assisted learning, Humanitarians AI Incorporated
+The Research Paper Recipe, textbook, Medhavy, AI-assisted learning, research writing, Nik Bear Brown, Bear Brown LLC

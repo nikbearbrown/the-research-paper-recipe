@@ -1,14 +1,14 @@
 # The Research Paper Recipe
 
-**Humanitarians AI Incorporated**
+**Nik Bear Brown**
 
 ---
 
 ## Copyright
 
-Copyright © 2026 Humanitarians AI Incorporated. All rights reserved.
+Copyright © 2026 Nik Bear Brown. All rights reserved.
 
-Published by Humanitarians AI Incorporated, a 501(c)(3) nonprofit organization.
+Published by Bear Brown, LLC.
 
 No part of this publication may be reproduced, distributed, or transmitted in any form or by any means without the prior written permission of the publisher, except in the case of brief quotations in critical reviews and certain other noncommercial uses permitted by copyright law.
 

@@ -8,7 +8,9 @@ Thanks to the readers, students, collaborators, and tool builders whose question
 
 ## About the Author
 
-**Humanitarians AI Incorporated** is a 501(c)(3) nonprofit organization focused on public-interest AI education, intelligent textbooks, and practical learning infrastructure. Its books are designed to support learners, teachers, and communities with accessible explanations, structured practice, and AI-ready educational materials.
+**Nik Bear Brown** teaches data science, AI, and visualization at Northeastern University. His work spans machine learning, generative AI, data visualization, learning engineering, and the design of AI-assisted production pipelines. He writes practical textbooks for readers who want usable structure rather than generic prompts, with an emphasis on building judgment, inspecting evidence, and using AI without surrendering authorship.
+
+He works in Boston and writes occasionally at [nikbearbrown.com](https://www.nikbearbrown.com/).
 
 ---
 

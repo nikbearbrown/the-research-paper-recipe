@@ -1,8 +1,8 @@
 # License
 
-Copyright © 2026 Humanitarians AI Incorporated. All rights reserved.
+Copyright © 2026 Nik Bear Brown. All rights reserved.
 
-Published by Humanitarians AI Incorporated, a 501(c)(3) nonprofit organization.
+Published by Bear Brown, LLC.
 
 All rights reserved.
 

@@ -2,16 +2,16 @@
 
 AI+1, Hands on. Domain specific. No generic prompts.
 
-**Author:** Humanitarians AI Incorporated  
-**Publisher:** Humanitarians AI Incorporated, a 501(c)(3) nonprofit organization  
-**Copyright:** Copyright © 2026 Humanitarians AI Incorporated. All rights reserved.  
+**Author:** Nik Bear Brown  
+**Publisher:** Bear Brown, LLC  
+**Copyright:** Copyright © 2026 Nik Bear Brown. All rights reserved.  
 **Edition:** 2026
 
 ## Summary
 
 *The Research Paper Recipe* is a structured textbook for readers who need a clear path through the subject rather than a loose collection of explanations. It begins with Chapter 1 — Before You Write Anything, moves through 14 core chapters, and ends with Chapter 14 — Writing Well: Prose for Scientific Papers.
 
-AI matters to *The Research Paper Recipe* because the modern textbook is no longer only a static container. It is also part of a learning system: searchable, remixable, explainable, and increasingly connected to tools such as Medhavy. For Humanitarians AI books, the relevant question is not whether AI can replace the learner or the teacher. It cannot. The useful question is what AI can make easier to inspect: definitions, worked examples, misconceptions, practice sequences, alternate explanations, and the structure of an argument. This book treats AI as infrastructure for open, public-interest learning infrastructure. The chapters should still stand on their own as readable prose, but they are also designed to be legible to an intelligent textbook system.
+AI matters to *The Research Paper Recipe* because the modern textbook is no longer only a static container. It is also part of a learning system: searchable, remixable, explainable, and increasingly connected to tools such as Medhavy. The relevant question is not whether AI can replace the learner or the teacher. It cannot. The useful question is what AI can make easier to inspect: definitions, worked examples, misconceptions, practice sequences, alternate explanations, and the structure of an argument. This book treats AI as infrastructure for clearer learning and better research judgment. The chapters should still stand on their own as readable prose, but they are also designed to be legible to an intelligent textbook system.
 
 ## Table of Contents
 

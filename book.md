@@ -12,7 +12,7 @@
 
 # The Research Paper Recipe
 
-**Author:** Humanitarians AI
+**Author:** Nik Bear Brown
 
 ---
 
