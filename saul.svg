@@ -1,0 +1,83 @@
+<!-- The Design Commitment Matrix | Book: The Research Paper Recipe | Chapter: 02-foundation | Figure: 02 | Generated: 2026-05-29 | Source: pantry/02-foundation-cajal.md -->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title-02">
+  <title id="fig-title-02">The Design Commitment Matrix</title>
+  <desc>A five-by-three grid maps study designs to the claims each licenses — association, causation, generalization. A filled square means licensed, a half square means licensed with caveat, a hollow square means not supported.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book-slug="the-research-paper-recipe" chapter="02-foundation" figure-number="02" date-generated="2026-05-29"/></metadata>
+  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+
+  <text x="32" y="38" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="14" fill="#2a1a0e">The Design Commitment Matrix</text>
+  <text x="32" y="56" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">A design fixes, in advance, what language you are permitted to use</text>
+
+  <!-- Column header bands -->
+  <rect x="232" y="78" width="140" height="34" fill="#F5F5F5" stroke="#545454" stroke-width="1"/>
+  <text x="302" y="100" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Association</text>
+  <rect x="372" y="78" width="140" height="34" fill="#F5F5F5" stroke="#545454" stroke-width="1"/>
+  <text x="442" y="100" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Causation</text>
+  <rect x="512" y="78" width="148" height="34" fill="#F5F5F5" stroke="#545454" stroke-width="1"/>
+  <text x="586" y="100" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">Generalization</text>
+
+  <!-- Row stub bands + body cells -->
+  <!-- Row 1: RCT -->
+  <rect x="40" y="112" width="192" height="48" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="52" y="141" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Randomized trial</text>
+  <rect x="232" y="112" width="140" height="48" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <rect x="372" y="112" width="140" height="48" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <rect x="512" y="112" width="148" height="48" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <rect x="290" y="124" width="24" height="24" fill="#C8102E" stroke="#C8102E" stroke-width="1"/>
+  <rect x="430" y="124" width="24" height="24" fill="#C8102E" stroke="#C8102E" stroke-width="1"/>
+  <path d="M 574 124 h 24 v 24 h -24 z" fill="none" stroke="#545454" stroke-width="1.5"/>
+  <path d="M 574 124 h 12 v 24 h -12 z" fill="#545454"/>
+
+  <!-- Row 2: Cohort / longitudinal -->
+  <rect x="40" y="160" width="192" height="48" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="52" y="189" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Cohort study</text>
+  <rect x="232" y="160" width="140" height="48" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <rect x="372" y="160" width="140" height="48" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <rect x="512" y="160" width="148" height="48" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <rect x="290" y="172" width="24" height="24" fill="#C8102E" stroke="#C8102E" stroke-width="1"/>
+  <path d="M 430 172 h 24 v 24 h -24 z" fill="none" stroke="#545454" stroke-width="1.5"/>
+  <path d="M 430 172 h 12 v 24 h -12 z" fill="#545454"/>
+  <rect x="574" y="172" width="24" height="24" fill="#C8102E" stroke="#C8102E" stroke-width="1"/>
+
+  <!-- Row 3: Cross-sectional -->
+  <rect x="40" y="208" width="192" height="48" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="52" y="237" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Cross-sectional survey</text>
+  <rect x="232" y="208" width="140" height="48" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <rect x="372" y="208" width="140" height="48" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <rect x="512" y="208" width="148" height="48" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <rect x="290" y="220" width="24" height="24" fill="#C8102E" stroke="#C8102E" stroke-width="1"/>
+  <path d="M 430 220 h 24 v 24 h -24 z" fill="none" stroke="#545454" stroke-width="1.5"/>
+  <rect x="574" y="220" width="24" height="24" fill="#C8102E" stroke="#C8102E" stroke-width="1"/>
+
+  <!-- Row 4: Case study -->
+  <rect x="40" y="256" width="192" height="48" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="52" y="285" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Case study</text>
+  <rect x="232" y="256" width="140" height="48" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <rect x="372" y="256" width="140" height="48" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <rect x="512" y="256" width="148" height="48" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <path d="M 290 268 h 24 v 24 h -24 z" fill="none" stroke="#545454" stroke-width="1.5"/>
+  <path d="M 290 268 h 12 v 24 h -12 z" fill="#545454"/>
+  <path d="M 430 268 h 24 v 24 h -24 z" fill="none" stroke="#545454" stroke-width="1.5"/>
+  <path d="M 574 268 h 24 v 24 h -24 z" fill="none" stroke="#545454" stroke-width="1.5"/>
+
+  <!-- Row 5: Anecdote -->
+  <rect x="40" y="304" width="192" height="48" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="52" y="333" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Anecdote</text>
+  <rect x="232" y="304" width="140" height="48" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <rect x="372" y="304" width="140" height="48" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <rect x="512" y="304" width="148" height="48" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
+  <path d="M 290 316 h 24 v 24 h -24 z" fill="none" stroke="#545454" stroke-width="1.5"/>
+  <path d="M 430 316 h 24 v 24 h -24 z" fill="none" stroke="#545454" stroke-width="1.5"/>
+  <path d="M 574 316 h 24 v 24 h -24 z" fill="none" stroke="#545454" stroke-width="1.5"/>
+
+  <!-- Legend -->
+  <rect x="40" y="372" width="16" height="16" fill="#C8102E"/>
+  <text x="62" y="385" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">licensed</text>
+  <path d="M 150 372 h 16 v 16 h -16 z" fill="none" stroke="#545454" stroke-width="1.5"/>
+  <path d="M 150 372 h 8 v 16 h -8 z" fill="#545454"/>
+  <text x="172" y="385" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">with caveat</text>
+  <path d="M 290 372 h 16 v 16 h -16 z" fill="none" stroke="#545454" stroke-width="1.5"/>
+  <text x="312" y="385" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">not supported</text>
+
+  <text x="32" y="410" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">The finding's content cannot upgrade the verb: only randomization licenses the word "caused."</text>
+</svg>
