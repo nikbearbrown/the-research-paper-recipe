@@ -301,7 +301,7 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 
 The ideas in this chapter didn't appear from nowhere. **Janet Emig** showed that writing is not the transcription of finished thoughts but a process of discovery — the reason this chapter tells you to draft in the order your findings actually arrived. Here's a prompt to find out more — and then make it better.
 
-![Janet Emig](../images/janet-emig-os5.jpg)
+![Janet Emig](../images/janet-emig-os5.png)
 
 *Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
 

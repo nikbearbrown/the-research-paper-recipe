@@ -310,7 +310,7 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 
 The ideas in this chapter didn't appear from nowhere. **Ludwik Fleck** was studying how scientific facts get built — and unbuilt — by communities of researchers, decades before "falsifiability" and "paradigms" entered the vocabulary. Here's a prompt to find out more — and then make it better.
 
-![Ludwik Fleck](../images/ludwik-fleck-9tn.jpg)
+![Ludwik Fleck](../images/ludwik-fleck-9tn.png)
 
 *Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
 

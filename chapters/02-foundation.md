@@ -286,7 +286,7 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 
 The ideas in this chapter didn't appear from nowhere. **Archie Cochrane** spent his career arguing that medicine should rest only on evidence that could survive a fair test — the conviction beneath every reporting standard you will cite. Here's a prompt to find out more — and then make it better.
 
-![Archie Cochrane](../images/archie-cochrane-lia.jpg)
+![Archie Cochrane](../images/archie-cochrane-1f8.png)
 
 *Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
 

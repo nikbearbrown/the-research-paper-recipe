@@ -292,7 +292,7 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 
 The ideas in this chapter didn't appear from nowhere. **Jane Loevinger** built the theory of how a test earns the right to claim it measures something real — the foundation of construct validity. Here's a prompt to find out more — and then make it better.
 
-![Jane Loevinger](../images/jane-loevinger-cad.jpg)
+![Jane Loevinger](../images/jane-loevinger-cad.png)
 
 *Puppet Art by [Nik Bear Brown](https://www.nikbearbrown.com/).*
 
